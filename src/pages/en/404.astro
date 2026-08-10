@@ -1,0 +1,20 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Icon from '@/components/Icon.astro';
+import '@/styles/components/NotFoundPage.scss';
+import { notFound as content } from '@/data/en/404.js';
+---
+
+<BaseLayout title={content.meta.title} description={content.meta.description} lang="en" noindex>
+  <main>
+    <div class="not-found">
+      <img src="/footer-logo.svg" alt="Lasan Marine" width="372" height="138" />
+      <p class="not-found-code">{content.code}</p>
+      <p class="not-found-message">{content.message}</p>
+      <a href="/en/" class="button">
+        <Icon name="home" size={18} />
+        {content.homeLabel}
+      </a>
+    </div>
+  </main>
+</BaseLayout>

@@ -1,0 +1,7050 @@
+[
+  {
+    "hang": "Weichai",
+    "hieu_may": "X6170ZC350-1",
+    "ps": "350",
+    "hp": "345",
+    "kw": "257",
+    "rpm": "1000"
+  },
+  {
+    "hang": "Weichai",
+    "hieu_may": "X6170ZC380-1",
+    "ps": "380",
+    "hp": "375",
+    "kw": "279",
+    "rpm": "1000"
+  },
+  {
+    "hang": "Weichai",
+    "hieu_may": "X6170ZC408-1",
+    "ps": "408",
+    "hp": "402",
+    "kw": "300",
+    "rpm": "1000"
+  },
+  {
+    "hang": "Weichai",
+    "hieu_may": "X6170ZC450-1",
+    "ps": "450",
+    "hp": "444",
+    "kw": "331",
+    "rpm": "1000"
+  },
+  {
+    "hang": "Weichai",
+    "hieu_may": "X6170ZC520-2",
+    "ps": "520",
+    "hp": "513",
+    "kw": "382",
+    "rpm": "1200"
+  },
+  {
+    "hang": "Weichai",
+    "hieu_may": "X6170ZC550-4",
+    "ps": "748",
+    "hp": "738",
+    "kw": "550",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Weichai",
+    "hieu_may": "WP12C450-21",
+    "ps": "450",
+    "hp": "444",
+    "kw": "331",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Weichai",
+    "hieu_may": "WHM6160C620-5",
+    "ps": "620",
+    "hp": "612",
+    "kw": "456",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Weichai",
+    "hieu_may": "WHM6160MC756-5",
+    "ps": "756",
+    "hp": "746",
+    "kw": "556",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Weichai",
+    "hieu_may": "TD226B-4C2",
+    "ps": "102",
+    "hp": "101",
+    "kw": "75",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Weichai",
+    "hieu_may": "WP12C500",
+    "ps": "500",
+    "hp": "493",
+    "kw": "368",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Weichai",
+    "hieu_may": "WD12C400",
+    "ps": "400",
+    "hp": "395",
+    "kw": "294",
+    "rpm": "2150"
+  },
+  {
+    "hang": "NIIGATA",
+    "hieu_may": "6NSDL-M",
+    "ps": "750",
+    "hp": "740",
+    "kw": "552",
+    "rpm": "1400"
+  },
+  {
+    "hang": "NIIGATA",
+    "hieu_may": "6NSE-M",
+    "ps": "549",
+    "hp": "541",
+    "kw": "404",
+    "rpm": "1950"
+  },
+  {
+    "hang": "NIIGATA",
+    "hieu_may": "6NSD-M",
+    "ps": "650",
+    "hp": "641",
+    "kw": "478",
+    "rpm": "1450"
+  },
+  {
+    "hang": "NIIGATA",
+    "hieu_may": "6NSAK-M",
+    "ps": "450",
+    "hp": "444",
+    "kw": "331",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Daedong",
+    "hieu_may": "4DM",
+    "ps": "100",
+    "hp": "99",
+    "kw": "74",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Daedong",
+    "hieu_may": "5DM",
+    "ps": "125",
+    "hp": "123",
+    "kw": "92",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Daedong",
+    "hieu_may": "DD6CC",
+    "ps": "500",
+    "hp": "493",
+    "kw": "368",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Daedong",
+    "hieu_may": "DD6CE",
+    "ps": "550",
+    "hp": "542",
+    "kw": "405",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Daedong",
+    "hieu_may": "DD6AC",
+    "ps": "335",
+    "hp": "330",
+    "kw": "246",
+    "rpm": "2150"
+  },
+  {
+    "hang": "Daedong",
+    "hieu_may": "DD6AZ",
+    "ps": "247",
+    "hp": "244",
+    "kw": "182",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "3MCZ",
+    "ps": "30",
+    "hp": "30",
+    "kw": "22",
+    "rpm": "1200"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "3MGZ",
+    "ps": "45",
+    "hp": "44",
+    "kw": "33",
+    "rpm": "850"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "MH150S",
+    "ps": "150",
+    "hp": "148",
+    "kw": "110",
+    "rpm": "1020"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "MH35",
+    "ps": "114",
+    "hp": "112",
+    "kw": "84",
+    "rpm": "2713"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "MH35S",
+    "ps": "136",
+    "hp": "134",
+    "kw": "100",
+    "rpm": "2713"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "MH35CS",
+    "ps": "182",
+    "hp": "180",
+    "kw": "134",
+    "rpm": "2713"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "MH50",
+    "ps": "164",
+    "hp": "162",
+    "kw": "121",
+    "rpm": "2131"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "MH50BCS",
+    "ps": "245",
+    "hp": "242",
+    "kw": "180",
+    "rpm": "2035"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "MH50S",
+    "ps": "182",
+    "hp": "180",
+    "kw": "134",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "MH6F",
+    "ps": "39",
+    "hp": "38",
+    "kw": "29",
+    "rpm": "1400"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "MH6F-T",
+    "ps": "55",
+    "hp": "54",
+    "kw": "40",
+    "rpm": "1400"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "MH6PN",
+    "ps": "105",
+    "hp": "104",
+    "kw": "77",
+    "rpm": "1200"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "MH6TN(A)",
+    "ps": "140",
+    "hp": "138",
+    "kw": "103",
+    "rpm": "1200"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "6MGBZS",
+    "ps": "110",
+    "hp": "108",
+    "kw": "81",
+    "rpm": "1100"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "M3D115AN",
+    "ps": "37",
+    "hp": "36",
+    "kw": "27",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "M3D11N",
+    "ps": "30",
+    "hp": "30",
+    "kw": "22",
+    "rpm": "1400"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "M3D45FN",
+    "ps": "60",
+    "hp": "59",
+    "kw": "44",
+    "rpm": "1050"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "M4D115AN",
+    "ps": "50",
+    "hp": "49",
+    "kw": "37",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "M4D115DN",
+    "ps": "75",
+    "hp": "74",
+    "kw": "55",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "M4D11N",
+    "ps": "39",
+    "hp": "38",
+    "kw": "29",
+    "rpm": "1400"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "M5D115AN",
+    "ps": "65",
+    "hp": "64",
+    "kw": "48",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "M5D11N",
+    "ps": "50",
+    "hp": "49",
+    "kw": "37",
+    "rpm": "1400"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "M6D115AN",
+    "ps": "75",
+    "hp": "74",
+    "kw": "55",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "M6D11N",
+    "ps": "60",
+    "hp": "59",
+    "kw": "44",
+    "rpm": "1400"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "M6D16BZC",
+    "ps": "190",
+    "hp": "187",
+    "kw": "140",
+    "rpm": "1100"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "M6D17BHCS",
+    "ps": "400",
+    "hp": "395",
+    "kw": "294",
+    "rpm": "1200"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "M6D17BHS",
+    "ps": "230",
+    "hp": "227",
+    "kw": "169",
+    "rpm": "1200"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "M6D17BUCS",
+    "ps": "550",
+    "hp": "542",
+    "kw": "405",
+    "rpm": "1200"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "M6D20BUCS",
+    "ps": "750",
+    "hp": "740",
+    "kw": "552",
+    "rpm": "900"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "M6D45ECSN",
+    "ps": "150",
+    "hp": "148",
+    "kw": "110",
+    "rpm": "1250"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "M6D45EK",
+    "ps": "120",
+    "hp": "118",
+    "kw": "88",
+    "rpm": "1050"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "MD150S",
+    "ps": "180",
+    "hp": "178",
+    "kw": "132",
+    "rpm": "1020"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "MH105",
+    "ps": "80",
+    "hp": "79",
+    "kw": "59",
+    "rpm": "1900"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "MH105CS",
+    "ps": "150",
+    "hp": "148",
+    "kw": "110",
+    "rpm": "1900"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "MH150ACS",
+    "ps": "160",
+    "hp": "158",
+    "kw": "118",
+    "rpm": "1650"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "MH150AS",
+    "ps": "115",
+    "hp": "113",
+    "kw": "85",
+    "rpm": "980"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "MH150B",
+    "ps": "140",
+    "hp": "138",
+    "kw": "103",
+    "rpm": "1650"
+  },
+  {
+    "hang": "Kubota",
+    "hieu_may": "MH150CS",
+    "ps": "455",
+    "hp": "449",
+    "kw": "335",
+    "rpm": "1650"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD31",
+    "ps": "105",
+    "hp": "104",
+    "kw": "77",
+    "rpm": "3250"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD41",
+    "ps": "160",
+    "hp": "158",
+    "kw": "118",
+    "rpm": "3250"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD41H",
+    "ps": "145",
+    "hp": "143",
+    "kw": "107",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD41A-J",
+    "ps": "150",
+    "hp": "148",
+    "kw": "110",
+    "rpm": "3250"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD60A",
+    "ps": "150",
+    "hp": "148",
+    "kw": "110",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD60B",
+    "ps": "184",
+    "hp": "181",
+    "kw": "135",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD60E",
+    "ps": "255",
+    "hp": "252",
+    "kw": "188",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD61",
+    "ps": "220",
+    "hp": "217",
+    "kw": "162",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD61A",
+    "ps": "220",
+    "hp": "217",
+    "kw": "162",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD70C",
+    "ps": "210",
+    "hp": "207",
+    "kw": "154",
+    "rpm": "2400"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD70D",
+    "ps": "210",
+    "hp": "207",
+    "kw": "154",
+    "rpm": "2400"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD70E",
+    "ps": "300",
+    "hp": "296",
+    "kw": "221",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD71",
+    "ps": "222",
+    "hp": "219",
+    "kw": "163",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD71B",
+    "ps": "286",
+    "hp": "282",
+    "kw": "210",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD72",
+    "ps": "300",
+    "hp": "296",
+    "kw": "221",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD102",
+    "ps": "272",
+    "hp": "268",
+    "kw": "200",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD102A",
+    "ps": "320",
+    "hp": "316",
+    "kw": "235",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD120B",
+    "ps": "341",
+    "hp": "336",
+    "kw": "251",
+    "rpm": "1200"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD121",
+    "ps": "350",
+    "hp": "345",
+    "kw": "257",
+    "rpm": "1940"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD122A",
+    "ps": "380",
+    "hp": "375",
+    "kw": "279",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TMD31",
+    "ps": "90",
+    "hp": "89",
+    "kw": "66",
+    "rpm": "3250"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "4A-1",
+    "ps": "50",
+    "hp": "49",
+    "kw": "36.77",
+    "rpm": "200"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "4AAC-1",
+    "ps": "80",
+    "hp": "79",
+    "kw": "58.84",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6A-1",
+    "ps": "80",
+    "hp": "79",
+    "kw": "58.84",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6AAC-1",
+    "ps": "120",
+    "hp": "118",
+    "kw": "88.26",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6AAC-2",
+    "ps": "120",
+    "hp": "118",
+    "kw": "88.26",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6ZC-3",
+    "ps": "60",
+    "hp": "59",
+    "kw": "44.13",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6ZC-4",
+    "ps": "60",
+    "hp": "59",
+    "kw": "44.13",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6ZC-5",
+    "ps": "60",
+    "hp": "59",
+    "kw": "44.13",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6ZCAC-4",
+    "ps": "85",
+    "hp": "84",
+    "kw": "62.52",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6ZDAC-1",
+    "ps": "340",
+    "hp": "335",
+    "kw": "250.07",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6ZE-1",
+    "ps": "100",
+    "hp": "99",
+    "kw": "73.55",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6ZEAC-1",
+    "ps": "160",
+    "hp": "158",
+    "kw": "117.68",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6ZGAC-1",
+    "ps": "380",
+    "hp": "375",
+    "kw": "279.49",
+    "rpm": "1900"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6ZHAC-1",
+    "ps": "435",
+    "hp": "429",
+    "kw": "319.94",
+    "rpm": "1550"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6ZHBAC-1",
+    "ps": "435",
+    "hp": "429",
+    "kw": "319.94",
+    "rpm": "1550"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6ZKAC-1",
+    "ps": "250",
+    "hp": "247",
+    "kw": "183.87",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6D11",
+    "ps": "90",
+    "hp": "89",
+    "kw": "66.19",
+    "rpm": "3000"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6D14",
+    "ps": "160",
+    "hp": "158",
+    "kw": "117.68",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6D14T",
+    "ps": "210",
+    "hp": "207",
+    "kw": "154.45",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6D15",
+    "ps": "170",
+    "hp": "168",
+    "kw": "125.03",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6D15T",
+    "ps": "245",
+    "hp": "242",
+    "kw": "180.20",
+    "rpm": "2700"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6D16",
+    "ps": "190",
+    "hp": "187",
+    "kw": "139.74",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6D16T",
+    "ps": "215",
+    "hp": "212",
+    "kw": "158.13",
+    "rpm": "2800"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6D17",
+    "ps": "185",
+    "hp": "182",
+    "kw": "136.07",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6D20",
+    "ps": "168",
+    "hp": "166",
+    "kw": "123.56",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6D20T",
+    "ps": "215",
+    "hp": "212",
+    "kw": "158.13",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6D21",
+    "ps": "215",
+    "hp": "212",
+    "kw": "158.13",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6D22",
+    "ps": "225",
+    "hp": "222",
+    "kw": "165.49",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6D22T",
+    "ps": "250",
+    "hp": "247",
+    "kw": "183.87",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6D24T",
+    "ps": "330",
+    "hp": "325",
+    "kw": "242.71",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6D31",
+    "ps": "145",
+    "hp": "143",
+    "kw": "106.65",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6D40T",
+    "ps": "350",
+    "hp": "345",
+    "kw": "257.42",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6DR5",
+    "ps": "105",
+    "hp": "104",
+    "kw": "77.23",
+    "rpm": "3500"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6DS7",
+    "ps": "135",
+    "hp": "133",
+    "kw": "99.29",
+    "rpm": "3100"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "6M60T",
+    "ps": "270",
+    "hp": "266",
+    "kw": "198.58",
+    "rpm": "2700"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "8DC2",
+    "ps": "265",
+    "hp": "261",
+    "kw": "194.91",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "8DC4",
+    "ps": "270",
+    "hp": "266",
+    "kw": "198.58",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "8DC6",
+    "ps": "275",
+    "hp": "271",
+    "kw": "202.26",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "8DC7",
+    "ps": "280",
+    "hp": "276",
+    "kw": "205.84",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "8DC8",
+    "ps": "305",
+    "hp": "301",
+    "kw": "224.33",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "8DC9",
+    "ps": "320",
+    "hp": "316",
+    "kw": "235.36",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "8DC90AT",
+    "ps": "360",
+    "hp": "355",
+    "kw": "264.78",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "8DC91",
+    "ps": "320",
+    "hp": "316",
+    "kw": "235.36",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "8DC91AT",
+    "ps": "360",
+    "hp": "355",
+    "kw": "264.78",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "8DC92A",
+    "ps": "330",
+    "hp": "325",
+    "kw": "242.71",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "8DC10",
+    "ps": "335",
+    "hp": "330",
+    "kw": "246.39",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "D6B-MTK",
+    "ps": "350",
+    "hp": "345",
+    "kw": "257.42",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "D6B-TKE",
+    "ps": "345",
+    "hp": "340",
+    "kw": "253.75",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "M6H-M(M35)",
+    "ps": "105",
+    "hp": "104",
+    "kw": "77.23",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "M6H-MTK",
+    "ps": "180",
+    "hp": "178",
+    "kw": "132.39",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "M6J-MTK",
+    "ps": "150",
+    "hp": "148",
+    "kw": "110.32",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "M6J-MYTK",
+    "ps": "140",
+    "hp": "138",
+    "kw": "102.97",
+    "rpm": "3100"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "M6L-M(M60)",
+    "ps": "185",
+    "hp": "182",
+    "kw": "136.07",
+    "rpm": "2180"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "M6L-MTK",
+    "ps": "250",
+    "hp": "247",
+    "kw": "183.87",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S3DM-M15",
+    "ps": "60",
+    "hp": "59",
+    "kw": "44.13",
+    "rpm": "2850"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S4BB-M35",
+    "ps": "120",
+    "hp": "118",
+    "kw": "88.26",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S4BB-M35-3",
+    "ps": "130",
+    "hp": "128",
+    "kw": "95.61",
+    "rpm": "2130"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S4BB2-M35",
+    "ps": "145",
+    "hp": "143",
+    "kw": "106.65",
+    "rpm": "2130"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S4BC-M30",
+    "ps": "100",
+    "hp": "99",
+    "kw": "73.55",
+    "rpm": "2130"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S4M3E-MTK",
+    "ps": "220",
+    "hp": "117",
+    "kw": "161.81",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S4M3F-M25",
+    "ps": "100",
+    "hp": "99",
+    "kw": "73.55",
+    "rpm": "2700"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S4M3F-M25-2",
+    "ps": "130",
+    "hp": "128",
+    "kw": "95.61",
+    "rpm": "2700"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S4M-MTK",
+    "ps": "140",
+    "hp": "138",
+    "kw": "102.97",
+    "rpm": "2400"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S4M-MTK-2",
+    "ps": "180",
+    "hp": "178",
+    "kw": "132.39",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6MB-MTK",
+    "ps": "200",
+    "hp": "197",
+    "kw": "147.1",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6MB-MTK-2",
+    "ps": "250",
+    "hp": "247",
+    "kw": "183.87",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6M-MTK",
+    "ps": "220",
+    "hp": "217",
+    "kw": "161.81",
+    "rpm": "2400"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6M2-MTK",
+    "ps": "250",
+    "hp": "247",
+    "kw": "183.87",
+    "rpm": "2400"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6M2-MTK-2",
+    "ps": "320",
+    "hp": "316",
+    "kw": "235.36",
+    "rpm": "2400"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6M3-MTK",
+    "ps": "380",
+    "hp": "375",
+    "kw": "279.49",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6M3-MTK-S",
+    "ps": "420",
+    "hp": "414",
+    "kw": "308.91",
+    "rpm": "2400"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6M3-MTK-2S",
+    "ps": "450",
+    "hp": "444",
+    "kw": "330.97",
+    "rpm": "2460"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6M3H-MTK-S",
+    "ps": "410",
+    "hp": "404",
+    "kw": "301.55",
+    "rpm": "2380"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6M3F-MTK",
+    "ps": "320",
+    "hp": "316",
+    "kw": "235.36",
+    "rpm": "2400"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6M3F-MTK-S",
+    "ps": "340",
+    "hp": "335",
+    "kw": "250.07",
+    "rpm": "2520"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6M3F-MTK2L",
+    "ps": "345",
+    "hp": "340",
+    "kw": "253.75",
+    "rpm": "2470"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6M3J-MTK2L",
+    "ps": "450",
+    "hp": "444",
+    "kw": "330.97",
+    "rpm": "2471"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6M3G-M35",
+    "ps": "135",
+    "hp": "133",
+    "kw": "99.29",
+    "rpm": "2700"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6M4-M50",
+    "ps": "180",
+    "hp": "178",
+    "kw": "132.39",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6A2-MTK",
+    "ps": "450",
+    "hp": "444",
+    "kw": "330.97",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6A3-MTK",
+    "ps": "545",
+    "hp": "538",
+    "kw": "400.85",
+    "rpm": "1850"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6A3-MTK2",
+    "ps": "650",
+    "hp": "641",
+    "kw": "478.07",
+    "rpm": "1900"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6A3-MTK2L",
+    "ps": "730",
+    "hp": "720",
+    "kw": "536.91",
+    "rpm": "1900"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6A3-MPTA",
+    "ps": "480",
+    "hp": "473",
+    "kw": "353.04",
+    "rpm": "1840"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6A3-MPTK",
+    "ps": "540",
+    "hp": "533",
+    "kw": "397.17",
+    "rpm": "1840"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6AG-MTK",
+    "ps": "435",
+    "hp": "429",
+    "kw": "319.94",
+    "rpm": "2000"
+  },
+  {
+    "hang": "S4B-MTK",
+    "hieu_may": "S4B-MTK",
+    "ps": "250",
+    "hp": "247",
+    "kw": "183.87",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6BD-M50",
+    "ps": "120",
+    "hp": "118",
+    "kw": "88.26",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6B-MTK",
+    "ps": "375",
+    "hp": "370",
+    "kw": "275.81",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6B-MTK2",
+    "ps": "400",
+    "hp": "395",
+    "kw": "294.20",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6B-MPTA",
+    "ps": "315",
+    "hp": "311",
+    "kw": "231.68",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6B-MPTK",
+    "ps": "360",
+    "hp": "355",
+    "kw": "264.78",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6B3-MTK",
+    "ps": "500",
+    "hp": "493",
+    "kw": "367.75",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6B3-MPTA",
+    "ps": "435",
+    "hp": "429",
+    "kw": "319.94",
+    "rpm": "1940"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6B3-MPTK",
+    "ps": "460",
+    "hp": "454",
+    "kw": "338.33",
+    "rpm": "1940"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6B3F-MTK",
+    "ps": "500",
+    "hp": "493",
+    "kw": "367.75",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6B3F-MTK-2",
+    "ps": "590",
+    "hp": "582",
+    "kw": "433.94",
+    "rpm": "200"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6BF-MTK",
+    "ps": "270",
+    "hp": "266",
+    "kw": "198.58",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6BF-MTK-2",
+    "ps": "350",
+    "hp": "345",
+    "kw": "357.42",
+    "rpm": "1950"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6B5-MTK2L",
+    "ps": "685",
+    "hp": "676",
+    "kw": "503.82",
+    "rpm": "1940"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6N-MTK",
+    "ps": "450",
+    "hp": "444",
+    "kw": "330.97",
+    "rpm": "1550"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6N-MTK-2",
+    "ps": "530",
+    "hp": "523",
+    "kw": "389.81",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6N-MPTA-2",
+    "ps": "615",
+    "hp": "607",
+    "kw": "452.33",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6N-MPTK-2",
+    "ps": "720",
+    "hp": "710",
+    "kw": "529.56",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6R-MTK",
+    "ps": "823",
+    "hp": "812",
+    "kw": "605.32",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6R-MPTA",
+    "ps": "590",
+    "hp": "582",
+    "kw": "433.94",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6R-MPTK",
+    "ps": "823",
+    "hp": "812",
+    "kw": "605.32",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6R-PTK",
+    "ps": "740",
+    "hp": "730",
+    "kw": "544.27",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6R-PTA",
+    "ps": "700",
+    "hp": "690",
+    "kw": "514.85",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6R2-MTK",
+    "ps": "750",
+    "hp": "740",
+    "kw": "551.62",
+    "rpm": "1450"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6R2-PTA",
+    "ps": "810",
+    "hp": "799",
+    "kw": "595.75",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6R2-MPTA",
+    "ps": "600",
+    "hp": "592",
+    "kw": "441.30",
+    "rpm": "1350"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6R2-MPTK",
+    "ps": "721",
+    "hp": "711",
+    "kw": "530.29",
+    "rpm": "1400"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6RF-MTK",
+    "ps": "650",
+    "hp": "641",
+    "kw": "478.07",
+    "rpm": "1700"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6R2F-MTK",
+    "ps": "600",
+    "hp": "592",
+    "kw": "441.30",
+    "rpm": "1350"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6R2F-MTK-2",
+    "ps": "720",
+    "hp": "710",
+    "kw": "529.56",
+    "rpm": "1400"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6U-MTK",
+    "ps": "1350",
+    "hp": "1332",
+    "kw": "993.92",
+    "rpm": "1100"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S8A-MTK",
+    "ps": "555",
+    "hp": "547",
+    "kw": "408.2",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S8N-MTK",
+    "ps": "640",
+    "hp": "631",
+    "kw": "470.72",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S12A-MT",
+    "ps": "600",
+    "hp": "592",
+    "kw": "441.30",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S12A-MTA",
+    "ps": "740",
+    "hp": "730",
+    "kw": "544.27",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S12A-MTK",
+    "ps": "830",
+    "hp": "819",
+    "kw": "610.46",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S12A2-MPTA",
+    "ps": "850",
+    "hp": "838",
+    "kw": "625.17",
+    "rpm": "1940"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S12A2-MPTK",
+    "ps": "940",
+    "hp": "927",
+    "kw": "691.37",
+    "rpm": "1940"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S12N-MT",
+    "ps": "760",
+    "hp": "750",
+    "kw": "558.98",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S12N-MTA",
+    "ps": "840",
+    "hp": "829",
+    "kw": "617.82",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S12N-MTK",
+    "ps": "960",
+    "hp": "947",
+    "kw": "706.08",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S16N-MT",
+    "ps": "1000",
+    "hp": "980",
+    "kw": "735.5",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S16N-MTA",
+    "ps": "1120",
+    "hp": "1105",
+    "kw": "823.76",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S16N-MTK",
+    "ps": "1300",
+    "hp": "1282",
+    "kw": "956.15",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S12R-MPTA",
+    "ps": "1180",
+    "hp": "1164",
+    "kw": "867.89",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S12R-MPTK",
+    "ps": "1260",
+    "hp": "1243",
+    "kw": "926.73",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S16R-MPTA",
+    "ps": "1570",
+    "hp": "1549",
+    "kw": "1154.73",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S16R-MPTK",
+    "ps": "1675",
+    "hp": "1652",
+    "kw": "1231.96",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6Y-MTK",
+    "ps": "700",
+    "hp": "690",
+    "kw": "514.85",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S4F-MTK",
+    "ps": "100",
+    "hp": "99",
+    "kw": "73.55",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S4MJ-MTK",
+    "ps": "100",
+    "hp": "99",
+    "kw": "73.55",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6A3-T2MTK3L",
+    "ps": "735",
+    "hp": "725",
+    "kw": "540.59",
+    "rpm": "1900"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6B3-T2MTK2L",
+    "ps": "592",
+    "hp": "584",
+    "kw": "435.42",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6D-T2MTK2S",
+    "ps": "610",
+    "hp": "602",
+    "kw": "448.65",
+    "rpm": "2375"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6RG-T2MTKL",
+    "ps": "911",
+    "hp": "899",
+    "kw": "670.04",
+    "rpm": "1696"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6R2-T2MTK3L",
+    "ps": "1100",
+    "hp": "1085",
+    "kw": "809.05",
+    "rpm": "1400"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6M3H-MTKL",
+    "ps": "385",
+    "hp": "380",
+    "kw": "283.17",
+    "rpm": "2330"
+  },
+  {
+    "hang": "Mitsubishi",
+    "hieu_may": "S6B5-MTK2S",
+    "ps": "730",
+    "hp": "720",
+    "kw": "536.91",
+    "rpm": "1990"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "6BT5.9-C115",
+    "ps": "115",
+    "hp": "113",
+    "kw": "84.58",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "6BT5.9-C120",
+    "ps": "120",
+    "hp": "118",
+    "kw": "88.26",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "6BT5.9-C150",
+    "ps": "150",
+    "hp": "148",
+    "kw": "110.32",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "6CT",
+    "ps": "210",
+    "hp": "207",
+    "kw": "154.45",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "6CTA",
+    "ps": "265",
+    "hp": "261",
+    "kw": "194.91",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "6CTA-C145",
+    "ps": "145",
+    "hp": "143",
+    "kw": "106.65",
+    "rpm": "1900"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "6CTA-C175",
+    "ps": "175",
+    "hp": "173",
+    "kw": "128.71",
+    "rpm": "1850"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "6CTA-C180",
+    "ps": "180",
+    "hp": "178",
+    "kw": "132.39",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "6CTA-C220",
+    "ps": "220",
+    "hp": "217",
+    "kw": "161.81",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "6CTA-C245",
+    "ps": "245",
+    "hp": "242",
+    "kw": "180.20",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "6CTA-C260",
+    "ps": "260",
+    "hp": "256",
+    "kw": "191.23",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "6CTA-C300",
+    "ps": "300",
+    "hp": "296",
+    "kw": "220.65",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "6CTA8.3-M2",
+    "ps": "420",
+    "hp": "414",
+    "kw": "308.91",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "6CTA8.3-M3",
+    "ps": "450",
+    "hp": "444",
+    "kw": "330.97",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "V-1710M",
+    "ps": "487",
+    "hp": "480",
+    "kw": "358.19",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "V-504M",
+    "ps": "116",
+    "hp": "114",
+    "kw": "85.32",
+    "rpm": "3000"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "V-555-M70",
+    "ps": "185",
+    "hp": "182",
+    "kw": "136.07",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "V-555M",
+    "ps": "227",
+    "hp": "224",
+    "kw": "166.96",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "V-903M",
+    "ps": "248",
+    "hp": "245",
+    "kw": "182.4",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "VT-903M",
+    "ps": "289",
+    "hp": "285",
+    "kw": "212.56",
+    "rpm": "2520"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "VTA675",
+    "ps": "675",
+    "hp": "666",
+    "kw": "496.46",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "VTA-903M",
+    "ps": "322",
+    "hp": "318",
+    "kw": "236.83",
+    "rpm": "2520"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "VTA-1710M1",
+    "ps": "614",
+    "hp": "606",
+    "kw": "451.60",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "VTA-1710M2",
+    "ps": "700",
+    "hp": "690",
+    "kw": "514.85",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "VT12-800-GC",
+    "ps": "720",
+    "hp": "710",
+    "kw": "529.56",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "VTA-28C",
+    "ps": "725",
+    "hp": "715",
+    "kw": "533.24",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "VTA28-G3",
+    "ps": "725",
+    "hp": "715",
+    "kw": "533.24",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "VTA28-G5",
+    "ps": "882",
+    "hp": "870",
+    "kw": "648.71",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "VTA28G1",
+    "ps": "744",
+    "hp": "734",
+    "kw": "547.21",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NH220",
+    "ps": "220",
+    "hp": "217",
+    "kw": "161.81",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTO-6M",
+    "ps": "242",
+    "hp": "239",
+    "kw": "177.99",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NT-495M",
+    "ps": "131",
+    "hp": "129",
+    "kw": "96.35",
+    "rpm": "1890"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NT-855P",
+    "ps": "280",
+    "hp": "276",
+    "kw": "205.94",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NT855M",
+    "ps": "300",
+    "hp": "296",
+    "kw": "220.65",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NT855-M2",
+    "ps": "330",
+    "hp": "325",
+    "kw": "242.71",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NT855-350",
+    "ps": "350",
+    "hp": "345",
+    "kw": "257.42",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NT855-415",
+    "ps": "415",
+    "hp": "409",
+    "kw": "305.23",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTA-855C",
+    "ps": "310",
+    "hp": "306",
+    "kw": "228",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTA855-290",
+    "ps": "290",
+    "hp": "286",
+    "kw": "213.29",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTA855-425",
+    "ps": "425",
+    "hp": "419",
+    "kw": "312.59",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTA855-435",
+    "ps": "435",
+    "hp": "429",
+    "kw": "319.94",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTA855-G4",
+    "ps": "470",
+    "hp": "464",
+    "kw": "345.68",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "L10-270",
+    "ps": "270",
+    "hp": "266",
+    "kw": "198.58",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "L10",
+    "ps": "260",
+    "hp": "256",
+    "kw": "191.23",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "L10-280",
+    "ps": "280",
+    "hp": "276",
+    "kw": "205.94",
+    "rpm": "1700"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "L10-300",
+    "ps": "300",
+    "hp": "296",
+    "kw": "220.65",
+    "rpm": "1700"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "L10-310",
+    "ps": "310",
+    "hp": "306",
+    "kw": "228",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "L10-350",
+    "ps": "380",
+    "hp": "375",
+    "kw": "279.49",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "LTA10-240",
+    "ps": "240",
+    "hp": "237",
+    "kw": "167.52",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "LTA10-250",
+    "ps": "250",
+    "hp": "247",
+    "kw": "183.87",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "LTA-10",
+    "ps": "305",
+    "hp": "301",
+    "kw": "224.33",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "LTA10-G3",
+    "ps": "330",
+    "hp": "325",
+    "kw": "242.71",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KT19M",
+    "ps": "450",
+    "hp": "444",
+    "kw": "330.97",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KT19-C",
+    "ps": "450",
+    "hp": "444",
+    "kw": "330.97",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KTA19-C525",
+    "ps": "525",
+    "hp": "518",
+    "kw": "386.14",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KTA19-C600",
+    "ps": "600",
+    "hp": "592",
+    "kw": "441.3",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KTA19-M500",
+    "ps": "500",
+    "hp": "493",
+    "kw": "367.75",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KTA19-M600",
+    "ps": "600",
+    "hp": "592",
+    "kw": "441.3",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KTA19-M640",
+    "ps": "640",
+    "hp": "631",
+    "kw": "470.72",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KTA19-M700",
+    "ps": "700",
+    "hp": "690",
+    "kw": "514.85",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KTA19-M2",
+    "ps": "680",
+    "hp": "671",
+    "kw": "500.14",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KTA19-M3",
+    "ps": "500",
+    "hp": "493",
+    "kw": "367.75",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KTA19-M530",
+    "ps": "530",
+    "hp": "523",
+    "kw": "389.81",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KTA19-M3 700",
+    "ps": "700",
+    "hp": "690",
+    "kw": "514.85",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KTA19-M4",
+    "ps": "700",
+    "hp": "690",
+    "kw": "514.85",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KTA19-G2",
+    "ps": "530",
+    "hp": "523",
+    "kw": "389.81",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KTA19-G3",
+    "ps": "630",
+    "hp": "621",
+    "kw": "463.36",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KTA19-G4",
+    "ps": "750",
+    "hp": "740",
+    "kw": "551.62",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KTA38-M0",
+    "ps": "850",
+    "hp": "838",
+    "kw": "625.17",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KTA38",
+    "ps": "880",
+    "hp": "868",
+    "kw": "647.24",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KTA38M",
+    "ps": "940",
+    "hp": "927",
+    "kw": "691.37",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KTA38-M1",
+    "ps": "1015",
+    "hp": "1001",
+    "kw": "746.53",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KTA1150-M",
+    "ps": "458",
+    "hp": "452",
+    "kw": "336.86",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "KTA1150P",
+    "ps": "600",
+    "hp": "592",
+    "kw": "441.3",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "ISCE-300",
+    "ps": "300",
+    "hp": "296",
+    "kw": "220.65",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "QSK19-M750",
+    "ps": "750",
+    "hp": "740",
+    "kw": "551.62",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTA885M",
+    "ps": "350",
+    "hp": "345",
+    "kw": "257.42",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTA855M",
+    "ps": "400",
+    "hp": "395",
+    "kw": "294.20",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTA-855G2",
+    "ps": "350",
+    "hp": "345",
+    "kw": "257.42",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTA855G3",
+    "ps": "375",
+    "hp": "370",
+    "kw": "275.81",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTA-400",
+    "ps": "400",
+    "hp": "395",
+    "kw": "294.2",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTC230",
+    "ps": "230",
+    "hp": "227",
+    "kw": "169.16",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTC250",
+    "ps": "250",
+    "hp": "247",
+    "kw": "183.87",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTC290",
+    "ps": "290",
+    "hp": "286",
+    "kw": "213.29",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTC300",
+    "ps": "300",
+    "hp": "296",
+    "kw": "220.65",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTC315",
+    "ps": "315",
+    "hp": "311",
+    "kw": "231.68",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTC350",
+    "ps": "350",
+    "hp": "345",
+    "kw": "257.42",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTC365",
+    "ps": "365",
+    "hp": "360",
+    "kw": "268.46",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTC400",
+    "ps": "400",
+    "hp": "395",
+    "kw": "294.2",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTC444",
+    "ps": "444",
+    "hp": "438",
+    "kw": "326.56",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTC450",
+    "ps": "450",
+    "hp": "444",
+    "kw": "330.97",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTC475",
+    "ps": "475",
+    "hp": "469",
+    "kw": "349.36",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTC-743M",
+    "ps": "225",
+    "hp": "222",
+    "kw": "165.49",
+    "rpm": "1950"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTC855",
+    "ps": "300",
+    "hp": "296",
+    "kw": "220.65",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "N14-310",
+    "ps": "310",
+    "hp": "306",
+    "kw": "228",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "N14-330",
+    "ps": "330",
+    "hp": "325",
+    "kw": "242.71",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "N14-350",
+    "ps": "350",
+    "hp": "345",
+    "kw": "257.42",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "N14-370",
+    "ps": "370",
+    "hp": "365",
+    "kw": "272.13",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "N14-400",
+    "ps": "400",
+    "hp": "395",
+    "kw": "294.2",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "N14-410",
+    "ps": "410",
+    "hp": "404",
+    "kw": "301.55",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "N14-420",
+    "ps": "420",
+    "hp": "414",
+    "kw": "308.91",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "N14-425",
+    "ps": "425",
+    "hp": "419",
+    "kw": "312.59",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "N14-430",
+    "ps": "430",
+    "hp": "424",
+    "kw": "316.26",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "N14-435",
+    "ps": "435",
+    "hp": "429",
+    "kw": "319.94",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "N14-450",
+    "ps": "450",
+    "hp": "444",
+    "kw": "330.97",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "N14-460",
+    "ps": "460",
+    "hp": "454",
+    "kw": "338.33",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "N14-480",
+    "ps": "480",
+    "hp": "473",
+    "kw": "303.54",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "N14-500",
+    "ps": "500",
+    "hp": "493",
+    "kw": "367.75",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "N14-525",
+    "ps": "525",
+    "hp": "518",
+    "kw": "386.14",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTA14-535",
+    "ps": "535",
+    "hp": "528",
+    "kw": "393.49",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTA14-M440",
+    "ps": "440",
+    "hp": "434",
+    "kw": "323.62",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "NTA14-G2",
+    "ps": "535",
+    "hp": "528",
+    "kw": "393.49",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "M11-280",
+    "ps": "280",
+    "hp": "276",
+    "kw": "205.84",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "M11-310",
+    "ps": "310",
+    "hp": "306",
+    "kw": "228",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "M11-330",
+    "ps": "330",
+    "hp": "325",
+    "kw": "242.71",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "MTA11",
+    "ps": "425",
+    "hp": "419",
+    "kw": "312.59",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "L270",
+    "ps": "270",
+    "hp": "226",
+    "kw": "198.58",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "L10-240",
+    "ps": "240",
+    "hp": "237",
+    "kw": "167.52",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Cummins",
+    "hieu_may": "L10-250",
+    "ps": "250",
+    "hp": "247",
+    "kw": "183.87",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "3406C",
+    "ps": "370",
+    "hp": "365",
+    "kw": "272.13",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "3304B(NA)",
+    "ps": "105",
+    "hp": "104",
+    "kw": "77.23",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "3306B",
+    "ps": "155",
+    "hp": "153",
+    "kw": "114",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "3208NA",
+    "ps": "215",
+    "hp": "212",
+    "kw": "158.13",
+    "rpm": "2800"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "3208T",
+    "ps": "265",
+    "hp": "261",
+    "kw": "194.91",
+    "rpm": "2800"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "3208TA",
+    "ps": "320",
+    "hp": "316",
+    "kw": "235.36",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "3304T",
+    "ps": "170",
+    "hp": "168",
+    "kw": "125.03",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "3306T",
+    "ps": "260",
+    "hp": "256",
+    "kw": "191.23",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "3306TA",
+    "ps": "295",
+    "hp": "291",
+    "kw": "216.97",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "3406T",
+    "ps": "330",
+    "hp": "325",
+    "kw": "242.71",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "3406TA",
+    "ps": "410",
+    "hp": "404",
+    "kw": "301.55",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "3406DITA",
+    "ps": "425",
+    "hp": "419",
+    "kw": "312.59",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "3408T",
+    "ps": "450",
+    "hp": "444",
+    "kw": "330.97",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "3408TA",
+    "ps": "480",
+    "hp": "473",
+    "kw": "353.04",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "3412T",
+    "ps": "550",
+    "hp": "542",
+    "kw": "404.52",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "3412TA",
+    "ps": "710",
+    "hp": "700",
+    "kw": "522.",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "348TA",
+    "ps": "935",
+    "hp": "922",
+    "kw": "687.69",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "3508TA",
+    "ps": "867",
+    "hp": "855",
+    "kw": "637.68",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "3512TA",
+    "ps": "1206",
+    "hp": "1190",
+    "kw": "887.01",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "D343TA",
+    "ps": "470",
+    "hp": "464",
+    "kw": "345.",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "D353T",
+    "ps": "250",
+    "hp": "247",
+    "kw": "183.87",
+    "rpm": "1125"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "D353TA",
+    "ps": "515",
+    "hp": "508",
+    "kw": "378.78",
+    "rpm": "1300"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "D379TA",
+    "ps": "650",
+    "hp": "641",
+    "kw": "478.07",
+    "rpm": "1300"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "D398TA",
+    "ps": "985",
+    "hp": "972",
+    "kw": "724.47",
+    "rpm": "1300"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "D399TA",
+    "ps": "1400",
+    "hp": "1381",
+    "kw": "1029.7",
+    "rpm": "1300"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "3406C",
+    "ps": "405",
+    "hp": "399",
+    "kw": "297.88",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "C12",
+    "ps": "715",
+    "hp": "705",
+    "kw": "525.88",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "C15",
+    "ps": "446",
+    "hp": "440",
+    "kw": "328.03",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "C18",
+    "ps": "814",
+    "hp": "803",
+    "kw": "598.7",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Caterpillar",
+    "hieu_may": "3508",
+    "ps": "1000",
+    "hp": "986",
+    "kw": "735.5",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "2QM20",
+    "ps": "20",
+    "hp": "20",
+    "kw": "14.71",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3QM30",
+    "ps": "30",
+    "hp": "30",
+    "kw": "22.06",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "2M10",
+    "ps": "20",
+    "hp": "14.71",
+    "kw": "",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3M15",
+    "ps": "45",
+    "hp": "44",
+    "kw": "33.1",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "2SM(G/E)",
+    "ps": "27",
+    "hp": "27",
+    "kw": "19.86",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3SM(G/E)",
+    "ps": "45",
+    "hp": "44",
+    "kw": "33.1",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "2TGK",
+    "ps": "20",
+    "hp": "20",
+    "kw": "14.71",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3TGK",
+    "ps": "30",
+    "hp": "30",
+    "kw": "22.06",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "2TGGE",
+    "ps": "22",
+    "hp": "22",
+    "kw": "16.18",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3TGG3",
+    "ps": "33",
+    "hp": "33",
+    "kw": "24.27",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "2TGV",
+    "ps": "25",
+    "hp": "25",
+    "kw": "18.39",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3TGV",
+    "ps": "37",
+    "hp": "36",
+    "kw": "27.21",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "2TD",
+    "ps": "26",
+    "hp": "26",
+    "kw": "19.12",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3TD",
+    "ps": "39",
+    "hp": "38",
+    "kw": "28.68",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4DT",
+    "ps": "52",
+    "hp": "51",
+    "kw": "38.25",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "2LE",
+    "ps": "22",
+    "hp": "22",
+    "kw": "16.18",
+    "rpm": "1000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "2LD",
+    "ps": "33",
+    "hp": "33",
+    "kw": "24.27",
+    "rpm": "900"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3LD",
+    "ps": "50",
+    "hp": "49",
+    "kw": "36.77",
+    "rpm": "900"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4LD",
+    "ps": "66",
+    "hp": "65",
+    "kw": "48.54",
+    "rpm": "900"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "5LD",
+    "ps": "83",
+    "hp": "82",
+    "kw": "61.05",
+    "rpm": "900"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LD",
+    "ps": "100",
+    "hp": "99",
+    "kw": "73.55",
+    "rpm": "900"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "2ES",
+    "ps": "27",
+    "hp": "27",
+    "kw": "19.86",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3ES",
+    "ps": "56",
+    "hp": "55",
+    "kw": "41.19",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4ES",
+    "ps": "74",
+    "hp": "73",
+    "kw": "54.43",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3EK",
+    "ps": "56",
+    "hp": "55",
+    "kw": "41.19",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4EK",
+    "ps": "74",
+    "hp": "73",
+    "kw": "54.43",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4ED",
+    "ps": "82",
+    "hp": "81",
+    "kw": "60.31",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3KS",
+    "ps": "50",
+    "hp": "49",
+    "kw": "36.77",
+    "rpm": "1050"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4KS",
+    "ps": "65",
+    "hp": "64",
+    "kw": "47.81",
+    "rpm": "1050"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3KD",
+    "ps": "60",
+    "hp": "59",
+    "kw": "44.13",
+    "rpm": "1200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "5KD",
+    "ps": "100",
+    "hp": "99",
+    "kw": "73.55",
+    "rpm": "1200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4KD",
+    "ps": "80",
+    "hp": "79",
+    "kw": "58.84",
+    "rpm": "1200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6KD",
+    "ps": "120",
+    "hp": "118",
+    "kw": "88.26",
+    "rpm": "1200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6KD-HT",
+    "ps": "200",
+    "hp": "197",
+    "kw": "147.1",
+    "rpm": "1200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3E15B",
+    "ps": "40",
+    "hp": "39",
+    "kw": "29.42",
+    "rpm": "2700"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3EH15",
+    "ps": "42",
+    "hp": "41",
+    "kw": "30.89",
+    "rpm": "2800"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3HMK",
+    "ps": "24",
+    "hp": "24",
+    "kw": "17.65",
+    "rpm": "3000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3L15",
+    "ps": "45",
+    "hp": "44",
+    "kw": "33.1",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3LM",
+    "ps": "36",
+    "hp": "36",
+    "kw": "26.48",
+    "rpm": "3000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4HB35",
+    "ps": "110",
+    "hp": "108",
+    "kw": "80.9",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4H25AK",
+    "ps": "45",
+    "hp": "44",
+    "kw": "33.1",
+    "rpm": "1200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4H25AK (T)",
+    "ps": "90",
+    "hp": "89",
+    "kw": "66.19",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3Z15",
+    "ps": "45",
+    "hp": "44",
+    "kw": "33.1",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LAH-ST",
+    "ps": "550",
+    "hp": "542",
+    "kw": "404.52",
+    "rpm": "1850"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LAHK-ST1",
+    "ps": "620",
+    "hp": "612",
+    "kw": "456.01",
+    "rpm": "1900"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6KY-ET",
+    "ps": "580",
+    "hp": "572",
+    "kw": "426.59",
+    "rpm": "2140"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6GX-ET",
+    "ps": "430",
+    "hp": "424",
+    "kw": "316.26",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6GX-ET2",
+    "ps": "455",
+    "hp": "449",
+    "kw": "334.65",
+    "rpm": "2330"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6GX-GT",
+    "ps": "550",
+    "hp": "542",
+    "kw": "404.52",
+    "rpm": "2430"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LP-DT",
+    "ps": "205",
+    "hp": "202",
+    "kw": "150.78",
+    "rpm": "3600"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LP-ST",
+    "ps": "245",
+    "hp": "242",
+    "kw": "180.2",
+    "rpm": "3600"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LP-WST",
+    "ps": "254",
+    "hp": "251",
+    "kw": "186.82",
+    "rpm": "3680"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LP-WDT",
+    "ps": "235",
+    "hp": "232",
+    "kw": "172.84",
+    "rpm": "3680"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6EY17WG",
+    "ps": "1100",
+    "hp": "1085",
+    "kw": "809.05",
+    "rpm": "1450"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6EY17WG1",
+    "ps": "1051",
+    "hp": "1037",
+    "kw": "773.01",
+    "rpm": "1350"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6EY17WU",
+    "ps": "910",
+    "hp": "898",
+    "kw": "669.3",
+    "rpm": "1350"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6RY17Q-GW",
+    "ps": "910",
+    "hp": "898",
+    "kw": "669.3",
+    "rpm": "1450"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3KH",
+    "ps": "82",
+    "hp": "81",
+    "kw": "60.31",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3MD",
+    "ps": "39",
+    "hp": "38",
+    "kw": "28.68",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4MD",
+    "ps": "52",
+    "hp": "51",
+    "kw": "38.25",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "5MD",
+    "ps": "65",
+    "hp": "64",
+    "kw": "47.81",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6MD",
+    "ps": "78",
+    "hp": "77",
+    "kw": "57.37",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4DH",
+    "ps": "70",
+    "hp": "69",
+    "kw": "51.48",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6DH",
+    "ps": "105",
+    "hp": "104",
+    "kw": "77.23",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6ES",
+    "ps": "110",
+    "hp": "108",
+    "kw": "80.9",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6ES-HT",
+    "ps": "160",
+    "hp": "158",
+    "kw": "117.68",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3PH",
+    "ps": "40",
+    "hp": "39",
+    "kw": "29.42",
+    "rpm": "2700"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4PH",
+    "ps": "55",
+    "hp": "54",
+    "kw": "40.45",
+    "rpm": "2700"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4PH-HT",
+    "ps": "90",
+    "hp": "89",
+    "kw": "66.19",
+    "rpm": "2800"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6PH-T",
+    "ps": "110",
+    "hp": "108",
+    "kw": "80.9",
+    "rpm": "2700"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6PH-HT",
+    "ps": "130",
+    "hp": "128",
+    "kw": "95.61",
+    "rpm": "2700"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4CH15A",
+    "ps": "80",
+    "hp": "79",
+    "kw": "58.84",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4CH25A",
+    "ps": "80",
+    "hp": "79",
+    "kw": "58.84",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4CHK",
+    "ps": "70",
+    "hp": "69",
+    "kw": "51.48",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4CHK-HT",
+    "ps": "105",
+    "hp": "104",
+    "kw": "77.23",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4CHK-DT",
+    "ps": "190",
+    "hp": "187",
+    "kw": "139.74",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6CH-UT",
+    "ps": "230",
+    "hp": "227",
+    "kw": "169.16",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6CH-ST",
+    "ps": "245",
+    "hp": "242",
+    "kw": "180.2",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6DHK",
+    "ps": "90",
+    "hp": "89",
+    "kw": "66.19",
+    "rpm": "2700"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6DHK-HT",
+    "ps": "140",
+    "hp": "138",
+    "kw": "102.97",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6GHA",
+    "ps": "130",
+    "hp": "128",
+    "kw": "95.61",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6GHD50",
+    "ps": "180",
+    "hp": "178",
+    "kw": "132.39",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6GH1-HT",
+    "ps": "220",
+    "hp": "217",
+    "kw": "161.81",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6GH-DT",
+    "ps": "250",
+    "hp": "247",
+    "kw": "183.87",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6GH-DTF",
+    "ps": "270",
+    "hp": "266",
+    "kw": "198.58",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6GH-UT",
+    "ps": "300",
+    "hp": "296",
+    "kw": "220.65",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6GH-ST",
+    "ps": "320",
+    "hp": "316",
+    "kw": "235.36",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6GHA-ST",
+    "ps": "360",
+    "hp": "355",
+    "kw": "264.78",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6GHA-ET",
+    "ps": "440",
+    "hp": "434",
+    "kw": "323.62",
+    "rpm": "2250"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LAAK",
+    "ps": "240",
+    "hp": "237",
+    "kw": "176.52",
+    "rpm": "1900"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LAAK-DT",
+    "ps": "400",
+    "hp": "395",
+    "kw": "294.2",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LAAK-UT",
+    "ps": "450",
+    "hp": "444",
+    "kw": "330.97",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LAK-ST",
+    "ps": "520",
+    "hp": "513",
+    "kw": "382.46",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "8LAS-DT",
+    "ps": "500",
+    "hp": "493",
+    "kw": "367.75",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "8LAS-UT",
+    "ps": "570",
+    "hp": "562",
+    "kw": "419.23",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "8LAA-DTE",
+    "ps": "530",
+    "hp": "523",
+    "kw": "389.81",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "8LAAK-UTE",
+    "ps": "650",
+    "hp": "641",
+    "kw": "478.07",
+    "rpm": "1850"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "12LAA-DTE",
+    "ps": "800",
+    "hp": "789",
+    "kw": "588.4",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "3BNK",
+    "ps": "100",
+    "hp": "99",
+    "kw": "73.55",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6BNK",
+    "ps": "200",
+    "hp": "197",
+    "kw": "147.1",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6BNK-DT",
+    "ps": "330",
+    "hp": "325",
+    "kw": "242.71",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6BNK-UT",
+    "ps": "370",
+    "hp": "365",
+    "kw": "272.13",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4LM",
+    "ps": "48",
+    "hp": "47",
+    "kw": "35.3",
+    "rpm": "3000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4LM-HT",
+    "ps": "72",
+    "hp": "71",
+    "kw": "52.96",
+    "rpm": "3000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4LM-DT",
+    "ps": "80",
+    "hp": "79",
+    "kw": "58.84",
+    "rpm": "3000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6KE-HT",
+    "ps": "330",
+    "hp": "325",
+    "kw": "242.71",
+    "rpm": "1900"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6KES-HT",
+    "ps": "360",
+    "hp": "355",
+    "kw": "264.78",
+    "rpm": "1900"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6KEK-DT",
+    "ps": "450",
+    "hp": "444",
+    "kw": "330.97",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6KH-UT",
+    "ps": "350",
+    "hp": "345",
+    "kw": "257.42",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6KH-ET",
+    "ps": "450",
+    "hp": "444",
+    "kw": "330.97",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6KH-ST",
+    "ps": "410",
+    "hp": "404",
+    "kw": "301.55",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6KX-ET",
+    "ps": "520",
+    "hp": "513",
+    "kw": "382.46",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6KX-GT",
+    "ps": "675",
+    "hp": "666",
+    "kw": "496.46",
+    "rpm": "2130"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6KXZ-WGT8",
+    "ps": "544",
+    "hp": "537",
+    "kw": "400.11",
+    "rpm": "2084"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6KXZP-WGT",
+    "ps": "683",
+    "hp": "674",
+    "kw": "502.35",
+    "rpm": "2035"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6KXZS-WGT",
+    "ps": "734",
+    "hp": "724",
+    "kw": "539.86",
+    "rpm": "2080"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6KAK-HT",
+    "ps": "300",
+    "hp": "296",
+    "kw": "220.65",
+    "rpm": "1840"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6KB-DT",
+    "ps": "320",
+    "hp": "316",
+    "kw": "235.36",
+    "rpm": "1900"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6Z-DT",
+    "ps": "1400",
+    "hp": "1381",
+    "kw": "1029.7",
+    "rpm": "680"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6Z-ST",
+    "ps": "1600",
+    "hp": "1578",
+    "kw": "1176.8",
+    "rpm": "680"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6Z-ET",
+    "ps": "1800",
+    "hp": "1775",
+    "kw": "1323.9",
+    "rpm": "680"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4CX-ET",
+    "ps": "190",
+    "hp": "187",
+    "kw": "139.74",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4CX-ETZ",
+    "ps": "195",
+    "hp": "192",
+    "kw": "143.42",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4CX-GT",
+    "ps": "230",
+    "hp": "227",
+    "kw": "169.16",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6CA-ET",
+    "ps": "300",
+    "hp": "296",
+    "kw": "220.65",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6CA-GT",
+    "ps": "330",
+    "hp": "325",
+    "kw": "242.71",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6CX-ET",
+    "ps": "290",
+    "hp": "286",
+    "kw": "213.29",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6CX-ETYE",
+    "ps": "320",
+    "hp": "316",
+    "kw": "235.36",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6CX-GT",
+    "ps": "360",
+    "hp": "355",
+    "kw": "264.78",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "S165-ST",
+    "ps": "550",
+    "hp": "542",
+    "kw": "404.52",
+    "rpm": "1300"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6M",
+    "ps": "200",
+    "hp": "197",
+    "kw": "147.1",
+    "rpm": "750"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6MA",
+    "ps": "230",
+    "hp": "227",
+    "kw": "169.16",
+    "rpm": "900"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6M-HTS",
+    "ps": "400",
+    "hp": "395",
+    "kw": "294.2",
+    "rpm": "750"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6MA-HTS",
+    "ps": "480",
+    "hp": "473",
+    "kw": "353.04",
+    "rpm": "900"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6R",
+    "ps": "165",
+    "hp": "163",
+    "kw": "121.36",
+    "rpm": "1000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6R-T",
+    "ps": "240",
+    "hp": "237",
+    "kw": "176.52",
+    "rpm": "1000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6R-HT",
+    "ps": "280",
+    "hp": "276",
+    "kw": "205.94",
+    "rpm": "1000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6RA-HT",
+    "ps": "330",
+    "hp": "325",
+    "kw": "242.71",
+    "rpm": "1200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6UA-UT",
+    "ps": "750",
+    "hp": "740",
+    "kw": "551.62",
+    "rpm": "900"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6G-ST",
+    "ps": "1000",
+    "hp": "986",
+    "kw": "735.5",
+    "rpm": "750"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6G-ET",
+    "ps": "1100",
+    "hp": "1085",
+    "kw": "809.05",
+    "rpm": "750"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6GA-ET",
+    "ps": "1200",
+    "hp": "1184",
+    "kw": "882.6",
+    "rpm": "820"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6KD(G)-HTE",
+    "ps": "240",
+    "hp": "237",
+    "kw": "176.52",
+    "rpm": "1400"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "4TY120",
+    "ps": "77",
+    "hp": "76",
+    "kw": "56.63",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6TY120",
+    "ps": "115",
+    "hp": "113",
+    "kw": "84.58",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6HAK",
+    "ps": "165",
+    "hp": "163",
+    "kw": "121.36",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6HAK-HT",
+    "ps": "240",
+    "hp": "237",
+    "kw": "176.52",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6HAK-DT",
+    "ps": "280",
+    "hp": "276",
+    "kw": "205.94",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6HA2M-WHT",
+    "ps": "350",
+    "hp": "345",
+    "kw": "257.42",
+    "rpm": "1950"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6HA2M-WDT",
+    "ps": "405",
+    "hp": "399",
+    "kw": "297.88",
+    "rpm": "1950"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6HYM-WET",
+    "ps": "650",
+    "hp": "641",
+    "kw": "478.07",
+    "rpm": "2150"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6HYS-WET",
+    "ps": "612",
+    "hp": "604",
+    "kw": "450.13",
+    "rpm": "2132"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6HYP-WET",
+    "ps": "575",
+    "hp": "567",
+    "kw": "422.91",
+    "rpm": "2084"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6AYM-WST",
+    "ps": "659",
+    "hp": "650",
+    "kw": "484.69",
+    "rpm": "1900"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6AYM-WET",
+    "ps": "829",
+    "hp": "818",
+    "kw": "609.73",
+    "rpm": "1900"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6AYP-WGT",
+    "ps": "829",
+    "hp": "818",
+    "kw": "609.73",
+    "rpm": "1880"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6AYP1-WGT",
+    "ps": "775",
+    "hp": "764",
+    "kw": "570.01",
+    "rpm": "1880"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6AYB-WGT",
+    "ps": "734",
+    "hp": "724",
+    "kw": "539.86",
+    "rpm": "1938"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6AYB-WGT8",
+    "ps": "544",
+    "hp": "537",
+    "kw": "400.11",
+    "rpm": "1938"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6AYB1-WGT",
+    "ps": "653",
+    "hp": "644",
+    "kw": "480.28",
+    "rpm": "1938"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LY-UT",
+    "ps": "245",
+    "hp": "242",
+    "kw": "180.2",
+    "rpm": "3000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LY-ST",
+    "ps": "270",
+    "hp": "266",
+    "kw": "198.58",
+    "rpm": "3000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LY-WUT",
+    "ps": "280",
+    "hp": "276",
+    "kw": "205.94",
+    "rpm": "3100"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LY-WUTZY",
+    "ps": "290",
+    "hp": "286",
+    "kw": "213.29",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LY2-WDT",
+    "ps": "291",
+    "hp": "287",
+    "kw": "214.03",
+    "rpm": "3100"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LY2-WST",
+    "ps": "345",
+    "hp": "340",
+    "kw": "253.75",
+    "rpm": "3100"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LY2-WDTZY",
+    "ps": "320",
+    "hp": "316",
+    "kw": "235.36",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LX-ET",
+    "ps": "650",
+    "hp": "641",
+    "kw": "478.07",
+    "rpm": "1900"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LX-ET2",
+    "ps": "700",
+    "hp": "690",
+    "kw": "514.85",
+    "rpm": "1950"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LX-ET3",
+    "ps": "770",
+    "hp": "759",
+    "kw": "566.33",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LXHP-GT",
+    "ps": "795",
+    "hp": "784",
+    "kw": "584.72",
+    "rpm": "1940"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6LXHS-GT",
+    "ps": "865",
+    "hp": "853",
+    "kw": "636.21",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6CZAS-WGT",
+    "ps": "572",
+    "hp": "564",
+    "kw": "420.71",
+    "rpm": "2326"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6CZAP-WGT",
+    "ps": "529",
+    "hp": "522",
+    "kw": "389.08",
+    "rpm": "2229"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6CZS-GT",
+    "ps": "572",
+    "hp": "564",
+    "kw": "420.71",
+    "rpm": "2326"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6CZS-WGT-3",
+    "ps": "714",
+    "hp": "704",
+    "kw": "525.15",
+    "rpm": "2530"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6CZP-GT",
+    "ps": "529",
+    "hp": "522",
+    "kw": "389.08",
+    "rpm": "2229"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6NH160-EN",
+    "ps": "720",
+    "hp": "710",
+    "kw": "529.65",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Yanmar",
+    "hieu_may": "6HYS-WGT",
+    "ps": "720",
+    "hp": "710",
+    "kw": "529.56",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD31",
+    "ps": "105",
+    "hp": "104",
+    "kw": "77.23",
+    "rpm": "3250"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD41",
+    "ps": "160",
+    "hp": "158",
+    "kw": "117.68",
+    "rpm": "3250"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD41H",
+    "ps": "145",
+    "hp": "143",
+    "kw": "106.65",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD41A-J",
+    "ps": "150",
+    "hp": "148",
+    "kw": "110.32",
+    "rpm": "3250"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD60A",
+    "ps": "150",
+    "hp": "148",
+    "kw": "110.32",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD60B",
+    "ps": "184",
+    "hp": "181",
+    "kw": "135.33",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD60E",
+    "ps": "255",
+    "hp": "252",
+    "kw": "187.55",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD61",
+    "ps": "220",
+    "hp": "217",
+    "kw": "161.81",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD61A",
+    "ps": "220",
+    "hp": "217",
+    "kw": "161.81",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD70C",
+    "ps": "210",
+    "hp": "207",
+    "kw": "154.45",
+    "rpm": "2400"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD70D",
+    "ps": "210",
+    "hp": "207",
+    "kw": "154.45",
+    "rpm": "2400"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD70E",
+    "ps": "300",
+    "hp": "296",
+    "kw": "220.65",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD71",
+    "ps": "222",
+    "hp": "219",
+    "kw": "163.28",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD71B",
+    "ps": "286",
+    "hp": "282",
+    "kw": "210.35",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD72",
+    "ps": "300",
+    "hp": "296",
+    "kw": "220.65",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD102",
+    "ps": "272",
+    "hp": "268",
+    "kw": "200.06",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD120B",
+    "ps": "341",
+    "hp": "336",
+    "kw": "250.81",
+    "rpm": "1200"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD121",
+    "ps": "350",
+    "hp": "345",
+    "kw": "257.42",
+    "rpm": "1940"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD122A",
+    "ps": "380",
+    "hp": "375",
+    "kw": "279.49",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TMD31",
+    "ps": "90",
+    "hp": "89",
+    "kw": "66.19",
+    "rpm": "3250"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TMD40A",
+    "ps": "91",
+    "hp": "90",
+    "kw": "66.93",
+    "rpm": "3000"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TMD41",
+    "ps": "130",
+    "hp": "180",
+    "kw": "95.61",
+    "rpm": "3250"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TMD70C",
+    "ps": "163",
+    "hp": "161",
+    "kw": "119.89",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TMD100A",
+    "ps": "195",
+    "hp": "192",
+    "kw": "143.42",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TMD102A",
+    "ps": "360",
+    "hp": "355",
+    "kw": "264.78",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TMD120A",
+    "ps": "279",
+    "hp": "275",
+    "kw": "205.2",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "300",
+    "ps": "TMD121",
+    "hp": "296",
+    "kw": "220.65",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TMD122",
+    "ps": "340",
+    "hp": "335",
+    "kw": "250.07",
+    "rpm": "1900"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TD120",
+    "ps": "320",
+    "hp": "316",
+    "kw": "235.36",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "MD31",
+    "ps": "50",
+    "hp": "49",
+    "kw": "36.77",
+    "rpm": "3250"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "MD70C",
+    "ps": "139",
+    "hp": "137",
+    "kw": "102.23",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "MD100B",
+    "ps": "144",
+    "hp": "142",
+    "kw": "105.91",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "MD120A",
+    "ps": "211",
+    "hp": "208",
+    "kw": "155.19",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD 122D",
+    "ps": "432",
+    "hp": "426",
+    "kw": "317.74",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD 122P",
+    "ps": "580",
+    "hp": "572",
+    "kw": "426.59",
+    "rpm": "2250"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD163P",
+    "ps": "751",
+    "hp": "741",
+    "kw": "552.36",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD162A",
+    "ps": "450",
+    "hp": "444",
+    "kw": "330.97",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD102D",
+    "ps": "455",
+    "hp": "449",
+    "kw": "334.65",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD165P",
+    "ps": "751",
+    "hp": "741",
+    "kw": "552.36",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD72P-A",
+    "ps": "430",
+    "hp": "424",
+    "kw": "316.26",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Volvo Penta",
+    "hieu_may": "TAMD162C",
+    "ps": "510",
+    "hp": "503",
+    "kw": "375.1",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "WO4C-T",
+    "ps": "140",
+    "hp": "138",
+    "kw": "102.97",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "WO4D",
+    "ps": "120",
+    "hp": "118",
+    "kw": "88.26",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "WO6D",
+    "ps": "145",
+    "hp": "143",
+    "kw": "106.65",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "WO6E",
+    "ps": "165",
+    "hp": "163",
+    "kw": "121.36",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "JO8C-TG",
+    "ps": "250",
+    "hp": "247",
+    "kw": "183.87",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "JO8C-F",
+    "ps": "205",
+    "hp": "202",
+    "kw": "150.78",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "JO5C",
+    "ps": "125",
+    "hp": "123",
+    "kw": "91.94",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "JO5C-T",
+    "ps": "170",
+    "hp": "168",
+    "kw": "125.03",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "HO6C",
+    "ps": "170",
+    "hp": "168",
+    "kw": "125.03",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "HO6C-TI",
+    "ps": "240",
+    "hp": "237",
+    "kw": "176.52",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "HO6B",
+    "ps": "170",
+    "hp": "168",
+    "kw": "125.03",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Hino (yamaha)",
+    "hieu_may": "HO6BT",
+    "ps": "230",
+    "hp": "227",
+    "kw": "169.16",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "HO7C",
+    "ps": "170",
+    "hp": "168",
+    "kw": "125.03",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "HO7C-T",
+    "ps": "215",
+    "hp": "212",
+    "kw": "158.13",
+    "rpm": "2700"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "HO7D",
+    "ps": "195",
+    "hp": "192",
+    "kw": "143.42",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "DM100",
+    "ps": "100",
+    "hp": "99",
+    "kw": "73.55",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "DQ100",
+    "ps": "110",
+    "hp": "108",
+    "kw": "80.9",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EC100",
+    "ps": "130",
+    "hp": "128",
+    "kw": "95.61",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EH100",
+    "ps": "145",
+    "hp": "143",
+    "kw": "106.65",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EH300",
+    "ps": "150",
+    "hp": "148",
+    "kw": "110.32",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EH500",
+    "ps": "160",
+    "hp": "158",
+    "kw": "117.68",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EH700",
+    "ps": "170",
+    "hp": "168",
+    "kw": "125.03",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EL100",
+    "ps": "185",
+    "hp": "182",
+    "kw": "136.07",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EF100",
+    "ps": "280",
+    "hp": "276",
+    "kw": "205.94",
+    "rpm": "2400"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EF300",
+    "ps": "295",
+    "hp": "291",
+    "kw": "216.97",
+    "rpm": "2400"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EF350",
+    "ps": "300",
+    "hp": "296",
+    "kw": "220.65",
+    "rpm": "2400"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EF500",
+    "ps": "305",
+    "hp": "301",
+    "kw": "224.33",
+    "rpm": "2400"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EF550",
+    "ps": "315",
+    "hp": "311",
+    "kw": "231.68",
+    "rpm": "2400"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EF700",
+    "ps": "330",
+    "hp": "325",
+    "kw": "242.71",
+    "rpm": "2400"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EF750",
+    "ps": "360",
+    "hp": "355",
+    "kw": "264.78",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EP100",
+    "ps": "280",
+    "hp": "276",
+    "kw": "205.94",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EP100-T",
+    "ps": "290",
+    "hp": "286",
+    "kw": "213.29",
+    "rpm": "2150"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "DS50",
+    "ps": "140",
+    "hp": "138",
+    "kw": "102.97",
+    "rpm": "2400"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "DS70",
+    "ps": "160",
+    "hp": "158",
+    "kw": "117.68",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EB100",
+    "ps": "175",
+    "hp": "173",
+    "kw": "128.71",
+    "rpm": "2350"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EB200",
+    "ps": "175",
+    "hp": "173",
+    "kw": "128.71",
+    "rpm": "2350"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EB300",
+    "ps": "190",
+    "hp": "187",
+    "kw": "139.74",
+    "rpm": "2350"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EB400",
+    "ps": "190",
+    "hp": "187",
+    "kw": "139.74",
+    "rpm": "2350"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EC100",
+    "ps": "130",
+    "hp": "128",
+    "kw": "95.61",
+    "rpm": "3000"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "ED100",
+    "ps": "260",
+    "hp": "256",
+    "kw": "191.23",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EK100",
+    "ps": "270",
+    "hp": "266",
+    "kw": "198.58",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EK200",
+    "ps": "270",
+    "hp": "266",
+    "kw": "198.58",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "EM100",
+    "ps": "200",
+    "hp": "197",
+    "kw": "147.1",
+    "rpm": "2700"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "ER200",
+    "ps": "225",
+    "hp": "222",
+    "kw": "165.49",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "DK10",
+    "ps": "205",
+    "hp": "120",
+    "kw": "150",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "DK20",
+    "ps": "260",
+    "hp": "256",
+    "kw": "191.23",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "K13C",
+    "ps": "335",
+    "hp": "330",
+    "kw": "246.39",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "K13D",
+    "ps": "270",
+    "hp": "266",
+    "kw": "198.58",
+    "rpm": "2150"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "P11C",
+    "ps": "300",
+    "hp": "296",
+    "kw": "220.65",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "F17E",
+    "ps": "335",
+    "hp": "250.07",
+    "kw": "264.78",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "F17D",
+    "ps": "310",
+    "hp": "306",
+    "kw": "228",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "F17C",
+    "ps": "360",
+    "hp": "355",
+    "kw": "264.78",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "F20C",
+    "ps": "380",
+    "hp": "375",
+    "kw": "279.49",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "F21C",
+    "ps": "390",
+    "hp": "385",
+    "kw": "286.84",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "V21C",
+    "ps": "390",
+    "hp": "385",
+    "kw": "286.84",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "V22C",
+    "ps": "420",
+    "hp": "414",
+    "kw": "308.91",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "V22D",
+    "ps": "410",
+    "hp": "404",
+    "kw": "301.55",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "V25C",
+    "ps": "450",
+    "hp": "444",
+    "kw": "330.97",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "V26C",
+    "ps": "500",
+    "hp": "493",
+    "kw": "367.75",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "PO9B",
+    "ps": "295",
+    "hp": "291",
+    "kw": "216.97",
+    "rpm": "2150"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "PO9C",
+    "ps": "295",
+    "hp": "291",
+    "kw": "216.97",
+    "rpm": "2150"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "PO9E",
+    "ps": "295",
+    "hp": "291",
+    "kw": "216.97",
+    "rpm": "2150"
+  },
+  {
+    "hang": "Hino",
+    "hieu_may": "E13C",
+    "ps": "449",
+    "hp": "443",
+    "kw": "330.24",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "CD17",
+    "ps": "61",
+    "hp": "60",
+    "kw": "44.87",
+    "rpm": "5000"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "SD20",
+    "ps": "60",
+    "hp": "59",
+    "kw": "44.13",
+    "rpm": "4000"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "SD22",
+    "ps": "65",
+    "hp": "64",
+    "kw": "47.81",
+    "rpm": "4000"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "SD23",
+    "ps": "76",
+    "hp": "75",
+    "kw": "55.9",
+    "rpm": "4300"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "SD25",
+    "ps": "77",
+    "hp": "76",
+    "kw": "56.63",
+    "rpm": "4000"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "SD33",
+    "ps": "95",
+    "hp": "94",
+    "kw": "69.87",
+    "rpm": "3600"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "LD20",
+    "ps": "65",
+    "hp": "64",
+    "kw": "47.81",
+    "rpm": "4600"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "LD20(T)",
+    "ps": "81",
+    "hp": "80",
+    "kw": "59.58",
+    "rpm": "4400"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "LD28",
+    "ps": "91",
+    "hp": "90",
+    "kw": "66.93",
+    "rpm": "4600"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "TD23",
+    "ps": "76",
+    "hp": "75",
+    "kw": "55.9",
+    "rpm": "4300"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "TD27",
+    "ps": "85",
+    "hp": "84",
+    "kw": "62.52",
+    "rpm": "4300"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "TD42",
+    "ps": "125",
+    "hp": "123",
+    "kw": "91.94",
+    "rpm": "4000"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "BD30",
+    "ps": "85",
+    "hp": "84",
+    "kw": "62.52",
+    "rpm": "3600"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "BD30(T)",
+    "ps": "100",
+    "hp": "99",
+    "kw": "73.55",
+    "rpm": "3600"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "ED30",
+    "ps": "85",
+    "hp": "84",
+    "kw": "62.52",
+    "rpm": "3600"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "ED33",
+    "ps": "90",
+    "hp": "89",
+    "kw": "66.19",
+    "rpm": "3600"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "FD33",
+    "ps": "100",
+    "hp": "99",
+    "kw": "73.55",
+    "rpm": "3600"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "FD35",
+    "ps": "105",
+    "hp": "104",
+    "kw": "77.23",
+    "rpm": "3500"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "FD35(T)",
+    "ps": "130",
+    "hp": "128",
+    "kw": "95.61",
+    "rpm": "3500"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "FD35TA",
+    "ps": "130",
+    "hp": "128",
+    "kw": "95.61",
+    "rpm": "3300"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "FD42",
+    "ps": "125",
+    "hp": "123",
+    "kw": "91.94",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "FD46",
+    "ps": "135",
+    "hp": "133",
+    "kw": "99.29",
+    "rpm": "3000"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "RD28",
+    "ps": "96",
+    "hp": "95",
+    "kw": "70.61",
+    "rpm": "4800"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "FD6",
+    "ps": "150",
+    "hp": "148",
+    "kw": "110.32",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "FD6(T)",
+    "ps": "175",
+    "hp": "173",
+    "kw": "128.71",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "FD606(P)",
+    "ps": "115",
+    "hp": "113",
+    "kw": "84.58",
+    "rpm": "2700"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "FD6T06",
+    "ps": "140",
+    "hp": "138",
+    "kw": "102.97",
+    "rpm": "2700"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "FD6TA06",
+    "ps": "175",
+    "hp": "173",
+    "kw": "128.71",
+    "rpm": "2700"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "FE6",
+    "ps": "180",
+    "hp": "178",
+    "kw": "132.39",
+    "rpm": "3000"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "FE6(T)",
+    "ps": "200",
+    "hp": "197",
+    "kw": "147.1",
+    "rpm": "2800"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "ND6",
+    "ps": "135",
+    "hp": "133",
+    "kw": "99.29",
+    "rpm": "2800"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "PD6(H)",
+    "ps": "185",
+    "hp": "182",
+    "kw": "136.07",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "PD6(T)",
+    "ps": "260",
+    "hp": "256",
+    "kw": "191.23",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "PE6(H)",
+    "ps": "230",
+    "hp": "227",
+    "kw": "169.16",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "PE6(T)",
+    "ps": "290",
+    "hp": "286",
+    "kw": "213.29",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "PF6",
+    "ps": "210",
+    "hp": "207",
+    "kw": "154.45",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "RD8",
+    "ps": "280",
+    "hp": "276",
+    "kw": "205.84",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "RD8(T)",
+    "ps": "330",
+    "hp": "325",
+    "kw": "242.71",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "RE8",
+    "ps": "315",
+    "hp": "311",
+    "kw": "231.68",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "RE10",
+    "ps": "370",
+    "hp": "365",
+    "kw": "272.13",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "RF8",
+    "ps": "340",
+    "hp": "335",
+    "kw": "250.07",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "RF10",
+    "ps": "420",
+    "hp": "414",
+    "kw": "308.91",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "RD10",
+    "ps": "350",
+    "hp": "345",
+    "kw": "257.42",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "FM6TA06",
+    "ps": "245",
+    "hp": "242",
+    "kw": "180.2",
+    "rpm": "2700"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "PD616",
+    "ps": "160",
+    "hp": "158",
+    "kw": "117.68",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "PD6T16",
+    "ps": "210",
+    "hp": "207",
+    "kw": "154.45",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "PD6TA06",
+    "ps": "247",
+    "hp": "244",
+    "kw": "181.67",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "PD6TA16",
+    "ps": "210",
+    "hp": "207",
+    "kw": "154.45",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "PE6T06",
+    "ps": "230",
+    "hp": "227",
+    "kw": "169.16",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "PE6TA06",
+    "ps": "270",
+    "hp": "266",
+    "kw": "198.58",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "PM6TA06",
+    "ps": "270",
+    "hp": "266",
+    "kw": "198.58",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "PN6TA",
+    "ps": "420",
+    "hp": "414",
+    "kw": "308.91",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "RD10T06Z",
+    "ps": "360",
+    "hp": "355",
+    "kw": "264.78",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "RD10TA06Z",
+    "ps": "450",
+    "hp": "444",
+    "kw": "330.97",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "RD8T06Z",
+    "ps": "280",
+    "hp": "276",
+    "kw": "205.94",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "RD8TA06Z",
+    "ps": "360",
+    "hp": "355",
+    "kw": "264.78",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "RE10TA06",
+    "ps": "500",
+    "hp": "493",
+    "kw": "367.75",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "RM8TA06",
+    "ps": "350",
+    "hp": "345",
+    "kw": "257.42",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "RN10TA06",
+    "ps": "409",
+    "hp": "",
+    "kw": "",
+    "rpm": "2230"
+  },
+  {
+    "hang": "Nissan",
+    "hieu_may": "NM6TA",
+    "ps": "340",
+    "hp": "335",
+    "kw": "250.07",
+    "rpm": "2400"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "M6D22T",
+    "ps": "252",
+    "hp": "249",
+    "kw": "185.35",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "M6D22TI",
+    "ps": "325",
+    "hp": "321",
+    "kw": "239.04",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "6MD30",
+    "ps": "210",
+    "hp": "207",
+    "kw": "154.45",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "M6D30T",
+    "ps": "280",
+    "hp": "276",
+    "kw": "205.84",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "M6D30TI",
+    "ps": "360",
+    "hp": "355",
+    "kw": "264.78",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "M6D33TI",
+    "ps": "430",
+    "hp": "424",
+    "kw": "316.26",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D8AY",
+    "ps": "320",
+    "hp": "316",
+    "kw": "235.36",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D8AW",
+    "ps": "380",
+    "hp": "375",
+    "kw": "279.49",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D8AX",
+    "ps": "373",
+    "hp": "368",
+    "kw": "274.34",
+    "rpm": "1818"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D8AB",
+    "ps": "355",
+    "hp": "350",
+    "kw": "261.1",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D8AV",
+    "ps": "290",
+    "hp": "286",
+    "kw": "213.29",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D4AF-G",
+    "ps": "45",
+    "hp": "44",
+    "kw": "33.1",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D4AK-G",
+    "ps": "54",
+    "hp": "53",
+    "kw": "39.72",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D4DA-G",
+    "ps": "75",
+    "hp": "74",
+    "kw": "55.16",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6BT-G",
+    "ps": "140",
+    "hp": "138",
+    "kw": "102.97",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6ABS",
+    "ps": "310",
+    "hp": "306",
+    "kw": "228",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6AU(G)",
+    "ps": "171",
+    "hp": "169",
+    "kw": "125.77",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6AU",
+    "ps": "190",
+    "hp": "187",
+    "kw": "139.74",
+    "rpm": "1800"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6AU(T)",
+    "ps": "310",
+    "hp": "306",
+    "kw": "228",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6AV",
+    "ps": "235",
+    "hp": "232",
+    "kw": "172.84",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6AVT",
+    "ps": "310",
+    "hp": "306",
+    "kw": "228",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6AC(6D24TI)",
+    "ps": "340",
+    "hp": "335",
+    "kw": "250.07",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6AC-G1",
+    "ps": "288",
+    "hp": "284",
+    "kw": "211.82",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6ACX",
+    "ps": "340",
+    "hp": "335",
+    "kw": "250.07",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6ACY",
+    "ps": "350",
+    "hp": "345",
+    "kw": "257.42",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6AZ",
+    "ps": "260",
+    "hp": "256",
+    "kw": "191.23",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6AZ-G1",
+    "ps": "243",
+    "hp": "240",
+    "kw": "178.73",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6AZ-G2",
+    "ps": "207",
+    "hp": "204",
+    "kw": "152.25",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6ARZ(T)",
+    "ps": "280",
+    "hp": "276",
+    "kw": "205.94",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "MD6ABT",
+    "ps": "310",
+    "hp": "306",
+    "kw": "228",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6BV",
+    "ps": "145",
+    "hp": "143",
+    "kw": "106.65",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6BS(6D16)",
+    "ps": "142",
+    "hp": "140",
+    "kw": "104.44",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6BJM",
+    "ps": "170",
+    "hp": "168",
+    "kw": "125.03",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6BR",
+    "ps": "128",
+    "hp": "126",
+    "kw": "94.14",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6BHR",
+    "ps": "167",
+    "hp": "165",
+    "kw": "122.83",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6BR-T",
+    "ps": "188",
+    "hp": "185",
+    "kw": "138.27",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6CA",
+    "ps": "380",
+    "hp": "375",
+    "kw": "279.49",
+    "rpm": "1900"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6CA-G1",
+    "ps": "360",
+    "hp": "355",
+    "kw": "264.78",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6CA-G2",
+    "ps": "400",
+    "hp": "395",
+    "kw": "294.2",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6CA-G3",
+    "ps": "360",
+    "hp": "355",
+    "kw": "264.78",
+    "rpm": "1500"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6DA19",
+    "ps": "196",
+    "hp": "193",
+    "kw": "144.16",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "D6DA22",
+    "ps": "225",
+    "hp": "222",
+    "kw": "165.49",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "H6D2TA",
+    "ps": "325",
+    "hp": "321",
+    "kw": "239.04",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "H6D2T2",
+    "ps": "283",
+    "hp": "279",
+    "kw": "208.15",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "H6D8TA",
+    "ps": "450",
+    "hp": "444",
+    "kw": "330.97",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "H6D9TA",
+    "ps": "500",
+    "hp": "493",
+    "kw": "367.75",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "H6D1",
+    "ps": "134",
+    "hp": "132",
+    "kw": "98.56",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "H6D1T",
+    "ps": "180",
+    "hp": "178",
+    "kw": "132.39",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "H6D1TA",
+    "ps": "210",
+    "hp": "207",
+    "kw": "154.45",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "M6D16",
+    "ps": "140",
+    "hp": "138",
+    "kw": "102.97",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "M6D16T",
+    "ps": "180",
+    "hp": "178",
+    "kw": "132.39",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "M6D16TI",
+    "ps": "210",
+    "hp": "207",
+    "kw": "154.45",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Hyundai",
+    "hieu_may": "M6D22",
+    "ps": "168",
+    "hp": "166",
+    "kw": "123.56",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4EC1",
+    "ps": "52",
+    "hp": "51",
+    "kw": "38.25",
+    "rpm": "5400"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4EC1-T",
+    "ps": "70",
+    "hp": "69",
+    "kw": "51.48",
+    "rpm": "5000"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4FB1",
+    "ps": "66",
+    "hp": "65",
+    "kw": "48.54",
+    "rpm": "5400"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4FB1-T",
+    "ps": "73",
+    "hp": "72",
+    "kw": "53.69",
+    "rpm": "5000"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4FC1",
+    "ps": "66",
+    "hp": "65",
+    "kw": "48.54",
+    "rpm": "4500"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4FC1-T",
+    "ps": "79",
+    "hp": "78",
+    "kw": "58.1",
+    "rpm": "4500"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4FD1",
+    "ps": "73",
+    "hp": "72",
+    "kw": "53.69",
+    "rpm": "4500"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4FG1",
+    "ps": "79",
+    "hp": "78",
+    "kw": "58.1",
+    "rpm": "4300"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "C190",
+    "ps": "45",
+    "hp": "44",
+    "kw": "33.1",
+    "rpm": "3500"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "C223",
+    "ps": "70",
+    "hp": "69",
+    "kw": "51.48",
+    "rpm": "4300"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "C240",
+    "ps": "40",
+    "hp": "39",
+    "kw": "29.42",
+    "rpm": "1750"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "C330TC",
+    "ps": "35",
+    "hp": "35",
+    "kw": "25.74",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4JA1",
+    "ps": "55",
+    "hp": "54",
+    "kw": "40.45",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4JB1",
+    "ps": "60",
+    "hp": "59",
+    "kw": "44.13",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4JB1-T",
+    "ps": "80",
+    "hp": "79",
+    "kw": "58.84",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4JG1",
+    "ps": "63",
+    "hp": "62",
+    "kw": "46.34",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4JG1-T",
+    "ps": "83",
+    "hp": "82",
+    "kw": "61.05",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4BA1",
+    "ps": "60",
+    "hp": "59",
+    "kw": "44.13",
+    "rpm": "3000"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4BB1",
+    "ps": "70",
+    "hp": "69",
+    "kw": "51.48",
+    "rpm": "2750"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4BC2",
+    "ps": "65",
+    "hp": "64",
+    "kw": "47.81",
+    "rpm": "3500"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4BD1",
+    "ps": "70",
+    "hp": "69",
+    "kw": "51.48",
+    "rpm": "2750"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4BC1",
+    "ps": "95",
+    "hp": "94",
+    "kw": "69.87",
+    "rpm": "3500"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4BD1-T",
+    "ps": "80",
+    "hp": "79",
+    "kw": "58.84",
+    "rpm": "2700"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4BE1",
+    "ps": "110",
+    "hp": "118",
+    "kw": "80.9",
+    "rpm": "3600"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4BG1",
+    "ps": "90",
+    "hp": "89",
+    "kw": "66.19",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4BG1-T",
+    "ps": "113",
+    "hp": "111",
+    "kw": "83.11",
+    "rpm": "2400"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "4HF1",
+    "ps": "140",
+    "hp": "138",
+    "kw": "102.97",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "DA120",
+    "ps": "125",
+    "hp": "123",
+    "kw": "91.94",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "DA640",
+    "ps": "130",
+    "hp": "128",
+    "kw": "95.61",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6BB1",
+    "ps": "145",
+    "hp": "143",
+    "kw": "106.65",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6BD1",
+    "ps": "160",
+    "hp": "158",
+    "kw": "117.68",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6BD1-T",
+    "ps": "185",
+    "hp": "182",
+    "kw": "136.07",
+    "rpm": "3000"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6BF1",
+    "ps": "170",
+    "hp": "168",
+    "kw": "125.03",
+    "rpm": "3200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6BG1",
+    "ps": "120",
+    "hp": "118",
+    "kw": "88.26",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6BG1-T",
+    "ps": "160",
+    "hp": "158",
+    "kw": "117.68",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6HE1",
+    "ps": "195",
+    "hp": "192",
+    "kw": "143.42",
+    "rpm": "2900"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6HE1-T",
+    "ps": "250",
+    "hp": "247",
+    "kw": "183.87",
+    "rpm": "2700"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6SA1",
+    "ps": "145",
+    "hp": "143",
+    "kw": "106.65",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6SD1",
+    "ps": "160",
+    "hp": "158",
+    "kw": "117.65",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6SD1-T",
+    "ps": "310",
+    "hp": "306",
+    "kw": "228",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6SD1TC",
+    "ps": "300",
+    "hp": "296",
+    "kw": "220.65",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6SD1TC2",
+    "ps": "330",
+    "hp": "325",
+    "kw": "242.71",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "DH100(H)",
+    "ps": "195",
+    "hp": "192",
+    "kw": "142.43",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6WG1UTGC",
+    "ps": "705",
+    "hp": "695",
+    "kw": "518.13",
+    "rpm": "2060"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6WG1TCG",
+    "ps": "750",
+    "hp": "740",
+    "kw": "551.62",
+    "rpm": "2060"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6WG1WM",
+    "ps": "600",
+    "hp": "592",
+    "kw": "441.3",
+    "rpm": "2030"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6HK1 T",
+    "ps": "170",
+    "hp": "168",
+    "kw": "125.03",
+    "rpm": "1818"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6HK1 TC",
+    "ps": "227",
+    "hp": "224",
+    "kw": "166.96",
+    "rpm": "1818"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6HK1",
+    "ps": "150",
+    "hp": "148",
+    "kw": "110.32",
+    "rpm": "2715"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6HK1WMX",
+    "ps": "328",
+    "hp": "324",
+    "kw": "241.24",
+    "rpm": "2620"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6BG1MUG",
+    "ps": "136",
+    "hp": "134",
+    "kw": "110.03",
+    "rpm": "2715"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6BG1TCXA",
+    "ps": "210",
+    "hp": "207",
+    "kw": "154.45",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6BG1TCXB",
+    "ps": "253",
+    "hp": "250",
+    "kw": "186.08",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6BG1TCXC",
+    "ps": "286",
+    "hp": "282",
+    "kw": "210.35",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6BG1TCXD",
+    "ps": "314",
+    "hp": "310",
+    "kw": "230.95",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6BG1TCXC2",
+    "ps": "300",
+    "hp": "296",
+    "kw": "220.65",
+    "rpm": "2880"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6BG1TC2",
+    "ps": "256",
+    "hp": "252",
+    "kw": "188.29",
+    "rpm": "2715"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6SD1TCG2",
+    "ps": "485",
+    "hp": "478",
+    "kw": "356.72",
+    "rpm": "2325"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6SD1TCV2",
+    "ps": "485",
+    "hp": "478",
+    "kw": "356.72",
+    "rpm": "2325"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6SD1TCZ",
+    "ps": "380",
+    "hp": "375",
+    "kw": "279.49",
+    "rpm": "2230"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6SD1TCX1",
+    "ps": "440",
+    "hp": "434",
+    "kw": "323.62",
+    "rpm": "2340"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6SD1TCX2",
+    "ps": "400",
+    "hp": "395",
+    "kw": "294.2",
+    "rpm": "2270"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6SD1TCXG",
+    "ps": "418",
+    "hp": "412",
+    "kw": "307.44",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6HE1TCX",
+    "ps": "363",
+    "hp": "358",
+    "kw": "266.99",
+    "rpm": "2740"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6HE1TCX2",
+    "ps": "352",
+    "hp": "347",
+    "kw": "258.9",
+    "rpm": "2710"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6HE1TCY2",
+    "ps": "296",
+    "hp": "292",
+    "kw": "217.71",
+    "rpm": "2810"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6HE1TCG2",
+    "ps": "413",
+    "hp": "407",
+    "kw": "303.76",
+    "rpm": "2810"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6RB1-TCU2",
+    "ps": "420",
+    "hp": "414",
+    "kw": "308.91",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "DH100H-T",
+    "ps": "230",
+    "hp": "227",
+    "kw": "169.16",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "E120(T)",
+    "ps": "250",
+    "hp": "247",
+    "kw": "183.87",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "E120B",
+    "ps": "190",
+    "hp": "187",
+    "kw": "139.74",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "E120B-T",
+    "ps": "225",
+    "hp": "222",
+    "kw": "165.49",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6QA1",
+    "ps": "160",
+    "hp": "158",
+    "kw": "117.68",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6BB35",
+    "ps": "118",
+    "hp": "116",
+    "kw": "86.79",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6SA1TC",
+    "ps": "230",
+    "hp": "227",
+    "kw": "169.16",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "A640",
+    "ps": "90",
+    "hp": "89",
+    "kw": "66.19",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "8MA1M",
+    "ps": "275",
+    "hp": "271",
+    "kw": "202.26",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "8MA1T",
+    "ps": "380",
+    "hp": "375",
+    "kw": "279.49",
+    "rpm": "2300"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "8PB1TC",
+    "ps": "280",
+    "hp": "276",
+    "kw": "205.84",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "10PB1",
+    "ps": "230",
+    "hp": "227",
+    "kw": "169.16",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "10PB1TC",
+    "ps": "350",
+    "hp": "345",
+    "kw": "257.42",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "12PB1",
+    "ps": "280",
+    "hp": "276",
+    "kw": "205.94",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "12PB1TC",
+    "ps": "405",
+    "hp": "399",
+    "kw": "297.88",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6D-TC",
+    "ps": "130",
+    "hp": "128",
+    "kw": "95.61",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6BD1-TC",
+    "ps": "165",
+    "hp": "163",
+    "kw": "121.36",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6BG1-TC",
+    "ps": "210",
+    "hp": "207",
+    "kw": "154.45",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6SA1TC",
+    "ps": "230",
+    "hp": "227",
+    "kw": "169.16",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6SD1-TCG",
+    "ps": "485",
+    "hp": "478",
+    "kw": "356.72",
+    "rpm": "2325"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6BG1TCX",
+    "ps": "260",
+    "hp": "256",
+    "kw": "191.23",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6BG1TC",
+    "ps": "250",
+    "hp": "247",
+    "kw": "183.87",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM4BD1",
+    "ps": "90",
+    "hp": "89",
+    "kw": "66.19",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6HE1TCY",
+    "ps": "360",
+    "hp": "355",
+    "kw": "264.78",
+    "rpm": "2800"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6HE1TCG",
+    "ps": "392",
+    "hp": "387",
+    "kw": "288.32",
+    "rpm": "2800"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6BD1-T",
+    "ps": "145",
+    "hp": "143",
+    "kw": "106.65",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6BD1-TC",
+    "ps": "165",
+    "hp": "163",
+    "kw": "121.36",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UME120",
+    "ps": "190",
+    "hp": "187",
+    "kw": "139.74",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM10PB1TC",
+    "ps": "350",
+    "hp": "345",
+    "kw": "257.42",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UMS6D1TCG",
+    "ps": "300",
+    "hp": "296",
+    "kw": "220.65",
+    "rpm": "2100"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM12PD1TCX",
+    "ps": "540",
+    "hp": "533",
+    "kw": "397.17",
+    "rpm": "2000"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "V170",
+    "ps": "330",
+    "hp": "325",
+    "kw": "242.71",
+    "rpm": "2500"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "3ABIM",
+    "ps": "30",
+    "hp": "30",
+    "kw": "22.06",
+    "rpm": "2600"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6RB1",
+    "ps": "205",
+    "hp": "202",
+    "kw": "150.78",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6RB1-T",
+    "ps": "275",
+    "hp": "271",
+    "kw": "202.62",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6RB1-TCU",
+    "ps": "340",
+    "hp": "335",
+    "kw": "250.07",
+    "rpm": "1600"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6RB1-TCX",
+    "ps": "485",
+    "hp": "478",
+    "kw": "356.72",
+    "rpm": "2200"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6WF1 TC",
+    "ps": "355",
+    "hp": "350",
+    "kw": "261.1",
+    "rpm": "1640"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6WF1TCG",
+    "ps": "612",
+    "hp": "604",
+    "kw": "405.13",
+    "rpm": "2160"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6WF1TCX",
+    "ps": "575",
+    "hp": "567",
+    "kw": "422.91",
+    "rpm": "2160"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6WG1 T",
+    "ps": "290",
+    "hp": "286",
+    "kw": "213.29",
+    "rpm": "1818"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "6WG1 TC",
+    "ps": "420",
+    "hp": "414",
+    "kw": "308.91",
+    "rpm": "1818"
+  },
+  {
+    "hang": "Isuzu",
+    "hieu_may": "UM6WG1TCX",
+    "ps": "700",
+    "hp": "690",
+    "kw": "514.85",
+    "rpm": "2060"
+  }
+]

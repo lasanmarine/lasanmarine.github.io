@@ -10,6 +10,7 @@ export const nav = {
   toolsMenu: [
     ['Chuyển đổi công suất', '/cong-cu/chuyen-doi-cong-suat/'],
     ['Kiểm tra đường kính trục chân vịt', '/cong-cu/kiem-tra-duong-kinh-truc-chan-vit/'],
+    ['Tra cứu thông số động cơ', '/cong-cu/tra-cuu-dong-co/'],
   ],
   contactLabel: 'Liên hệ chúng tôi',
   languageLabel: 'EN',

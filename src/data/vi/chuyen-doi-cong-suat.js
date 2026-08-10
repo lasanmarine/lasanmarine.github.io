@@ -17,6 +17,7 @@ export const chuyenDoiCongSuat = {
         href: '/cong-cu/kiem-tra-duong-kinh-truc-chan-vit/',
         label: 'Kiểm tra đường kính trục chân vịt',
       },
+      { href: '/cong-cu/tra-cuu-dong-co/', label: 'Tra cứu thông số động cơ' },
     ],
   },
   calculator: {

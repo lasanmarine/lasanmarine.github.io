@@ -1,0 +1,29 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 28px;
+  padding: clamp(80px, 14vw, 160px) 24px;
+}
+
+.not-found img {
+  width: min(100%, 260px);
+  height: auto;
+}
+
+.not-found .not-found-code {
+  margin: 0;
+  color: #0b1c4b;
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.not-found .not-found-message {
+  margin: 0;
+  max-width: 480px;
+  color: rgba(29, 31, 32, 0.68);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}

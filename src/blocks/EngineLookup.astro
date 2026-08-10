@@ -1,0 +1,75 @@
+---
+interface ColumnOption {
+  value: string;
+  label: string;
+}
+
+interface EngineRow {
+  hang: string;
+  hieu_may: string;
+  ps: string;
+  hp: string;
+  kw: string;
+  rpm: string;
+}
+
+interface Props {
+  searchLabel: string;
+  searchPlaceholder: string;
+  columnLabel: string;
+  columns: ColumnOption[];
+  headers: string[];
+  emptyMessage: string;
+  resultCountLabel: string;
+  note: string;
+  rows: EngineRow[];
+}
+
+const {
+  searchLabel,
+  searchPlaceholder,
+  columnLabel,
+  columns,
+  headers,
+  emptyMessage,
+  resultCountLabel,
+  note,
+  rows,
+} = Astro.props as Props;
+---
+
+<div class="lookup" data-engine-lookup data-rows={JSON.stringify(rows)}>
+  <div class="lookup-controls">
+    <label class="full">
+      {searchLabel}
+      <input type="search" name="q" placeholder={searchPlaceholder} data-search />
+    </label>
+    <label>
+      {columnLabel}
+      <select name="column" data-column>
+        {columns.map((c) => <option value={c.value}>{c.label}</option>)}
+      </select>
+    </label>
+  </div>
+
+  <p class="lookup-count" data-count data-suffix={resultCountLabel} aria-live="polite"></p>
+
+  <div class="lookup-table-wrap">
+    <table class="result-table">
+      <thead>
+        <tr>
+          {headers.map((h) => <th>{h}</th>)}
+        </tr>
+      </thead>
+      <tbody data-body></tbody>
+    </table>
+    <p class="lookup-empty" data-empty hidden>{emptyMessage}</p>
+  </div>
+
+  <p class="tool-note">{note}</p>
+</div>
+
+<script>
+  import { initEngineLookup } from '@/scripts/engine-lookup-tool';
+  initEngineLookup();
+</script>

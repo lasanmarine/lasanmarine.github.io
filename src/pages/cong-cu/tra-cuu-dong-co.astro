@@ -1,0 +1,33 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/blocks/PageHero.astro';
+import ToolLayout from '@/blocks/ToolLayout.astro';
+import EngineLookup from '@/blocks/EngineLookup.astro';
+import '@/styles/tools.scss';
+import { traCuuDongCo as content } from '@/data/vi/tra-cuu-dong-co.js';
+import engines from '@/data/vi/dong-co.json';
+---
+
+<BaseLayout title={content.meta.title} description={content.meta.description}>
+  <PageHero title={content.hero.title} description={content.hero.description} />
+  <main>
+    <ToolLayout
+      navTitle={content.tool.navTitle}
+      navIntro={content.tool.navIntro}
+      navAriaLabel={content.tool.navAriaLabel}
+      links={content.tool.links}
+    >
+      <EngineLookup
+        searchLabel={content.lookup.searchLabel}
+        searchPlaceholder={content.lookup.searchPlaceholder}
+        columnLabel={content.lookup.columnLabel}
+        columns={content.lookup.columns}
+        headers={content.lookup.headers}
+        emptyMessage={content.lookup.emptyMessage}
+        resultCountLabel={content.lookup.resultCountLabel}
+        note={content.lookup.note}
+        rows={engines}
+      />
+    </ToolLayout>
+  </main>
+</BaseLayout>
