@@ -1,5 +1,29 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-family: 'Barlow Local';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Barlow-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Barlow Local';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/Barlow-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Barlow Local';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Barlow-Bold.ttf') format('truetype');
+}
+
 $navy: #0b1c4b;
 $blue: #0a72c8;
 $pale: #f4f6f9;
@@ -13,7 +37,7 @@ $ink: #1d1f20;
 }
 
 :root {
-  font-family: Barlow, 'Avenir Next', sans-serif;
+  font-family: 'Barlow Local';
   color: $ink;
   background: white;
   text-rendering: optimizeLegibility;

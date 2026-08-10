@@ -32,6 +32,16 @@ const categories = [
   title="Lasan Marine | Thiết kế kỹ thuật phương tiện thủy"
   description="Thiết kế tàu cá, phương tiện thủy nội địa và phương tiện vận tải đường thủy."
 >
+  <Fragment slot="head">
+    <link rel="preload" href="/hero.png" as="image" fetchpriority="high" />
+    <link
+      rel="preload"
+      href="/fonts/Barlow-SemiBold.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+  </Fragment>
   <main>
     <section class="technical-grid hero">
       <div class="container">
@@ -384,14 +394,14 @@ const categories = [
   }
   .vehicle-categories {
     position: relative;
-    height: 300svh;
+    height: 300dvh;
     background: #071233;
   }
   .vehicle-categories__sticky {
     position: sticky;
     top: 0;
     isolation: isolate;
-    height: 100svh;
+    height: 100dvh;
     overflow: hidden;
     color: white;
   }

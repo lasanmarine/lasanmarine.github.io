@@ -44,15 +44,30 @@ const switchHref =
         <Icon name="arrow" size={18} />
       </a>
     </nav>
+    <button class="nav-backdrop" type="button" tabindex="-1" aria-hidden="true"></button>
   </div>
 </header>
 <script>
-  const button = document.querySelector('.menu-button');
-  const nav = document.querySelector('#site-nav');
+  const button = document.querySelector<HTMLButtonElement>('.menu-button');
+  const nav = document.querySelector<HTMLElement>('#site-nav');
+  const backdrop = document.querySelector<HTMLElement>('.nav-backdrop');
+
+  const setOpen = (open: boolean) => {
+    button?.setAttribute('aria-expanded', String(open));
+    nav?.classList.toggle('is-open', open);
+    backdrop?.classList.toggle('is-open', open);
+    document.body.classList.toggle('nav-locked', open);
+  };
+
   button?.addEventListener('click', () => {
-    const open = button.getAttribute('aria-expanded') === 'true';
-    button.setAttribute('aria-expanded', String(!open));
-    nav?.classList.toggle('is-open', !open);
+    setOpen(button.getAttribute('aria-expanded') !== 'true');
+  });
+  backdrop?.addEventListener('click', () => setOpen(false));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setOpen(false);
+  });
+  nav?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setOpen(false));
   });
 </script>
 <style lang="scss">
@@ -182,7 +197,13 @@ const switchHref =
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
   }
-  @media (max-width: 1100px) {
+  .nav-backdrop {
+    display: none;
+  }
+  :global(body.nav-locked) {
+    overflow: hidden;
+  }
+  @media (max-width: 1300px) {
     .brand img {
       width: 210px;
     }
@@ -193,7 +214,7 @@ const switchHref =
       padding: 11px 14px;
     }
   }
-  @media (max-width: 850px) {
+  @media (max-width: 1024px) {
     .header__inner {
       height: 72px;
     }
@@ -201,48 +222,88 @@ const switchHref =
       display: block;
       margin-left: auto;
     }
+    .nav-backdrop {
+      display: block;
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      border: 0;
+      padding: 0;
+      background: rgba(7, 18, 51, 0.5);
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        opacity 260ms ease,
+        visibility 260ms;
+    }
+    .nav-backdrop.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
     .nav {
-      display: none;
-      position: absolute;
-      top: 72px;
-      left: 0;
+      position: fixed;
+      z-index: 61;
+      top: 0;
       right: 0;
+      bottom: 0;
+      width: min(86vw, 380px);
+      height: 100dvh;
+      margin: 0;
       background: #fff;
-      padding: 24px 20px;
-      border-bottom: 1px solid rgba(11, 28, 75, 0.15);
+      padding: 96px 28px 32px;
+      display: flex;
       flex-direction: column;
       align-items: stretch;
+      gap: 6px;
+      font-size: 1.15rem;
+      overflow-y: auto;
+      box-shadow: none;
+      transform: translateX(100%);
+      transition:
+        transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 320ms ease;
     }
     .nav.is-open {
-      display: flex;
+      transform: translateX(0);
+      box-shadow: -18px 0 48px rgba(7, 18, 51, 0.18);
     }
     .nav > a {
-      padding: 8px;
+      padding: 14px 4px;
+      border-bottom: 1px solid rgba(11, 28, 75, 0.1);
+    }
+    .nav-tools {
+      border-bottom: 1px solid rgba(11, 28, 75, 0.1);
     }
     .nav-tools > a {
       display: block;
-      padding: 8px;
+      padding: 14px 4px;
       font-weight: 600;
     }
     .nav-tools__menu {
       position: static;
       width: auto;
-      padding: 0 0 0 18px;
+      padding: 0 0 10px 14px;
       border: 0;
       opacity: 1;
       visibility: visible;
       transform: none;
+      font-size: 1rem;
     }
     .nav-tools__menu::before {
       display: none;
     }
     .nav-tools__menu a {
-      padding: 8px;
+      padding: 10px 4px;
       color: rgba(11, 28, 75, 0.72);
+    }
+    .language {
+      padding: 14px 4px;
     }
     .contact {
       justify-content: center;
-      padding: 14px;
+      margin-top: 14px;
+      padding: 16px;
+      font-size: 1rem;
     }
     .brand img {
       width: 200px;

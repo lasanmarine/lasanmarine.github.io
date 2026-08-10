@@ -43,10 +43,11 @@ const alternateOgLocale = isEnglish ? 'vi_VN' : 'en_US';
     <meta property="og:image" content={socialImageURL} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={socialImageURL} />
-    <title>{title}</title>
-  </head>
+     <meta name="twitter:description" content={description} />
+     <meta name="twitter:image" content={socialImageURL} />
+     <title>{title}</title>
+     <slot name="head" />
+   </head>
   <body>
     <Header lang={lang} />
     <slot />
