@@ -1,0 +1,120 @@
+---
+interface MaterialOption {
+  value: string;
+  label: string;
+}
+
+interface Props {
+  powerLabel: string;
+  unitLabel: string;
+  unitPlaceholder: string;
+  units: string[];
+  rpmLabel: string;
+  ratioLabel: string;
+  ratioPlaceholder: string;
+  materialLabel: string;
+  materialPlaceholder: string;
+  materials: MaterialOption[];
+  submitLabel: string;
+  resetLabel: string;
+  resultsTitle: string;
+  resultHeaders: string[];
+  resultRows: { label: string; unit: string; key: string }[];
+  note: string;
+}
+
+const {
+  powerLabel,
+  unitLabel,
+  unitPlaceholder,
+  units,
+  rpmLabel,
+  ratioLabel,
+  ratioPlaceholder,
+  materialLabel,
+  materialPlaceholder,
+  materials,
+  submitLabel,
+  resetLabel,
+  resultsTitle,
+  resultHeaders,
+  resultRows,
+  note,
+} = Astro.props as Props;
+---
+
+<div class="calculator" data-shaft-calculator>
+  <form class="calculator-form" novalidate>
+    <div class="calculator-fields">
+      <label>
+        {powerLabel}
+        <input type="number" name="power" min="0" step="any" inputmode="decimal" required />
+      </label>
+      <label>
+        {unitLabel}
+        <select name="unit" required>
+          <option value="">{unitPlaceholder}</option>
+          {units.map((unit) => <option value={unit}>{unit}</option>)}
+        </select>
+      </label>
+      <label>
+        {rpmLabel}
+        <input type="number" name="rpm" min="0" step="any" inputmode="decimal" required />
+      </label>
+      <label>
+        {ratioLabel}
+        <input
+          type="number"
+          name="ratio"
+          min="0"
+          step="any"
+          inputmode="decimal"
+          placeholder={ratioPlaceholder}
+          required
+        />
+      </label>
+      <label class="full">
+        {materialLabel}
+        <select name="k3" required>
+          <option value="">{materialPlaceholder}</option>
+          {materials.map((m) => <option value={m.value}>{m.label}</option>)}
+        </select>
+      </label>
+    </div>
+    <p class="calculator-error" data-error hidden></p>
+    <div class="calculator-actions">
+      <button class="button" type="submit">{submitLabel}</button>
+      <button class="button button--secondary" type="reset">{resetLabel}</button>
+    </div>
+  </form>
+
+  <div class="calculator-result" data-results hidden aria-live="polite">
+    <h2>{resultsTitle}</h2>
+    <table class="result-table">
+      <thead>
+        <tr>
+          <th>{resultHeaders[0]}</th>
+          <th>{resultHeaders[1]}</th>
+          <th>{resultHeaders[2]}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          resultRows.map((row) => (
+            <tr>
+              <td>{row.label}</td>
+              <td data-result={row.key} />
+              <td>{row.unit}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p class="tool-note">{note}</p>
+  </div>
+</div>
+
+<script>
+  import { initShaftDiameterTool } from '@/scripts/shaft-diameter-tool';
+  initShaftDiameterTool();
+</script>

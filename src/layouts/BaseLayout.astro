@@ -1,8 +1,10 @@
 ---
 import '@/styles/global.scss';
 import '@/styles/tailwind.css';
-import Header from '@/components/Header.astro';
-import Footer from '@/components/Footer.astro';
+import Header from '@/blocks/Header.astro';
+import Footer from '@/blocks/Footer.astro';
+import { nav as navVi } from '@/data/vi/nav.js';
+import { nav as navEn } from '@/data/en/nav.js';
 
 const {
   title = 'Lasan Marine',
@@ -11,6 +13,9 @@ const {
   noindex = false,
   lang = 'vi',
 } = Astro.props;
+
+const base = lang === 'en' ? '/en' : '';
+const nav = lang === 'en' ? navEn : navVi;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const socialImageURL = new URL(image, Astro.site);
@@ -47,37 +52,19 @@ const alternateOgLocale = isEnglish ? 'vi_VN' : 'en_US';
     <meta property="og:image" content={socialImageURL} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
-     <meta name="twitter:description" content={description} />
-     <meta name="twitter:image" content={socialImageURL} />
-     <title>{title}</title>
-     <slot name="head" />
-   </head>
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageURL} />
+    <title>{title}</title>
+    <slot name="head" />
+  </head>
   <body>
-    <Header lang={lang} />
+    <Header base={base} content={nav} />
     <slot />
-    <Footer lang={lang} />
+    <Footer base={base} content={nav} />
 
     <script>
-      const initAOS = () => {
-        if (!document.querySelector('[data-aos]')) return;
-
-        Promise.all([import('aos'), import('aos/dist/aos.css')]).then(([{ default: AOS }]) => {
-          AOS.init({
-            duration: 500,
-            once: true,
-            offset: 24,
-            disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
-          });
-        });
-      };
-
-      const requestIdle = window.requestIdleCallback;
-
-      if (requestIdle) {
-        requestIdle(initAOS);
-      } else {
-        setTimeout(initAOS, 1);
-      }
+      import { scheduleAOS } from '@/scripts/aos-init';
+      scheduleAOS();
     </script>
   </body>
 </html>

@@ -1,0 +1,80 @@
+---
+import Icon from '@/components/Icon.astro';
+import '@/styles/components/ServiceShowcase.scss';
+
+interface Props {
+  base: string;
+  sectionTitle: string;
+  detailsLabel: string;
+  services: { name: string; description: string; longDescription?: string; icon: string }[];
+  backgrounds: string[];
+}
+
+const { base, sectionTitle, detailsLabel, services, backgrounds } = Astro.props as Props;
+---
+
+<section
+  class="service-showcase"
+  data-service-showcase
+  style={`--service-count: ${services.length}`}
+>
+  <div class="service-showcase__sticky">
+    <div class="service-showcase__background" aria-hidden="true">
+      {
+        services.map((_, index) => (
+          <div
+            class:list={{ active: index === 0 }}
+            data-service-background={index}
+            style={`background-image: url('${backgrounds[index % backgrounds.length]}')`}
+          />
+        ))
+      }
+    </div>
+
+    <div class="service-showcase__layout">
+      <div class="service-showcase__nav">
+        <h2 class="section-title">{sectionTitle}</h2>
+        <ol>
+          {
+            services.map((service, index) => (
+              <li>
+                <a
+                  href={`#service-${index + 1}`}
+                  class:list={{ active: index === 0 }}
+                  data-service-link={index}
+                >
+                  {service.name}
+                </a>
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+
+      <div class="service-showcase__viewport">
+        <div class="service-showcase__content" data-service-track>
+          {
+            services.map((service, index) => (
+              <article id={`service-${index + 1}`} data-service-panel={index}>
+                <div class="service-showcase__panel-content">
+                  <Icon name={service.icon} size={72} />
+                  <h3>{service.name}</h3>
+                  <p>{service.longDescription ?? service.description}</p>
+                  <a href={`${base}/dich-vu/thiet-ke-tau-moi/`}>
+                    {detailsLabel}
+                    <Icon name="arrow" size={22} />
+                  </a>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { initServiceShowcases } from '@/scripts/service-showcase';
+  initServiceShowcases();
+</script>

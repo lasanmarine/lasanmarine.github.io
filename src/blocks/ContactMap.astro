@@ -1,16 +1,21 @@
 ---
-const { lang = 'vi' } = Astro.props;
+interface Props {
+  content: {
+    title: string;
+    linkLabel: string;
+  };
+}
+
+const { content } = Astro.props as Props;
 const address = '03 Trần Lư, Phường Bắc Nha Trang, Khánh Hòa, Việt Nam';
 const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
 const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
-const title = lang === 'en' ? 'Lasan Marine location map' : 'Bản đồ vị trí Lasan Marine';
-const linkLabel = lang === 'en' ? 'Open in Google Maps' : 'Mở trên Google Maps';
 ---
 
 <div class="contact-map relative border-y border-navy/16">
   <iframe
     src={mapUrl}
-    title={title}
+    title={content.title}
     width="600"
     height="360"
     loading="lazy"
@@ -24,6 +29,6 @@ const linkLabel = lang === 'en' ? 'Open in Google Maps' : 'Mở trên Google Map
     rel="noopener noreferrer"
     class="block border-t border-navy/14 px-4 py-3 text-sm font-semibold text-marine no-underline"
   >
-    {linkLabel}
+    {content.linkLabel}
   </a>
 </div>

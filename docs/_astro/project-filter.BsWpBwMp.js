@@ -1,0 +1,1 @@
+function s(r,a=document){const c=a.querySelectorAll("[data-filter]"),i=a.querySelectorAll("[data-group]");c.forEach(e=>e.addEventListener("click",()=>{c.forEach(t=>t.classList.remove("active")),e.classList.add("active"),i.forEach(t=>{t.hidden=e.dataset.filter!==r&&t.dataset.group!==e.dataset.filter})}))}export{s as i};

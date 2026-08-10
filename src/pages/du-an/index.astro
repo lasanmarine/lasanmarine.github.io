@@ -1,63 +1,43 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import PageHero from '@/components/PageHero.astro';
-import ProjectGrid from '@/components/ProjectGrid.astro';
-import CallToAction from '@/components/CallToAction.astro';
-const filters = ['Tất cả', 'Thiết kế mới', 'Chuyển hoán', 'Hoán cải', 'Hồ sơ kỹ thuật'];
+import PageHero from '@/blocks/PageHero.astro';
+import ProjectGrid from '@/blocks/ProjectGrid.astro';
+import CallToAction from '@/blocks/CallToAction.astro';
+import { duAn as content } from '@/data/vi/du-an.js';
+import { getSiteData } from '@/data/site.js';
+
+const base = '';
+const { projects } = getSiteData('vi');
 ---
 
-<BaseLayout
-  title="Dự án | Lasan Marine"
-  description="Các dự án thiết kế và chuyển hoán phương tiện thủy."
-  ><PageHero
-    title="Dự án"
-    description="Một số phương tiện Lasan Marine đã thiết kế, chuyển hoán và hoàn thiện hồ sơ kỹ thuật."
-  /><main>
+<BaseLayout title={content.meta.title} description={content.meta.description}>
+  <PageHero title={content.hero.title} description={content.hero.description} />
+  <main>
     <section class="section">
       <div class="container">
-        <div class="filters">
+        <div class="mb-12 flex overflow-auto border-b border-navy/16">
           {
-            filters.map((x, i) => (
-              <button class:list={{ active: i === 0 }} data-filter={x}>
-                {x}
+            content.filters.map((label, index) => (
+              <button
+                class:list={[
+                  'shrink-0 border-0 border-b-2 border-transparent px-6 pt-3.5 pb-4 whitespace-nowrap text-ink/60',
+                  { 'border-marine font-semibold text-marine': index === 0 },
+                ]}
+                data-filter={label}
+              >
+                {label}
               </button>
             ))
           }
-        </div><ProjectGrid />
+        </div>
+        <ProjectGrid base={base} projects={projects} imageLabel={content.imageLabel} />
       </div>
-    </section><CallToAction title="Bạn đang có một phương tiện cần thiết kế hoặc cải tạo?" />
-  </main><script>
-    const buttons = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
-    const cards = document.querySelectorAll<HTMLElement>('.project');
-    buttons.forEach((b) =>
-      b.addEventListener('click', () => {
-        buttons.forEach((x) => x.classList.remove('active'));
-        b.classList.add('active');
-        cards.forEach((c) => {
-          c.hidden = b.dataset.filter !== 'Tất cả' && c.dataset.group !== b.dataset.filter;
-        });
-      }),
-    );
-  </script></BaseLayout
-><style lang="scss">
-  .filters {
-    display: flex;
-    overflow: auto;
-    border-bottom: 1px solid rgba(11, 28, 75, 0.16);
-    margin-bottom: 48px;
-  }
-  .filters button {
-    background: none;
-    border: 0;
-    border-bottom: 2px solid transparent;
-    padding: 14px 24px 16px;
-    color: rgba(29, 31, 32, 0.6);
-    white-space: nowrap;
-    cursor: pointer;
-  }
-  .filters button.active {
-    color: #0a72c8;
-    border-color: #0a72c8;
-    font-weight: 600;
-  }
-</style>
+    </section>
+    <CallToAction title={content.ctaTitle} />
+  </main>
+</BaseLayout>
+
+<script>
+  import { initProjectFilter } from '@/scripts/project-filter';
+  initProjectFilter('Tất cả');
+</script>

@@ -1,36 +1,32 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import PageHero from '@/components/PageHero.astro';
-import ServiceGrid from '@/components/ServiceGrid.astro';
-import ProcessSteps from '@/components/ProcessSteps.astro';
-import CallToAction from '@/components/CallToAction.astro';
+import PageHero from '@/blocks/PageHero.astro';
+import ServiceGrid from '@/blocks/ServiceGrid.astro';
+import ProcessSteps from '@/blocks/ProcessSteps.astro';
+import CallToAction from '@/blocks/CallToAction.astro';
+import { dichVu as content } from '@/data/en/dich-vu.js';
+import { getSiteData } from '@/data/site.js';
+
+const base = '/en';
+const { services, steps } = getSiteData('en');
 ---
 
-<BaseLayout
-  title="Services | Lasan Marine"
-  description="Vessel design and marine engineering consultancy."
-  lang="en"
-  ><PageHero
-    title="Vessel design & engineering services"
-    description="Ten service groups covering new design, conversion, refit, classification, and stability documentation."
-  /><main>
+<BaseLayout title={content.meta.title} description={content.meta.description} lang="en"
+  ><PageHero title={content.hero.title} description={content.hero.description} /><main>
     <section class="section">
-      <div class="container"><ServiceGrid lang="en" /></div>
+      <div class="container"
+        ><ServiceGrid base={base} services={services} detailsLabel={content.services.detailsLabel} /></div
+      >
     </section><section class="section section--pale">
       <div class="container">
-        <h2 class="section-title">Our process</h2><div class="steps-space">
-          <ProcessSteps lang="en" />
+        <h2 class="section-title">{content.process.title}</h2><div class="mt-15">
+          <ProcessSteps steps={steps} />
         </div>
       </div>
     </section><CallToAction
-      title="Discuss your technical requirements with Lasan Marine"
-      href="/en/lien-he/"
-      label="Contact us"
+      title={content.cta.title}
+      href={content.cta.href}
+      label={content.cta.label}
     />
   </main></BaseLayout
 >
-<style>
-  .steps-space {
-    margin-top: 60px;
-  }
-</style>

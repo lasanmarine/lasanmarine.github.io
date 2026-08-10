@@ -1,41 +1,15 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import PageHero from '@/components/PageHero.astro';
-import CallToAction from '@/components/CallToAction.astro';
+import PageHero from '@/blocks/PageHero.astro';
+import CallToAction from '@/blocks/CallToAction.astro';
+import BlogArticle from '@/blocks/BlogArticle.astro';
+import { chuyenHoanNgheTauCa as content } from '@/data/vi/chuyen-hoan-nghe-tau-ca.js';
 ---
 
-<BaseLayout
-  title="Chuyển hoán nghề cho tàu cá | Lasan Marine"
-  description="Các hạng mục cần kiểm tra khi chuyển hoán nghề tàu cá."
-  ><PageHero
-    title="Những điểm cần lưu ý khi chuyển hoán nghề cho tàu cá"
-    description="Ghi chú kỹ thuật · 12.06.2026"
-  /><main>
-    <article class="section">
-      <div class="container prose article">
-        <p class="lead">
-          Thay đổi nghề khai thác kéo theo thay đổi bố trí boong, trang thiết bị và trạng thái tải
-          trọng.
-        </p><h2>Đánh giá lại bố trí chung</h2><p>
-          Các thiết bị phục vụ nghề mới cần được bố trí theo luồng khai thác hợp lý, đồng thời giữ
-          lối đi và vùng thao tác an toàn.
-        </p><h2>Kiểm tra tải trọng và ổn định</h2><p>
-          Khối lượng thiết bị, ngư cụ và sản phẩm khai thác làm thay đổi trọng tâm tàu. Các trạng
-          thái tải trọng cần được lập lại để kiểm tra ổn định.
-        </p><h2>Hoàn thiện hồ sơ kỹ thuật</h2><p>
-          Bản vẽ bố trí, kết cấu gia cường, hệ thống liên quan và thông báo ổn định cần được cập
-          nhật đồng bộ trước khi kiểm tra phân cấp.
-        </p>
-      </div>
-    </article><CallToAction title="Cần tư vấn cho phương tiện của bạn?" />
-  </main></BaseLayout
-><style>
-  .article {
-    max-width: 800px;
-  }
-  .article h2 {
-    color: #0b1c4b;
-    font-size: 30px;
-    margin-top: 40px;
-  }
-</style>
+<BaseLayout title={content.meta.title} description={content.meta.description}>
+  <PageHero title={content.hero.title} description={content.hero.description} />
+  <main>
+    <BlogArticle lead={content.lead} sections={content.sections} />
+    <CallToAction title={content.cta.title} />
+  </main>
+</BaseLayout>

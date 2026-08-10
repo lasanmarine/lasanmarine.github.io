@@ -1,10 +1,14 @@
 ---
-import Icon from './Icon.astro';
-import { getSiteData } from '@/data/site.js';
-const { compact = false, lang = 'vi' } = Astro.props;
-const base = lang === 'en' ? '/en' : '';
-const { services } = getSiteData(lang);
-const detailsLabel = lang === 'en' ? 'View details' : 'Xem chi tiết';
+import Icon from '@/components/Icon.astro';
+
+interface Props {
+  base: string;
+  services: { name: string; description: string; icon: string }[];
+  detailsLabel: string;
+  compact?: boolean;
+}
+
+const { base, services, detailsLabel, compact = false } = Astro.props as Props;
 ---
 
 <div

@@ -1,0 +1,56 @@
+---
+import Blueprint from '@/components/Blueprint.astro';
+import Icon from '@/components/Icon.astro';
+
+interface Post {
+  category: string;
+  title: string;
+  excerpt: string;
+  href: string;
+}
+
+interface Props {
+  featured: Post;
+  posts: Post[];
+  imageLabel: string;
+  readLabel: string;
+}
+
+const { featured, posts, imageLabel, readLabel } = Astro.props as Props;
+---
+
+<section class="section">
+  <div
+    class="container mb-20 grid grid-cols-2 gap-15 max-[800px]:grid-cols-1"
+  >
+    <Blueprint class="min-h-[390px] aspect-4/3" label={imageLabel} />
+    <div class="self-center">
+      <b class="text-marine">{featured.category}</b>
+      <h2 class="my-[15px] text-[40px] leading-[1.15] text-navy">{featured.title}</h2>
+      <p class="leading-[1.7] text-ink/70">{featured.excerpt}</p>
+      <a
+        href={featured.href}
+        class="flex items-center gap-2.5 font-semibold text-marine no-underline"
+      >
+        {readLabel} <Icon name="arrow" />
+      </a>
+    </div>
+  </div>
+  <div
+    class="container grid grid-cols-3 gap-x-8 gap-y-14 max-[800px]:grid-cols-2 max-[800px]:gap-x-6 max-[800px]:gap-y-12 max-[520px]:grid-cols-1 max-[520px]:gap-11"
+  >
+    {
+      posts.map((post) => (
+        <article class="grid min-w-0 grid-rows-[auto_auto_auto_1fr_auto] gap-4">
+          <Blueprint class="aspect-4/3" label={imageLabel} />
+          <b class="text-marine">{post.category}</b>
+          <h2 class="m-0 text-2xl leading-[1.25] text-navy">{post.title}</h2>
+          <p class="m-0 leading-[1.7] text-ink/70">{post.excerpt}</p>
+          <a href={post.href} class="m-0 flex items-center gap-2.5 font-semibold text-marine no-underline">
+            {readLabel} <Icon name="arrow" />
+          </a>
+        </article>
+      ))
+    }
+  </div>
+</section>

@@ -1,45 +1,15 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import PageHero from '@/components/PageHero.astro';
-import CallToAction from '@/components/CallToAction.astro';
+import PageHero from '@/blocks/PageHero.astro';
+import CallToAction from '@/blocks/CallToAction.astro';
+import BlogArticle from '@/blocks/BlogArticle.astro';
+import { chuyenHoanNgheTauCa as content } from '@/data/en/chuyen-hoan-nghe-tau-ca.js';
 ---
 
-<BaseLayout
-  title="Fishing vessel conversion | Lasan Marine"
-  description="Items to verify when converting a fishing vessel."
-  lang="en"
-  ><PageHero
-    title="Key considerations when converting a fishing vessel"
-    description="Technical note · 12.06.2026"
-  /><main>
-    <article class="section">
-      <div class="container prose article">
-        <p class="lead">
-          A new fishing method changes deck arrangement, equipment, and loading conditions.
-        </p><h2>Review the general arrangement</h2><p>
-          Equipment for the new operation must follow a practical workflow while preserving safe
-          access and working areas.
-        </p><h2>Check loading and stability</h2><p>
-          Equipment, fishing gear, and catch alter the vessel's center of gravity. Loading
-          conditions must be recalculated for stability.
-        </p><h2>Update technical documents</h2><p>
-          Arrangement, structural reinforcement, related systems, and the stability booklet must be
-          updated consistently before classification review.
-        </p>
-      </div>
-    </article><CallToAction
-      title="Need advice for your vessel?"
-      href="/en/lien-he/"
-      label="Contact us"
-    />
-  </main></BaseLayout
-><style>
-  .article {
-    max-width: 800px;
-  }
-  .article h2 {
-    color: #0b1c4b;
-    font-size: 30px;
-    margin-top: 40px;
-  }
-</style>
+<BaseLayout title={content.meta.title} description={content.meta.description} lang="en">
+  <PageHero title={content.hero.title} description={content.hero.description} />
+  <main>
+    <BlogArticle lead={content.lead} sections={content.sections} />
+    <CallToAction title={content.cta.title} href={content.cta.href} label={content.cta.label} />
+  </main>
+</BaseLayout>

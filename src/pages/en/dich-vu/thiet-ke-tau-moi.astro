@@ -1,55 +1,36 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import PageHero from '@/components/PageHero.astro';
-import ProcessSteps from '@/components/ProcessSteps.astro';
-import ProjectGrid from '@/components/ProjectGrid.astro';
-import CallToAction from '@/components/CallToAction.astro';
-const scope = [
-  'Operating requirement analysis',
-  'Principal dimensions',
-  'General arrangement',
-  'Lines plan',
-  'Structural design',
-  'Machinery and propulsion',
-  'Stability calculations',
-  'Technical documentation',
-];
-const outputs = [
-  'General Arrangement',
-  'Lines Plan',
-  'Construction Drawings',
-  'Machinery Arrangement',
-  'Stability Calculation',
-  'Technical Specification',
-  'Supporting technical documents',
-];
+import PageHero from '@/blocks/PageHero.astro';
+import ProcessSteps from '@/blocks/ProcessSteps.astro';
+import ProjectGrid from '@/blocks/ProjectGrid.astro';
+import CallToAction from '@/blocks/CallToAction.astro';
+import { thietKeTauMoi as content } from '@/data/en/thiet-ke-tau-moi.js';
+import { getSiteData } from '@/data/site.js';
+
+const base = '/en';
+const { steps, projects } = getSiteData('en');
 ---
 
-<BaseLayout
-  title="New vessel design | Lasan Marine"
-  description="New vessel design from initial requirements to technical documentation."
-  lang="en"
-  ><PageHero
-    title="New vessel design"
-    description="Develop a vessel from initial operating requirements through a complete technical package."
-  /><main>
+<BaseLayout title={content.meta.title} description={content.meta.description} lang="en"
+  ><PageHero title={content.hero.title} description={content.hero.description} /><main>
     <section class="section">
-      <div class="container two">
-        <h2 class="section-title">Service overview</h2><p class="lead muted">
-          For vessel owners, operators, and shipyards developing a vessel for a specific operating
-          purpose.
+      <div
+        class="container grid grid-cols-[380px_1fr] gap-[70px] max-[750px]:grid-cols-1 max-[750px]:gap-5"
+      >
+        <h2 class="section-title">{content.overview.title}</h2><p class="lead muted">
+          {content.overview.text}
         </p>
       </div>
     </section><section class="section section--pale">
       <div class="container">
-        <h2 class="section-title">Scope of work</h2><div class="matrix">
+        <h2 class="section-title">{content.scope.title}</h2><div
+          class="mt-[50px] grid grid-cols-4 border border-navy/15 max-[750px]:grid-cols-2 max-[450px]:grid-cols-1"
+        >
           {
-            scope.map((item, index) => (
-              <div>
-                <>
-                  <b>{String(index + 1).padStart(2, '0')}</b>
-                  <span>{item}</span>
-                </>
+            content.scope.items.map((item, index) => (
+              <div class="flex gap-4 border border-navy/10 p-7">
+                <b class="text-marine">{String(index + 1).padStart(2, '0')}</b>
+                <span>{item}</span>
               </div>
             ))
           }
@@ -57,82 +38,35 @@ const outputs = [
       </div>
     </section><section class="section">
       <div class="container">
-        <h2 class="section-title">Delivery process</h2><div class="space">
-          <ProcessSteps lang="en" />
+        <h2 class="section-title">{content.process.title}</h2><div class="mt-[55px]">
+          <ProcessSteps steps={steps} />
         </div>
       </div>
-    </section><section class="section output technical-grid">
+    </section><section class="section technical-grid text-white">
       <div class="container">
-        <h2>Deliverables</h2><p>
-          Documents are organized by discipline for construction and classification review.
-        </p><div>{outputs.map((item) => <span>{item}</span>)}</div>
+        <h2 class="text-[40px]">{content.deliverables.title}</h2><p class="text-white/70">
+          {content.deliverables.text}
+        </p><div class="mt-[35px] flex flex-wrap gap-px">
+          {
+            content.deliverables.items.map((item) => (
+              <span class="border border-white/25 px-[22px] py-[18px]">{item}</span>
+            ))
+          }
+        </div>
       </div>
     </section><section class="section">
       <div class="container">
-        <h2 class="section-title space">Related projects</h2><ProjectGrid limit={3} lang="en" />
+        <h2 class="section-title mt-[55px]">{content.projects.title}</h2><ProjectGrid
+          base={base}
+          projects={projects}
+          imageLabel={content.projects.imageLabel}
+          limit={3}
+        />
       </div>
     </section><CallToAction
-      title="Discuss your technical requirements with Lasan Marine"
-      href="/en/lien-he/"
-      label="Send an inquiry"
+      title={content.cta.title}
+      href={content.cta.href}
+      label={content.cta.label}
     />
   </main></BaseLayout
 >
-<style lang="scss">
-  .two {
-    display: grid;
-    grid-template-columns: 380px 1fr;
-    gap: 70px;
-  }
-  .matrix {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 50px;
-    border: 1px solid rgba(11, 28, 75, 0.15);
-  }
-  .matrix div {
-    padding: 28px;
-    border: 1px solid rgba(11, 28, 75, 0.1);
-    display: flex;
-    gap: 16px;
-  }
-  .matrix b {
-    color: #0a72c8;
-  }
-  .space {
-    margin-top: 55px;
-  }
-  .output {
-    color: white;
-  }
-  .output h2 {
-    font-size: 40px;
-  }
-  .output p {
-    color: rgba(255, 255, 255, 0.7);
-  }
-  .output .container > div {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1px;
-    margin-top: 35px;
-  }
-  .output span {
-    padding: 18px 22px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-  }
-  @media (max-width: 750px) {
-    .two {
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-    .matrix {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  @media (max-width: 450px) {
-    .matrix {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>

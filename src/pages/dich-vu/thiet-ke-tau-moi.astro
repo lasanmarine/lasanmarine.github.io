@@ -1,54 +1,36 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import PageHero from '@/components/PageHero.astro';
-import ProcessSteps from '@/components/ProcessSteps.astro';
-import ProjectGrid from '@/components/ProjectGrid.astro';
-import CallToAction from '@/components/CallToAction.astro';
-const scope = [
-  'Phân tích yêu cầu khai thác',
-  'Xác định thông số chính',
-  'Thiết kế bố trí chung',
-  'Thiết kế tuyến hình',
-  'Thiết kế kết cấu',
-  'Bố trí máy và hệ động lực',
-  'Tính toán ổn định',
-  'Hoàn thiện hồ sơ kỹ thuật',
-];
-const outputs = [
-  'General Arrangement',
-  'Lines Plan',
-  'Construction Drawings',
-  'Machinery Arrangement',
-  'Stability Calculation',
-  'Technical Specification',
-  'Hồ sơ kỹ thuật liên quan',
-];
+import PageHero from '@/blocks/PageHero.astro';
+import ProcessSteps from '@/blocks/ProcessSteps.astro';
+import ProjectGrid from '@/blocks/ProjectGrid.astro';
+import CallToAction from '@/blocks/CallToAction.astro';
+import { thietKeTauMoi as content } from '@/data/vi/thiet-ke-tau-moi.js';
+import { getSiteData } from '@/data/site.js';
+
+const base = '';
+const { steps, projects } = getSiteData('vi');
 ---
 
-<BaseLayout
-  title="Thiết kế tàu mới | Lasan Marine"
-  description="Dịch vụ thiết kế tàu mới từ phương án đến hồ sơ kỹ thuật."
-  ><PageHero
-    title="Thiết kế tàu mới"
-    description="Phát triển phương án tàu từ yêu cầu khai thác ban đầu đến bộ hồ sơ kỹ thuật hoàn chỉnh."
-  /><main>
+<BaseLayout title={content.meta.title} description={content.meta.description}
+  ><PageHero title={content.hero.title} description={content.hero.description} /><main>
     <section class="section">
-      <div class="container two">
-        <h2 class="section-title">Tổng quan dịch vụ</h2><p class="lead muted">
-          Dịch vụ phù hợp với chủ tàu, doanh nghiệp khai thác và đơn vị đóng tàu đang cần phát triển
-          phương tiện theo mục đích sử dụng cụ thể.
+      <div
+        class="container grid grid-cols-[380px_1fr] gap-[70px] max-[750px]:grid-cols-1 max-[750px]:gap-5"
+      >
+        <h2 class="section-title">{content.overview.title}</h2><p class="lead muted">
+          {content.overview.text}
         </p>
       </div>
     </section><section class="section section--pale">
       <div class="container">
-        <h2 class="section-title">Phạm vi công việc</h2><div class="matrix">
+        <h2 class="section-title">{content.scope.title}</h2><div
+          class="mt-[50px] grid grid-cols-4 border border-navy/15 max-[750px]:grid-cols-2 max-[450px]:grid-cols-1"
+        >
           {
-            scope.map((x, i) => (
-              <div>
-                <>
-                  <b>{String(i + 1).padStart(2, '0')}</b>
-                  <span>{x}</span>
-                </>
+            content.scope.items.map((x, i) => (
+              <div class="flex gap-4 border border-navy/10 p-7">
+                <b class="text-marine">{String(i + 1).padStart(2, '0')}</b>
+                <span>{x}</span>
               </div>
             ))
           }
@@ -56,79 +38,31 @@ const outputs = [
       </div>
     </section><section class="section">
       <div class="container">
-        <h2 class="section-title">Quy trình thực hiện</h2><div class="space"><ProcessSteps /></div>
+        <h2 class="section-title">{content.process.title}</h2><div class="mt-[55px]">
+          <ProcessSteps steps={steps} />
+        </div>
       </div>
-    </section><section class="section output technical-grid">
+    </section><section class="section technical-grid text-white">
       <div class="container">
-        <h2>Đầu ra bàn giao</h2><p>
-          Bộ tài liệu được tổ chức theo hạng mục, phục vụ thi công và kiểm tra phân cấp.
-        </p><div>{outputs.map((x) => <span>{x}</span>)}</div>
+        <h2 class="text-[40px]">{content.deliverables.title}</h2><p class="text-white/70">
+          {content.deliverables.text}
+        </p><div class="mt-[35px] flex flex-wrap gap-px">
+          {
+            content.deliverables.items.map((x) => (
+              <span class="border border-white/25 px-[22px] py-[18px]">{x}</span>
+            ))
+          }
+        </div>
       </div>
     </section><section class="section">
       <div class="container">
-        <h2 class="section-title space">Dự án liên quan</h2><ProjectGrid limit={3} />
+        <h2 class="section-title mt-[55px]">{content.projects.title}</h2><ProjectGrid
+          base={base}
+          projects={projects}
+          imageLabel={content.projects.imageLabel}
+          limit={3}
+        />
       </div>
-    </section><CallToAction
-      title="Trao đổi yêu cầu kỹ thuật với Lasan Marine"
-      label="Gửi yêu cầu"
-    />
+    </section><CallToAction title={content.cta.title} label={content.cta.label} />
   </main></BaseLayout
 >
-<style lang="scss">
-  .two {
-    display: grid;
-    grid-template-columns: 380px 1fr;
-    gap: 70px;
-  }
-  .matrix {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 50px;
-    border: 1px solid rgba(11, 28, 75, 0.15);
-  }
-  .matrix div {
-    padding: 28px;
-    border: 1px solid rgba(11, 28, 75, 0.1);
-    display: flex;
-    gap: 16px;
-  }
-  .matrix b {
-    color: #0a72c8;
-  }
-  .space {
-    margin-top: 55px;
-  }
-  .output {
-    color: white;
-  }
-  .output h2 {
-    font-size: 40px;
-  }
-  .output p {
-    color: rgba(255, 255, 255, 0.7);
-  }
-  .output .container > div {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1px;
-    margin-top: 35px;
-  }
-  .output span {
-    padding: 18px 22px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-  }
-  @media (max-width: 750px) {
-    .two {
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-    .matrix {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  @media (max-width: 450px) {
-    .matrix {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>

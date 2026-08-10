@@ -1,93 +1,64 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import ButtonLink from '@/components/ButtonLink.astro';
-import ServiceShowcase from '@/components/ServiceShowcase.astro';
-import ProcessSteps from '@/components/ProcessSteps.astro';
-import ProjectGrid from '@/components/ProjectGrid.astro';
-import CallToAction from '@/components/CallToAction.astro';
 import Icon from '@/components/Icon.astro';
+import ServiceShowcase from '@/blocks/ServiceShowcase.astro';
+import ProcessSteps from '@/blocks/ProcessSteps.astro';
+import ProjectGrid from '@/blocks/ProjectGrid.astro';
+import CallToAction from '@/blocks/CallToAction.astro';
 import '@/styles/components/HomePage.scss';
+import { home } from '@/data/vi/home.js';
+import { getSiteData } from '@/data/site.js';
 
-const categories = [
-  [
-    '01',
-    'Tàu đánh cá',
-    'Thiết kế mới, chuyển hoán và cải tạo tàu phục vụ khai thác thủy sản.',
-    '/tau_danh_ca.webp',
-  ],
-  [
-    '02',
-    'Phương tiện thủy nội địa',
-    'Thiết kế tàu phục vụ vận tải, khai thác và hoạt động nội địa.',
-    '/phuong_tien_tau_thuy_noi_dia.webp',
-  ],
-  [
-    '03',
-    'Phương tiện vận tải đường thủy',
-    'Giải pháp theo yêu cầu tải trọng, công năng và điều kiện vận hành.',
-    '/phuong_tien_van_tai_duong_thuy.webp',
-  ],
-];
+const base = '';
+const { services, steps, projects } = getSiteData('vi');
+const backgrounds = Array.from({ length: 10 }, (_, i) => `/ser${i + 1}.webp`);
 ---
 
-<BaseLayout
-  title="Lasan Marine | Thiết kế kỹ thuật phương tiện thủy"
-  description="Thiết kế tàu cá, phương tiện thủy nội địa và phương tiện vận tải đường thủy."
->
+<BaseLayout title={home.meta.title} description={home.meta.description}>
   <Fragment slot="head">
     <link rel="preload" href="/hero.webp" as="image" fetchpriority="high" />
   </Fragment>
   <main>
     <section class="technical-grid hero">
       <div class="container py-24">
-        <h1>Engineering Tomorrow's Oceans</h1>
-        <p class="hero__description">
-          Cung cấp giải pháp thiết kế tàu cá, phương tiện thủy nội địa, phương tiện vận tải đường
-          thủy.
-        </p>
+        <h1>{home.hero.title}</h1>
+        <p class="hero__description">{home.hero.description}</p>
         <div class="flex flex-wrap gap-3.5">
-          <ButtonLink href="/dich-vu/">Xem dịch vụ</ButtonLink>
-          <ButtonLink href="/lien-he/" outline>Liên hệ chúng tôi</ButtonLink>
+          <ButtonLink href={home.hero.ctaPrimary.href}>{home.hero.ctaPrimary.label}</ButtonLink>
+          <ButtonLink href={home.hero.ctaSecondary.href} outline>
+            {home.hero.ctaSecondary.label}
+          </ButtonLink>
         </div>
       </div>
     </section>
     <section class="section">
       <div class="container grid grid-cols-[400px_1fr] gap-20 max-[800px]:grid-cols-1 max-[800px]:gap-6">
-        <h2 class="section-title">Về chúng tôi</h2>
+        <h2 class="section-title">{home.about.title}</h2>
         <div class="prose">
-          <p class="lead">
-            Lasan Marine là công ty chuyên về thiết kế, cải hoán và lập hồ sơ kỹ thuật cho phương
-            tiện thủy.
-          </p>
-          <p>
-            Đội ngũ kỹ sư làm việc từ yêu cầu khai thác thực tế: xác định thông số chính, bố trí
-            chung, tuyến hình, kết cấu, hệ động lực và tính toán ổn định cho tới khi hồ sơ hoàn
-            thiện.
-          </p>
+          <p class="lead">{home.about.lead}</p>
+          <p>{home.about.body}</p>
         </div>
       </div>
     </section>
     <section class="section customer-message">
       <div class="container customer-message__layout">
         <div class="customer-message__portrait">
-          <img src="/ceo_huynh_le_hong_thai.webp" alt="TS. Huỳnh Lê Hồng Thái" loading="lazy" />
+          <img src="/ceo_huynh_le_hong_thai.webp" alt={home.customerMessage.name} loading="lazy" />
           <span class="customer-message__orbit" aria-hidden="true"></span>
           <span class="customer-message__mark customer-message__mark--top" aria-hidden="true">
           </span>
           <span class="customer-message__mark customer-message__mark--side" aria-hidden="true">
           </span>
           <div class="customer-message__signature">
-            <strong>TS. Huỳnh Lê Hồng Thái</strong>
-            <span>Giám đốc công ty</span>
+            <strong>{home.customerMessage.name}</strong>
+            <span>{home.customerMessage.role}</span>
           </div>
         </div>
         <div class="customer-message__content">
-          <h2 class="section-title">Kính gửi quý khách hàng</h2>
-          <p class="customer-message__quote">
-            Mỗi phương tiện là một bài toán kỹ thuật riêng. Chúng tôi luôn lắng nghe nhu cầu khai
-            thác thực tế để cùng khách hàng tạo nên giải pháp an toàn, hiệu quả và phù hợp lâu dài.
-          </p>
-          <ButtonLink href="/lien-he/">Liên hệ</ButtonLink>
+          <h2 class="section-title">{home.customerMessage.title}</h2>
+          <p class="customer-message__quote">{home.customerMessage.quote}</p>
+          <ButtonLink href="/lien-he/">{home.customerMessage.ctaLabel}</ButtonLink>
         </div>
       </div>
     </section>
@@ -95,37 +66,35 @@ const categories = [
       <div class="vehicle-categories__sticky">
         <div class="vehicle-categories__background" aria-hidden="true">
           {
-            categories.map((category, index) => (
+            home.categories.items.map((category, index) => (
               <div
                 class:list={{ active: index === 0 }}
                 data-category-background={index}
-                style={`background-image: linear-gradient(90deg, rgba(7, 18, 51, 0.88), rgba(7, 18, 51, 0.52)), url('${category[3]}')`}
+                style={`background-image: linear-gradient(90deg, rgba(7, 18, 51, 0.88), rgba(7, 18, 51, 0.52)), url('${category.image}')`}
               />
             ))
           }
         </div>
         <div class="container vehicle-categories__content">
           <div class="vehicle-categories__heading">
-            <h2 class="section-title">Loại phương tiện</h2>
-            <p class="lead intro max-w-[720px] mt-3">
-              Cuộn để khám phá các nhóm phương tiện Lasan Marine thiết kế.
-            </p>
+            <h2 class="section-title">{home.categories.title}</h2>
+            <p class="lead intro max-w-[720px] mt-3">{home.categories.intro}</p>
           </div>
           <div class="categories-viewport">
             <div class="categories" data-category-track>
               {
-                categories.map((category, index) => (
+                home.categories.items.map((category, index) => (
                   <a
                     href="/dich-vu/"
                     class:list={{ active: index === 0 }}
                     data-category-card={index}
                   >
                     <div>
-                      <h3>{category[1]}</h3>
-                      <p>{category[2]}</p>
+                      <h3>{category.title}</h3>
+                      <p>{category.text}</p>
                     </div>
                     <span>
-                      <em>Nhấn vào để khám phá</em>
+                      <em>{home.categories.cardCta}</em>
                       <Icon name="arrow" size={32} />
                     </span>
                   </a>
@@ -139,28 +108,31 @@ const categories = [
     </section>
     <section class="section w-full! bg-navy py-0!">
       <div class="container w-full! max-w-none! mx-0!">
-        <ServiceShowcase />
+        <ServiceShowcase
+          base={base}
+          sectionTitle={home.services.sectionTitle}
+          detailsLabel={home.services.detailsLabel}
+          services={services}
+          backgrounds={backgrounds}
+        />
       </div>
     </section>
     <section class="section technical-grid text-white scroll-mt-21">
       <div class="container">
-        <h2 class="text-[40px] mb-15">Quy trình triển khai dự án</h2>
-        <ProcessSteps dark />
+        <h2 class="text-[40px] mb-15">{home.process.title}</h2>
+        <ProcessSteps steps={steps} dark />
       </div>
     </section>
     <section class="section">
       <div class="container">
         <div class="mb-12 flex items-end justify-between gap-[30px] max-[800px]:flex-col max-[800px]:items-start">
-          <h2 class="section-title">Dự án tiêu biểu</h2>
-          <ButtonLink href="/du-an/">Xem tất cả dự án</ButtonLink>
+          <h2 class="section-title">{home.projects.title}</h2>
+          <ButtonLink href="/du-an/">{home.projects.cta}</ButtonLink>
         </div>
-        <ProjectGrid limit={3} />
+        <ProjectGrid base={base} projects={projects} imageLabel={home.projects.imageLabel} limit={3} />
       </div>
     </section>
-    <CallToAction
-      title="Bạn đang có một phương tiện cần thiết kế hoặc cải tạo?"
-      text="Gửi thông tin để đội ngũ kỹ thuật trao đổi phương án phù hợp."
-    />
+    <CallToAction title={home.cta.title} text={home.cta.text} />
   </main>
 </BaseLayout>
 

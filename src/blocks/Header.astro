@@ -1,0 +1,51 @@
+---
+import Icon from '@/components/Icon.astro';
+import '@/styles/components/Header.scss';
+
+interface Props {
+  base: string;
+  content: {
+    links: string[][];
+    toolsLabel: string;
+    toolsMenu: string[][];
+    contactLabel: string;
+    languageLabel: string;
+  };
+}
+
+const { base, content } = Astro.props as Props;
+const switchHref = base === '/en' ? Astro.url.pathname.replace(/^\/en/, '') || '/' : `/en${Astro.url.pathname}`;
+const switchHreflang = base === '/en' ? 'vi' : 'en';
+---
+
+<header class="header">
+  <div class="container header__inner">
+    <a href={`${base}/`} class="brand">
+      <img src="/logo-lasan.svg" width="250" height="35" alt="Lasan Marine" />
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span><span class="sr-only">Menu</span>
+    </button>
+    <nav id="site-nav" class="nav" aria-label="Main navigation">
+      {content.links.map(([label, path]) => <a href={`${base}${path}`}>{label}</a>)}
+      <div class="nav-tools">
+        <a href={`${base}/cong-cu/chuyen-doi-cong-suat/`}>{content.toolsLabel}</a>
+        <div class="nav-tools__menu">
+          {content.toolsMenu.map(([label, path]) => <a href={`${base}${path}`}>{label}</a>)}
+        </div>
+      </div>
+      <a href={switchHref} class="language" hreflang={switchHreflang}>
+        {content.languageLabel}
+      </a>
+      <a href={`${base}/lien-he/`} class="contact">
+        {content.contactLabel}
+        <Icon name="arrow" size={18} />
+      </a>
+    </nav>
+    <button class="nav-backdrop" type="button" tabindex="-1" aria-hidden="true"></button>
+  </div>
+</header>
+<script>
+  import { initHeaderNav } from '@/scripts/header-nav';
+  initHeaderNav();
+</script>

@@ -2,6 +2,7 @@
 @source '../components/**/*.astro';
 @source '../pages/**/*.astro';
 @source '../layouts/**/*.astro';
+@source '../blocks/**/*.astro';
 
 @theme {
   --color-navy: #0b1c4b;

@@ -1,36 +1,27 @@
 ---
-import ContactMap from './ContactMap.astro';
+import ContactMap from '@/blocks/ContactMap.astro';
 
-const { lang = 'vi' } = Astro.props;
-const base = lang === 'en' ? '/en' : '';
-const copy =
-  lang === 'en'
-    ? {
-        description:
-          'Marine engineering consultancy and design for fishing vessels, inland waterway vessels, and waterway transport.',
-        menu: ['Home', 'About', 'Services', 'Projects', 'Insights'],
-        services: 'Services',
-        serviceLinks: [
-          'New vessel design',
-          'Hull conversion',
-          'Vessel refit',
-          'Technical documents',
-        ],
-        contact: 'Contact',
-        tax: 'Tax code',
-        address: '03 Tran Lu Street, Bac Nha Trang Ward, Khanh Hoa Province, Vietnam',
-      }
-    : {
-        description:
-          'Đơn vị tư vấn và thiết kế kỹ thuật chuyên về tàu đánh cá, phương tiện thủy nội địa và phương tiện vận tải đường thủy.',
-        menu: ['Trang chủ', 'Giới thiệu', 'Dịch vụ', 'Dự án', 'Bài viết'],
-        services: 'Dịch vụ',
-        serviceLinks: ['Thiết kế tàu mới', 'Chuyển hoán vỏ', 'Hoán cải', 'Hồ sơ kỹ thuật'],
-        contact: 'Liên hệ',
-        tax: 'MST',
-        address: 'Số 03 Trần Lư, Phường Bắc Nha Trang, Tỉnh Khánh Hòa, Việt Nam',
-      };
-const menuPaths = ['/', '/gioi-thieu/', '/dich-vu/', '/du-an/', '/bai-viet/'];
+interface Props {
+  base: string;
+  content: {
+    links: string[][];
+    footer: {
+      description: string;
+      servicesTitle: string;
+      serviceLinks: string[];
+      contactTitle: string;
+      tax: string;
+      address: string;
+    };
+    map: {
+      title: string;
+      linkLabel: string;
+    };
+  };
+}
+
+const { base, content } = Astro.props as Props;
+const footer = content.footer;
 ---
 
 <footer class="border-t border-navy/14 bg-white text-ink/68">
@@ -47,14 +38,14 @@ const menuPaths = ['/', '/gioi-thieu/', '/dich-vu/', '/du-an/', '/bai-viet/'];
       />
     </div>
     <div class="flex flex-col gap-11 pt-2">
-      <p class="m-0 max-w-[680px] text-base leading-[1.7]">{copy.description}</p>
+      <p class="m-0 max-w-[680px] text-base leading-[1.7]">{footer.description}</p>
       <div class="grid grid-cols-[0.8fr_1fr_1.4fr] gap-10 max-[520px]:grid-cols-1 max-[520px]:gap-8">
         <div>
           <h2 class="m-0 mb-5 text-[17px] text-navy">Menu</h2>
           {
-            copy.menu.map((label, index) => (
+            content.links.map(([label, path]) => (
               <a
-                href={`${base}${menuPaths[index]}`}
+                href={`${base}${path}`}
                 class="mb-2.5 block w-fit text-sm leading-relaxed text-navy/70 no-underline transition-colors duration-[180ms] hover:text-marine"
               >
                 {label}
@@ -63,9 +54,9 @@ const menuPaths = ['/', '/gioi-thieu/', '/dich-vu/', '/du-an/', '/bai-viet/'];
           }
         </div>
         <div>
-          <h2 class="m-0 mb-5 text-[17px] text-navy">{copy.services}</h2>
+          <h2 class="m-0 mb-5 text-[17px] text-navy">{footer.servicesTitle}</h2>
           {
-            copy.serviceLinks.map((label) => (
+            footer.serviceLinks.map((label) => (
               <a
                 href={`${base}/dich-vu/thiet-ke-tau-moi/`}
                 class="mb-2.5 block w-fit text-sm leading-relaxed text-navy/70 no-underline transition-colors duration-[180ms] hover:text-marine"
@@ -76,12 +67,12 @@ const menuPaths = ['/', '/gioi-thieu/', '/dich-vu/', '/du-an/', '/bai-viet/'];
           }
         </div>
         <div>
-          <h2 class="m-0 mb-5 text-[17px] text-navy">{copy.contact}</h2>
+          <h2 class="m-0 mb-5 text-[17px] text-navy">{footer.contactTitle}</h2>
           <strong class="mb-2.5 block text-[15px] leading-relaxed text-navy">
             LASAN MARINE COMPANY LIMITED
           </strong>
-          <span class="mb-2.5 block text-sm leading-relaxed">{copy.tax}: 4202063521</span>
-          <span class="mb-2.5 block text-sm leading-relaxed">{copy.address}</span>
+          <span class="mb-2.5 block text-sm leading-relaxed">{footer.tax}: 4202063521</span>
+          <span class="mb-2.5 block text-sm leading-relaxed">{footer.address}</span>
           <a
             href="tel:0834310781"
             class="mb-2.5 block w-fit text-sm leading-relaxed text-navy/70 no-underline transition-colors duration-[180ms] hover:text-marine"
@@ -90,7 +81,7 @@ const menuPaths = ['/', '/gioi-thieu/', '/dich-vu/', '/du-an/', '/bai-viet/'];
           </a>
         </div>
       </div>
-      <ContactMap lang={lang} />
+      <ContactMap content={content.map} />
     </div>
   </div>
   <div class="container border-t border-navy/14 py-5 pb-9 text-[13px] text-navy/68 max-[520px]:mt-10">

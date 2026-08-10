@@ -1,0 +1,35 @@
+---
+interface ToolLink {
+  href: string;
+  label: string;
+  current?: boolean;
+}
+
+interface Props {
+  navTitle: string;
+  navIntro?: string;
+  navAriaLabel: string;
+  links: ToolLink[];
+}
+
+const { navTitle, navIntro, navAriaLabel, links } = Astro.props as Props;
+---
+
+<section class="section">
+  <div class="container tool-layout">
+    <aside class="tool-intro">
+      <h2 class="section-title">{navTitle}</h2>
+      {navIntro && <p>{navIntro}</p>}
+      <nav class="tool-links" aria-label={navAriaLabel}>
+        {
+          links.map((link) => (
+            <a href={link.href} aria-current={link.current ? 'page' : undefined}>
+              {link.label}
+            </a>
+          ))
+        }
+      </nav>
+    </aside>
+    <slot />
+  </div>
+</section>

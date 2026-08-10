@@ -1,154 +1,20 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import PageHero from '@/components/PageHero.astro';
-import Blueprint from '@/components/Blueprint.astro';
-import Icon from '@/components/Icon.astro';
-import CallToAction from '@/components/CallToAction.astro';
-const posts = [
-  [
-    'Ghi chú kỹ thuật · 02.06.2026',
-    'Tuyến hình và ảnh hưởng đến sức cản thân tàu',
-    'Vì sao thay đổi nhỏ ở phần mũi có thể làm thay đổi đáng kể tiêu hao nhiên liệu.',
-  ],
-  [
-    'Hồ sơ · 24.05.2026',
-    'Bộ hồ sơ tối thiểu cho tàu cá vỏ thép',
-    'Danh mục bản vẽ và tài liệu thường được yêu cầu khi kiểm tra phân cấp.',
-  ],
-  [
-    'Ổn định · 15.05.2026',
-    'Đọc thông báo ổn định như thế nào',
-    'Các trạng thái khai thác và ý nghĩa của từng đường cong trong hồ sơ.',
-  ],
-  [
-    'Hoán cải · 28.04.2026',
-    'Khi nào nên hoán cải thay vì đóng mới',
-    'So sánh chi phí, thời gian và giới hạn kỹ thuật của hai phương án.',
-  ],
-  [
-    'Kết cấu · 12.04.2026',
-    'Kiểm tra kết cấu khi thay máy chính',
-    'Những vùng chịu lực cần tính lại trước khi lắp đặt máy mới.',
-  ],
-  [
-    'Quy định · 30.03.2026',
-    'Chuyển vùng hoạt động: hồ sơ cần chuẩn bị',
-    'Trình tự đánh giá và các tài liệu đi kèm.',
-  ],
-];
+import PageHero from '@/blocks/PageHero.astro';
+import CallToAction from '@/blocks/CallToAction.astro';
+import BlogList from '@/blocks/BlogList.astro';
+import { baiViet as content } from '@/data/vi/bai-viet.js';
 ---
 
-<BaseLayout
-  title="Bài viết | Lasan Marine"
-  description="Ghi chú kỹ thuật và kinh nghiệm thiết kế phương tiện thủy."
-  ><PageHero
-    title="Bài viết"
-    description="Ghi chú kỹ thuật, kinh nghiệm thiết kế và cập nhật quy định liên quan đến phương tiện thủy."
-  /><main>
-    <section class="section">
-      <div class="container featured">
-        <Blueprint class="placeholder" label="Ảnh bài viết" /><div>
-          <b>Ghi chú kỹ thuật · 12.06.2026</b><h2>
-            Những điểm cần lưu ý khi chuyển hoán nghề cho tàu cá
-          </h2><p>
-            Thay đổi nghề khai thác kéo theo thay đổi bố trí boong, trang thiết bị và trạng thái tải
-            trọng.
-          </p><a href="/bai-viet/chuyen-hoan-nghe-tau-ca/">Đọc bài viết <Icon name="arrow" /></a>
-        </div>
-      </div><div class="container posts">
-        {
-          posts.map((p) => (
-            <article>
-              <>
-                <Blueprint class="placeholder" label="Ảnh bài viết" />
-                <b>{p[0]}</b>
-                <h2>{p[1]}</h2>
-                <p>{p[2]}</p>
-                <a href="/bai-viet/chuyen-hoan-nghe-tau-ca/">
-                  Đọc bài viết <Icon name="arrow" />
-                </a>
-              </>
-            </article>
-          ))
-        }
-      </div>
-    </section><CallToAction title="Cần tư vấn cho phương tiện của bạn?" />
-  </main></BaseLayout
-><style lang="scss">
-  .featured {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    margin-bottom: 80px;
-  }
-  .featured > .blueprint {
-    min-height: 390px;
-  }
-  .featured > div:last-child {
-    align-self: center;
-  }
-  .featured b,
-  .posts b {
-    color: #0a72c8;
-  }
-  .featured h2 {
-    font-size: 40px;
-    color: #0b1c4b;
-    margin: 15px 0;
-  }
-  .featured p,
-  .posts p {
-    color: rgba(29, 31, 32, 0.7);
-    line-height: 1.7;
-  }
-  .featured a,
-  .posts a {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    color: #0a72c8;
-    font-weight: 600;
-    text-decoration: none;
-  }
-  .posts {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 56px 32px;
-  }
-  .posts article {
-    display: grid;
-    grid-template-rows: auto auto auto 1fr auto;
-    row-gap: 16px;
-    min-width: 0;
-  }
-  .posts .placeholder {
-    aspect-ratio: 4/3;
-  }
-  .posts h2 {
-    font-size: 24px;
-    color: #0b1c4b;
-    margin: 0;
-    line-height: 1.25;
-  }
-  .posts p {
-    margin: 0;
-  }
-  .posts a {
-    margin: 0;
-  }
-  @media (max-width: 800px) {
-    .featured {
-      grid-template-columns: 1fr;
-    }
-    .posts {
-      grid-template-columns: 1fr 1fr;
-      gap: 48px 24px;
-    }
-  }
-  @media (max-width: 520px) {
-    .posts {
-      grid-template-columns: 1fr;
-      gap: 44px;
-    }
-  }
-</style>
+<BaseLayout title={content.meta.title} description={content.meta.description}>
+  <PageHero title={content.hero.title} description={content.hero.description} />
+  <main>
+    <BlogList
+      featured={content.featured}
+      posts={content.posts}
+      imageLabel={content.imageLabel}
+      readLabel={content.readLabel}
+    />
+    <CallToAction title={content.cta.title} />
+  </main>
+</BaseLayout>

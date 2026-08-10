@@ -1,134 +1,65 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import PageHero from '@/components/PageHero.astro';
+import PageHero from '@/blocks/PageHero.astro';
 import Blueprint from '@/components/Blueprint.astro';
-import ProjectGrid from '@/components/ProjectGrid.astro';
-import CallToAction from '@/components/CallToAction.astro';
-const facts = [
-  ['Vessel type', 'Fishing vessel'],
-  ['Service', 'New vessel design'],
-  ['Length', '24 m'],
-  ['Beam', '6.8 m'],
-  ['Power', '450 HP'],
-  ['Year', '2026'],
-];
-const scope = [
-  'General arrangement',
-  'Lines plan',
-  'Hull structure',
-  'Machinery arrangement',
-  'Shaft and propeller',
-  'Stability calculation',
-  'Stability booklet',
-  'Classification documents',
-];
+import ProjectGrid from '@/blocks/ProjectGrid.astro';
+import CallToAction from '@/blocks/CallToAction.astro';
+import { tauCaVoThep24m as content } from '@/data/en/tau-ca-vo-thep-24m.js';
+import { getSiteData } from '@/data/site.js';
+
+const base = '/en';
+const { projects } = getSiteData('en');
 ---
 
-<BaseLayout
-  title="24m steel fishing vessel | Lasan Marine"
-  description="Design project for a 24m steel fishing vessel."
-  lang="en"
-  ><PageHero title="24m steel fishing vessel design" /><main>
+<BaseLayout title={content.meta.title} description={content.meta.description} lang="en">
+  <PageHero title={content.hero.title} />
+  <main>
     <section class="section">
       <div class="container">
-        <Blueprint class="placeholder hero-img" label="Large project image" /><div class="facts">
+        <Blueprint
+          class="placeholder h-[440px] max-[750px]:h-[280px]"
+          label={content.hero.imageLabel}
+        />
+        <div class="mt-[55px] grid grid-cols-6 border border-navy/15 max-[750px]:grid-cols-2">
           {
-            facts.map((fact) => (
-              <div>
-                <>
-                  <small>{fact[0]}</small>
-                  <strong>{fact[1]}</strong>
-                </>
+            content.facts.map(([label, value]) => (
+              <div class="border-r border-navy/15 p-[22px]">
+                <small class="mb-[7px] block text-marine">{label}</small>
+                <strong class="block">{value}</strong>
               </div>
             ))
           }
-        </div><div class="story">
+        </div>
+        <div class="mt-20 grid grid-cols-2 gap-[70px] max-[750px]:grid-cols-1 max-[750px]:gap-[30px]">
           <div>
-            <h2 class="section-title">Challenge</h2><p>
-              The owner required an offshore steel vessel with increased refrigerated hold capacity
-              while meeting stability and safety requirements.
-            </p>
-          </div><div>
-            <h2 class="section-title">Solution</h2><p>
-              Lasan Marine defined the principal dimensions, developed a new hull form and
-              arrangement, and verified structure and stability for operating conditions.
-            </p>
+            <h2 class="section-title">{content.story.challenge.title}</h2>
+            <p class="leading-[1.8] text-ink/75">{content.story.challenge.text}</p>
+          </div>
+          <div>
+            <h2 class="section-title">{content.story.solution.title}</h2>
+            <p class="leading-[1.8] text-ink/75">{content.story.solution.text}</p>
           </div>
         </div>
       </div>
-    </section><section class="section section--pale">
+    </section>
+    <section class="section section--pale">
       <div class="container">
-        <h2 class="section-title">Design scope</h2><div class="scope">
-          {scope.map((item) => <span>✓ {item}</span>)}
+        <h2 class="section-title">{content.scope.title}</h2>
+        <div class="mt-[45px] grid grid-cols-4 max-[750px]:grid-cols-2">
+          {
+            content.scope.items.map((item) => (
+              <span class="border border-navy/12 p-6">✓ {item}</span>
+            ))
+          }
         </div>
       </div>
-    </section><section class="section">
+    </section>
+    <section class="section">
       <div class="container">
-        <h2 class="section-title space">Related projects</h2><ProjectGrid limit={3} lang="en" />
+        <h2 class="section-title mb-12">{content.related.title}</h2>
+        <ProjectGrid base={base} projects={projects} imageLabel={content.related.imageLabel} limit={3} />
       </div>
-    </section><CallToAction
-      title="Discuss your technical requirements with Lasan Marine"
-      href="/en/lien-he/"
-      label="Contact us"
-    />
-  </main></BaseLayout
-><style lang="scss">
-  .hero-img {
-    height: 440px;
-  }
-  .facts {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    border: 1px solid rgba(11, 28, 75, 0.15);
-    margin-top: 55px;
-  }
-  .facts div {
-    padding: 22px;
-    border-right: 1px solid rgba(11, 28, 75, 0.15);
-  }
-  .facts small,
-  .facts strong {
-    display: block;
-  }
-  .facts small {
-    color: #0a72c8;
-    margin-bottom: 7px;
-  }
-  .story {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px;
-    margin-top: 80px;
-  }
-  .story p {
-    line-height: 1.8;
-    color: rgba(29, 31, 32, 0.75);
-  }
-  .scope {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 45px;
-  }
-  .scope span {
-    padding: 24px;
-    border: 1px solid rgba(11, 28, 75, 0.12);
-  }
-  .space {
-    margin-bottom: 48px;
-  }
-  @media (max-width: 750px) {
-    .facts {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .story {
-      grid-template-columns: 1fr;
-      gap: 30px;
-    }
-    .scope {
-      grid-template-columns: 1fr 1fr;
-    }
-    .hero-img {
-      height: 280px;
-    }
-  }
-</style>
+    </section>
+    <CallToAction title={content.ctaTitle} href={content.ctaHref} label={content.ctaLabel} />
+  </main>
+</BaseLayout>

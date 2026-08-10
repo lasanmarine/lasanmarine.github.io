@@ -1,12 +1,16 @@
 ---
-import Blueprint from './Blueprint.astro';
-import Icon from './Icon.astro';
-import { getSiteData } from '@/data/site.js';
-const { limit, lang = 'vi' } = Astro.props;
-const base = lang === 'en' ? '/en' : '';
-const { projects } = getSiteData(lang);
+import Blueprint from '@/components/Blueprint.astro';
+import Icon from '@/components/Icon.astro';
+
+interface Props {
+  base: string;
+  projects: { name: string; service: string; group: string; meta: string }[];
+  imageLabel: string;
+  limit?: number;
+}
+
+const { base, projects, imageLabel, limit } = Astro.props as Props;
 const visibleProjects = projects.slice(0, limit ?? projects.length);
-const imageLabel = lang === 'en' ? 'Project image' : 'Ảnh dự án';
 ---
 
 <div class="grid grid-cols-3 gap-x-9 gap-y-12 max-[850px]:grid-cols-2 max-[550px]:grid-cols-1">

@@ -1,9 +1,12 @@
 ---
-import { getSiteData } from '@/data/site.js';
 import '@/styles/components/ProcessSteps.scss';
 
-const { dark = false, lang = 'vi' } = Astro.props;
-const { steps } = getSiteData(lang);
+interface Props {
+  steps: string[];
+  dark?: boolean;
+}
+
+const { steps, dark = false } = Astro.props as Props;
 ---
 
 <div class:list={['course-plot', { dark }]}>

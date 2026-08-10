@@ -1,0 +1,27 @@
+---
+interface Section {
+  heading: string;
+  body: string;
+}
+
+interface Props {
+  lead: string;
+  sections: Section[];
+}
+
+const { lead, sections } = Astro.props as Props;
+---
+
+<article class="section">
+  <div class="container prose max-w-[800px]">
+    <p class="lead">{lead}</p>
+    {
+      sections.map((s) => (
+        <>
+          <h2 class="mt-10 text-[30px] text-navy">{s.heading}</h2>
+          <p>{s.body}</p>
+        </>
+      ))
+    }
+  </div>
+</article>

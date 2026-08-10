@@ -1,0 +1,90 @@
+---
+interface Props {
+  valueLabel: string;
+  valuePlaceholder: string;
+  unitLabel: string;
+  unitPlaceholder: string;
+  units: string[];
+  submitLabel: string;
+  resetLabel: string;
+  resultsTitle: string;
+  resultHeaders: string[];
+  resultUnits: string[];
+  note: string;
+}
+
+const {
+  valueLabel,
+  valuePlaceholder,
+  unitLabel,
+  unitPlaceholder,
+  units,
+  submitLabel,
+  resetLabel,
+  resultsTitle,
+  resultHeaders,
+  resultUnits,
+  note,
+} = Astro.props as Props;
+---
+
+<div class="calculator" data-power-converter>
+  <form class="calculator-form" novalidate>
+    <div class="calculator-fields">
+      <label>
+        {valueLabel}
+        <input
+          type="number"
+          name="value"
+          min="0"
+          step="any"
+          inputmode="decimal"
+          placeholder={valuePlaceholder}
+          required
+        />
+      </label>
+      <label>
+        {unitLabel}
+        <select name="unit" required>
+          <option value="">{unitPlaceholder}</option>
+          {units.map((unit) => <option value={unit}>{unit}</option>)}
+        </select>
+      </label>
+    </div>
+    <p class="calculator-error" data-error hidden></p>
+    <div class="calculator-actions">
+      <button class="button" type="submit">{submitLabel}</button>
+      <button class="button button--secondary" type="reset">{resetLabel}</button>
+    </div>
+  </form>
+
+  <div class="calculator-result" data-results hidden aria-live="polite">
+    <h2>{resultsTitle}</h2>
+    <table class="result-table">
+      <thead>
+        <tr>
+          <th>{resultHeaders[0]}</th>
+          <th>{resultHeaders[1]}</th>
+          <th>{resultHeaders[2]}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          resultUnits.map((unit) => (
+            <tr>
+              <td data-result={unit} />
+              <td data-rounded={unit} />
+              <td>{unit}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p class="tool-note">{note}</p>
+  </div>
+</div>
+
+<script>
+  import { initPowerConversionTool } from '@/scripts/power-conversion-tool';
+  initPowerConversionTool();
+</script>

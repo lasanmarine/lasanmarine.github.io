@@ -1,6 +1,14 @@
 ---
-import ButtonLink from './ButtonLink.astro';
-const { title, text = '', href = '/lien-he/', label = 'Liên hệ' } = Astro.props;
+import ButtonLink from '@/components/ButtonLink.astro';
+
+interface Props {
+  title: string;
+  text?: string;
+  href?: string;
+  label?: string;
+}
+
+const { title, text = '', href = '/lien-he/', label = 'Liên hệ' } = Astro.props as Props;
 ---
 
 <section class="technical-grid text-white">
