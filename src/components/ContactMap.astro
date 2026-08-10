@@ -1,0 +1,46 @@
+---
+const { lang = 'vi' } = Astro.props;
+const address = '03 Trần Lư, Phường Bắc Nha Trang, Khánh Hòa, Việt Nam';
+const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
+const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+const title = lang === 'en' ? 'Lasan Marine location map' : 'Bản đồ vị trí Lasan Marine';
+const linkLabel = lang === 'en' ? 'Open in Google Maps' : 'Mở trên Google Maps';
+---
+
+<div class="contact-map">
+  <iframe
+    src={mapUrl}
+    title={title}
+    width="600"
+    height="360"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  >
+  </iframe>
+  <a href={directionsUrl} target="_blank" rel="noopener noreferrer">{linkLabel}</a>
+</div>
+
+<style lang="scss">
+  .contact-map {
+    position: relative;
+    border-block: 1px solid rgba(11, 28, 75, 0.16);
+  }
+
+  .contact-map iframe {
+    display: block;
+    width: 100%;
+    height: clamp(320px, 42vw, 520px);
+    border: 0;
+    filter: saturate(0.75) contrast(1.04);
+  }
+
+  .contact-map a {
+    display: block;
+    padding: 12px 16px;
+    border-top: 1px solid rgba(11, 28, 75, 0.14);
+    color: #0a72c8;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+</style>

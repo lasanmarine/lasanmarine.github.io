@@ -1,0 +1,239 @@
+---
+import { getSiteData } from '@/data/site.js';
+
+const { dark = false, lang = 'vi' } = Astro.props;
+const { steps } = getSiteData(lang);
+---
+
+<div class:list={['course-plot', { dark }]}>
+  <svg
+    class="course-plot__line course-plot__line--desktop"
+    viewBox="0 0 1200 220"
+    preserveAspectRatio="none"
+    aria-hidden="true"
+  >
+    <defs>
+      <marker
+        id="course-arrow"
+        markerWidth="11"
+        markerHeight="11"
+        refX="9"
+        refY="5.5"
+        orient="auto"
+        markerUnits="strokeWidth"
+      >
+        <path d="M0 0 11 5.5 0 11Z" fill="currentColor"></path>
+      </marker>
+    </defs>
+    <path d="M24 110 H1170" marker-end="url(#course-arrow)"></path>
+  </svg>
+
+  <svg
+    class="course-plot__line course-plot__line--mobile"
+    viewBox="0 0 60 720"
+    preserveAspectRatio="none"
+    aria-hidden="true"
+  >
+    <defs>
+      <marker
+        id="course-arrow-mobile"
+        markerWidth="11"
+        markerHeight="11"
+        refX="9"
+        refY="5.5"
+        orient="auto"
+        markerUnits="strokeWidth"
+      >
+        <path d="M0 0 11 5.5 0 11Z" fill="currentColor"></path>
+      </marker>
+    </defs>
+    <path d="M30 12 V700" marker-end="url(#course-arrow-mobile)"></path>
+  </svg>
+
+  <ol>
+    {
+      steps.map((text, index) => (
+        <li>
+          <span class="course-plot__waypoint" aria-hidden="true" />
+          <div class="course-plot__content">
+            <b>{String(index + 1).padStart(2, '0')}</b>
+            <p>{text}</p>
+          </div>
+        </li>
+      ))
+    }
+  </ol>
+</div>
+
+<style lang="scss">
+  .course-plot {
+    position: relative;
+    min-height: 300px;
+    color: #0a72c8;
+  }
+
+  .course-plot__line {
+    position: absolute;
+    inset: 40px 0 auto;
+    width: 100%;
+    height: 220px;
+    overflow: visible;
+  }
+
+  .course-plot__line path:not(marker path) {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 3;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .course-plot__line--mobile {
+    display: none;
+  }
+
+  .course-plot ol {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    min-height: 300px;
+    margin: 0;
+    padding: 0 28px;
+    list-style: none;
+  }
+
+  .course-plot li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .course-plot__waypoint {
+    position: absolute;
+    top: 142px;
+    width: 15px;
+    height: 15px;
+    background: currentColor;
+    border: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #0b1c4b;
+  }
+
+  .course-plot__content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: calc(100% - 22px);
+    max-width: 210px;
+    min-height: 82px;
+  }
+
+  .course-plot li:nth-child(odd) .course-plot__content {
+    top: 20px;
+    justify-content: flex-end;
+  }
+
+  .course-plot li:nth-child(even) .course-plot__content {
+    top: 184px;
+    justify-content: flex-start;
+  }
+
+  .course-plot__content::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 1px;
+    height: 31px;
+    background: currentColor;
+    opacity: 0.65;
+  }
+
+  .course-plot li:nth-child(odd) .course-plot__content::after {
+    top: calc(100% + 12px);
+  }
+
+  .course-plot li:nth-child(even) .course-plot__content::after {
+    bottom: calc(100% + 12px);
+  }
+
+  .course-plot b {
+    color: currentColor;
+    font-size: 34px;
+    line-height: 1;
+  }
+
+  .course-plot p {
+    margin: 0;
+    color: rgba(29, 31, 32, 0.74);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .dark {
+    color: #4fa3e3;
+  }
+
+  .dark p {
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  @media (max-width: 850px) {
+    .course-plot {
+      min-height: 720px;
+    }
+
+    .course-plot__line--desktop {
+      display: none;
+    }
+
+    .course-plot__line--mobile {
+      display: block;
+      inset: 0 auto 0 0;
+      width: 60px;
+      height: 720px;
+    }
+
+    .course-plot ol {
+      grid-template-columns: 1fr;
+      gap: 0;
+      min-height: 720px;
+      padding: 0 0 0 30px;
+    }
+
+    .course-plot li {
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 120px;
+      padding-left: 44px;
+    }
+
+    .course-plot__waypoint {
+      top: 50%;
+      left: -7px;
+      transform: translateY(-50%);
+    }
+
+    .course-plot__content,
+    .course-plot li:nth-child(odd) .course-plot__content,
+    .course-plot li:nth-child(even) .course-plot__content {
+      position: static;
+      width: auto;
+      max-width: 260px;
+      min-height: 0;
+      justify-content: center;
+    }
+
+    .course-plot b {
+      font-size: 32px;
+    }
+
+    .course-plot p {
+      font-size: 16px;
+    }
+
+    .course-plot__content::after {
+      display: none;
+    }
+  }
+</style>

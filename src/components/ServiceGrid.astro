@@ -1,0 +1,104 @@
+---
+import Icon from './Icon.astro';
+import { getSiteData } from '@/data/site.js';
+const { compact = false, lang = 'vi' } = Astro.props;
+const base = lang === 'en' ? '/en' : '';
+const { services } = getSiteData(lang);
+const detailsLabel = lang === 'en' ? 'View details' : 'Xem chi tiết';
+---
+
+<div class:list={['service-grid', { compact }]}>
+  {
+    services.map(({ name, description, icon }) => (
+      <a href={`${base}/dich-vu/thiet-ke-tau-moi/`}>
+        <Icon name={icon} size={compact ? 36 : 44} />
+        <h3>{name}</h3>
+        <p>{description}</p>
+        {!compact && (
+          <span>
+            {detailsLabel} <Icon name="arrow" size={21} />
+          </span>
+        )}
+      </a>
+    ))
+  }
+</div>
+<style lang="scss">
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .service-grid > a {
+    min-height: 320px;
+    padding: 40px 36px;
+    border: 1px solid rgba(11, 28, 75, 0.14);
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    row-gap: 20px;
+    text-decoration: none;
+    color: #0b1c4b;
+  }
+  .service-grid > a > svg {
+    color: #0a72c8;
+  }
+  .service-grid h3 {
+    font-size: 26px;
+    margin: 0;
+  }
+  .service-grid p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(29, 31, 32, 0.66);
+  }
+  .service-grid span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #0a72c8;
+    font-weight: 600;
+  }
+  .service-grid a:hover {
+    background: #f4f6f9;
+  }
+  .compact {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    border-top: 1px solid rgba(11, 28, 75, 0.14);
+    border-left: 1px solid rgba(11, 28, 75, 0.14);
+  }
+  .compact > a {
+    padding: 28px 24px;
+    min-height: 220px;
+    border-width: 0 1px 1px 0;
+  }
+  .compact h3 {
+    font-size: 20px;
+  }
+  .compact p {
+    font-size: 14px;
+  }
+  @media (max-width: 1000px) {
+    .service-grid,
+    .compact {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .service-grid:not(.compact) {
+      gap: 20px;
+    }
+  }
+  @media (max-width: 560px) {
+    .service-grid,
+    .compact {
+      grid-template-columns: 1fr;
+    }
+    .service-grid > a {
+      min-height: 0;
+      padding: 30px 26px 32px;
+    }
+    .service-grid:not(.compact) {
+      gap: 16px;
+    }
+  }
+</style>

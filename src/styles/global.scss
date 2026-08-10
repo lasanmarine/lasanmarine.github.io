@@ -1,0 +1,214 @@
+@import 'tailwindcss';
+
+$navy: #0b1c4b;
+$blue: #0a72c8;
+$pale: #f4f6f9;
+$ink: #1d1f20;
+
+@theme {
+  --color-navy: #{$navy};
+  --color-marine: #{$blue};
+  --color-pale: #{$pale};
+  --color-ink: #{$ink};
+}
+
+:root {
+  font-family: Barlow, 'Avenir Next', sans-serif;
+  color: $ink;
+  background: white;
+  text-rendering: optimizeLegibility;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-width: 320px;
+  margin: 0;
+}
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+a {
+  color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+:focus-visible {
+  outline: 2px solid $blue;
+  outline-offset: 3px;
+}
+.container {
+  width: min(100% - 80px, 1360px);
+  margin-inline: auto;
+}
+.section {
+  padding-block: 100px;
+}
+.section--pale {
+  background: $pale;
+  border-block: 1px solid rgba($navy, 0.1);
+}
+.technical-grid {
+  background-color: $navy;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+.page-title {
+  font-size: clamp(2.75rem, 5vw, 4.125rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+.section-title {
+  color: $navy;
+  font-size: clamp(2rem, 3.5vw, 2.875rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+.lead {
+  font-size: 1.25rem;
+  line-height: 1.7;
+}
+.muted {
+  color: rgba($ink, 0.7);
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 28px;
+  border: 1px solid transparent;
+  background: $blue;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+.button--outline {
+  border-color: rgba(255, 255, 255, 0.45);
+  background: transparent;
+}
+.button svg {
+  transition: transform 0.2s;
+}
+.button:hover svg {
+  transform: translate(3px, -3px);
+}
+.blueprint {
+  position: relative;
+  border: 1px solid rgba($navy, 0.18);
+}
+.blueprint .corner {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  color: rgba($navy, 0.45);
+}
+.blueprint .corner::before,
+.blueprint .corner::after {
+  content: '';
+  position: absolute;
+  background: currentColor;
+}
+.blueprint .corner::before {
+  left: 5px;
+  width: 1px;
+  height: 100%;
+}
+.blueprint .corner::after {
+  top: 5px;
+  width: 100%;
+  height: 1px;
+}
+.corner.tl {
+  top: -6px;
+  left: -6px;
+}
+.corner.tr {
+  top: -6px;
+  right: -6px;
+}
+.corner.bl {
+  bottom: -6px;
+  left: -6px;
+}
+.corner.br {
+  bottom: -6px;
+  right: -6px;
+}
+.placeholder {
+  display: grid;
+  place-items: center;
+  min-height: 240px;
+  color: rgba($navy, 0.38);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.prose {
+  color: rgba($ink, 0.82);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+.prose p {
+  margin-bottom: 1.2rem;
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: min(100% - 40px, 1360px);
+  }
+  .section {
+    padding-block: 72px;
+  }
+  .page-title {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    width: min(100% - 32px, 1360px);
+  }
+  .section {
+    padding-block: 56px;
+  }
+  .lead {
+    font-size: 1.05rem;
+  }
+  .button {
+    width: fit-content;
+    align-self: flex-start;
+    padding: 14px 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

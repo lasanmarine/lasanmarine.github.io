@@ -1,0 +1,166 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import '@/styles/tools.scss';
+---
+
+<BaseLayout
+  title="Kiểm tra đường kính trục chân vịt | Lasan Marine"
+  description="Tính nhanh số vòng quay chân vịt và đường kính tối thiểu của trục chân vịt."
+>
+  <PageHero
+    title="Kiểm tra đường kính trục chân vịt"
+    description="Ước tính nhanh số vòng quay chân vịt và đường kính trục tối thiểu theo công suất, tỉ số truyền và vật liệu."
+  />
+  <main>
+    <section class="section">
+      <div class="container tool-layout">
+        <aside class="tool-intro">
+          <h2 class="section-title">Công cụ kỹ thuật</h2>
+          <p>
+            Nhập thông số máy, hộp số và hệ số vật liệu để kiểm tra sơ bộ kích thước trục chân vịt.
+          </p>
+          <nav class="tool-links" aria-label="Danh sách công cụ">
+            <a href="/cong-cu/chuyen-doi-cong-suat/">Chuyển đổi công suất</a>
+            <a href="/cong-cu/kiem-tra-duong-kinh-truc-chan-vit/" aria-current="page">
+              Kiểm tra đường kính trục chân vịt
+            </a>
+          </nav>
+        </aside>
+
+        <div class="calculator" data-shaft-calculator>
+          <form class="calculator-form" novalidate>
+            <div class="calculator-fields">
+              <label>
+                Công suất máy
+                <input type="number" name="power" min="0" step="any" inputmode="decimal" required />
+              </label>
+              <label>
+                Đơn vị công suất
+                <select name="unit" required>
+                  <option value="">Chọn đơn vị</option>
+                  <option value="kW">kW</option>
+                  <option value="HP">HP</option>
+                  <option value="CV">CV</option>
+                  <option value="PS">PS</option>
+                </select>
+              </label>
+              <label>
+                Số vòng quay máy (rpm)
+                <input type="number" name="rpm" min="0" step="any" inputmode="decimal" required />
+              </label>
+              <label>
+                Tỉ số truyền
+                <input
+                  type="number"
+                  name="ratio"
+                  min="0"
+                  step="any"
+                  inputmode="decimal"
+                  placeholder="Ví dụ: 2.5"
+                  required
+                />
+              </label>
+              <label class="full">
+                Vật liệu và hệ số K3
+                <select name="k3" required>
+                  <option value="">Chọn vật liệu</option>
+                  <option value="119.7">Thép các bon và thép các bon mangan, K3 = 119,7</option>
+                  <option value="98.8">Thép không gỉ 316, K3 = 98,8</option>
+                  <option value="89.3">Thép không gỉ 431, K3 = 89,3</option>
+                  <option value="87.4">Đồng mangan, K3 = 87,4</option>
+                  <option value="80.7">Đồng nhôm nickel, K3 = 80,7</option>
+                  <option value="80.7">Hợp kim đồng nickel K400, K3 = 80,7</option>
+                  <option value="67.5">Hợp kim đồng nickel K500, K3 = 67,5</option>
+                </select>
+              </label>
+            </div>
+            <p class="calculator-error" data-error hidden></p>
+            <div class="calculator-actions">
+              <button class="button" type="submit">Tính kết quả</button>
+              <button class="button button--secondary" type="reset">Nhập lại</button>
+            </div>
+          </form>
+
+          <div class="calculator-result" data-results hidden aria-live="polite">
+            <h2>Kết quả kiểm tra</h2>
+            <table class="result-table">
+              <thead><tr><th>Thông số</th><th>Kết quả</th><th>Đơn vị</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>Số vòng quay chân vịt</td><td data-result="propeller-rpm"></td><td>rpm</td>
+                </tr>
+                <tr>
+                  <td>Đường kính tối thiểu trục chân vịt</td><td data-result="diameter"></td><td>
+                    mm
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="tool-note">
+              Công thức kiểm tra sơ bộ: d = K3 × (P/n)^(1/3), với P tính bằng kW và n là số vòng
+              quay chân vịt. Kết quả không thay thế tính toán thiết kế và yêu cầu của quy phạm áp
+              dụng.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-shaft-calculator]').forEach((calculator) => {
+    const form = calculator.querySelector<HTMLFormElement>('form');
+    const error = calculator.querySelector<HTMLElement>('[data-error]');
+    const results = calculator.querySelector<HTMLElement>('[data-results]');
+    const factorsToKw: Record<string, number> = {
+      kW: 1,
+      HP: 0.7457,
+      CV: 0.735499,
+      PS: 0.735499,
+    };
+
+    const showError = (message: string) => {
+      if (!error) return;
+      error.textContent = message;
+      error.hidden = false;
+      results?.setAttribute('hidden', '');
+    };
+
+    form?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      const power = Number(data.get('power'));
+      const unit = String(data.get('unit') ?? '');
+      const engineRpm = Number(data.get('rpm'));
+      const ratio = Number(data.get('ratio'));
+      const k3 = Number(data.get('k3'));
+
+      if (![power, engineRpm, ratio, k3].every((value) => Number.isFinite(value) && value > 0)) {
+        showError('Vui lòng nhập đầy đủ các giá trị lớn hơn 0.');
+        return;
+      }
+      if (!factorsToKw[unit]) {
+        showError('Vui lòng chọn đơn vị công suất.');
+        return;
+      }
+
+      const powerKw = power * factorsToKw[unit];
+      const propellerRpm = engineRpm / ratio;
+      const diameter = k3 * Math.cbrt(powerKw / propellerRpm);
+
+      calculator.querySelector<HTMLElement>('[data-result="propeller-rpm"]')!.textContent =
+        propellerRpm.toFixed(0);
+      calculator.querySelector<HTMLElement>('[data-result="diameter"]')!.textContent =
+        diameter.toFixed(0);
+      if (error) error.hidden = true;
+      results?.removeAttribute('hidden');
+    });
+
+    form?.addEventListener('reset', () => {
+      if (error) error.hidden = true;
+      results?.setAttribute('hidden', '');
+    });
+  });
+</script>

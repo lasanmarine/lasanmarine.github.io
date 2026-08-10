@@ -1,0 +1,138 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import ProcessSteps from '@/components/ProcessSteps.astro';
+import ProjectGrid from '@/components/ProjectGrid.astro';
+import CallToAction from '@/components/CallToAction.astro';
+const scope = [
+  'Operating requirement analysis',
+  'Principal dimensions',
+  'General arrangement',
+  'Lines plan',
+  'Structural design',
+  'Machinery and propulsion',
+  'Stability calculations',
+  'Technical documentation',
+];
+const outputs = [
+  'General Arrangement',
+  'Lines Plan',
+  'Construction Drawings',
+  'Machinery Arrangement',
+  'Stability Calculation',
+  'Technical Specification',
+  'Supporting technical documents',
+];
+---
+
+<BaseLayout
+  title="New vessel design | Lasan Marine"
+  description="New vessel design from initial requirements to technical documentation."
+  lang="en"
+  ><PageHero
+    title="New vessel design"
+    description="Develop a vessel from initial operating requirements through a complete technical package."
+  /><main>
+    <section class="section">
+      <div class="container two">
+        <h2 class="section-title">Service overview</h2><p class="lead muted">
+          For vessel owners, operators, and shipyards developing a vessel for a specific operating
+          purpose.
+        </p>
+      </div>
+    </section><section class="section section--pale">
+      <div class="container">
+        <h2 class="section-title">Scope of work</h2><div class="matrix">
+          {
+            scope.map((item, index) => (
+              <div>
+                <>
+                  <b>{String(index + 1).padStart(2, '0')}</b>
+                  <span>{item}</span>
+                </>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section><section class="section">
+      <div class="container">
+        <h2 class="section-title">Delivery process</h2><div class="space">
+          <ProcessSteps lang="en" />
+        </div>
+      </div>
+    </section><section class="section output technical-grid">
+      <div class="container">
+        <h2>Deliverables</h2><p>
+          Documents are organized by discipline for construction and classification review.
+        </p><div>{outputs.map((item) => <span>{item}</span>)}</div>
+      </div>
+    </section><section class="section">
+      <div class="container">
+        <h2 class="section-title space">Related projects</h2><ProjectGrid limit={3} lang="en" />
+      </div>
+    </section><CallToAction
+      title="Discuss your technical requirements with Lasan Marine"
+      href="/en/lien-he/"
+      label="Send an inquiry"
+    />
+  </main></BaseLayout
+>
+<style lang="scss">
+  .two {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 70px;
+  }
+  .matrix {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 50px;
+    border: 1px solid rgba(11, 28, 75, 0.15);
+  }
+  .matrix div {
+    padding: 28px;
+    border: 1px solid rgba(11, 28, 75, 0.1);
+    display: flex;
+    gap: 16px;
+  }
+  .matrix b {
+    color: #0a72c8;
+  }
+  .space {
+    margin-top: 55px;
+  }
+  .output {
+    color: white;
+  }
+  .output h2 {
+    font-size: 40px;
+  }
+  .output p {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .output .container > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    margin-top: 35px;
+  }
+  .output span {
+    padding: 18px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+  @media (max-width: 750px) {
+    .two {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .matrix {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 450px) {
+    .matrix {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

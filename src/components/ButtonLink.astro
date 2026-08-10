@@ -1,0 +1,8 @@
+---
+import Icon from './Icon.astro';
+const { href, outline = false } = Astro.props;
+---
+
+<a href={href} class:list={['button', { 'button--outline': outline }]}>
+  <slot /><Icon name="arrow" />
+</a>

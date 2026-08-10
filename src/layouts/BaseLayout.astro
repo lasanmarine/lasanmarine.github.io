@@ -1,0 +1,78 @@
+---
+import '@/styles/global.scss';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+
+const {
+  title = 'Lasan Marine',
+  description = 'Lasan Marine',
+  image = '/social-card.jpg',
+  noindex = false,
+  lang = 'vi',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL(image, Astro.site);
+const isEnglish = lang === 'en';
+const localizedPath = Astro.url.pathname.replace(/^\/en(?=\/|$)/, '') || '/';
+const vietnameseURL = new URL(localizedPath, Astro.site);
+const englishURL = new URL(`/en${localizedPath}`, Astro.site);
+const ogLocale = isEnglish ? 'en_US' : 'vi_VN';
+const alternateOgLocale = isEnglish ? 'vi_VN' : 'en_US';
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f5f0" />
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="alternate" hreflang="vi" href={vietnameseURL} />
+    <link rel="alternate" hreflang="en" href={englishURL} />
+    <link rel="alternate" hreflang="x-default" href={vietnameseURL} />
+    <link rel="icon" href="/favicon-logo.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={alternateOgLocale} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={socialImageURL} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageURL} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header lang={lang} />
+    <slot />
+    <Footer lang={lang} />
+
+    <script>
+      const initAOS = () => {
+        if (!document.querySelector('[data-aos]')) return;
+
+        Promise.all([import('aos'), import('aos/dist/aos.css')]).then(([{ default: AOS }]) => {
+          AOS.init({
+            duration: 500,
+            once: true,
+            offset: 24,
+            disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+          });
+        });
+      };
+
+      const requestIdle = window.requestIdleCallback;
+
+      if (requestIdle) {
+        requestIdle(initAOS);
+      } else {
+        setTimeout(initAOS, 1);
+      }
+    </script>
+  </body>
+</html>

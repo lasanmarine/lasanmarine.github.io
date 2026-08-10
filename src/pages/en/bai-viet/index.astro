@@ -1,0 +1,144 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import Blueprint from '@/components/Blueprint.astro';
+import Icon from '@/components/Icon.astro';
+import CallToAction from '@/components/CallToAction.astro';
+const posts = [
+  [
+    'Technical note · 02.06.2026',
+    'Hull form and resistance',
+    'Why small changes near the bow can significantly affect fuel consumption.',
+  ],
+  [
+    'Documents · 24.05.2026',
+    'Minimum documents for a steel fishing vessel',
+    'Drawings and documents commonly required for classification review.',
+  ],
+  [
+    'Stability · 15.05.2026',
+    'How to read a stability booklet',
+    'Operating conditions and the meaning of each stability curve.',
+  ],
+  [
+    'Refit · 28.04.2026',
+    'When to refit instead of building new',
+    'Comparing cost, schedule, and technical limitations.',
+  ],
+  [
+    'Structure · 12.04.2026',
+    'Structural checks for a larger main engine',
+    'Areas that need recalculation before installing a new engine.',
+  ],
+  [
+    'Regulation · 30.03.2026',
+    'Extending the operating area',
+    'Assessment steps and supporting documents.',
+  ],
+];
+---
+
+<BaseLayout
+  title="Insights | Lasan Marine"
+  description="Technical notes and vessel design experience."
+  lang="en"
+  ><PageHero
+    title="Insights"
+    description="Technical notes, design experience, and regulatory updates for marine vessels."
+  /><main>
+    <section class="section">
+      <div class="container featured">
+        <Blueprint class="placeholder" label="Article image" /><div>
+          <b>Technical note · 12.06.2026</b><h2>
+            Key considerations when converting a fishing vessel
+          </h2><p>
+            A new fishing method changes deck arrangement, equipment, and loading conditions.
+          </p><a href="/en/bai-viet/chuyen-hoan-nghe-tau-ca/">Read article <Icon name="arrow" /></a>
+        </div>
+      </div><div class="container posts">
+        {
+          posts.map((post) => (
+            <article>
+              <>
+                <Blueprint class="placeholder" label="Article image" />
+                <b>{post[0]}</b>
+                <h2>{post[1]}</h2>
+                <p>{post[2]}</p>
+                <a href="/en/bai-viet/chuyen-hoan-nghe-tau-ca/">
+                  Read article <Icon name="arrow" />
+                </a>
+              </>
+            </article>
+          ))
+        }
+      </div>
+    </section><CallToAction
+      title="Need advice for your vessel?"
+      href="/en/lien-he/"
+      label="Contact us"
+    />
+  </main></BaseLayout
+><style lang="scss">
+  .featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 80px;
+  }
+  .featured > .blueprint {
+    min-height: 390px;
+  }
+  .featured > div:last-child {
+    align-self: center;
+  }
+  .featured b,
+  .posts b {
+    color: #0a72c8;
+  }
+  .featured h2 {
+    font-size: 40px;
+    color: #0b1c4b;
+    margin: 15px 0;
+  }
+  .featured p,
+  .posts p {
+    color: rgba(29, 31, 32, 0.7);
+    line-height: 1.7;
+  }
+  .featured a,
+  .posts a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #0a72c8;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 32px;
+  }
+  .posts .placeholder {
+    aspect-ratio: 4/3;
+    margin-bottom: 20px;
+  }
+  .posts h2 {
+    font-size: 24px;
+    color: #0b1c4b;
+    margin: 10px 0;
+  }
+  @media (max-width: 800px) {
+    .featured {
+      grid-template-columns: 1fr;
+    }
+    .posts {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 520px) {
+    .posts {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,414 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import CallToAction from '@/components/CallToAction.astro';
+const principles = [
+  'Respond quickly and effectively to every client requirement.',
+  'Continuously improve the quality of every service we provide.',
+  'Work with care, commitment, humility, and a willingness to listen.',
+  'Deliver competitively priced services without compromising engineering quality.',
+];
+const legal = [
+  ['Company name', 'LASAN MARINE COMPANY LIMITED'],
+  ['Tax code', '4202063521'],
+  ['Address', '03 Tran Lu Street, Bac Nha Trang Ward, Khanh Hoa Province'],
+  ['Hotline', '0834 310 781'],
+];
+const stats = [
+  ['1000+', 'Fishing vessel design dossiers'],
+  ['05', 'Steel-hulled vessels'],
+  ['30+', 'Composite vessels'],
+  ['03', 'Inland waterway vessels'],
+];
+---
+
+<BaseLayout
+  title="About | Lasan Marine"
+  description="Marine engineering consultancy and vessel design."
+  lang="en"
+  ><PageHero
+    title="Engineering solutions for marine vessels"
+    description="Lasan Marine provides technical consultancy and design for fishing vessels, inland waterway vessels, and waterway transport."
+  /><main>
+    <section class="section introduction">
+      <div class="container introduction__layout">
+        <div class="introduction__portrait">
+          <img src="/ceo_huynh_le_hong_thai.png" alt="Dr. Huynh Le Hong Thai" />
+          <span class="introduction__orbit" aria-hidden="true"></span>
+          <span class="introduction__mark introduction__mark--top" aria-hidden="true"></span>
+          <span class="introduction__mark introduction__mark--side" aria-hidden="true"></span>
+          <div><strong>Dr. Huynh Le Hong Thai</strong><span>Company Director</span></div>
+        </div>
+        <div class="introduction__message">
+          <h2 class="section-title">A message to our clients</h2>
+          <div class="prose lead-copy">
+            <p>
+              Lasan Marine was founded with a mission to become a trusted vessel design company,
+              built on engineering quality and reliability.
+            </p>
+            <p>
+              We focus on marine engineering services delivered through a clear, professional, and
+              fully integrated workflow.
+            </p>
+            <p>
+              We continue to listen, learn, and refine our work so that tomorrow's quality is always
+              better than today's.
+            </p>
+          </div>
+          <strong class="introduction__closing">It is our privilege to serve you.</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="company-stats" aria-label="Lasan Marine capabilities">
+      <div class="container">
+        {
+          stats.map((item) => (
+            <div>
+              <>
+                <strong>{item[0]}</strong>
+                <span>{item[1]}</span>
+              </>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section company-profile">
+      <div class="container company-profile__layout">
+        <aside>
+          <h2 class="section-title">Company overview</h2>
+        </aside>
+        <div class="company-profile__content">
+          <article>
+            <h3>Quality driven by a young team</h3>
+            <p class="prose">
+              As a young company, we understand that quality and innovation are essential to meeting
+              client needs in less time and with greater efficiency.
+            </p>
+            <div class="principles">
+              {principles.map((principle) => <p>{principle}</p>)}
+            </div>
+          </article>
+
+          <article>
+            <h3>Legal information</h3>
+            <dl class="legal">
+              {
+                legal.map((item) => (
+                  <div>
+                    <>
+                      <dt>{item[0]}</dt>
+                      <dd>{item[1]}</dd>
+                    </>
+                  </div>
+                ))
+              }
+            </dl>
+          </article>
+
+          <article class="capability">
+            <h3>Delivery capability</h3>
+            <p class="prose">
+              Lasan Marine delivers new-build design, vessel conversion, as-built documentation, and
+              technical dossiers for a wide range of vessels and construction materials.
+            </p>
+          </article>
+
+          <blockquote>
+            <p>“Our clients' interests and service to the community are vital to our company.”</p>
+            <span>This is the enduring value Lasan Marine continues to build</span>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+    <CallToAction title="Contact Lasan Marine" href="/en/lien-he/" label="Contact us" />
+  </main></BaseLayout
+>
+<style lang="scss">
+  .introduction {
+    padding-block: 140px;
+    background: #f4f6f9;
+  }
+  .introduction__layout {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+    gap: clamp(90px, 12vw, 180px);
+    align-items: center;
+  }
+  .introduction__portrait {
+    position: relative;
+    width: min(78%, 320px);
+    aspect-ratio: 1;
+    margin: 44px auto;
+  }
+  .introduction__portrait::before {
+    display: none;
+  }
+  .introduction__portrait img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 18%;
+  }
+  .introduction__orbit {
+    position: absolute;
+    inset: -28px;
+    border: 1px solid rgba(11, 28, 75, 0.28);
+    border-radius: 50%;
+  }
+  .introduction__orbit::before,
+  .introduction__orbit::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: #0a72c8;
+  }
+  .introduction__orbit::before {
+    top: 18%;
+    right: 2%;
+    width: 10px;
+    height: 10px;
+  }
+  .introduction__orbit::after {
+    bottom: 10%;
+    left: 10%;
+    width: 6px;
+    height: 6px;
+  }
+  .introduction__mark {
+    position: absolute;
+    z-index: 3;
+    background: #0b1c4b;
+  }
+  .introduction__mark::after {
+    content: '';
+    position: absolute;
+    background: inherit;
+  }
+  .introduction__mark--top {
+    top: -44px;
+    left: 50%;
+    width: 1px;
+    height: 32px;
+  }
+  .introduction__mark--top::after {
+    top: 15px;
+    left: -6px;
+    width: 13px;
+    height: 1px;
+  }
+  .introduction__mark--side {
+    top: 50%;
+    right: -44px;
+    width: 32px;
+    height: 1px;
+  }
+  .introduction__mark--side::after {
+    top: -6px;
+    left: 15px;
+    width: 1px;
+    height: 13px;
+  }
+  .introduction__portrait > div {
+    position: absolute;
+    z-index: 4;
+    top: 70%;
+    left: 68%;
+    width: max-content;
+    max-width: 440px;
+    padding: 14px 20px 15px;
+    border-left: 3px solid #0a72c8;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 8px 24px rgba(11, 28, 75, 0.1);
+    text-align: left;
+  }
+  .introduction__portrait strong,
+  .introduction__portrait span {
+    display: block;
+  }
+  .introduction__portrait strong {
+    color: #0b1c4b;
+    font-size: 1.1rem;
+  }
+  .introduction__portrait span {
+    margin-top: 8px;
+    color: rgba(29, 31, 32, 0.62);
+  }
+  .lead-copy {
+    margin-top: 40px;
+    font-size: 1.08rem;
+  }
+  .introduction__message {
+    text-align: left;
+  }
+  .introduction__closing {
+    display: block;
+    margin-top: 40px;
+    color: #0a72c8;
+  }
+  .company-stats {
+    padding-block: 56px;
+    background: #0b1c4b;
+    color: white;
+  }
+  .company-stats .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .company-stats .container > div {
+    min-height: 110px;
+    padding: 12px 32px;
+    border-left: 1px solid rgba(255, 255, 255, 0.22);
+    text-align: center;
+  }
+  .company-stats strong,
+  .company-stats span {
+    display: block;
+  }
+  .company-stats strong {
+    margin-bottom: 8px;
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    line-height: 1;
+  }
+  .company-stats span {
+    color: rgba(255, 255, 255, 0.68);
+  }
+  .company-profile__layout {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.65fr) minmax(0, 1.35fr);
+    gap: clamp(60px, 9vw, 140px);
+  }
+  .company-profile aside {
+    align-self: start;
+    position: sticky;
+    top: 120px;
+  }
+  .company-profile aside p {
+    max-width: 320px;
+    color: rgba(29, 31, 32, 0.62);
+    line-height: 1.7;
+  }
+  .company-profile__content article {
+    padding-block: 0 68px;
+    margin-bottom: 68px;
+    border-bottom: 1px solid rgba(11, 28, 75, 0.16);
+  }
+  .company-profile h3 {
+    margin-bottom: 26px;
+    color: #0b1c4b;
+    font-size: clamp(1.65rem, 3vw, 2.5rem);
+  }
+  .principles {
+    counter-reset: principle;
+    margin-top: 36px;
+    border-top: 1px solid rgba(11, 28, 75, 0.16);
+  }
+  .principles p {
+    counter-increment: principle;
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    align-items: center;
+    gap: 28px;
+    margin: 0;
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(11, 28, 75, 0.16);
+    line-height: 1.55;
+  }
+  .principles p::before {
+    content: counter(principle, decimal-leading-zero);
+    align-self: start;
+    color: #0a72c8;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    line-height: 1;
+    font-weight: 600;
+    text-align: center;
+  }
+  .legal {
+    margin: 0;
+  }
+  .legal > div {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 28px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(11, 28, 75, 0.16);
+  }
+  .legal dt {
+    color: #0a72c8;
+  }
+  .legal dd {
+    margin: 0;
+    color: #0b1c4b;
+    font-weight: 600;
+  }
+  .company-profile__content blockquote {
+    margin: 0;
+    padding: clamp(32px, 5vw, 58px);
+    background: #0b1c4b;
+    color: white;
+  }
+  .company-profile__content blockquote p {
+    margin: 0 0 24px;
+    font-size: clamp(1.65rem, 3.5vw, 2.75rem);
+    line-height: 1.25;
+  }
+  .company-profile__content blockquote span {
+    color: rgba(255, 255, 255, 0.62);
+  }
+  @media (max-width: 800px) {
+    .introduction__layout,
+    .company-profile__layout {
+      grid-template-columns: 1fr;
+      gap: 72px;
+    }
+    .introduction__portrait {
+      width: min(70vw, 260px);
+      margin: 32px 0;
+    }
+    .introduction__portrait > div {
+      top: 76%;
+      left: 0;
+      max-width: calc(100vw - 56px);
+      padding: 12px 16px 13px;
+      text-align: left;
+    }
+    .company-stats .container {
+      grid-template-columns: 1fr 1fr;
+    }
+    .company-stats .container > div {
+      padding: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+    }
+    .company-profile aside {
+      position: static;
+    }
+  }
+  @media (max-width: 500px) {
+    .introduction {
+      padding-block: 88px;
+    }
+    .principles p {
+      grid-template-columns: 56px 1fr;
+      gap: 18px;
+      padding-block: 24px;
+    }
+    .company-stats .container {
+      grid-template-columns: 1fr;
+    }
+    .company-stats .container > div {
+      min-height: 0;
+      padding-inline: 0;
+      border-left: 0;
+    }
+    .legal > div {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+  }
+</style>

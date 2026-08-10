@@ -1,0 +1,161 @@
+---
+import ContactMap from './ContactMap.astro';
+
+const { lang = 'vi' } = Astro.props;
+const base = lang === 'en' ? '/en' : '';
+const copy =
+  lang === 'en'
+    ? {
+        description:
+          'Marine engineering consultancy and design for fishing vessels, inland waterway vessels, and waterway transport.',
+        menu: ['Home', 'About', 'Services', 'Projects', 'Insights'],
+        services: 'Services',
+        serviceLinks: [
+          'New vessel design',
+          'Hull conversion',
+          'Vessel refit',
+          'Technical documents',
+        ],
+        contact: 'Contact',
+        tax: 'Tax code',
+        address: '03 Tran Lu Street, Bac Nha Trang Ward, Khanh Hoa Province, Vietnam',
+      }
+    : {
+        description:
+          'Đơn vị tư vấn và thiết kế kỹ thuật chuyên về tàu đánh cá, phương tiện thủy nội địa và phương tiện vận tải đường thủy.',
+        menu: ['Trang chủ', 'Giới thiệu', 'Dịch vụ', 'Dự án', 'Bài viết'],
+        services: 'Dịch vụ',
+        serviceLinks: ['Thiết kế tàu mới', 'Chuyển hoán vỏ', 'Hoán cải', 'Hồ sơ kỹ thuật'],
+        contact: 'Liên hệ',
+        tax: 'MST',
+        address: 'Số 03 Trần Lư, Phường Bắc Nha Trang, Tỉnh Khánh Hòa, Việt Nam',
+      };
+const menuPaths = ['/', '/gioi-thieu/', '/dich-vu/', '/du-an/', '/bai-viet/'];
+---
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <img src="/footer-logo.svg" width="372" height="138" alt="Lasan Marine" />
+    </div><div class="footer__content">
+      <p>{copy.description}</p>
+      <div class="footer__links">
+        <div>
+          <h2>Menu</h2>
+          {copy.menu.map((label, index) => <a href={`${base}${menuPaths[index]}`}>{label}</a>)}
+        </div><div>
+          <h2>{copy.services}</h2>
+          {
+            copy.serviceLinks.map((label) => (
+              <a href={`${base}/dich-vu/thiet-ke-tau-moi/`}>{label}</a>
+            ))
+          }
+        </div><div>
+          <h2>{copy.contact}</h2>
+          <strong>LASAN MARINE COMPANY LIMITED</strong>
+          <span>{copy.tax}: 4202063521</span>
+          <span>{copy.address}</span>
+          <a href="tel:0834310781">0834 310 781</a>
+        </div>
+      </div>
+      <ContactMap lang={lang} />
+    </div>
+  </div><div class="container copyright">© 2026 Lasan Marine Company Limited.</div>
+</footer>
+<style lang="scss">
+  .footer {
+    background: #fff;
+    color: rgba(29, 31, 32, 0.68);
+    border-top: 1px solid rgba(11, 28, 75, 0.14);
+  }
+  .footer__grid {
+    padding-block: 72px 48px;
+    display: grid;
+    grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.6fr);
+    gap: clamp(64px, 9vw, 140px);
+  }
+  .footer__brand {
+    display: flex;
+    align-items: flex-start;
+  }
+  .footer img {
+    width: min(100%, 420px);
+    height: auto;
+  }
+  .footer p {
+    max-width: 680px;
+    margin: 0;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    padding-top: 8px;
+  }
+  .footer__content .contact-map {
+    width: 100%;
+    margin-top: 0;
+  }
+  .footer__links {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 1.4fr;
+    gap: 40px;
+  }
+  .footer h2 {
+    font-size: 17px;
+    color: #0b1c4b;
+    margin: 0 0 20px;
+  }
+  .footer a,
+  .footer span {
+    display: block;
+    text-decoration: none;
+    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .footer a {
+    width: fit-content;
+    color: rgba(11, 28, 75, 0.7);
+    transition: color 180ms ease;
+  }
+  .footer a:hover {
+    color: #0a72c8;
+  }
+  .footer strong {
+    display: block;
+    color: #0b1c4b;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .copyright {
+    border-top: 1px solid rgba(11, 28, 75, 0.14);
+    padding-block: 20px 36px;
+    color: rgba(11, 28, 75, 0.52);
+    font-size: 13px;
+  }
+  @media (max-width: 900px) {
+    .footer__grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+    .footer img {
+      width: min(100%, 340px);
+    }
+  }
+  @media (max-width: 520px) {
+    .footer__grid {
+      grid-template-columns: 1fr;
+      padding-block: 56px 0;
+    }
+    .footer__links {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .copyright {
+      margin-top: 40px;
+    }
+  }
+</style>

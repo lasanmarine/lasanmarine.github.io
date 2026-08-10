@@ -1,0 +1,37 @@
+---
+const { title, description = '' } = Astro.props;
+---
+
+<section class="technical-grid page-hero">
+  <div class="container">
+    <h1 class="page-title">{title}</h1>
+    {description && <p>{description}</p>}
+  </div>
+</section>
+<style lang="scss">
+  .page-hero {
+    color: #fff;
+    .container {
+      padding-block: 110px;
+    }
+    h1 {
+      max-width: 950px;
+      margin: 0;
+    }
+    p {
+      max-width: 760px;
+      margin: 26px 0 0;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 19px;
+      line-height: 1.65;
+    }
+  }
+  @media (max-width: 600px) {
+    .page-hero .container {
+      padding-block: 72px;
+    }
+    .page-hero p {
+      font-size: 17px;
+    }
+  }
+</style>

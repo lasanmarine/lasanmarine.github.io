@@ -1,0 +1,169 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import '@/styles/tools.scss';
+---
+
+<BaseLayout
+  title="Propeller shaft diameter check | Lasan Marine"
+  description="Estimate propeller speed and minimum propeller shaft diameter."
+  lang="en"
+>
+  <PageHero
+    title="Propeller shaft diameter check"
+    description="Estimate propeller speed and minimum shaft diameter from engine power, reduction ratio, and material."
+  />
+  <main>
+    <section class="section">
+      <div class="container tool-layout">
+        <aside class="tool-intro">
+          <h2 class="section-title">Engineering tools</h2>
+          <p>
+            Enter engine, gearbox, and material parameters for a preliminary propeller shaft check.
+          </p>
+          <nav class="tool-links" aria-label="Engineering tools">
+            <a href="/en/cong-cu/chuyen-doi-cong-suat/">Power conversion</a>
+            <a href="/en/cong-cu/kiem-tra-duong-kinh-truc-chan-vit/" aria-current="page">
+              Propeller shaft diameter check
+            </a>
+          </nav>
+        </aside>
+        <div class="calculator" data-shaft-calculator>
+          <form class="calculator-form" novalidate>
+            <div class="calculator-fields">
+              <label>
+                Engine power<input
+                  type="number"
+                  name="power"
+                  min="0"
+                  step="any"
+                  inputmode="decimal"
+                  required
+                />
+              </label>
+              <label>
+                Power unit<select name="unit" required>
+                  <option value="">Select unit</option><option value="kW">kW</option><option
+                    value="HP"
+                  >
+                    HP
+                  </option><option value="CV">CV</option><option value="PS">PS</option>
+                </select>
+              </label>
+              <label>
+                Engine speed (rpm)<input
+                  type="number"
+                  name="rpm"
+                  min="0"
+                  step="any"
+                  inputmode="decimal"
+                  required
+                />
+              </label>
+              <label>
+                Reduction ratio<input
+                  type="number"
+                  name="ratio"
+                  min="0"
+                  step="any"
+                  inputmode="decimal"
+                  placeholder="Example: 2.5"
+                  required
+                />
+              </label>
+              <label class="full">
+                Material and K3 factor<select name="k3" required>
+                  <option value="">Select material</option><option value="119.7">
+                    Carbon and carbon-manganese steel, K3 = 119.7
+                  </option><option value="98.8">316 stainless steel, K3 = 98.8</option><option
+                    value="89.3"
+                  >
+                    431 stainless steel, K3 = 89.3
+                  </option><option value="87.4">Manganese bronze, K3 = 87.4</option><option
+                    value="80.7"
+                  >
+                    Nickel-aluminium bronze, K3 = 80.7
+                  </option><option value="80.7">Copper-nickel alloy K400, K3 = 80.7</option><option
+                    value="67.5"
+                  >
+                    Copper-nickel alloy K500, K3 = 67.5
+                  </option>
+                </select>
+              </label>
+            </div>
+            <p class="calculator-error" data-error hidden></p>
+            <div class="calculator-actions">
+              <button class="button" type="submit">Calculate</button><button
+                class="button button--secondary"
+                type="reset"
+              >
+                Reset
+              </button>
+            </div>
+          </form>
+          <div class="calculator-result" data-results hidden aria-live="polite">
+            <h2>Check results</h2>
+            <table class="result-table">
+              <thead><tr><th>Parameter</th><th>Result</th><th>Unit</th></tr></thead><tbody>
+                <tr>
+                  <td>Propeller speed</td><td data-result="propeller-rpm"></td><td>rpm</td>
+                </tr><tr>
+                  <td>Minimum propeller shaft diameter</td><td data-result="diameter"></td><td>
+                    mm
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="tool-note">
+              Preliminary formula: d = K3 × (P/n)^(1/3), where P is in kW and n is propeller rpm.
+              The result does not replace design calculations or applicable classification
+              requirements.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-shaft-calculator]').forEach((calculator) => {
+    const form = calculator.querySelector<HTMLFormElement>('form');
+    const error = calculator.querySelector<HTMLElement>('[data-error]');
+    const results = calculator.querySelector<HTMLElement>('[data-results]');
+    const factors: Record<string, number> = { kW: 1, HP: 0.7457, CV: 0.735499, PS: 0.735499 };
+    form?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      const power = Number(data.get('power')),
+        rpm = Number(data.get('rpm')),
+        ratio = Number(data.get('ratio')),
+        k3 = Number(data.get('k3'));
+      const unit = String(data.get('unit') ?? '');
+      if (
+        ![power, rpm, ratio, k3].every((value) => Number.isFinite(value) && value > 0) ||
+        !factors[unit]
+      ) {
+        if (error) {
+          error.textContent =
+            'Complete all fields with values greater than 0 and select a power unit.';
+          error.hidden = false;
+        }
+        results?.setAttribute('hidden', '');
+        return;
+      }
+      const propellerRpm = rpm / ratio;
+      const diameter = k3 * Math.cbrt((power * factors[unit]) / propellerRpm);
+      calculator.querySelector<HTMLElement>('[data-result="propeller-rpm"]')!.textContent =
+        propellerRpm.toFixed(0);
+      calculator.querySelector<HTMLElement>('[data-result="diameter"]')!.textContent =
+        diameter.toFixed(0);
+      if (error) error.hidden = true;
+      results?.removeAttribute('hidden');
+    });
+    form?.addEventListener('reset', () => {
+      if (error) error.hidden = true;
+      results?.setAttribute('hidden', '');
+    });
+  });
+</script>

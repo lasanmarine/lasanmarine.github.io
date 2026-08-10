@@ -1,0 +1,385 @@
+---
+import Icon from './Icon.astro';
+import { getSiteData } from '@/data/site.js';
+
+const { lang = 'vi' } = Astro.props;
+const base = lang === 'en' ? '/en' : '';
+const { services } = getSiteData(lang);
+const sectionTitle = lang === 'en' ? 'Engineering services' : 'Dịch vụ kỹ thuật';
+const detailsLabel = lang === 'en' ? 'View service' : 'Xem dịch vụ';
+const showcaseDescriptions =
+  lang === 'en'
+    ? [
+        'Develop the vessel concept from operating requirements, principal dimensions, general arrangement, hull lines, structure, propulsion, and stability through a complete technical package.',
+        'Review the existing hull and operating requirements, then develop a conversion solution that balances structure, capacity, safety, and the vessel’s new working purpose.',
+        'Assess the new main engine, shaft line, propeller, foundations, and related systems to produce a workable propulsion conversion with the necessary technical calculations.',
+        'Rearrange the vessel and deck equipment for a new fishing method, matching the working process, stability requirements, crew operation, and practical conditions at sea.',
+        'Evaluate the vessel’s technical condition and operating limits, then prepare the calculations and documents required for a safe extension to a new operating area.',
+        'Prepare drawings, calculations, specifications, and technical records for inspection, classification, registration, and coordination with the relevant authorities.',
+        'Update the technical documentation when construction or operation requires a change, keeping drawings, calculations, and the final vessel condition consistent.',
+        'Develop a practical refit solution that adapts the existing vessel structure, arrangement, equipment, and systems to a new operating purpose.',
+        'Plan a main-engine replacement or upgrade, including machinery arrangement, foundations, shafting, propeller compatibility, and supporting systems.',
+        'Calculate operating conditions and loading cases, then prepare a stability booklet that supports safe operation and technical review.',
+      ]
+    : [
+        'Phát triển phương án tàu từ yêu cầu khai thác, kích thước chính, bố trí chung, tuyến hình, kết cấu, hệ động lực và tính toán ổn định đến bộ hồ sơ kỹ thuật hoàn chỉnh.',
+        'Khảo sát hiện trạng vỏ tàu và yêu cầu khai thác để đề xuất phương án chuyển hoán cân bằng giữa kết cấu, tải trọng, an toàn và công năng sử dụng mới.',
+        'Đánh giá máy chính, hệ trục, chân vịt, bệ máy và các hệ thống liên quan để triển khai phương án thay máy có tính toán kỹ thuật và khả năng thi công thực tế.',
+        'Điều chỉnh bố trí chung và trang thiết bị trên tàu theo nghề khai thác mới, phù hợp với quy trình làm việc, yêu cầu ổn định, thao tác của thuyền viên và điều kiện hoạt động trên biển.',
+        'Đánh giá tình trạng kỹ thuật và giới hạn khai thác của phương tiện, thực hiện các tính toán và hồ sơ cần thiết để mở rộng vùng hoạt động an toàn.',
+        'Lập bản vẽ, thuyết minh, tính toán và tài liệu kỹ thuật phục vụ kiểm tra, phân cấp, đăng ký và phối hợp với các cơ quan liên quan.',
+        'Cập nhật hồ sơ kỹ thuật khi phương án thi công hoặc khai thác có thay đổi, bảo đảm bản vẽ, tính toán và hiện trạng phương tiện thống nhất với nhau.',
+        'Xây dựng phương án hoán cải phù hợp để điều chỉnh kết cấu, bố trí, trang thiết bị và hệ thống của phương tiện theo mục đích khai thác mới.',
+        'Lập phương án thay thế hoặc nâng cấp máy chính, bao gồm bố trí buồng máy, bệ máy, hệ trục, khả năng tương thích của chân vịt và các hệ thống phụ trợ.',
+        'Tính toán các trạng thái tải trọng và điều kiện khai thác, lập thông báo ổn định phục vụ vận hành an toàn và thẩm tra kỹ thuật.',
+      ];
+const backgrounds = [
+  '/ser1.jpg',
+  '/ser2.jpg',
+  '/ser3.jpg',
+  '/ser4.jpg',
+  '/ser5.jpg',
+  '/ser6.jpg',
+  '/ser7.jpg',
+  '/ser8.jpg',
+  '/ser9.jpg',
+  '/ser10.jpg',
+];
+---
+
+<section
+  class="service-showcase"
+  data-service-showcase
+  style={`--service-count: ${services.length}`}
+>
+  <div class="service-showcase__sticky">
+    <div class="service-showcase__background" aria-hidden="true">
+      {
+        services.map((_, index) => (
+          <div
+            class:list={{ active: index === 0 }}
+            data-service-background={index}
+            style={`background-image: url('${backgrounds[index % backgrounds.length]}')`}
+          />
+        ))
+      }
+    </div>
+
+    <div class="service-showcase__layout">
+      <div class="service-showcase__nav">
+        <h2 class="section-title">{sectionTitle}</h2>
+        <ol>
+          {
+            services.map((service, index) => (
+              <li>
+                <a
+                  href={`#service-${index + 1}`}
+                  class:list={{ active: index === 0 }}
+                  data-service-link={index}
+                >
+                  {service.name}
+                </a>
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+
+      <div class="service-showcase__viewport">
+        <div class="service-showcase__content" data-service-track>
+          {
+            services.map((service, index) => (
+              <article id={`service-${index + 1}`} data-service-panel={index}>
+                <div class="service-showcase__panel-content">
+                  <Icon name={service.icon} size={72} />
+                  <h3>{service.name}</h3>
+                  <p>{showcaseDescriptions[index] ?? service.description}</p>
+                  <a href={`${base}/dich-vu/thiet-ke-tau-moi/`}>
+                    {detailsLabel}
+                    <Icon name="arrow" size={22} />
+                  </a>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('[data-service-showcase]').forEach((showcase) => {
+    const links = showcase.querySelectorAll('[data-service-link]');
+    const panels = showcase.querySelectorAll('[data-service-panel]');
+    const backgrounds = showcase.querySelectorAll('[data-service-background]');
+    const track = showcase.querySelector<HTMLElement>('[data-service-track]');
+    let frame = 0;
+    let wheelAmount = 0;
+    let wheelLocked = false;
+
+    const update = () => {
+      frame = 0;
+      if (!track || !panels.length) return;
+
+      const bounds = showcase.getBoundingClientRect();
+      const range = (showcase as HTMLElement).offsetHeight - window.innerHeight;
+      const progress = Math.min(1, Math.max(0, -bounds.top / range));
+      const activeIndex = Math.min(panels.length - 1, Math.round(progress * (panels.length - 1)));
+
+      track.style.transform = `translate3d(0, ${-progress * (panels.length - 1) * 100}%, 0)`;
+      links.forEach((link, index) => link.classList.toggle('active', index === activeIndex));
+      backgrounds.forEach((background, index) =>
+        background.classList.toggle('active', index === activeIndex),
+      );
+    };
+
+    const requestUpdate = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+
+    links.forEach((link, index) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const top =
+          showcase.getBoundingClientRect().top + window.scrollY + index * window.innerHeight;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+
+    showcase.addEventListener(
+      'wheel',
+      (event) => {
+        if (!(event instanceof WheelEvent) || !panels.length) return;
+
+        const bounds = showcase.getBoundingClientRect();
+        const currentIndex = Math.min(
+          panels.length - 1,
+          Math.max(0, Math.round(-bounds.top / window.innerHeight)),
+        );
+        const direction = Math.sign(event.deltaY);
+        const canMove =
+          (direction > 0 && currentIndex < panels.length - 1) ||
+          (direction < 0 && currentIndex > 0);
+
+        if (!canMove) {
+          wheelAmount = 0;
+          return;
+        }
+
+        event.preventDefault();
+        if (wheelLocked) return;
+
+        wheelAmount += event.deltaY;
+        if (Math.abs(wheelAmount) < 24) return;
+
+        const nextIndex = currentIndex + Math.sign(wheelAmount);
+        const sectionTop = bounds.top + window.scrollY;
+        wheelAmount = 0;
+        wheelLocked = true;
+        window.scrollTo({ top: sectionTop + nextIndex * window.innerHeight, behavior: 'smooth' });
+
+        window.setTimeout(() => {
+          wheelLocked = false;
+        }, 700);
+      },
+      { passive: false },
+    );
+
+    update();
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate);
+  });
+</script>
+
+<style lang="scss">
+  .service-showcase {
+    position: relative;
+    isolation: isolate;
+    height: calc(var(--service-count) * 100svh);
+  }
+
+  .service-showcase__sticky {
+    position: sticky;
+    top: 0;
+    isolation: isolate;
+    width: 100%;
+    height: 100svh;
+    overflow: hidden;
+    background: #071233;
+  }
+
+  .service-showcase__background {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: #071233;
+  }
+  .service-showcase__background > div {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background-position: center;
+    background-size: cover;
+    transform: scale(1.02);
+    transition:
+      opacity 500ms ease,
+      transform 900ms ease;
+  }
+  .service-showcase__background > div.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .service-showcase__background > div::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(7, 18, 51, 0.94) 0%,
+      rgba(7, 18, 51, 0.76) 62%,
+      rgba(7, 18, 51, 0.48) 100%
+    );
+  }
+
+  .service-showcase__layout {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.55fr);
+    gap: clamp(48px, 8vw, 120px);
+    width: min(100%, 1360px);
+    height: 100%;
+    margin-inline: auto;
+    padding-block: max(110px, 12svh) 54px;
+  }
+
+  .service-showcase__nav,
+  .service-showcase__content {
+    min-width: 0;
+  }
+  .service-showcase__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+    min-width: 0;
+  }
+  .service-showcase__nav h2 {
+    margin: 0;
+    color: #fff;
+  }
+  .service-showcase__nav ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .service-showcase__nav a {
+    display: block;
+    padding: 12px 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 180ms ease;
+  }
+  .service-showcase__nav a.active {
+    color: #fff;
+    font-weight: 600;
+  }
+  .service-showcase__viewport {
+    min-width: 0;
+    overflow: hidden;
+  }
+  .service-showcase__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+  }
+  .service-showcase__content article {
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: clamp(48px, 8vh, 90px) clamp(8px, 3vw, 44px);
+    border-left: 1px solid rgba(255, 255, 255, 0.16);
+  }
+
+  .service-showcase__panel-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    width: 100%;
+    max-width: 680px;
+  }
+
+  :global(.service-showcase__panel-content > svg:first-child) {
+    color: #fff;
+    stroke: #fff;
+  }
+  .service-showcase__content h3 {
+    position: relative;
+    max-width: 680px;
+    margin: 0;
+    color: #fff;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1.1;
+  }
+  .service-showcase__content p {
+    position: relative;
+    max-width: 620px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 18px;
+    line-height: 1.75;
+  }
+  .service-showcase__panel-content > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 48px;
+    padding: 12px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+      border-color 180ms ease,
+      background-color 180ms ease,
+      color 180ms ease;
+  }
+  .service-showcase__panel-content > a:hover {
+    border-color: #fff;
+    background: #fff;
+    color: #0b1c4b;
+  }
+  @media (max-width: 800px) {
+    .service-showcase__layout {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+      gap: 20px;
+      width: 100%;
+      padding: 96px 20px 28px;
+    }
+    .service-showcase__nav {
+      display: block;
+    }
+    .service-showcase__nav ol {
+      display: none;
+    }
+    .service-showcase__content article {
+      height: 100%;
+      padding: 36px 20px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .service-showcase__background > div {
+      transition: none;
+    }
+  }
+</style>

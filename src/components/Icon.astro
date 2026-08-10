@@ -1,0 +1,43 @@
+---
+const paths = {
+  arrow: ['M7 17 17 7', 'M9 7h8v8'],
+  ship: [
+    'M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2',
+    'M19.4 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.9 5.3 2.8 7.8',
+    'M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6',
+  ],
+  file: [
+    'M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z',
+    'M14 2v5h5',
+    'M9 13h6',
+    'M9 17h6',
+  ],
+  cog: [
+    'M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z',
+    'M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.2 2.2M16.9 16.9l2.2 2.2M19.1 4.9l-2.2 2.2M7.1 16.9l-2.2 2.2',
+  ],
+  users: [
+    'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2',
+    'M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z',
+    'M22 21v-2a4 4 0 0 0-3-3.9',
+  ],
+  check: ['m5 12 5 5L20 7'],
+};
+type IconName = keyof typeof paths;
+const { name = 'arrow', size = 24 } = Astro.props as { name?: IconName; size?: number };
+const iconPaths: string[] = paths[name];
+---
+
+<svg
+  width={size}
+  height={size}
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+>
+  {iconPaths.map((d: string) => <path d={d} />)}
+</svg>

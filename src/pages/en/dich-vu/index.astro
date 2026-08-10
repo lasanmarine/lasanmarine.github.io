@@ -1,0 +1,36 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import ServiceGrid from '@/components/ServiceGrid.astro';
+import ProcessSteps from '@/components/ProcessSteps.astro';
+import CallToAction from '@/components/CallToAction.astro';
+---
+
+<BaseLayout
+  title="Services | Lasan Marine"
+  description="Vessel design and marine engineering consultancy."
+  lang="en"
+  ><PageHero
+    title="Vessel design & engineering services"
+    description="Ten service groups covering new design, conversion, refit, classification, and stability documentation."
+  /><main>
+    <section class="section">
+      <div class="container"><ServiceGrid lang="en" /></div>
+    </section><section class="section section--pale">
+      <div class="container">
+        <h2 class="section-title">Our process</h2><div class="steps-space">
+          <ProcessSteps lang="en" />
+        </div>
+      </div>
+    </section><CallToAction
+      title="Discuss your technical requirements with Lasan Marine"
+      href="/en/lien-he/"
+      label="Contact us"
+    />
+  </main></BaseLayout
+>
+<style>
+  .steps-space {
+    margin-top: 60px;
+  }
+</style>

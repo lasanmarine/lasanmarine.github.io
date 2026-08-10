@@ -1,0 +1,178 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import Icon from '@/components/Icon.astro';
+import { servicesEn } from '@/data/site.js';
+const contacts = [
+  ['Company', 'LASAN MARINE COMPANY LIMITED'],
+  ['Address', '03 Tran Lu Street, Bac Nha Trang Ward, Khanh Hoa Province'],
+  ['Hotline', '0834 310 781'],
+  ['Email', 'contact@lasanmarine.vn'],
+];
+---
+
+<BaseLayout
+  title="Contact | Lasan Marine"
+  description="Discuss your technical requirements with Lasan Marine."
+  lang="en"
+  ><PageHero title="Talk to the Lasan Marine engineering team" /><main>
+    <section class="section">
+      <div class="container contact-layout">
+        <aside>
+          <h2 class="section-title">Contact information</h2><div class="contacts">
+            {
+              contacts.map((contact) => (
+                <div>
+                  <>
+                    <small>{contact[0]}</small>
+                    <strong>{contact[1]}</strong>
+                  </>
+                </div>
+              ))
+            }
+          </div>
+        </aside><form id="contact-form">
+          <div class="fields">
+            <label>Full name *<input name="name" required autocomplete="name" /></label><label>
+              Company<input name="company" autocomplete="organization" />
+            </label><label>
+              Phone *<input name="phone" type="tel" required autocomplete="tel" />
+            </label><label>
+              Email<input name="email" type="email" autocomplete="email" />
+            </label><label>
+              Service<select name="service">
+                {servicesEn.map((service) => <option>{service.name}</option>)}
+              </select>
+            </label><label>
+              Vessel type<select name="vessel">
+                <option>Fishing vessel</option><option>Inland waterway vessel</option><option>
+                  Waterway transport vessel
+                </option>
+              </select>
+            </label><label class="full">
+              Message<textarea
+                name="message"
+                rows="6"
+                placeholder="Briefly describe the vessel and technical requirements"
+              >
+              </textarea>
+            </label><label class="full file">
+              Attachments<input type="file" name="attachment" accept=".pdf,.dwg,.zip" /><span>
+                Select drawings or documents (PDF, DWG, ZIP)
+              </span>
+            </label><div class="full">
+              <button class="button" type="submit">Send inquiry <Icon name="arrow" /></button>
+            </div>
+          </div><div class="success" hidden>
+            <Icon name="check" size={48} /><h2>Inquiry recorded</h2><p>
+              This is a UI prototype. Connect the form to an email service or API before production
+              deployment.
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main><script>
+    const form = document.querySelector('#contact-form');
+    form?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      form.querySelector('.fields')?.setAttribute('hidden', '');
+      form.querySelector('.success')?.removeAttribute('hidden');
+    });
+  </script></BaseLayout
+><style lang="scss">
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 440px 1fr;
+    gap: 90px;
+  }
+  .contacts {
+    border-top: 1px solid rgba(11, 28, 75, 0.16);
+    margin-top: 25px;
+  }
+  .contacts div {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(11, 28, 75, 0.16);
+  }
+  .contacts small,
+  .contacts strong {
+    display: block;
+  }
+  .contacts small {
+    color: rgba(29, 31, 32, 0.6);
+    margin-bottom: 6px;
+  }
+  .contacts strong {
+    color: #0b1c4b;
+    font-size: 18px;
+  }
+  .fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .fields label {
+    display: block;
+    color: #0b1c4b;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .fields input,
+  .fields select,
+  .fields textarea {
+    display: block;
+    width: 100%;
+    border: 1px solid rgba(11, 28, 75, 0.22);
+    padding: 14px 16px;
+    margin-top: 8px;
+    background: white;
+    color: #0b1c4b;
+  }
+  .full {
+    grid-column: span 2;
+  }
+  .file {
+    position: relative;
+    border: 1px dashed rgba(11, 28, 75, 0.3);
+    padding: 26px;
+  }
+  .file input {
+    position: absolute;
+    opacity: 0;
+    inset: 0;
+    height: 100%;
+    cursor: pointer;
+  }
+  .file span {
+    display: block;
+    color: rgba(29, 31, 32, 0.65);
+    font-weight: 400;
+  }
+  .success {
+    border: 1px solid #0a72c8;
+    background: #f4f8fd;
+    padding: 50px;
+  }
+  .success svg {
+    color: #0a72c8;
+  }
+  .success h2 {
+    font-size: 34px;
+    color: #0b1c4b;
+    margin: 22px 0 12px;
+  }
+  @media (max-width: 900px) {
+    .contact-layout {
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
+  }
+  @media (max-width: 550px) {
+    .fields {
+      grid-template-columns: 1fr;
+    }
+    .full {
+      grid-column: auto;
+    }
+  }
+</style>

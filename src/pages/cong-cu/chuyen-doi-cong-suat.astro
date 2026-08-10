@@ -1,0 +1,141 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import '@/styles/tools.scss';
+---
+
+<BaseLayout
+  title="Chuyển đổi công suất | Lasan Marine"
+  description="Chuyển đổi nhanh giữa các đơn vị công suất kW, HP, CV và PS."
+>
+  <PageHero
+    title="Chuyển đổi công suất"
+    description="Quy đổi công suất máy giữa kW, HP, CV và PS phục vụ tra cứu kỹ thuật."
+  />
+  <main>
+    <section class="section">
+      <div class="container tool-layout">
+        <aside class="tool-intro">
+          <h2 class="section-title">Công cụ kỹ thuật</h2>
+          <nav class="tool-links" aria-label="Danh sách công cụ">
+            <a href="/cong-cu/chuyen-doi-cong-suat/" aria-current="page">Chuyển đổi công suất</a>
+            <a href="/cong-cu/kiem-tra-duong-kinh-truc-chan-vit/">
+              Kiểm tra đường kính trục chân vịt
+            </a>
+          </nav>
+        </aside>
+
+        <div class="calculator" data-power-converter>
+          <form class="calculator-form" novalidate>
+            <div class="calculator-fields">
+              <label>
+                Giá trị công suất
+                <input
+                  type="number"
+                  name="value"
+                  min="0"
+                  step="any"
+                  inputmode="decimal"
+                  placeholder="Ví dụ: 500"
+                  required
+                />
+              </label>
+              <label>
+                Đơn vị ban đầu
+                <select name="unit" required>
+                  <option value="">Chọn đơn vị</option>
+                  <option value="kW">kW</option>
+                  <option value="HP">HP</option>
+                  <option value="CV">CV</option>
+                  <option value="PS">PS</option>
+                </select>
+              </label>
+            </div>
+            <p class="calculator-error" data-error hidden></p>
+            <div class="calculator-actions">
+              <button class="button" type="submit">Chuyển đổi</button>
+              <button class="button button--secondary" type="reset">Nhập lại</button>
+            </div>
+          </form>
+
+          <div class="calculator-result" data-results hidden aria-live="polite">
+            <h2>Kết quả quy đổi</h2>
+            <table class="result-table">
+              <thead><tr><th>Kết quả</th><th>Làm tròn</th><th>Đơn vị</th></tr></thead>
+              <tbody>
+                <tr><td data-result="HP"></td><td data-rounded="HP"></td><td>HP</td></tr>
+                <tr><td data-result="CV"></td><td data-rounded="CV"></td><td>CV</td></tr>
+                <tr><td data-result="kW"></td><td data-rounded="kW"></td><td>kW</td></tr>
+                <tr><td data-result="PS"></td><td data-rounded="PS"></td><td>PS</td></tr>
+              </tbody>
+            </table>
+            <p class="tool-note">
+              Quy ước: 1 HP = 0,7457 kW; 1 CV = 1 PS = 0,735499 kW. Kết quả phục vụ tra cứu nhanh,
+              không thay thế hồ sơ tính toán được thẩm tra.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-power-converter]').forEach((calculator) => {
+    const form = calculator.querySelector<HTMLFormElement>('form');
+    const error = calculator.querySelector<HTMLElement>('[data-error]');
+    const results = calculator.querySelector<HTMLElement>('[data-results]');
+    const factorsToKw: Record<string, number> = {
+      kW: 1,
+      HP: 0.7457,
+      CV: 0.735499,
+      PS: 0.735499,
+    };
+
+    const showError = (message: string) => {
+      if (!error) return;
+      error.textContent = message;
+      error.hidden = false;
+      results?.setAttribute('hidden', '');
+    };
+
+    form?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      const value = Number(data.get('value'));
+      const unit = String(data.get('unit') ?? '');
+
+      if (!Number.isFinite(value) || value <= 0) {
+        showError('Vui lòng nhập giá trị công suất lớn hơn 0.');
+        return;
+      }
+      if (!factorsToKw[unit]) {
+        showError('Vui lòng chọn đơn vị công suất ban đầu.');
+        return;
+      }
+
+      const kw = value * factorsToKw[unit];
+      const converted: Record<string, number> = {
+        HP: kw / factorsToKw.HP,
+        CV: kw / factorsToKw.CV,
+        kW: kw,
+        PS: kw / factorsToKw.PS,
+      };
+
+      Object.entries(converted).forEach(([resultUnit, resultValue]) => {
+        const exact = calculator.querySelector<HTMLElement>(`[data-result="${resultUnit}"]`);
+        const rounded = calculator.querySelector<HTMLElement>(`[data-rounded="${resultUnit}"]`);
+        if (exact) exact.textContent = resultValue.toFixed(2);
+        if (rounded) rounded.textContent = resultValue.toFixed(0);
+      });
+
+      if (error) error.hidden = true;
+      results?.removeAttribute('hidden');
+    });
+
+    form?.addEventListener('reset', () => {
+      if (error) error.hidden = true;
+      results?.setAttribute('hidden', '');
+    });
+  });
+</script>

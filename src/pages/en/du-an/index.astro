@@ -1,0 +1,69 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import ProjectGrid from '@/components/ProjectGrid.astro';
+import CallToAction from '@/components/CallToAction.astro';
+const filters = ['All', 'New design', 'Conversion', 'Refit', 'Technical documents'];
+---
+
+<BaseLayout
+  title="Projects | Lasan Marine"
+  description="Vessel design and conversion projects by Lasan Marine."
+  lang="en"
+  ><PageHero
+    title="Projects"
+    description="Selected vessels designed, converted, and documented by Lasan Marine."
+  /><main>
+    <section class="section">
+      <div class="container">
+        <div class="filters">
+          {
+            filters.map((label, index) => (
+              <button class:list={{ active: index === 0 }} data-filter={label}>
+                {label}
+              </button>
+            ))
+          }
+        </div><ProjectGrid lang="en" />
+      </div>
+    </section><CallToAction
+      title="Do you have a vessel that needs design or conversion?"
+      href="/en/lien-he/"
+      label="Contact us"
+    />
+  </main><script>
+    const buttons = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
+    const cards = document.querySelectorAll<HTMLElement>('.project');
+    buttons.forEach((button) =>
+      button.addEventListener('click', () => {
+        buttons.forEach((item) => item.classList.remove('active'));
+        button.classList.add('active');
+        cards.forEach((card) => {
+          card.hidden =
+            button.dataset.filter !== 'All' && card.dataset.group !== button.dataset.filter;
+        });
+      }),
+    );
+  </script></BaseLayout
+><style lang="scss">
+  .filters {
+    display: flex;
+    overflow: auto;
+    border-bottom: 1px solid rgba(11, 28, 75, 0.16);
+    margin-bottom: 48px;
+  }
+  .filters button {
+    background: none;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    padding: 14px 24px 16px;
+    color: rgba(29, 31, 32, 0.6);
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .filters button.active {
+    color: #0a72c8;
+    border-color: #0a72c8;
+    font-weight: 600;
+  }
+</style>
