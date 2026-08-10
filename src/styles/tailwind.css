@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+@source '../components/**/*.astro';
+@source '../pages/**/*.astro';
+@source '../layouts/**/*.astro';
+
+@theme {
+  --color-navy: #0b1c4b;
+  --color-marine: #0a72c8;
+  --color-pale: #f4f6f9;
+  --color-ink: #1d1f20;
+}

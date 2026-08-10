@@ -7,15 +7,32 @@ const { services } = getSiteData(lang);
 const detailsLabel = lang === 'en' ? 'View details' : 'Xem chi tiết';
 ---
 
-<div class:list={['service-grid', { compact }]}>
+<div
+  class:list={[
+    'grid max-[1000px]:grid-cols-2 max-[560px]:grid-cols-1',
+    compact
+      ? 'grid-cols-5 border-t border-l border-navy/14'
+      : 'grid-cols-3 gap-6 max-[1000px]:gap-5 max-[560px]:gap-4',
+  ]}
+>
   {
     services.map(({ name, description, icon }) => (
-      <a href={`${base}/dich-vu/thiet-ke-tau-moi/`}>
-        <Icon name={icon} size={compact ? 36 : 44} />
-        <h3>{name}</h3>
-        <p>{description}</p>
+      <a
+        href={`${base}/dich-vu/thiet-ke-tau-moi/`}
+        class:list={[
+          'grid min-h-[320px] grid-rows-[auto_auto_1fr_auto] gap-5 text-navy no-underline hover:bg-pale max-[560px]:min-h-0',
+          compact
+            ? 'min-h-[220px] border-r border-b border-navy/14 px-6 py-7'
+            : 'border border-navy/14 px-9 py-10 max-[560px]:px-[26px] max-[560px]:pt-[30px] max-[560px]:pb-8',
+        ]}
+      >
+        <Icon name={icon} size={compact ? 36 : 44} class="text-marine" />
+        <h3 class:list={['m-0', compact ? 'text-xl' : 'text-[26px]']}>{name}</h3>
+        <p class:list={['m-0 leading-[1.7] text-ink/66', compact ? 'text-sm' : 'text-[15px]']}>
+          {description}
+        </p>
         {!compact && (
-          <span>
+          <span class="flex items-center gap-2.5 font-semibold text-marine">
             {detailsLabel} <Icon name="arrow" size={21} />
           </span>
         )}
@@ -23,82 +40,3 @@ const detailsLabel = lang === 'en' ? 'View details' : 'Xem chi tiết';
     ))
   }
 </div>
-<style lang="scss">
-  .service-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-  .service-grid > a {
-    min-height: 320px;
-    padding: 40px 36px;
-    border: 1px solid rgba(11, 28, 75, 0.14);
-    display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    row-gap: 20px;
-    text-decoration: none;
-    color: #0b1c4b;
-  }
-  .service-grid > a > svg {
-    color: #0a72c8;
-  }
-  .service-grid h3 {
-    font-size: 26px;
-    margin: 0;
-  }
-  .service-grid p {
-    margin: 0;
-    font-size: 15px;
-    line-height: 1.7;
-    color: rgba(29, 31, 32, 0.66);
-  }
-  .service-grid span {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #0a72c8;
-    font-weight: 600;
-  }
-  .service-grid a:hover {
-    background: #f4f6f9;
-  }
-  .compact {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0;
-    border-top: 1px solid rgba(11, 28, 75, 0.14);
-    border-left: 1px solid rgba(11, 28, 75, 0.14);
-  }
-  .compact > a {
-    padding: 28px 24px;
-    min-height: 220px;
-    border-width: 0 1px 1px 0;
-  }
-  .compact h3 {
-    font-size: 20px;
-  }
-  .compact p {
-    font-size: 14px;
-  }
-  @media (max-width: 1000px) {
-    .service-grid,
-    .compact {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .service-grid:not(.compact) {
-      gap: 20px;
-    }
-  }
-  @media (max-width: 560px) {
-    .service-grid,
-    .compact {
-      grid-template-columns: 1fr;
-    }
-    .service-grid > a {
-      min-height: 0;
-      padding: 30px 26px 32px;
-    }
-    .service-grid:not(.compact) {
-      gap: 16px;
-    }
-  }
-</style>

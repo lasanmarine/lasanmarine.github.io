@@ -24,7 +24,11 @@ const paths = {
   check: ['m5 12 5 5L20 7'],
 };
 type IconName = keyof typeof paths;
-const { name = 'arrow', size = 24 } = Astro.props as { name?: IconName; size?: number };
+const {
+  name = 'arrow',
+  size = 24,
+  class: className,
+} = Astro.props as { name?: IconName; size?: number; class?: string };
 const iconPaths: string[] = paths[name];
 ---
 
@@ -38,6 +42,6 @@ const iconPaths: string[] = paths[name];
   stroke-linecap="round"
   stroke-linejoin="round"
   aria-hidden="true"
->
+  class={className}>
   {iconPaths.map((d: string) => <path d={d} />)}
 </svg>

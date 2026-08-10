@@ -1,5 +1,3 @@
-@import 'tailwindcss';
-
 @font-face {
   font-family: 'Barlow Local';
   font-style: normal;
@@ -28,13 +26,6 @@ $navy: #0b1c4b;
 $blue: #0a72c8;
 $pale: #f4f6f9;
 $ink: #1d1f20;
-
-@theme {
-  --color-navy: #{$navy};
-  --color-marine: #{$blue};
-  --color-pale: #{$pale};
-  --color-ink: #{$ink};
-}
 
 :root {
   font-family: 'Barlow Local';

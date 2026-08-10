@@ -9,81 +9,24 @@ const visibleProjects = projects.slice(0, limit ?? projects.length);
 const imageLabel = lang === 'en' ? 'Project image' : 'Ảnh dự án';
 ---
 
-<div class="project-grid">
+<div class="grid grid-cols-3 gap-x-9 gap-y-12 max-[850px]:grid-cols-2 max-[550px]:grid-cols-1">
   {
     visibleProjects.map((p) => (
-      <a class="project" href={`${base}/du-an/tau-ca-vo-thep-24m/`} data-group={p.group}>
-        <>
-          <Blueprint class="project__image placeholder" label={imageLabel} />
-          <b>{p.service}</b>
-          <h3>{p.name}</h3>
-          <div>
-            <>
-              <span>{p.meta}</span>
-              <Icon name="arrow" />
-            </>
-          </div>
-        </>
+      <a
+        class="grid grid-rows-[auto_auto_auto_1fr] content-start gap-3 no-underline"
+        href={`${base}/du-an/tau-ca-vo-thep-24m/`}
+        data-group={p.group}
+      >
+        <Blueprint class="mb-2 aspect-4/3" label={imageLabel} />
+        <b class="text-[15px] leading-[1.4] text-marine">{p.service}</b>
+        <h3 class="m-0 min-h-[2.3em] text-[26px] leading-[1.15] text-navy max-[550px]:min-h-0">
+          {p.name}
+        </h3>
+        <div class="mt-1 flex items-start justify-between gap-4 border-t border-navy/14 pt-4 text-sm leading-[1.55] text-ink/72">
+          <span>{p.meta}</span>
+          <Icon name="arrow" class="flex-none text-marine" />
+        </div>
       </a>
     ))
   }
 </div>
-<style lang="scss">
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 48px 36px;
-  }
-  .project {
-    display: grid;
-    grid-template-rows: auto auto auto 1fr;
-    gap: 12px;
-    align-content: start;
-    text-decoration: none;
-  }
-  .project__image {
-    aspect-ratio: 4/3;
-    margin: 0 0 8px;
-  }
-  .project b {
-    color: #0a72c8;
-    font-size: 15px;
-    line-height: 1.4;
-  }
-  .project h3 {
-    min-height: 2.3em;
-    margin: 0;
-    font-size: 26px;
-    line-height: 1.15;
-    color: #0b1c4b;
-  }
-  .project > div:last-child {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 16px;
-    margin-top: 4px;
-    padding-top: 16px;
-    border-top: 1px solid rgba(11, 28, 75, 0.14);
-    font-size: 14px;
-    line-height: 1.55;
-    color: rgba(29, 31, 32, 0.72);
-  }
-  .project > div:last-child svg {
-    color: #0a72c8;
-    flex: none;
-  }
-  @media (max-width: 850px) {
-    .project-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (max-width: 550px) {
-    .project-grid {
-      grid-template-columns: 1fr;
-    }
-    .project h3 {
-      min-height: 0;
-    }
-  }
-</style>

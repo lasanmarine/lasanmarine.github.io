@@ -33,129 +33,67 @@ const copy =
 const menuPaths = ['/', '/gioi-thieu/', '/dich-vu/', '/du-an/', '/bai-viet/'];
 ---
 
-<footer class="footer">
-  <div class="container footer__grid">
-    <div class="footer__brand">
-      <img src="/footer-logo.svg" width="372" height="138" alt="Lasan Marine" />
-    </div><div class="footer__content">
-      <p>{copy.description}</p>
-      <div class="footer__links">
+<footer class="border-t border-navy/14 bg-white text-ink/68">
+  <div
+    class="container grid grid-cols-[minmax(300px,0.8fr)_minmax(0,1.6fr)] gap-[clamp(64px,9vw,140px)] py-[72px] pb-12 max-[900px]:grid-cols-1 max-[900px]:gap-12 max-[520px]:pt-14 max-[520px]:pb-0"
+  >
+    <div class="flex items-start">
+      <img
+        src="/footer-logo.svg"
+        width="372"
+        height="138"
+        alt="Lasan Marine"
+        class="h-auto w-[min(100%,420px)] max-[900px]:w-[min(100%,340px)]"
+      />
+    </div>
+    <div class="flex flex-col gap-11 pt-2">
+      <p class="m-0 max-w-[680px] text-base leading-[1.7]">{copy.description}</p>
+      <div class="grid grid-cols-[0.8fr_1fr_1.4fr] gap-10 max-[520px]:grid-cols-1 max-[520px]:gap-8">
         <div>
-          <h2>Menu</h2>
-          {copy.menu.map((label, index) => <a href={`${base}${menuPaths[index]}`}>{label}</a>)}
-        </div><div>
-          <h2>{copy.services}</h2>
+          <h2 class="m-0 mb-5 text-[17px] text-navy">Menu</h2>
           {
-            copy.serviceLinks.map((label) => (
-              <a href={`${base}/dich-vu/thiet-ke-tau-moi/`}>{label}</a>
+            copy.menu.map((label, index) => (
+              <a
+                href={`${base}${menuPaths[index]}`}
+                class="mb-2.5 block w-fit text-sm leading-relaxed text-navy/70 no-underline transition-colors duration-[180ms] hover:text-marine"
+              >
+                {label}
+              </a>
             ))
           }
-        </div><div>
-          <h2>{copy.contact}</h2>
-          <strong>LASAN MARINE COMPANY LIMITED</strong>
-          <span>{copy.tax}: 4202063521</span>
-          <span>{copy.address}</span>
-          <a href="tel:0834310781">0834 310 781</a>
+        </div>
+        <div>
+          <h2 class="m-0 mb-5 text-[17px] text-navy">{copy.services}</h2>
+          {
+            copy.serviceLinks.map((label) => (
+              <a
+                href={`${base}/dich-vu/thiet-ke-tau-moi/`}
+                class="mb-2.5 block w-fit text-sm leading-relaxed text-navy/70 no-underline transition-colors duration-[180ms] hover:text-marine"
+              >
+                {label}
+              </a>
+            ))
+          }
+        </div>
+        <div>
+          <h2 class="m-0 mb-5 text-[17px] text-navy">{copy.contact}</h2>
+          <strong class="mb-2.5 block text-[15px] leading-relaxed text-navy">
+            LASAN MARINE COMPANY LIMITED
+          </strong>
+          <span class="mb-2.5 block text-sm leading-relaxed">{copy.tax}: 4202063521</span>
+          <span class="mb-2.5 block text-sm leading-relaxed">{copy.address}</span>
+          <a
+            href="tel:0834310781"
+            class="mb-2.5 block w-fit text-sm leading-relaxed text-navy/70 no-underline transition-colors duration-[180ms] hover:text-marine"
+          >
+            0834 310 781
+          </a>
         </div>
       </div>
       <ContactMap lang={lang} />
     </div>
-  </div><div class="container copyright">© 2026 Lasan Marine Company Limited.</div>
+  </div>
+  <div class="container border-t border-navy/14 py-5 pb-9 text-[13px] text-navy/68 max-[520px]:mt-10">
+    © 2026 Lasan Marine Company Limited.
+  </div>
 </footer>
-<style lang="scss">
-  .footer {
-    background: #fff;
-    color: rgba(29, 31, 32, 0.68);
-    border-top: 1px solid rgba(11, 28, 75, 0.14);
-  }
-  .footer__grid {
-    padding-block: 72px 48px;
-    display: grid;
-    grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.6fr);
-    gap: clamp(64px, 9vw, 140px);
-  }
-  .footer__brand {
-    display: flex;
-    align-items: flex-start;
-  }
-  .footer img {
-    width: min(100%, 420px);
-    height: auto;
-  }
-  .footer p {
-    max-width: 680px;
-    margin: 0;
-    line-height: 1.7;
-    font-size: 16px;
-  }
-  .footer__content {
-    display: flex;
-    flex-direction: column;
-    gap: 44px;
-    padding-top: 8px;
-  }
-  .footer__content .contact-map {
-    width: 100%;
-    margin-top: 0;
-  }
-  .footer__links {
-    display: grid;
-    grid-template-columns: 0.8fr 1fr 1.4fr;
-    gap: 40px;
-  }
-  .footer h2 {
-    font-size: 17px;
-    color: #0b1c4b;
-    margin: 0 0 20px;
-  }
-  .footer a,
-  .footer span {
-    display: block;
-    text-decoration: none;
-    margin: 0 0 10px;
-    font-size: 14px;
-    line-height: 1.6;
-  }
-  .footer a {
-    width: fit-content;
-    color: rgba(11, 28, 75, 0.7);
-    transition: color 180ms ease;
-  }
-  .footer a:hover {
-    color: #0a72c8;
-  }
-  .footer strong {
-    display: block;
-    color: #0b1c4b;
-    font-size: 15px;
-    line-height: 1.5;
-  }
-  .copyright {
-    border-top: 1px solid rgba(11, 28, 75, 0.14);
-    padding-block: 20px 36px;
-    color: rgba(11, 28, 75, 0.68);
-    font-size: 13px;
-  }
-  @media (max-width: 900px) {
-    .footer__grid {
-      grid-template-columns: 1fr;
-      gap: 48px;
-    }
-    .footer img {
-      width: min(100%, 340px);
-    }
-  }
-  @media (max-width: 520px) {
-    .footer__grid {
-      grid-template-columns: 1fr;
-      padding-block: 56px 0;
-    }
-    .footer__links {
-      grid-template-columns: 1fr;
-      gap: 32px;
-    }
-    .copyright {
-      margin-top: 40px;
-    }
-  }
-</style>
