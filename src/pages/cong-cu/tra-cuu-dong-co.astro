@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import PageHero from '@/blocks/PageHero.astro';
 import ToolLayout from '@/blocks/ToolLayout.astro';
 import EngineLookup from '@/blocks/EngineLookup.astro';
 import '@/styles/tools.scss';
@@ -9,11 +8,10 @@ import engines from '@/data/vi/dong-co.json';
 ---
 
 <BaseLayout title={content.meta.title} description={content.meta.description}>
-  <PageHero title={content.hero.title} description={content.hero.description} />
   <main>
     <ToolLayout
-      navTitle={content.tool.navTitle}
-      navIntro={content.tool.navIntro}
+      navTitle={content.hero.title}
+      navIntro={content.hero.description}
       navAriaLabel={content.tool.navAriaLabel}
       links={content.tool.links}
     >
@@ -25,6 +23,9 @@ import engines from '@/data/vi/dong-co.json';
         headers={content.lookup.headers}
         emptyMessage={content.lookup.emptyMessage}
         resultCountLabel={content.lookup.resultCountLabel}
+        paginationLabel={content.lookup.paginationLabel}
+        prevLabel={content.lookup.prevLabel}
+        nextLabel={content.lookup.nextLabel}
         note={content.lookup.note}
         rows={engines}
       />

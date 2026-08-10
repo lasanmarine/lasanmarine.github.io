@@ -8,8 +8,6 @@ export const chuyenDoiCongSuat = {
     description: 'Convert engine power between kW, HP, CV, and PS for quick technical reference.',
   },
   tool: {
-    navTitle: 'Engineering tools',
-    navIntro: 'Enter a power value and its original unit to obtain precise and rounded conversions.',
     navAriaLabel: 'Engineering tools',
     links: [
       { href: '/en/cong-cu/chuyen-doi-cong-suat/', label: 'Power conversion', current: true },

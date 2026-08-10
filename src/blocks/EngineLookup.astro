@@ -21,6 +21,9 @@ interface Props {
   headers: string[];
   emptyMessage: string;
   resultCountLabel: string;
+  paginationLabel: string;
+  prevLabel: string;
+  nextLabel: string;
   note: string;
   rows: EngineRow[];
 }
@@ -33,6 +36,9 @@ const {
   headers,
   emptyMessage,
   resultCountLabel,
+  paginationLabel,
+  prevLabel,
+  nextLabel,
   note,
   rows,
 } = Astro.props as Props;
@@ -65,6 +71,12 @@ const {
     </table>
     <p class="lookup-empty" data-empty hidden>{emptyMessage}</p>
   </div>
+
+  <nav class="lookup-pagination" data-pagination aria-label={paginationLabel}>
+    <button type="button" class="lookup-page-btn" data-prev aria-label={prevLabel}>‹</button>
+    <div class="lookup-page-numbers" data-page-numbers></div>
+    <button type="button" class="lookup-page-btn" data-next aria-label={nextLabel}>›</button>
+  </nav>
 
   <p class="tool-note">{note}</p>
 </div>

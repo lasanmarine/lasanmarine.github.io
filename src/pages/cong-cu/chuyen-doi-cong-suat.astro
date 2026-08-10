@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import PageHero from '@/blocks/PageHero.astro';
 import ToolLayout from '@/blocks/ToolLayout.astro';
 import PowerConverterCalculator from '@/blocks/PowerConverterCalculator.astro';
 import '@/styles/tools.scss';
@@ -8,11 +7,10 @@ import { chuyenDoiCongSuat as content } from '@/data/vi/chuyen-doi-cong-suat.js'
 ---
 
 <BaseLayout title={content.meta.title} description={content.meta.description}>
-  <PageHero title={content.hero.title} description={content.hero.description} />
   <main>
     <ToolLayout
-      navTitle={content.tool.navTitle}
-      navIntro={content.tool.navIntro}
+      navTitle={content.hero.title}
+      navIntro={content.hero.description}
       navAriaLabel={content.tool.navAriaLabel}
       links={content.tool.links}
     >

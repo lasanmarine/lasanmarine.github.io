@@ -18,7 +18,7 @@ const { navTitle, navIntro, navAriaLabel, links } = Astro.props as Props;
 <section class="section">
   <div class="container tool-layout">
     <aside class="tool-intro">
-      <h2 class="section-title">{navTitle}</h2>
+      <h1 class="section-title">{navTitle}</h1>
       {navIntro && <p>{navIntro}</p>}
       <nav class="tool-links" aria-label={navAriaLabel}>
         {

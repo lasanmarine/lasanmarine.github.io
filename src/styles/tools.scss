@@ -204,6 +204,58 @@
   display: none;
 }
 
+.lookup-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 26px;
+}
+
+.lookup-pagination[hidden] {
+  display: none;
+}
+
+.lookup-page-numbers {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lookup-page-btn {
+  min-width: 40px;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid rgba(11, 28, 75, 0.24);
+  background: #fff;
+  color: #0b1c4b;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lookup-page-btn:hover:not(:disabled) {
+  border-color: #0a72c8;
+  color: #0a72c8;
+}
+
+.lookup-page-btn.is-active {
+  border-color: #0b1c4b;
+  background: #0b1c4b;
+  color: #fff;
+}
+
+.lookup-page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.lookup-page-ellipsis {
+  color: rgba(29, 31, 32, 0.5);
+  padding: 0 4px;
+}
+
 @media (max-width: 850px) {
   .tool-layout {
     grid-template-columns: 1fr;

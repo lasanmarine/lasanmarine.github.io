@@ -9,8 +9,6 @@ export const kiemTraDuongKinhTrucChanVit = {
       'Estimate propeller speed and minimum shaft diameter from engine power, reduction ratio, and material.',
   },
   tool: {
-    navTitle: 'Engineering tools',
-    navIntro: 'Enter engine, gearbox, and material parameters for a preliminary propeller shaft check.',
     navAriaLabel: 'Engineering tools',
     links: [
       { href: '/en/cong-cu/chuyen-doi-cong-suat/', label: 'Power conversion' },

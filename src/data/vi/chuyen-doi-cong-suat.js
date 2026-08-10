@@ -8,8 +8,6 @@ export const chuyenDoiCongSuat = {
     description: 'Quy đổi công suất máy giữa kW, HP, CV và PS phục vụ tra cứu kỹ thuật.',
   },
   tool: {
-    navTitle: 'Công cụ kỹ thuật',
-    navIntro: undefined,
     navAriaLabel: 'Danh sách công cụ',
     links: [
       { href: '/cong-cu/chuyen-doi-cong-suat/', label: 'Chuyển đổi công suất', current: true },

@@ -9,8 +9,6 @@ export const kiemTraDuongKinhTrucChanVit = {
       'Ước tính nhanh số vòng quay chân vịt và đường kính trục tối thiểu theo công suất, tỉ số truyền và vật liệu.',
   },
   tool: {
-    navTitle: 'Công cụ kỹ thuật',
-    navIntro: undefined,
     navAriaLabel: 'Danh sách công cụ',
     links: [
       { href: '/cong-cu/chuyen-doi-cong-suat/', label: 'Chuyển đổi công suất' },

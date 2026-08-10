@@ -8,8 +8,6 @@ export const traCuuDongCo = {
     description: 'Tìm nhanh hãng, hiệu máy, công suất và số vòng quay của các dòng động cơ thủy thường dùng.',
   },
   tool: {
-    navTitle: 'Công cụ kỹ thuật',
-    navIntro: undefined,
     navAriaLabel: 'Danh sách công cụ',
     links: [
       { href: '/cong-cu/chuyen-doi-cong-suat/', label: 'Chuyển đổi công suất' },
@@ -29,6 +27,9 @@ export const traCuuDongCo = {
     headers: ['Hãng', 'Hiệu máy', 'Công suất (PS, CV)', 'Công suất (HP)', 'Công suất (kW)', 'Số vòng quay (RPM)'],
     emptyMessage: 'Không tìm thấy kết quả phù hợp.',
     resultCountLabel: 'kết quả',
+    paginationLabel: 'Điều hướng phân trang',
+    prevLabel: 'Trang trước',
+    nextLabel: 'Trang sau',
     note: 'Dữ liệu chỉ mang tính tham khảo, vui lòng đối chiếu với thông số kỹ thuật chính thức của nhà sản xuất.',
   },
 };

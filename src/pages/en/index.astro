@@ -41,27 +41,6 @@ const backgrounds = Array.from({ length: 10 }, (_, i) => `/ser${i + 1}.webp`);
         </div>
       </div>
     </section>
-    <section class="section customer-message">
-      <div class="container customer-message__layout">
-        <div class="customer-message__portrait">
-          <img src="/ceo_huynh_le_hong_thai.webp" alt={home.customerMessage.name} loading="lazy" />
-          <span class="customer-message__orbit" aria-hidden="true"></span>
-          <span class="customer-message__mark customer-message__mark--top" aria-hidden="true">
-          </span>
-          <span class="customer-message__mark customer-message__mark--side" aria-hidden="true">
-          </span>
-          <div class="customer-message__signature">
-            <strong>{home.customerMessage.name}</strong>
-            <span>{home.customerMessage.role}</span>
-          </div>
-        </div>
-        <div class="customer-message__content">
-          <h2 class="section-title">{home.customerMessage.title}</h2>
-          <p class="customer-message__quote">{home.customerMessage.quote}</p>
-          <ButtonLink href="/en/lien-he/">{home.customerMessage.ctaLabel}</ButtonLink>
-        </div>
-      </div>
-    </section>
     <section class="vehicle-categories" data-vehicle-categories>
       <div class="vehicle-categories__sticky">
         <div class="vehicle-categories__background" aria-hidden="true">

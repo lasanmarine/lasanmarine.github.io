@@ -28,12 +28,18 @@ const switchHreflang = base === '/en' ? 'vi' : 'en';
     </button>
     <nav id="site-nav" class="nav" aria-label="Main navigation">
       {content.links.map(([label, path]) => <a href={`${base}${path}`}>{label}</a>)}
-      <div class="nav-tools">
-        <a href={`${base}/cong-cu/chuyen-doi-cong-suat/`}>{content.toolsLabel}</a>
-        <div class="nav-tools__menu">
-          {content.toolsMenu.map(([label, path]) => <a href={`${base}${path}`}>{label}</a>)}
-        </div>
-      </div>
+      {
+        base !== '/en' && (
+          <div class="nav-tools">
+            <a href={`${base}/cong-cu/chuyen-doi-cong-suat/`}>{content.toolsLabel}</a>
+            <div class="nav-tools__menu">
+              {content.toolsMenu.map(([label, path]) => (
+                <a href={`${base}${path}`}>{label}</a>
+              ))}
+            </div>
+          </div>
+        )
+      }
       <a href={switchHref} class="language" hreflang={switchHreflang}>
         {content.languageLabel}
       </a>
