@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: process.env.SITE_URL || 'https://example.com',
   output: 'static',
+  outDir: './docs',
   compressHTML: true,
   i18n: {
     defaultLocale: 'vi',

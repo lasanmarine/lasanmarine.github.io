@@ -10,4 +10,6 @@ npm run build
 npm run preview
 ```
 
+`npm run build` xuất website vào `docs/` để GitHub Pages deploy từ thư mục này. File `.nojekyll` được tạo trong `docs/` để GitHub Pages không bỏ qua các asset Astro trong `docs/_astro/`.
+
 Đặt `SITE_URL` thành domain thật trước khi deploy, đồng thời cập nhật URL sitemap trong `public/robots.txt` và thêm `public/social-card.jpg`.
