@@ -16,13 +16,13 @@ export const traCuuDongCo = {
     ],
   },
   lookup: {
-    searchLabel: 'Tìm kiếm',
-    searchPlaceholder: 'Nhập hãng hoặc hiệu máy...',
-    columnLabel: 'Tìm theo',
-    columns: [
-      { value: 'all', label: 'Tất cả' },
-      { value: 'hang', label: 'Hãng' },
-      { value: 'hieu_may', label: 'Hiệu máy' },
+    fields: [
+      { key: 'hang', label: 'Hãng', placeholder: 'Vd: Weichai' },
+      { key: 'hieu_may', label: 'Hiệu máy', placeholder: 'Vd: X6170ZC350-1' },
+      { key: 'ps', label: 'Công suất (PS, CV)', placeholder: 'Vd: 350' },
+      { key: 'hp', label: 'Công suất (HP)', placeholder: 'Vd: 345' },
+      { key: 'kw', label: 'Công suất (kW)', placeholder: 'Vd: 257' },
+      { key: 'rpm', label: 'Số vòng quay (RPM)', placeholder: 'Vd: 1000' },
     ],
     headers: ['Hãng', 'Hiệu máy', 'Công suất (PS, CV)', 'Công suất (HP)', 'Công suất (kW)', 'Số vòng quay (RPM)'],
     emptyMessage: 'Không tìm thấy kết quả phù hợp.',

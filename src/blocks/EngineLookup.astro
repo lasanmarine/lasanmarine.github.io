@@ -1,7 +1,8 @@
 ---
-interface ColumnOption {
-  value: string;
+interface FilterField {
+  key: string;
   label: string;
+  placeholder: string;
 }
 
 interface EngineRow {
@@ -14,10 +15,7 @@ interface EngineRow {
 }
 
 interface Props {
-  searchLabel: string;
-  searchPlaceholder: string;
-  columnLabel: string;
-  columns: ColumnOption[];
+  fields: FilterField[];
   headers: string[];
   emptyMessage: string;
   resultCountLabel: string;
@@ -29,10 +27,7 @@ interface Props {
 }
 
 const {
-  searchLabel,
-  searchPlaceholder,
-  columnLabel,
-  columns,
+  fields,
   headers,
   emptyMessage,
   resultCountLabel,
@@ -44,18 +39,21 @@ const {
 } = Astro.props as Props;
 ---
 
-<div class="lookup" data-engine-lookup data-rows={JSON.stringify(rows)}>
+<div
+  class="lookup"
+  data-engine-lookup
+  data-rows={JSON.stringify(rows)}
+  data-headers={JSON.stringify(headers)}
+>
   <div class="lookup-controls">
-    <label class="full">
-      {searchLabel}
-      <input type="search" name="q" placeholder={searchPlaceholder} data-search />
-    </label>
-    <label>
-      {columnLabel}
-      <select name="column" data-column>
-        {columns.map((c) => <option value={c.value}>{c.label}</option>)}
-      </select>
-    </label>
+    {
+      fields.map((field) => (
+        <label>
+          {field.label}
+          <input type="text" placeholder={field.placeholder} data-filter={field.key} />
+        </label>
+      ))
+    }
   </div>
 
   <p class="lookup-count" data-count data-suffix={resultCountLabel} aria-live="polite"></p>

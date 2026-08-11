@@ -8,12 +8,13 @@ interface EngineRow {
 }
 
 const PAGE_SIZE = 25;
+const FIELDS: (keyof EngineRow)[] = ['hang', 'hieu_may', 'ps', 'hp', 'kw', 'rpm'];
 
 export function initEngineLookup(root: ParentNode = document): void {
   root.querySelectorAll<HTMLElement>('[data-engine-lookup]').forEach((lookup) => {
     const rows: EngineRow[] = JSON.parse(lookup.dataset.rows ?? '[]');
-    const search = lookup.querySelector<HTMLInputElement>('[data-search]');
-    const column = lookup.querySelector<HTMLSelectElement>('[data-column]');
+    const headers: string[] = JSON.parse(lookup.dataset.headers ?? '[]');
+    const filterInputs = lookup.querySelectorAll<HTMLInputElement>('[data-filter]');
     const body = lookup.querySelector<HTMLElement>('[data-body]');
     const empty = lookup.querySelector<HTMLElement>('[data-empty]');
     const count = lookup.querySelector<HTMLElement>('[data-count]');
@@ -30,12 +31,7 @@ export function initEngineLookup(root: ParentNode = document): void {
       body.innerHTML = data
         .map(
           (row) => `<tr>
-            <td>${row.hang}</td>
-            <td>${row.hieu_may}</td>
-            <td>${row.ps}</td>
-            <td>${row.hp}</td>
-            <td>${row.kw}</td>
-            <td>${row.rpm}</td>
+            ${FIELDS.map((field, i) => `<td data-label="${headers[i] ?? ''}">${row[field]}</td>`).join('')}
           </tr>`,
         )
         .join('');
@@ -75,21 +71,23 @@ export function initEngineLookup(root: ParentNode = document): void {
     };
 
     const filter = () => {
-      const q = (search?.value ?? '').trim().toLowerCase();
-      const col = column?.value ?? 'all';
-      filtered = !q
+      const activeFilters: [keyof EngineRow, string][] = [];
+      filterInputs.forEach((input) => {
+        const key = input.dataset.filter as keyof EngineRow;
+        const value = input.value.trim().toLowerCase();
+        if (key && value) activeFilters.push([key, value]);
+      });
+
+      filtered = !activeFilters.length
         ? rows
-        : rows.filter((row) => {
-            if (col === 'hang') return row.hang.toLowerCase().includes(q);
-            if (col === 'hieu_may') return row.hieu_may.toLowerCase().includes(q);
-            return row.hang.toLowerCase().includes(q) || row.hieu_may.toLowerCase().includes(q);
-          });
+        : rows.filter((row) =>
+            activeFilters.every(([key, value]) => String(row[key]).toLowerCase().includes(value)),
+          );
       page = 1;
       render();
     };
 
-    search?.addEventListener('input', filter);
-    column?.addEventListener('change', filter);
+    filterInputs.forEach((input) => input.addEventListener('input', filter));
     prevBtn?.addEventListener('click', () => {
       page -= 1;
       render();

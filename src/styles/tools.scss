@@ -150,7 +150,7 @@
 
 .lookup-controls {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(160px, 0.35fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
   margin-bottom: 22px;
 }
@@ -193,6 +193,61 @@
 
 .lookup-table-wrap .result-table {
   min-width: 640px;
+}
+
+@media (max-width: 700px) {
+  .lookup-table-wrap {
+    overflow-x: visible;
+  }
+
+  .lookup-table-wrap .result-table {
+    min-width: 0;
+    border: none;
+  }
+
+  .lookup-table-wrap .result-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .lookup-table-wrap .result-table tbody {
+    display: grid;
+    gap: 16px;
+  }
+
+  .lookup-table-wrap .result-table tr {
+    display: block;
+    border: 1px solid rgba(11, 28, 75, 0.16);
+    background: #fff;
+  }
+
+  .lookup-table-wrap .result-table td {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 16px;
+    border: none;
+    border-bottom: 1px solid rgba(11, 28, 75, 0.1);
+    text-align: right;
+    font-size: 14px;
+  }
+
+  .lookup-table-wrap .result-table td:last-child {
+    border-bottom: none;
+  }
+
+  .lookup-table-wrap .result-table td::before {
+    content: attr(data-label);
+    color: rgba(29, 31, 32, 0.55);
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+  }
 }
 
 .lookup-empty {
@@ -264,6 +319,10 @@
 
   .tool-intro {
     position: static;
+  }
+
+  .lookup-controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
