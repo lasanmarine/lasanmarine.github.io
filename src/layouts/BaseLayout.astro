@@ -40,9 +40,27 @@ const alternateOgLocale = isEnglish ? 'vi_VN' : 'en_US';
     <link rel="alternate" hreflang="en" href={englishURL} />
     <link rel="alternate" hreflang="x-default" href={vietnameseURL} />
     <link rel="icon" href="/favicon-logo.svg" type="image/svg+xml" />
-    <link rel="preload" href="/fonts/Barlow-Regular.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="preload" href="/fonts/Barlow-SemiBold.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="preload" href="/fonts/Barlow-Bold.ttf" as="font" type="font/ttf" crossorigin />
+    {/*
+      Arms the scroll reveals before first paint so above-the-fold elements do
+      not flash in before fading. If reveal.ts never runs, the class is dropped
+      again a moment later and everything stays visible.
+    */}
+    <script is:inline>
+      (function () {
+        if (
+          window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+          !('IntersectionObserver' in window)
+        )
+          return;
+        var root = document.documentElement;
+        root.classList.add('reveal-on');
+        setTimeout(function () {
+          if (!window.__revealReady) root.classList.remove('reveal-on');
+        }, 2500);
+      })();
+    </script>
+    {/* One variable file covers every weight; the italic loads only when used. */}
+    <link rel="preload" href="/fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={ogLocale} />
     <meta property="og:locale:alternate" content={alternateOgLocale} />
@@ -63,8 +81,8 @@ const alternateOgLocale = isEnglish ? 'vi_VN' : 'en_US';
     <Footer base={base} content={nav} />
 
     <script>
-      import { scheduleAOS } from '@/scripts/aos-init';
-      scheduleAOS();
+      import { initReveal } from '@/scripts/reveal';
+      initReveal();
     </script>
   </body>
 </html>

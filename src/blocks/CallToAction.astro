@@ -11,14 +11,16 @@ interface Props {
 const { title, text = '', href = '/lien-he/', label = 'Liên hệ' } = Astro.props as Props;
 ---
 
-<section class="technical-grid text-white">
+<section class="block-call-to-action technical-grid text-white">
   <div
     class="container grid grid-cols-[1fr_auto] items-center gap-15 py-[90px] max-[700px]:grid-cols-1 max-[700px]:gap-8 max-[700px]:py-16"
   >
-    <div>
+    <div data-aos="fade-up">
       <h2 class="m-0 max-w-[850px] text-[clamp(2rem,4vw,2.875rem)] leading-[1.1]">{title}</h2>
       {text && <p class="mt-4 mb-0 text-[17px] text-white/70">{text}</p>}
     </div>
-    <ButtonLink href={href} class="max-[700px]:justify-self-start">{label}</ButtonLink>
+    <div data-aos="fade-up" data-aos-delay="120" class="max-[700px]:justify-self-start">
+      <ButtonLink href={href}>{label}</ButtonLink>
+    </div>
   </div>
 </section>

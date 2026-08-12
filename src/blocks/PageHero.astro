@@ -7,12 +7,18 @@ interface Props {
 const { title, description = '' } = Astro.props as Props;
 ---
 
-<section class="technical-grid text-white">
-  <div class="container py-[110px] max-[600px]:py-18">
-    <h1 class="page-title m-0 max-w-[950px]">{title}</h1>
+<section class="block-page-hero technical-grid text-white">
+  <div
+    class="container flex flex-col gap-[26px] py-[110px] max-[600px]:gap-4 max-[600px]:py-18"
+  >
+    <h1 class="page-title m-0 max-w-[950px]" data-aos="fade-up">{title}</h1>
     {
       description && (
-        <p class="mt-[26px] mb-0 max-w-[760px] text-[19px] leading-[1.65] text-white/72 max-[600px]:text-[17px]">
+        <p
+          class="m-0 max-w-[760px] text-[19px] leading-[1.65] text-white/72 max-[600px]:text-[17px]"
+          data-aos="fade-up"
+          data-aos-delay="90"
+        >
           {description}
         </p>
       )

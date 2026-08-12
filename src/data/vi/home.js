@@ -1,14 +1,15 @@
 export const home = {
   meta: {
-    title: 'Lasan Marine | Thiết kế kỹ thuật phương tiện thủy',
-    description: 'Thiết kế tàu cá, phương tiện thủy nội địa và phương tiện vận tải đường thủy.',
+    title: 'Lasan Marine | Thiết kế Tàu mới & Hồ sơ Đăng kiểm VR Chuẩn Kỹ thuật',
+    description:
+      'Tối ưu tuyến hình - Giảm 10-15% chi phí nhiên liệu. Lập trọn bộ hồ sơ thẩm định Đăng kiểm (VR), tính toán ổn định và thiết kế kỹ thuật thi công.',
   },
   hero: {
     title: "Engineering Tomorrow's Oceans",
     description:
-      'Cung cấp giải pháp thiết kế tàu cá, phương tiện thủy nội địa, phương tiện vận tải đường thủy.',
-    ctaPrimary: { label: 'Xem dịch vụ', href: '/dich-vu/' },
-    ctaSecondary: { label: 'Liên hệ chúng tôi', href: '/lien-he/' },
+      'Tối ưu tuyến hình thân tàu – Giảm tiêu hao nhiên liệu. Đảm bảo 100% hồ sơ duyệt Đăng kiểm VR ngay từ lần nộp đầu tiên.',
+    ctaPrimary: { label: 'Xem dịch vụ kỹ thuật', href: '/dich-vu/' },
+    ctaSecondary: { label: 'Tư vấn trực tiếp', href: '/lien-he/' },
   },
   about: {
     title: 'Về chúng tôi',
@@ -24,41 +25,41 @@ export const home = {
     ctaLabel: 'Liên hệ',
   },
   categories: {
-    title: 'Loại phương tiện',
-    intro: 'Cuộn để khám phá các nhóm phương tiện Lasan Marine thiết kế.',
-    cardCta: 'Nhấn vào để khám phá',
+    title: 'Giải pháp kỹ thuật chuyên biệt cho từng dòng phương tiện',
+    intro: '',
+    cardCta: 'Khám phá giải pháp',
     items: [
       {
-        title: 'Tàu đánh cá',
-        text: 'Thiết kế mới, chuyển hoán và cải tạo tàu phục vụ khai thác thủy sản.',
+        title: 'Tàu khai thác Thủy hải sản',
+        text: 'Tàu cá xa bờ vỏ thép, gỗ, composite (lưới vây, lưới chụp, câu ngừ). Tối ưu thể tích hầm lạnh, chịu sóng bão cấp 8-9.',
         image: '/tau_danh_ca.webp',
       },
       {
-        title: 'Phương tiện thủy nội địa',
-        text: 'Thiết kế tàu phục vụ vận tải, khai thác và hoạt động nội địa.',
+        title: 'Phương tiện Thủy nội địa (VR-SI, VR-SB)',
+        text: 'Sà lan, tàu chở hàng, tàu du lịch, sông pha biển. Tối ưu mớn nước (d), tối đa tải trọng chở hàng DWT.',
         image: '/phuong_tien_tau_thuy_noi_dia.webp',
       },
       {
-        title: 'Phương tiện vận tải đường thủy',
-        text: 'Giải pháp theo yêu cầu tải trọng, công năng và điều kiện vận hành.',
+        title: 'Tàu vận tải Biển & Đường thủy',
+        text: 'Tàu hàng khô, tàu dầu, tàu container. Đảm bảo sức bền dầm dọc thân tàu và thỏa mãn 100% tiêu chí ổn định IMO/VR.',
         image: '/phuong_tien_van_tai_duong_thuy.webp',
       },
     ],
   },
   services: {
-    sectionTitle: 'Dịch vụ kỹ thuật',
-    detailsLabel: 'Xem dịch vụ',
+    sectionTitle: 'Dịch vụ trọng tâm',
+    detailsLabel: 'Xem chi tiết',
   },
   process: {
-    title: 'Quy trình triển khai dự án',
+    title: 'Quy trình Triển khai Chuẩn mực',
   },
   projects: {
-    title: 'Dự án tiêu biểu',
+    title: 'Dự án Kỹ thuật Tiêu biểu',
     cta: 'Xem tất cả dự án',
     imageLabel: 'Ảnh dự án',
   },
   cta: {
-    title: 'Bạn đang có một phương tiện cần thiết kế hoặc cải tạo?',
-    text: 'Gửi thông tin để đội ngũ kỹ thuật trao đổi phương án phù hợp.',
+    title: 'Cần phương án kỹ thuật tối ưu & hồ sơ VR duyệt nhanh?',
+    text: 'Kết nối ngay với Kỹ sư Tàu thủy Lasan Marine để được phân tích phương án & báo giá trong 24 giờ.',
   },
 };

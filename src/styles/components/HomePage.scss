@@ -229,12 +229,14 @@
 }
 .vehicle-categories__content {
   height: 100%;
-  padding-block: max(110px, 12svh) 54px;
+  // Top padding sets how far the heading sits from the viewport top while the
+  // section is pinned, so it is deliberately larger than the bottom.
+  padding-block: max(168px, 18svh) 54px;
   display: grid;
   grid-template-rows: auto 1fr auto;
 
   @media (max-width: 600px) {
-    padding-block: 96px 32px;
+    padding-block: 132px 32px;
   }
 }
 .vehicle-categories__heading {

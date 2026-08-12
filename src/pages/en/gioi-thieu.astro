@@ -11,7 +11,7 @@ import { gioiThieu as content } from '@/data/en/gioi-thieu.js';
   <main>
     <section class="section introduction">
       <div class="container introduction__layout">
-        <div class="introduction__portrait">
+        <div class="introduction__portrait" data-aos="fade-right">
           <img src="/ceo_huynh_le_hong_thai.webp" alt={content.message.name} />
           <span class="introduction__orbit" aria-hidden="true"></span>
           <span class="introduction__mark introduction__mark--top" aria-hidden="true"></span>
@@ -21,7 +21,7 @@ import { gioiThieu as content } from '@/data/en/gioi-thieu.js';
             <span>{content.message.role}</span>
           </div>
         </div>
-        <div class="introduction__message">
+        <div class="introduction__message" data-aos="fade-up" data-aos-delay="120">
           <h2 class="section-title">{content.message.title}</h2>
           <div class="prose lead-copy">
             {content.message.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
@@ -34,8 +34,8 @@ import { gioiThieu as content } from '@/data/en/gioi-thieu.js';
     <section class="company-stats" aria-label={content.statsLabel}>
       <div class="container">
         {
-          content.stats.map((item) => (
-            <div>
+          content.stats.map((item, index) => (
+            <div data-aos="fade-up" data-aos-delay={index * 90}>
               <strong>{item[0]}</strong>
               <span>{item[1]}</span>
             </div>
@@ -46,11 +46,11 @@ import { gioiThieu as content } from '@/data/en/gioi-thieu.js';
 
     <section class="section company-profile">
       <div class="container company-profile__layout">
-        <aside>
+        <aside data-aos="fade-right">
           <h2 class="section-title">{content.profile.title}</h2>
         </aside>
         <div class="company-profile__content">
-          <article>
+          <article data-aos="fade-up">
             <h3>{content.profile.quality.title}</h3>
             <p class="prose">{content.profile.quality.body}</p>
             <div class="principles">
@@ -58,7 +58,7 @@ import { gioiThieu as content } from '@/data/en/gioi-thieu.js';
             </div>
           </article>
 
-          <article>
+          <article data-aos="fade-up">
             <h3>{content.profile.legalTitle}</h3>
             <dl class="legal">
               {
@@ -72,12 +72,12 @@ import { gioiThieu as content } from '@/data/en/gioi-thieu.js';
             </dl>
           </article>
 
-          <article class="capability">
+          <article class="capability" data-aos="fade-up">
             <h3>{content.profile.capability.title}</h3>
             <p class="prose">{content.profile.capability.body}</p>
           </article>
 
-          <blockquote>
+          <blockquote data-aos="zoom-in">
             <p>{content.profile.quote.text}</p>
             <span>{content.profile.quote.attribution}</span>
           </blockquote>

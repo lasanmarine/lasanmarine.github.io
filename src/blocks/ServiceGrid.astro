@@ -13,31 +13,49 @@ const { base, services, detailsLabel, compact = false } = Astro.props as Props;
 
 <div
   class:list={[
-    'grid max-[1000px]:grid-cols-2 max-[560px]:grid-cols-1',
+    'block-service-grid grid max-[1000px]:grid-cols-2 max-[560px]:grid-cols-1',
     compact
       ? 'grid-cols-5 border-t border-l border-navy/14'
       : 'grid-cols-3 gap-6 max-[1000px]:gap-5 max-[560px]:gap-4',
   ]}
 >
   {
-    services.map(({ name, description, icon }) => (
+    services.map(({ name, description, icon }, index) => (
       <a
         href={`${base}/dich-vu/thiet-ke-tau-moi/`}
+        data-aos="fade-up"
+        data-aos-delay={(index % (compact ? 5 : 3)) * 80}
         class:list={[
-          'grid min-h-[320px] grid-rows-[auto_auto_1fr_auto] gap-5 text-navy no-underline hover:bg-pale max-[560px]:min-h-0',
+          'group grid min-h-[320px] grid-rows-[auto_auto_1fr_auto] gap-5 text-navy no-underline transition-colors duration-200 hover:bg-pale max-[560px]:min-h-0',
           compact
             ? 'min-h-[220px] border-r border-b border-navy/14 px-6 py-7'
             : 'border border-navy/14 px-9 py-10 max-[560px]:px-[26px] max-[560px]:pt-[30px] max-[560px]:pb-8',
         ]}
       >
-        <Icon name={icon} size={compact ? 36 : 44} class="text-marine" />
-        <h3 class:list={['m-0', compact ? 'text-xl' : 'text-[26px]']}>{name}</h3>
+        <Icon
+          name={icon}
+          size={compact ? 36 : 44}
+          class="text-marine transition-transform duration-300 group-hover:-translate-y-1"
+        />
+        <h3
+          class:list={[
+            'm-0 transition-colors duration-200 group-hover:text-marine',
+            compact ? 'text-xl' : 'text-[26px]',
+          ]}
+        >
+          {name}
+        </h3>
         <p class:list={['m-0 leading-[1.7] text-ink/66', compact ? 'text-sm' : 'text-[15px]']}>
           {description}
         </p>
         {!compact && (
           <span class="flex items-center gap-2.5 font-semibold text-marine">
-            {detailsLabel} <Icon name="arrow" size={21} />
+            {detailsLabel}{' '}
+            <Icon
+              name="arrow"
+              size={21}
+              class="transition-transform duration-200 group-hover:translate-x-1.5"
+            />
           </span>
         )}
       </a>

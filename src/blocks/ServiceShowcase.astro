@@ -14,7 +14,7 @@ const { base, sectionTitle, detailsLabel, services, backgrounds } = Astro.props 
 ---
 
 <section
-  class="service-showcase"
+  class="block-service-showcase service-showcase"
   data-service-showcase
   style={`--service-count: ${services.length}`}
 >
@@ -33,7 +33,7 @@ const { base, sectionTitle, detailsLabel, services, backgrounds } = Astro.props 
 
     <div class="service-showcase__layout">
       <div class="service-showcase__nav">
-        <h2 class="section-title">{sectionTitle}</h2>
+        <h2 class="section-title" data-aos="fade-up">{sectionTitle}</h2>
         <ol>
           {
             services.map((service, index) => (

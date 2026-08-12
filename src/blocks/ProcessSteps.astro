@@ -9,7 +9,7 @@ interface Props {
 const { steps, dark = false } = Astro.props as Props;
 ---
 
-<div class:list={['course-plot', { dark }]}>
+<div class:list={['block-process-steps course-plot', { dark }]}>
   <svg
     class="course-plot__line course-plot__line--desktop"
     viewBox="0 0 1200 220"
@@ -57,7 +57,7 @@ const { steps, dark = false } = Astro.props as Props;
   <ol>
     {
       steps.map((text, index) => (
-        <li>
+        <li data-aos="fade-up" data-aos-delay={index * 90}>
           <span class="course-plot__waypoint" aria-hidden="true" />
           <div class="course-plot__content">
             <b>{String(index + 1).padStart(2, '0')}</b>

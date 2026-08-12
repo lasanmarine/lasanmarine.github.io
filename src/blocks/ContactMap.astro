@@ -12,7 +12,7 @@ const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(address)}&out
 const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
 ---
 
-<div class="contact-map relative border-y border-navy/16">
+<div class="block-contact-map contact-map relative border-y border-navy/16" data-aos="fade-up">
   <iframe
     src={mapUrl}
     title={content.title}
@@ -27,7 +27,7 @@ const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeU
     href={directionsUrl}
     target="_blank"
     rel="noopener noreferrer"
-    class="block border-t border-navy/14 px-4 py-3 text-sm font-semibold text-marine no-underline"
+    class="block border-t border-navy/14 px-4 py-3 text-sm font-semibold text-marine no-underline transition-colors duration-200 hover:bg-pale"
   >
     {content.linkLabel}
   </a>

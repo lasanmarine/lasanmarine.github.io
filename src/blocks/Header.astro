@@ -9,16 +9,19 @@ interface Props {
     toolsLabel: string;
     toolsMenu: string[][];
     contactLabel: string;
-    languageLabel: string;
+    languages: string[][];
   };
 }
 
 const { base, content } = Astro.props as Props;
-const switchHref = base === '/en' ? Astro.url.pathname.replace(/^\/en/, '') || '/' : `/en${Astro.url.pathname}`;
-const switchHreflang = base === '/en' ? 'vi' : 'en';
+const currentLang = base === '/en' ? 'en' : 'vi';
+const localizedPath = Astro.url.pathname.replace(/^\/en(?=\/|$)/, '') || '/';
+const languageHref = (lang: string) => (lang === 'en' ? `/en${localizedPath}` : localizedPath);
+const currentLanguageLabel =
+  content.languages.find(([, lang]) => lang === currentLang)?.[0] ?? content.languages[0][0];
 ---
 
-<header class="header">
+<header class="block-header header">
   <div class="container header__inner">
     <a href={`${base}/`} class="brand">
       <img src="/logo-lasan.svg" width="250" height="35" alt="Lasan Marine" />
@@ -40,13 +43,27 @@ const switchHreflang = base === '/en' ? 'vi' : 'en';
           </div>
         )
       }
-      <a href={switchHref} class="language" hreflang={switchHreflang}>
-        {content.languageLabel}
-      </a>
-      <a href={`${base}/lien-he/`} class="contact">
-        {content.contactLabel}
-        <Icon name="arrow" size={18} />
-      </a>
+      <a href={`${base}/lien-he/`}>{content.contactLabel}</a>
+      <div class="nav-language">
+        <button class="nav-language__toggle" type="button" aria-expanded="false">
+          {currentLanguageLabel}
+          <Icon name="chevron-down" size={16} />
+        </button>
+        <div class="nav-language__menu">
+          {
+            content.languages.map(([label, lang]) => (
+              <a
+                href={languageHref(lang)}
+                hreflang={lang}
+                lang={lang}
+                aria-current={lang === currentLang ? 'true' : undefined}
+              >
+                {label}
+              </a>
+            ))
+          }
+        </div>
+      </div>
     </nav>
     <button class="nav-backdrop" type="button" tabindex="-1" aria-hidden="true"></button>
   </div>

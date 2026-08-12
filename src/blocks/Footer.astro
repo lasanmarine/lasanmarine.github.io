@@ -12,6 +12,11 @@ interface Props {
       contactTitle: string;
       tax: string;
       address: string;
+      email: string;
+      bank: {
+        title: string;
+        rows: string[][];
+      };
     };
     map: {
       title: string;
@@ -24,11 +29,11 @@ const { base, content } = Astro.props as Props;
 const footer = content.footer;
 ---
 
-<footer class="border-t border-navy/14 bg-white text-ink/68">
+<footer class="block-footer border-t border-navy/14 bg-white text-ink/68">
   <div
     class="container grid grid-cols-[minmax(300px,0.8fr)_minmax(0,1.6fr)] gap-[clamp(64px,9vw,140px)] py-[72px] pb-12 max-[900px]:grid-cols-1 max-[900px]:gap-12 max-[520px]:pt-14 max-[520px]:pb-0"
   >
-    <div class="flex items-start">
+    <div class="flex items-start" data-aos="fade-up">
       <img
         src="/footer-logo.svg"
         width="372"
@@ -37,8 +42,25 @@ const footer = content.footer;
         class="h-auto w-[min(100%,420px)] max-[900px]:w-[min(100%,340px)]"
       />
     </div>
-    <div class="flex flex-col gap-11 pt-2">
-      <p class="m-0 max-w-[680px] text-base leading-[1.7]">{footer.description}</p>
+    <div class="flex flex-col gap-11 pt-2" data-aos="fade-up" data-aos-delay="100">
+      <div class="flex flex-col gap-6">
+        <p class="m-0 max-w-[680px] text-base leading-[1.7]">{footer.description}</p>
+        <div class="max-w-[680px] border-t border-navy/14 pt-6">
+          <h2 class="m-0 mb-4 text-[17px] text-navy">{footer.bank.title}</h2>
+          <dl
+            class="m-0 grid grid-cols-[auto_1fr] gap-x-6 gap-y-2.5 text-sm leading-relaxed max-[520px]:grid-cols-1 max-[520px]:gap-y-1"
+          >
+            {
+              footer.bank.rows.map(([label, value]) => (
+                <>
+                  <dt class="text-navy/60">{label}</dt>
+                  <dd class="m-0 font-semibold text-navy">{value}</dd>
+                </>
+              ))
+            }
+          </dl>
+        </div>
+      </div>
       <div class="grid grid-cols-[0.8fr_1fr_1.4fr] gap-10 max-[520px]:grid-cols-1 max-[520px]:gap-8">
         <div>
           <h2 class="m-0 mb-5 text-[17px] text-navy">Menu</h2>
@@ -78,6 +100,12 @@ const footer = content.footer;
             class="mb-2.5 block w-fit text-sm leading-relaxed text-navy/70 no-underline transition-colors duration-[180ms] hover:text-marine"
           >
             0834 310 781
+          </a>
+          <a
+            href={`mailto:${footer.email}`}
+            class="mb-2.5 block w-fit text-sm leading-relaxed text-navy/70 no-underline transition-colors duration-[180ms] hover:text-marine"
+          >
+            {footer.email}
           </a>
         </div>
       </div>

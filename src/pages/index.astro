@@ -22,9 +22,9 @@ const backgrounds = Array.from({ length: 10 }, (_, i) => `/ser${i + 1}.webp`);
   <main>
     <section class="technical-grid hero">
       <div class="container py-24">
-        <h1>{home.hero.title}</h1>
-        <p class="hero__description">{home.hero.description}</p>
-        <div class="flex flex-wrap gap-3.5">
+        <h1 data-aos="fade-up">{home.hero.title}</h1>
+        <p class="hero__description" data-aos="fade-up" data-aos-delay="120">{home.hero.description}</p>
+        <div class="flex flex-wrap gap-3.5" data-aos="fade-up" data-aos-delay="240">
           <ButtonLink href={home.hero.ctaPrimary.href}>{home.hero.ctaPrimary.label}</ButtonLink>
           <ButtonLink href={home.hero.ctaSecondary.href} outline>
             {home.hero.ctaSecondary.label}
@@ -34,8 +34,8 @@ const backgrounds = Array.from({ length: 10 }, (_, i) => `/ser${i + 1}.webp`);
     </section>
     <section class="section">
       <div class="container grid grid-cols-[400px_1fr] gap-20 max-[800px]:grid-cols-1 max-[800px]:gap-6">
-        <h2 class="section-title">{home.about.title}</h2>
-        <div class="prose">
+        <h2 class="section-title" data-aos="fade-right">{home.about.title}</h2>
+        <div class="prose" data-aos="fade-up" data-aos-delay="120">
           <p class="lead">{home.about.lead}</p>
           <p>{home.about.body}</p>
         </div>
@@ -43,7 +43,7 @@ const backgrounds = Array.from({ length: 10 }, (_, i) => `/ser${i + 1}.webp`);
     </section>
     <section class="section customer-message">
       <div class="container customer-message__layout">
-        <div class="customer-message__portrait">
+        <div class="customer-message__portrait" data-aos="fade-right">
           <img src="/ceo_huynh_le_hong_thai.webp" alt={home.customerMessage.name} loading="lazy" />
           <span class="customer-message__orbit" aria-hidden="true"></span>
           <span class="customer-message__mark customer-message__mark--top" aria-hidden="true">
@@ -55,7 +55,7 @@ const backgrounds = Array.from({ length: 10 }, (_, i) => `/ser${i + 1}.webp`);
             <span>{home.customerMessage.role}</span>
           </div>
         </div>
-        <div class="customer-message__content">
+        <div class="customer-message__content" data-aos="fade-left" data-aos-delay="120">
           <h2 class="section-title">{home.customerMessage.title}</h2>
           <p class="customer-message__quote">{home.customerMessage.quote}</p>
           <ButtonLink href="/lien-he/">{home.customerMessage.ctaLabel}</ButtonLink>
@@ -76,9 +76,9 @@ const backgrounds = Array.from({ length: 10 }, (_, i) => `/ser${i + 1}.webp`);
           }
         </div>
         <div class="container vehicle-categories__content">
-          <div class="vehicle-categories__heading">
+          <div class="vehicle-categories__heading" data-aos="fade-up">
             <h2 class="section-title">{home.categories.title}</h2>
-            <p class="lead intro max-w-[720px] mt-3">{home.categories.intro}</p>
+            {home.categories.intro && <p class="lead intro max-w-[720px] mt-3">{home.categories.intro}</p>}
           </div>
           <div class="categories-viewport">
             <div class="categories" data-category-track>
@@ -119,15 +119,17 @@ const backgrounds = Array.from({ length: 10 }, (_, i) => `/ser${i + 1}.webp`);
     </section>
     <section class="section technical-grid text-white scroll-mt-21">
       <div class="container">
-        <h2 class="text-[40px] mb-15">{home.process.title}</h2>
+        <h2 class="text-[40px] mb-15" data-aos="fade-up">{home.process.title}</h2>
         <ProcessSteps steps={steps} dark />
       </div>
     </section>
     <section class="section">
       <div class="container">
         <div class="mb-12 flex items-end justify-between gap-[30px] max-[800px]:flex-col max-[800px]:items-start">
-          <h2 class="section-title">{home.projects.title}</h2>
-          <ButtonLink href="/du-an/">{home.projects.cta}</ButtonLink>
+          <h2 class="section-title" data-aos="fade-right">{home.projects.title}</h2>
+          <div data-aos="fade-left" data-aos-delay="100">
+            <ButtonLink href="/du-an/">{home.projects.cta}</ButtonLink>
+          </div>
         </div>
         <ProjectGrid base={base} projects={projects} imageLabel={home.projects.imageLabel} limit={3} />
       </div>

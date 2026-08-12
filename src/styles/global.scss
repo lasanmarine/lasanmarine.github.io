@@ -1,25 +1,18 @@
+// Inter, variable 100–900 with optical sizing (roman + italic).
 @font-face {
-  font-family: 'Barlow Local';
+  font-family: 'Inter Local';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 100 900;
   font-display: optional;
-  src: url('/fonts/Barlow-Regular.ttf') format('truetype');
+  src: url('/fonts/Inter-Variable.woff2') format('woff2-variations');
 }
 
 @font-face {
-  font-family: 'Barlow Local';
-  font-style: normal;
-  font-weight: 600;
+  font-family: 'Inter Local';
+  font-style: italic;
+  font-weight: 100 900;
   font-display: optional;
-  src: url('/fonts/Barlow-SemiBold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Barlow Local';
-  font-style: normal;
-  font-weight: 700;
-  font-display: optional;
-  src: url('/fonts/Barlow-Bold.ttf') format('truetype');
+  src: url('/fonts/Inter-Italic-Variable.woff2') format('woff2-variations');
 }
 
 $navy: #0b1c4b;
@@ -28,7 +21,8 @@ $pale: #f4f6f9;
 $ink: #1d1f20;
 
 :root {
-  font-family: 'Barlow Local';
+  font-family: 'Inter Local', system-ui, sans-serif;
+  font-optical-sizing: auto;
   color: $ink;
   background: white;
   text-rendering: optimizeLegibility;
@@ -118,17 +112,54 @@ textarea {
   font-size: 0.9rem;
   letter-spacing: 0.05em;
   cursor: pointer;
+  transition: background-color 220ms ease;
+}
+.button:hover {
+  background: #095ea6;
 }
 .button--outline {
   border-color: rgba(255, 255, 255, 0.45);
   background: transparent;
 }
+.button--outline:hover {
+  border-color: white;
+  background: rgba(255, 255, 255, 0.12);
+}
 .button svg {
   transition: transform 0.2s;
 }
 .button:hover svg {
-  transform: translate(3px, -3px);
+  transform: translateX(4px);
 }
+
+// Scroll reveals. Only active once reveal.ts has confirmed it is running, so
+// content is never left hidden by a script that failed to load.
+.reveal-on [data-aos] {
+  opacity: 0;
+  transition:
+    opacity 520ms ease,
+    transform 520ms ease;
+}
+.reveal-on [data-aos='fade-up'] {
+  transform: translateY(20px);
+}
+.reveal-on [data-aos='fade-down'] {
+  transform: translateY(-20px);
+}
+.reveal-on [data-aos='fade-right'] {
+  transform: translateX(-24px);
+}
+.reveal-on [data-aos='fade-left'] {
+  transform: translateX(24px);
+}
+.reveal-on [data-aos='zoom-in'] {
+  transform: scale(0.96);
+}
+.reveal-on [data-aos].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
 .blueprint {
   position: relative;
   border: 1px solid rgba($navy, 0.18);

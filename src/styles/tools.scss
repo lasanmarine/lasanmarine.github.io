@@ -26,6 +26,14 @@
   border-bottom: 1px solid rgba(11, 28, 75, 0.16);
   color: #0b1c4b;
   text-decoration: none;
+  transition:
+    color 180ms ease,
+    padding-left 180ms ease;
+}
+
+.tool-links a:hover {
+  padding-left: 8px;
+  color: #0a72c8;
 }
 
 .tool-links a[aria-current='page'] {
@@ -94,6 +102,11 @@
   border-color: rgba(11, 28, 75, 0.28);
   background: transparent;
   color: #0b1c4b;
+}
+
+.button--secondary:hover {
+  border-color: #0b1c4b;
+  background: rgba(11, 28, 75, 0.06);
 }
 
 .calculator-error {

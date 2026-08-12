@@ -15,9 +15,9 @@ interface Props {
 const { navTitle, navIntro, navAriaLabel, links } = Astro.props as Props;
 ---
 
-<section class="section">
+<section class="block-tool-layout section">
   <div class="container tool-layout">
-    <aside class="tool-intro">
+    <aside class="tool-intro" data-aos="fade-up">
       <h1 class="section-title">{navTitle}</h1>
       {navIntro && <p>{navIntro}</p>}
       <nav class="tool-links" aria-label={navAriaLabel}>

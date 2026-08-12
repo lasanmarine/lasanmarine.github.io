@@ -1,8 +1,8 @@
 ---
-const { class: className = '', label = '' } = Astro.props;
+const { class: className = '', label = '', ...rest } = Astro.props;
 ---
 
-<div class:list={['blueprint', className]}>
+<div class:list={['blueprint', className]} {...rest}>
   <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br">
   </i>
   <slot>{label}</slot>

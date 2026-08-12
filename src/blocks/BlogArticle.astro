@@ -12,15 +12,15 @@ interface Props {
 const { lead, sections } = Astro.props as Props;
 ---
 
-<article class="section">
+<article class="block-blog-article section">
   <div class="container prose max-w-[800px]">
-    <p class="lead">{lead}</p>
+    <p class="lead" data-aos="fade-up">{lead}</p>
     {
       sections.map((s) => (
-        <>
+        <div data-aos="fade-up">
           <h2 class="mt-10 text-[30px] text-navy">{s.heading}</h2>
           <p>{s.body}</p>
-        </>
+        </div>
       ))
     }
   </div>

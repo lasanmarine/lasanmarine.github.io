@@ -1,14 +1,14 @@
 export const chuyenDoiCongSuat = {
   meta: {
-    title: 'Chuyển đổi công suất | Lasan Marine',
-    description: 'Chuyển đổi nhanh giữa các đơn vị công suất kW, HP, CV và PS.',
+    title: 'Chuyển đổi Công suất Động cơ Thủy | Lasan Marine',
+    description: 'Công cụ quy đổi công suất động cơ thủy nhanh giữa các đơn vị kW, HP (Mã lực Anh), CV/PS (Mã lực Pháp/Đức) phục vụ tính toán kỹ thuật.',
   },
   hero: {
-    title: 'Chuyển đổi công suất',
-    description: 'Quy đổi công suất máy giữa kW, HP, CV và PS phục vụ tra cứu kỹ thuật.',
+    title: 'Chuyển đổi Công suất Động cơ Thủy',
+    description: 'Quy đổi chính xác công suất máy chính giữa kW, HP, CV và PS phục vụ tra cứu thông số kỹ thuật và tính chọn hệ động lực.',
   },
   tool: {
-    navAriaLabel: 'Danh sách công cụ',
+    navAriaLabel: 'Danh sách công cụ kỹ thuật',
     links: [
       { href: '/cong-cu/chuyen-doi-cong-suat/', label: 'Chuyển đổi công suất', current: true },
       {
@@ -24,11 +24,11 @@ export const chuyenDoiCongSuat = {
     unitLabel: 'Đơn vị ban đầu',
     unitPlaceholder: 'Chọn đơn vị',
     units: ['kW', 'HP', 'CV', 'PS'],
-    submitLabel: 'Chuyển đổi',
+    submitLabel: 'Quy đổi kết quả',
     resetLabel: 'Nhập lại',
-    resultsTitle: 'Kết quả quy đổi',
+    resultsTitle: 'Kết quả Quy đổi Công suất',
     resultHeaders: ['Kết quả', 'Làm tròn', 'Đơn vị'],
-    resultUnits: ['HP', 'CV', 'kW', 'PS'],
-    note: 'Quy ước: 1 HP = 0,7457 kW; 1 CV = 1 PS = 0,735499 kW. Kết quả phục vụ tra cứu nhanh, không thay thế hồ sơ tính toán được thẩm tra.',
+    resultUnits: ['HP (Anh)', 'CV (Pháp)', 'kW (ISO)', 'PS (Đức)'],
+    note: 'Quy ước chuẩn Kỹ thuật Tàu thủy: 1 HP (Imperial) = 0.7457 kW; 1 CV = 1 PS (Metric) = 0.7355 kW. Kết quả phục vụ tra cứu nhanh và kiểm tra sơ bộ.',
   },
 };
