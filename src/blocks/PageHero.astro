@@ -1,4 +1,6 @@
 ---
+import '@/styles/components/PageHero.scss';
+
 interface Props {
   title: string;
   description?: string;
@@ -7,9 +9,9 @@ interface Props {
 const { title, description = '' } = Astro.props as Props;
 ---
 
-<section class="block-page-hero technical-grid text-white">
+<section class="block-page-hero band-navy page-hero">
   <div
-    class="container flex flex-col gap-[26px] py-[110px] max-[600px]:gap-4 max-[600px]:py-18"
+    class="container relative flex flex-col gap-5 py-[110px] max-[600px]:gap-3.5 max-[600px]:py-18"
   >
     <h1 class="page-title m-0 max-w-[950px]" data-aos="fade-up">{title}</h1>
     {

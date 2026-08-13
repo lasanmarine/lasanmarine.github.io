@@ -23,8 +23,66 @@ export function initEngineLookup(root: ParentNode = document): void {
     const prevBtn = lookup.querySelector<HTMLButtonElement>('[data-prev]');
     const nextBtn = lookup.querySelector<HTMLButtonElement>('[data-next]');
 
+    const headerCells = lookup.querySelectorAll<HTMLElement>('[data-sort-index]');
+    // Below the table's card breakpoint the header row is hidden, so these two
+    // controls are the only way to sort. They share the state with the headers.
+    const sortSelect = lookup.querySelector<HTMLSelectElement>('[data-sort-select]');
+    const sortDirection = lookup.querySelector<HTMLButtonElement>('[data-sort-direction]');
+
     let filtered: EngineRow[] = rows;
     let page = 1;
+    let sortField: keyof EngineRow | null = null;
+    let sortAscending = true;
+
+    // Power and speed columns hold numbers written as text; comparing them as
+    // strings would order 1000 before 350. Anything that is not a clean number
+    // falls back to a locale-aware string compare.
+    const compare = (a: EngineRow, b: EngineRow, field: keyof EngineRow) => {
+      const left = String(a[field] ?? '').trim();
+      const right = String(b[field] ?? '').trim();
+      const leftNumber = Number(left.replace(',', '.'));
+      const rightNumber = Number(right.replace(',', '.'));
+
+      if (left && right && Number.isFinite(leftNumber) && Number.isFinite(rightNumber)) {
+        return leftNumber - rightNumber;
+      }
+      // Empty cells sort last regardless of direction.
+      if (!left) return 1;
+      if (!right) return -1;
+      return left.localeCompare(right, 'vi');
+    };
+
+    const applySort = () => {
+      if (!sortField) return;
+      const field = sortField;
+      filtered = filtered
+        .slice()
+        .sort((a, b) => (sortAscending ? compare(a, b, field) : compare(b, a, field)));
+    };
+
+    const syncSortIndicators = () => {
+      headerCells.forEach((cell) => {
+        const field = FIELDS[Number(cell.dataset.sortIndex)];
+        const active = field === sortField;
+        cell.setAttribute(
+          'aria-sort',
+          active ? (sortAscending ? 'ascending' : 'descending') : 'none',
+        );
+        cell.classList.toggle('is-sorted', active);
+      });
+
+      if (sortSelect && sortField) sortSelect.value = String(FIELDS.indexOf(sortField));
+      sortDirection?.classList.toggle('is-descending', !sortAscending);
+    };
+
+    const sortBy = (field: keyof EngineRow, ascending: boolean) => {
+      sortField = field;
+      sortAscending = ascending;
+      applySort();
+      page = 1;
+      syncSortIndicators();
+      render();
+    };
 
     const renderRows = (data: EngineRow[]) => {
       if (!body) return;
@@ -83,9 +141,30 @@ export function initEngineLookup(root: ParentNode = document): void {
         : rows.filter((row) =>
             activeFilters.every(([key, value]) => String(row[key]).toLowerCase().includes(value)),
           );
+      applySort();
       page = 1;
       render();
     };
+
+    headerCells.forEach((cell) => {
+      cell.querySelector('button')?.addEventListener('click', () => {
+        const field = FIELDS[Number(cell.dataset.sortIndex)];
+        if (!field) return;
+        // Clicking the active column flips direction; a new column starts
+        // ascending.
+        sortBy(field, field === sortField ? !sortAscending : true);
+      });
+    });
+
+    sortSelect?.addEventListener('change', () => {
+      const field = FIELDS[Number(sortSelect.value)];
+      if (field) sortBy(field, true);
+    });
+
+    sortDirection?.addEventListener('click', () => {
+      const field = sortField ?? FIELDS[Number(sortSelect?.value ?? 0)];
+      if (field) sortBy(field, sortField ? !sortAscending : true);
+    });
 
     filterInputs.forEach((input) => input.addEventListener('input', filter));
     prevBtn?.addEventListener('click', () => {
@@ -103,6 +182,7 @@ export function initEngineLookup(root: ParentNode = document): void {
       render();
     });
 
+    syncSortIndicators();
     render();
   });
 }

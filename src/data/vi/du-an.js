@@ -1,14 +1,17 @@
 export const duAn = {
   meta: {
-    title: 'Dự án Kỹ thuật Tiêu biểu | Lasan Marine',
-    description: 'Danh mục dự án thiết kế đóng mới, chuyển hoán vỏ, hoán cải máy và lập hồ sơ phân cấp Đăng kiểm tiêu biểu do Lasan Marine thực hiện.',
+    title: 'Dự án tiêu biểu | Lasan Marine',
+    description:
+      'Các dự án thiết kế đóng mới, chuyển hoán vỏ, hoán cải máy và lập hồ sơ phân cấp đăng kiểm do Lasan Marine thực hiện.',
   },
   hero: {
-    title: 'Dự án Kỹ thuật Tiêu biểu',
+    title: 'Dự án tiêu biểu',
     description:
-      'Tổng hợp các công trình phương tiện thủy Lasan Marine đã hoàn thành tư vấn thiết kế, chuyển hoán công năng và bảo vệ thành công hồ sơ thẩm định VR.',
+      'Những phương tiện thủy mà Lasan Marine đã tư vấn thiết kế, chuyển hoán công năng và hoàn tất hồ sơ thẩm định đăng kiểm.',
   },
-  filters: ['Tất cả', 'Thiết kế mới', 'Chuyển hoán vỏ', 'Hoán cải máy', 'Hồ sơ Phân cấp VR'],
+  // Các nhãn lọc phải trùng khớp với trường `group` trong src/data/site.js,
+  // vì bộ lọc so sánh chuỗi trực tiếp.
+  filters: ['Tất cả', 'Thiết kế mới', 'Chuyển hoán', 'Hoán cải', 'Hồ sơ kỹ thuật'],
   imageLabel: 'Ảnh dự án thực tế',
-  ctaTitle: 'Bạn đang cần triển khai thiết kế hoặc cải tạo kỹ thuật cho phương tiện?',
+  ctaTitle: 'Cần thiết kế hoặc cải tạo phương tiện?',
 };

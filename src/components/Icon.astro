@@ -22,6 +22,10 @@ const paths = {
     'M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z',
     'M22 21v-2a4 4 0 0 0-3-3.9',
   ],
+  'arrow-up-right': ['M7 17 17 7', 'M8 7h9v9'],
+  gauge: ['M3.5 17a9 9 0 1 1 17 0', 'm12 17 4.5-6.5'],
+  diameter: ['M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z', 'M4 12h16', 'M4.5 9.5v5M19.5 9.5v5'],
+  search: ['M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16z', 'm21 21-4.35-4.35'],
   check: ['m5 12 5 5L20 7'],
   home: ['m3 11 9-8 9 8', 'M5 10v10h14V10', 'M10 20v-6h4v6'],
 };
@@ -44,6 +48,7 @@ const iconPaths: string[] = paths[name];
   stroke-linecap="round"
   stroke-linejoin="round"
   aria-hidden="true"
-  class={className}>
+  class={className}
+>
   {iconPaths.map((d: string) => <path d={d} />)}
 </svg>

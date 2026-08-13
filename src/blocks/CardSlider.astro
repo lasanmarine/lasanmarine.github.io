@@ -1,0 +1,104 @@
+---
+import { Image } from 'astro:assets';
+import Icon from '@/components/Icon.astro';
+import '@/styles/components/CardSlider.scss';
+
+interface Item {
+  title: string;
+  text: string;
+  image: ImageMetadata;
+  href: string;
+}
+
+interface Props {
+  title: string;
+  intro?: string;
+  items: Item[];
+  ctaLabel: string;
+  navLabel: string;
+  prevLabel: string;
+  nextLabel: string;
+  // `feature` is the large image-led card on a navy band; `compact` shows three
+  // smaller cards on a pale band. Two variants so the home page can run both
+  // sliders without the second one reading as a repeat of the first.
+  variant?: 'feature' | 'compact';
+}
+
+const {
+  title,
+  intro = '',
+  items,
+  ctaLabel,
+  navLabel,
+  prevLabel,
+  nextLabel,
+  variant = 'feature',
+} = Astro.props as Props;
+
+// The feature card fills most of the viewport; the compact card is one of
+// three in a row. Generating only the widths each variant can actually use
+// keeps the build output small.
+const widths = variant === 'feature' ? [640, 960, 1280] : [400, 640, 960];
+const sizes =
+  variant === 'feature'
+    ? '(max-width: 600px) 100vw, min(76vw, 940px)'
+    : '(max-width: 700px) 100vw, (max-width: 1000px) 45vw, 30vw';
+---
+
+<section
+  class:list={[
+    'card-slider',
+    `card-slider--${variant}`,
+    'section',
+    { 'band-navy': variant === 'feature' },
+  ]}
+  data-card-slider
+>
+  <div class="container">
+    <div class="card-slider__head" data-aos="fade-up">
+      <div>
+        <h2 class="section-title section-title--marked">{title}</h2>
+        {intro && <p class="lead">{intro}</p>}
+      </div>
+      <div class="card-slider__buttons">
+        <button type="button" data-slider-prev aria-label={prevLabel}>
+          <Icon name="arrow" size={22} class="rotate-180" />
+        </button>
+        <button type="button" data-slider-next aria-label={nextLabel}>
+          <Icon name="arrow" size={22} />
+        </button>
+      </div>
+    </div>
+
+    <div class="card-slider__viewport" data-slider-viewport>
+      {
+        items.map((item) => (
+          <a class="slider-card" href={item.href} data-slider-slide>
+            <div class="slider-card__media">
+              <Image
+                src={item.image}
+                alt={item.title}
+                widths={widths}
+                sizes={sizes}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="slider-card__body">
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+              <span class="slider-card__cta">
+                {ctaLabel}
+                <Icon name="arrow" size={20} />
+              </span>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    <div class="card-slider__dots" role="group" aria-label={navLabel}>
+      {items.map((item) => <button type="button" data-slider-dot aria-label={item.title} />)}
+    </div>
+  </div>
+</section>

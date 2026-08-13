@@ -2,19 +2,47 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Icon from '@/components/Icon.astro';
 import '@/styles/components/NotFoundPage.scss';
-import { notFound as content } from '@/data/vi/404.js';
+import { notFound as vi } from '@/data/vi/404.js';
+import { notFound as en } from '@/data/en/404.js';
 ---
 
-<BaseLayout title={content.meta.title} description={content.meta.description} noindex>
+{
+  /*
+  GitHub Pages serves this one file for every unmatched URL, including the ones
+  under /en/, so the English copy can never be reached by routing alone. The
+  page ships both languages and the inline script below picks one from the
+  path before first paint.
+*/
+}
+<BaseLayout title={vi.meta.title} description={vi.meta.description} noindex>
   <main>
-    <div class="not-found">
+    <div
+      class="not-found"
+      data-localise
+      data-en-title={en.meta.title}
+      data-en-message={en.message}
+      data-en-home-label={en.homeLabel}
+    >
       <img src="/footer-logo.svg" alt="Lasan Marine" width="372" height="138" />
-      <p class="not-found-code">{content.code}</p>
-      <p class="not-found-message">{content.message}</p>
-      <a href="/" class="button">
+      <p class="not-found-code">{vi.code}</p>
+      <p class="not-found-message" data-message>{vi.message}</p>
+      <a href="/" class="button" data-home>
         <Icon name="home" size={18} />
-        {content.homeLabel}
+        <span data-home-label>{vi.homeLabel}</span>
       </a>
     </div>
   </main>
 </BaseLayout>
+
+<script is:inline>
+  (function () {
+    if (!location.pathname.startsWith('/en/') && location.pathname !== '/en') return;
+    var root = document.querySelector('[data-localise]');
+    if (!root) return;
+    document.documentElement.lang = 'en';
+    document.title = root.dataset.enTitle;
+    root.querySelector('[data-message]').textContent = root.dataset.enMessage;
+    root.querySelector('[data-home-label]').textContent = root.dataset.enHomeLabel;
+    root.querySelector('[data-home]').setAttribute('href', '/en/');
+  })();
+</script>

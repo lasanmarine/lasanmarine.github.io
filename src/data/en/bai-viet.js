@@ -12,7 +12,7 @@ export const baiViet = {
   featured: {
     category: 'Technical note · 12.06.2026',
     title: 'Key considerations when converting a fishing vessel',
-    excerpt: "A new fishing method changes deck arrangement, equipment, and loading conditions.",
+    excerpt: 'A new fishing method changes deck arrangement, equipment, and loading conditions.',
     href: '/en/bai-viet/chuyen-hoan-nghe-tau-ca/',
   },
   posts: [

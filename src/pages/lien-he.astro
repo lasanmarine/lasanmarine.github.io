@@ -13,7 +13,9 @@ const { form } = content;
   <PageHero title={content.hero.title} />
   <main>
     <section class="section">
-      <div class="container grid grid-cols-[440px_1fr] gap-[90px] max-[900px]:grid-cols-1 max-[900px]:gap-15">
+      <div
+        class="container grid grid-cols-[440px_1fr] gap-[90px] max-[900px]:grid-cols-1 max-[900px]:gap-15"
+      >
         <aside>
           <h2 class="section-title">{content.contactsTitle}</h2>
           <div class="mt-[25px] border-t border-navy/16">
@@ -27,7 +29,12 @@ const { form } = content;
             }
           </div>
         </aside>
-        <form id="contact-form">
+        <form
+          id="contact-form"
+          data-zalo-url={content.zalo.url}
+          data-zalo-intro={content.zalo.intro}
+          data-zalo-labels={JSON.stringify(content.zalo.labels)}
+        >
           <div class="fields grid grid-cols-2 gap-6 max-[550px]:grid-cols-1">
             <label class="block text-sm font-semibold text-navy">
               {form.name.label}
@@ -94,26 +101,41 @@ const { form } = content;
                 rows="6"
                 placeholder={form.message.placeholder}
                 class="mt-2 block w-full border border-navy/22 bg-white px-4 py-3.5 text-navy"
-              />
-            </label>
-            <label class="relative col-span-2 block border border-dashed border-navy/30 p-[26px] text-sm font-semibold text-navy max-[550px]:col-span-1">
-              {form.attachment.label}
-              <input
-                type="file"
-                name="attachment"
-                accept=".pdf,.dwg,.zip"
-                class="absolute inset-0 h-full cursor-pointer opacity-0"
-              />
-              <span class="block font-normal text-ink/65">{form.attachment.hint}</span>
+              >
+              </textarea>
             </label>
             <div class="col-span-2 max-[550px]:col-span-1">
               <button class="button" type="submit">{form.submitLabel} <Icon name="arrow" /></button>
             </div>
           </div>
-          <div class="success border border-marine bg-[#f4f8fd] p-[50px]" hidden>
+          <div class="success border border-marine bg-[#f4f8fd] p-[50px] max-[550px]:p-7" hidden>
             <Icon name="check" size={48} class="text-marine" />
             <h2 class="mt-[22px] mb-3 text-[34px] text-navy">{content.success.title}</h2>
-            <p>{content.success.text}</p>
+            <p class="m-0 leading-[1.7] text-ink/75">{content.success.text}</p>
+            <p class="mt-8 mb-2 text-sm font-semibold text-navy">{content.zalo.previewLabel}</p>
+            <pre
+              class="m-0 max-h-64 overflow-auto border border-navy/16 bg-white p-4 text-sm leading-[1.7] whitespace-pre-wrap text-ink/80"
+              data-message-preview>
+            </pre>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <button
+                type="button"
+                class="button button--ghost"
+                data-copy
+                data-copy-label={content.zalo.copyLabel}
+                data-copied-label={content.zalo.copiedLabel}
+              >
+                {content.zalo.copyLabel}
+              </button>
+              <a
+                class="button button--ghost"
+                href={content.zalo.url}
+                target="_blank"
+                rel="noopener"
+              >
+                {content.zalo.openLabel}
+              </a>
+            </div>
           </div>
         </form>
       </div>

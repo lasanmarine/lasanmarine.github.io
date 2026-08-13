@@ -1,0 +1,16 @@
+// The opening block on the inner pages. The dark field comes from `.band-navy`;
+// this file only adds the marine rule that closes the block off from the page.
+.page-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #0a72c8 0%, rgba(10, 114, 200, 0) 78%);
+}

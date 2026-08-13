@@ -8,8 +8,24 @@ export const nav = {
   ],
   toolsLabel: 'Tools',
   toolsMenu: [
-    ['Power conversion', '/cong-cu/chuyen-doi-cong-suat/'],
-    ['Propeller shaft diameter check', '/cong-cu/kiem-tra-duong-kinh-truc-chan-vit/'],
+    {
+      label: 'Power conversion',
+      href: '/cong-cu/chuyen-doi-cong-suat/',
+      description: 'Convert between kW, HP, CV, and PS.',
+      icon: 'gauge',
+    },
+    {
+      label: 'Propeller shaft diameter check',
+      href: '/cong-cu/kiem-tra-duong-kinh-truc-chan-vit/',
+      description: 'Minimum shaft diameter under class rules.',
+      icon: 'diameter',
+    },
+    {
+      label: 'Engine specifications',
+      href: '/cong-cu/tra-cuu-dong-co/',
+      description: 'Find power and speed by engine model.',
+      icon: 'search',
+    },
   ],
   contactLabel: 'Contact',
   languages: [

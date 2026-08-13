@@ -1,51 +1,52 @@
 export const thietKeTauMoi = {
   meta: {
-    title: 'Thiết kế Tàu mới | Lasan Marine - Chuẩn VR & Tối ưu Chi phí',
-    description: 'Dịch vụ thiết kế đóng mới tàu chuyên nghiệp: Tối ưu tuyến hình giảm 10-15% dầu, trọn bộ hồ sơ thẩm định Đăng kiểm VR.',
+    title: 'Thiết kế tàu mới | Lasan Marine',
+    description:
+      'Dịch vụ thiết kế đóng mới: tối ưu tuyến hình để giảm tiêu hao nhiên liệu và lập bộ hồ sơ trình thẩm định đăng kiểm VR.',
   },
   hero: {
-    title: 'Thiết kế Tàu mới Tối ưu & Chuẩn Đăng kiểm VR',
+    title: 'Thiết kế tàu mới theo tiêu chuẩn đăng kiểm VR',
     description:
-      'Giải pháp thiết kế đóng mới trọn gói: Tối ưu thủy động lực học, tăng sức chở DWT và đảm bảo 100% hồ sơ duyệt Đăng kiểm VR.',
+      'Thiết kế đóng mới trọn gói: tối ưu thủy động lực học, tăng sức chở và hoàn thiện hồ sơ trình thẩm định đăng kiểm.',
   },
   overview: {
-    title: 'Tổng quan Dịch vụ Thiết kế Đóng mới',
-    text: 'Giải pháp dành cho Chủ tàu & Nhà máy đóng tàu cần dòng phương tiện chạy êm, tiết kiệm nhiên liệu, tối đa tải trọng và duyệt hồ sơ VR đúng tiến độ triền đà.',
+    title: 'Tổng quan dịch vụ',
+    text: 'Giải pháp dành cho chủ tàu và nhà máy đóng tàu cần một phương tiện chạy êm, tiết kiệm nhiên liệu, đạt tải trọng mong muốn và có hồ sơ được duyệt đúng tiến độ triền đà.',
   },
   scope: {
-    title: 'Hạng mục Công việc Thiết kế',
+    title: 'Hạng mục công việc',
     items: [
-      'Phân tích bài toán khai thác & Chọn thông số chính (L, B, D, d)',
-      'Thiết kế Tuyến hình (Lines Plan) tối ưu CFD – Giảm sức cản thân vỏ',
-      'Thiết kế Bố trí chung (General Arrangement) tối ưu công năng',
-      'Tính toán Kết cấu thân tàu theo Quy phạm Đăng kiểm VR',
-      'Bố trí buồng máy, tính chọn Hệ động lực & Chân vịt hiệu suất cao',
-      'Tính toán Thủy tĩnh & Thông báo Ổn định (Stability Booklet)',
-      'Lập Thuyết minh kỹ thuật & Trình duyệt Cục Đăng kiểm VR',
+      'Phân tích bài toán khai thác và chọn thông số chính (L, B, D, d)',
+      'Thiết kế tuyến hình (lines plan) tối ưu bằng CFD để giảm sức cản thân vỏ',
+      'Thiết kế bố trí chung (general arrangement) theo công năng khai thác',
+      'Tính toán kết cấu thân tàu theo quy phạm đăng kiểm VR',
+      'Bố trí buồng máy, tính chọn hệ động lực và chân vịt',
+      'Tính toán thủy tĩnh và lập thông báo ổn định (stability booklet)',
+      'Lập thuyết minh kỹ thuật và trình duyệt Cục Đăng kiểm Việt Nam',
     ],
   },
   process: {
-    title: 'Quy trình Triển khai',
+    title: 'Quy trình triển khai',
   },
   deliverables: {
-    title: 'Hồ sơ Kỹ thuật Bàn giao',
-    text: 'Bộ hồ sơ tiêu chuẩn phục vụ trực tiếp cho quá trình thi công triền đà và thẩm định Đăng kiểm VR.',
+    title: 'Hồ sơ kỹ thuật bàn giao',
+    text: 'Bộ hồ sơ phục vụ trực tiếp cho quá trình thi công triền đà và thẩm định đăng kiểm.',
     items: [
-      'Bản vẽ Bố trí chung (General Arrangement)',
-      'Bản vẽ Tuyến hình thân tàu (Lines Plan)',
-      'Bản vẽ Kết cấu Thân tàu & Gia cường (Construction Drawings)',
-      'Bản vẽ Bố trí Buồng máy & Đường ống (Machinery & Piping)',
-      'Thông báo Ổn định & Thủy tĩnh (Stability Booklet)',
-      'Thuyết minh Kỹ thuật & Bảng Trang thiết bị (Technical Spec)',
-      'Bản vẽ Phóng dạng & Cắt tôn CNC (Nesting - theo yêu cầu)',
+      'Bản vẽ bố trí chung (general arrangement)',
+      'Bản vẽ tuyến hình thân tàu (lines plan)',
+      'Bản vẽ kết cấu thân tàu và gia cường (construction drawings)',
+      'Bản vẽ bố trí buồng máy và đường ống (machinery & piping)',
+      'Hồ sơ thủy tĩnh và thông báo ổn định (stability booklet)',
+      'Thuyết minh kỹ thuật và bảng kê trang thiết bị (technical specification)',
+      'Bản vẽ phóng dạng và cắt tôn CNC (nesting, theo yêu cầu)',
     ],
   },
   projects: {
-    title: 'Dự án Thiết kế Tiêu biểu',
+    title: 'Dự án tiêu biểu',
     imageLabel: 'Ảnh dự án',
   },
   cta: {
-    title: 'Cần tư vấn phương án thiết kế tàu mới?',
+    title: 'Cần tư vấn thiết kế tàu mới?',
     label: 'Gửi yêu cầu tư vấn',
   },
 };

@@ -1,5 +1,3 @@
-$navy: #0b1c4b;
-
 .course-plot {
   position: relative;
   min-height: 300px;
@@ -48,9 +46,7 @@ $navy: #0b1c4b;
   width: 15px;
   height: 15px;
   background: currentColor;
-  border: 0;
   border-radius: 50%;
-  box-shadow: 0 0 0 5px #{$navy};
 }
 
 .course-plot__content {
@@ -73,27 +69,10 @@ $navy: #0b1c4b;
   justify-content: flex-start;
 }
 
-.course-plot__content::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  width: 1px;
-  height: 31px;
-  background: currentColor;
-  opacity: 0.65;
-}
-
-.course-plot li:nth-child(odd) .course-plot__content::after {
-  top: calc(100% + 12px);
-}
-
-.course-plot li:nth-child(even) .course-plot__content::after {
-  bottom: calc(100% + 12px);
-}
-
 .course-plot b {
   color: currentColor;
   font-size: 34px;
+  font-weight: 300;
   line-height: 1;
 }
 
@@ -164,9 +143,5 @@ $navy: #0b1c4b;
 
   .course-plot p {
     font-size: 16px;
-  }
-
-  .course-plot__content::after {
-    display: none;
   }
 }

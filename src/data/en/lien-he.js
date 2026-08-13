@@ -27,14 +27,27 @@ export const lienHe = {
       label: 'Message',
       placeholder: 'Briefly describe the vessel and technical requirements',
     },
-    attachment: {
-      label: 'Attachments',
-      hint: 'Select drawings or documents (PDF, DWG, ZIP)',
-    },
     submitLabel: 'Send inquiry',
   },
+  zalo: {
+    url: 'https://zalo.me/0834310781',
+    intro: 'Enquiry from the Lasan Marine website',
+    labels: {
+      name: 'Name',
+      company: 'Company',
+      phone: 'Phone',
+      email: 'Email',
+      service: 'Service',
+      vessel: 'Vessel type',
+      message: 'Requirements',
+    },
+    previewLabel: 'Copied message',
+    copyLabel: 'Copy again',
+    copiedLabel: 'Copied',
+    openLabel: 'Reopen Zalo',
+  },
   success: {
-    title: 'Inquiry recorded',
-    text: 'This is a UI prototype. Connect the form to an email service or API before production deployment.',
+    title: 'Zalo opened',
+    text: 'The message below has been copied. Paste it into the Zalo chat that just opened and send. Attach any drawings directly in Zalo.',
   },
 };

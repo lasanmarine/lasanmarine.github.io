@@ -1,0 +1,45 @@
+---
+import Formula from '@/components/Formula.astro';
+import '@/styles/katex.css';
+
+interface Props {
+  title: string;
+  steps: { tex: string; text: string }[];
+  termsTitle: string;
+  terms: { tex: string; text: string }[];
+  note?: string;
+}
+
+const { title, steps, termsTitle, terms, note } = Astro.props as Props;
+---
+
+<section class="formula-note">
+  <h3>{title}</h3>
+
+  <ol class="formula-note__steps">
+    {
+      steps.map((step) => (
+        <li>
+          <Formula tex={step.tex} />
+          <p>{step.text}</p>
+        </li>
+      ))
+    }
+  </ol>
+
+  <h4>{termsTitle}</h4>
+  <dl class="formula-note__terms">
+    {
+      terms.map((term) => (
+        <div>
+          <dt>
+            <Formula tex={term.tex} display={false} />
+          </dt>
+          <dd>{term.text}</dd>
+        </div>
+      ))
+    }
+  </dl>
+
+  {note && <p class="tool-note">{note}</p>}
+</section>

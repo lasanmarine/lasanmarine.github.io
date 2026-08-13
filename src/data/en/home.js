@@ -6,7 +6,7 @@ export const home = {
   hero: {
     title: "Engineering Tomorrow's Oceans",
     description:
-      'Engineering solutions for fishing vessels, inland waterway vessels, and waterway transport.',
+      'From the first waterline on the drawing to the last approval on file, we work every figure so the vessel runs quieter, burns less fuel, and reaches the water on schedule.',
     ctaPrimary: { label: 'View services', href: '/en/dich-vu/' },
     ctaSecondary: { label: 'Contact us', href: '/en/lien-he/' },
   },
@@ -14,6 +14,7 @@ export const home = {
     title: 'About us',
     lead: 'Lasan Marine specializes in vessel design, conversion, refit, and technical documentation.',
     body: 'Our engineers work from real operating requirements through principal dimensions, general arrangement, hull form, structure, propulsion, and stability.',
+    ctaLabel: 'About the company',
   },
   customerMessage: {
     name: 'Dr. Huynh Le Hong Thai',
@@ -21,33 +22,38 @@ export const home = {
     title: 'A message to our clients',
     quote:
       'Every vessel presents a distinct engineering challenge. We listen closely to real operating needs and work with our clients to create safe, efficient solutions built for long-term use.',
-    ctaLabel: 'Contact us',
   },
   categories: {
     title: 'Vessel types',
-    intro: 'Scroll to explore the vessel categories designed by Lasan Marine.',
+    intro: 'The vessel categories Lasan Marine designs for.',
     cardCta: 'Explore this category',
+    navLabel: 'Vessel categories',
+    prevLabel: 'Previous category',
+    nextLabel: 'Next category',
     items: [
       {
         title: 'Fishing vessels',
         text: 'New design, conversion, and refit solutions tailored to fishing operations.',
-        image: '/tau_danh_ca.webp',
+        image: 'tau_danh_ca.webp',
       },
       {
         title: 'Inland waterway vessels',
         text: 'Vessel design for transport, commercial use, and inland operations.',
-        image: '/phuong_tien_tau_thuy_noi_dia.webp',
+        image: 'phuong_tien_tau_thuy_noi_dia.webp',
       },
       {
         title: 'Waterway transport vessels',
         text: 'Solutions tailored to cargo capacity, function, and operating conditions.',
-        image: '/phuong_tien_van_tai_duong_thuy.webp',
+        image: 'phuong_tien_van_tai_duong_thuy.webp',
       },
     ],
   },
   services: {
     sectionTitle: 'Engineering services',
     detailsLabel: 'View service',
+    navLabel: 'Engineering services',
+    prevLabel: 'Previous service',
+    nextLabel: 'Next service',
   },
   process: {
     title: 'Project delivery process',

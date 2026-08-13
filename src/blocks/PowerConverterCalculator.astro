@@ -1,30 +1,37 @@
 ---
+import FormulaNote from '@/blocks/FormulaNote.astro';
+
+interface FormulaNoteProps {
+  title: string;
+  steps: { tex: string; text: string }[];
+  termsTitle: string;
+  terms: { tex: string; text: string }[];
+}
+
 interface Props {
   valueLabel: string;
   valuePlaceholder: string;
   unitLabel: string;
-  unitPlaceholder: string;
   units: string[];
   submitLabel: string;
   resetLabel: string;
-  resultsTitle: string;
   resultHeaders: string[];
-  resultUnits: string[];
+  resultUnits: { key: string; label: string }[];
   note: string;
+  formula: FormulaNoteProps;
 }
 
 const {
   valueLabel,
   valuePlaceholder,
   unitLabel,
-  unitPlaceholder,
   units,
   submitLabel,
   resetLabel,
-  resultsTitle,
   resultHeaders,
   resultUnits,
   note,
+  formula,
 } = Astro.props as Props;
 ---
 
@@ -43,13 +50,19 @@ const {
           required
         />
       </label>
-      <label>
-        {unitLabel}
-        <select name="unit" required>
-          <option value="">{unitPlaceholder}</option>
-          {units.map((unit) => <option value={unit}>{unit}</option>)}
-        </select>
-      </label>
+      <fieldset class="unit-choice">
+        <legend>{unitLabel}</legend>
+        <div class="unit-choice__options">
+          {
+            units.map((unit, index) => (
+              <label>
+                <input type="radio" name="unit" value={unit} checked={index === 0} />
+                <span>{unit}</span>
+              </label>
+            ))
+          }
+        </div>
+      </fieldset>
     </div>
     <p class="calculator-error" data-error hidden></p>
     <div class="calculator-actions">
@@ -59,7 +72,6 @@ const {
   </form>
 
   <div class="calculator-result" data-results hidden aria-live="polite">
-    <h2>{resultsTitle}</h2>
     <table class="result-table">
       <thead>
         <tr>
@@ -72,15 +84,21 @@ const {
         {
           resultUnits.map((unit) => (
             <tr>
-              <td data-result={unit} />
-              <td data-rounded={unit} />
-              <td>{unit}</td>
+              <td data-result={unit.key} />
+              <td data-rounded={unit.key} />
+              <td>{unit.label}</td>
             </tr>
           ))
         }
       </tbody>
     </table>
-    <p class="tool-note">{note}</p>
+    <FormulaNote
+      title={formula.title}
+      steps={formula.steps}
+      termsTitle={formula.termsTitle}
+      terms={formula.terms}
+      note={note}
+    />
   </div>
 </div>
 

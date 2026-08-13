@@ -1,8 +1,13 @@
 ---
 import Icon from './Icon.astro';
-const { href, outline = false, class: className } = Astro.props;
+// `outline` is the light-on-dark variant; `ghost` is its counterpart for
+// light backgrounds.
+const { href, outline = false, ghost = false, class: className } = Astro.props;
 ---
 
-<a href={href} class:list={['button', { 'button--outline': outline }, className]}>
+<a
+  href={href}
+  class:list={['button', { 'button--outline': outline, 'button--ghost': ghost }, className]}
+>
   <slot /><Icon name="arrow" />
 </a>

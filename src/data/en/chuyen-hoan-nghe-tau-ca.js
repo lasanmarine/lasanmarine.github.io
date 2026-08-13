@@ -7,7 +7,7 @@ export const chuyenHoanNgheTauCa = {
     title: 'Key considerations when converting a fishing vessel',
     description: 'Technical note · 12.06.2026',
   },
-  lead: "A new fishing method changes deck arrangement, equipment, and loading conditions.",
+  lead: 'A new fishing method changes deck arrangement, equipment, and loading conditions.',
   sections: [
     {
       heading: 'Review the general arrangement',

@@ -7,7 +7,8 @@ export function initProjectFilter(allLabel: string, root: ParentNode = document)
       buttons.forEach((item) => item.classList.remove('active'));
       button.classList.add('active');
       cards.forEach((card) => {
-        card.hidden = button.dataset.filter !== allLabel && card.dataset.group !== button.dataset.filter;
+        card.hidden =
+          button.dataset.filter !== allLabel && card.dataset.group !== button.dataset.filter;
       });
     }),
   );

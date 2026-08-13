@@ -19,27 +19,28 @@ interface Props {
 const { featured, posts, imageLabel, readLabel } = Astro.props as Props;
 ---
 
-<section class="block-blog-list section">
-  <div
-    class="container mb-20 grid grid-cols-2 gap-15 max-[800px]:grid-cols-1"
-  >
+{
+  /* The featured post sits on its own cream band so it separates from the grid
+    below instead of being one more entry on the same white sheet. */
+}
+<section class="block-blog-list section section--divided">
+  <div class="container grid grid-cols-2 gap-15 max-[800px]:grid-cols-1">
     <Blueprint class="min-h-[390px] aspect-4/3" label={imageLabel} data-aos="fade-right" />
     <div class="self-center" data-aos="fade-up" data-aos-delay="90">
       <b class="text-marine">{featured.category}</b>
-      <h2 class="my-[15px] text-[40px] leading-[1.15] text-navy">{featured.title}</h2>
+      <h2 class="mt-4 mb-7 text-[40px] leading-[1.15] text-navy">{featured.title}</h2>
       <p class="leading-[1.7] text-ink/70">{featured.excerpt}</p>
       <a
         href={featured.href}
         class="group flex w-fit items-center gap-2.5 font-semibold text-marine no-underline"
       >
         {readLabel}
-        <Icon
-          name="arrow"
-          class="transition-transform duration-200 group-hover:translate-x-1.5"
-        />
+        <Icon name="arrow" class="transition-transform duration-200 group-hover:translate-x-1.5" />
       </a>
     </div>
   </div>
+</section>
+<section class="section">
   <div
     class="container grid grid-cols-3 gap-x-8 gap-y-14 max-[800px]:grid-cols-2 max-[800px]:gap-x-6 max-[800px]:gap-y-12 max-[520px]:grid-cols-1 max-[520px]:gap-11"
   >

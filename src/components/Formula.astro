@@ -1,0 +1,23 @@
+---
+import katex from 'katex';
+
+interface Props {
+  tex: string;
+  display?: boolean;
+  class?: string;
+}
+
+const { tex, display = true, class: className } = Astro.props as Props;
+
+// Rendered at build time, so no KaTeX JavaScript ships to the browser. The
+// default output includes MathML alongside the visual HTML, which is what
+// screen readers announce.
+const html = katex.renderToString(tex, {
+  displayMode: display,
+  throwOnError: false,
+  strict: false,
+  trust: false,
+});
+---
+
+<span class:list={['formula', className]} set:html={html} />

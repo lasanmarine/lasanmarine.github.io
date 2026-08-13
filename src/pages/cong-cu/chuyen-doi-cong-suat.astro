@@ -8,24 +8,18 @@ import { chuyenDoiCongSuat as content } from '@/data/vi/chuyen-doi-cong-suat.js'
 
 <BaseLayout title={content.meta.title} description={content.meta.description}>
   <main>
-    <ToolLayout
-      navTitle={content.hero.title}
-      navIntro={content.hero.description}
-      navAriaLabel={content.tool.navAriaLabel}
-      links={content.tool.links}
-    >
+    <ToolLayout navTitle={content.hero.title}>
       <PowerConverterCalculator
         valueLabel={content.calculator.valueLabel}
         valuePlaceholder={content.calculator.valuePlaceholder}
         unitLabel={content.calculator.unitLabel}
-        unitPlaceholder={content.calculator.unitPlaceholder}
         units={content.calculator.units}
         submitLabel={content.calculator.submitLabel}
         resetLabel={content.calculator.resetLabel}
-        resultsTitle={content.calculator.resultsTitle}
         resultHeaders={content.calculator.resultHeaders}
         resultUnits={content.calculator.resultUnits}
         note={content.calculator.note}
+        formula={content.calculator.formula}
       />
     </ToolLayout>
   </main>

@@ -13,13 +13,15 @@ const { services, steps } = getSiteData('vi');
 
 <BaseLayout title={content.meta.title} description={content.meta.description}
   ><PageHero title={content.hero.title} description={content.hero.description} /><main>
-    <section class="section"
-      ><div class="container"
-        ><ServiceGrid base={base} services={services} detailsLabel={content.services.detailsLabel} /></div
-      ></section
-    ><section class="section section--pale">
+    <section class="section">
       <div class="container">
-        <h2 class="section-title">{content.process.title}</h2><div class="mt-15">
+        <ServiceGrid base={base} services={services} detailsLabel={content.services.detailsLabel} />
+      </div>
+    </section><section class="section section--divided">
+      <div class="container">
+        <h2 class="section-title section-title--marked">{content.process.title}</h2><div
+          class="mt-15"
+        >
           <ProcessSteps steps={steps} />
         </div>
       </div>

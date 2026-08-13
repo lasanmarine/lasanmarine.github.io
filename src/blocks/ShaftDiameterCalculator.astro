@@ -1,45 +1,51 @@
 ---
+import FormulaNote from '@/blocks/FormulaNote.astro';
+
+interface FormulaNoteProps {
+  title: string;
+  steps: { tex: string; text: string }[];
+  termsTitle: string;
+  terms: { tex: string; text: string }[];
+}
+
 interface MaterialOption {
   value: string;
   label: string;
+  k3: string;
 }
 
 interface Props {
   powerLabel: string;
   unitLabel: string;
-  unitPlaceholder: string;
   units: string[];
   rpmLabel: string;
   ratioLabel: string;
   ratioPlaceholder: string;
   materialLabel: string;
-  materialPlaceholder: string;
   materials: MaterialOption[];
   submitLabel: string;
   resetLabel: string;
-  resultsTitle: string;
   resultHeaders: string[];
   resultRows: { label: string; unit: string; key: string }[];
   note: string;
+  formula: FormulaNoteProps;
 }
 
 const {
   powerLabel,
   unitLabel,
-  unitPlaceholder,
   units,
   rpmLabel,
   ratioLabel,
   ratioPlaceholder,
   materialLabel,
-  materialPlaceholder,
   materials,
   submitLabel,
   resetLabel,
-  resultsTitle,
   resultHeaders,
   resultRows,
   note,
+  formula,
 } = Astro.props as Props;
 ---
 
@@ -50,13 +56,19 @@ const {
         {powerLabel}
         <input type="number" name="power" min="0" step="any" inputmode="decimal" required />
       </label>
-      <label>
-        {unitLabel}
-        <select name="unit" required>
-          <option value="">{unitPlaceholder}</option>
-          {units.map((unit) => <option value={unit}>{unit}</option>)}
-        </select>
-      </label>
+      <fieldset class="unit-choice">
+        <legend>{unitLabel}</legend>
+        <div class="unit-choice__options">
+          {
+            units.map((unit, index) => (
+              <label>
+                <input type="radio" name="unit" value={unit} checked={index === 0} />
+                <span>{unit}</span>
+              </label>
+            ))
+          }
+        </div>
+      </fieldset>
       <label>
         {rpmLabel}
         <input type="number" name="rpm" min="0" step="any" inputmode="decimal" required />
@@ -73,13 +85,24 @@ const {
           required
         />
       </label>
-      <label class="full">
-        {materialLabel}
-        <select name="k3" required>
-          <option value="">{materialPlaceholder}</option>
-          {materials.map((m) => <option value={m.value}>{m.label}</option>)}
-        </select>
-      </label>
+      <fieldset class="material-choice full">
+        <legend>{materialLabel}</legend>
+        <div class="material-choice__options">
+          {
+            materials.map((material, index) => (
+              <label>
+                <input type="radio" name="k3" value={material.value} checked={index === 0} />
+                <span>
+                  <strong>{material.label}</strong>
+                  <em>
+                    K<sub>3</sub> = {material.k3}
+                  </em>
+                </span>
+              </label>
+            ))
+          }
+        </div>
+      </fieldset>
     </div>
     <p class="calculator-error" data-error hidden></p>
     <div class="calculator-actions">
@@ -89,7 +112,6 @@ const {
   </form>
 
   <div class="calculator-result" data-results hidden aria-live="polite">
-    <h2>{resultsTitle}</h2>
     <table class="result-table">
       <thead>
         <tr>
@@ -110,7 +132,13 @@ const {
         }
       </tbody>
     </table>
-    <p class="tool-note">{note}</p>
+    <FormulaNote
+      title={formula.title}
+      steps={formula.steps}
+      termsTitle={formula.termsTitle}
+      terms={formula.terms}
+      note={note}
+    />
   </div>
 </div>
 

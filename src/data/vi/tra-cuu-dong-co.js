@@ -1,35 +1,38 @@
 export const traCuuDongCo = {
   meta: {
-    title: 'Tra cứu Thông số Động cơ Thủy | Lasan Marine',
-    description: 'Thư viện tra cứu thông số kỹ thuật động cơ thủy: Hãng sản xuất, hiệu máy, công suất (PS, HP, kW) và vòng quay (RPM).',
+    title: 'Tra cứu thông số động cơ thủy | Lasan Marine',
+    description:
+      'Tra cứu thông số kỹ thuật động cơ thủy: hãng sản xuất, mã hiệu, công suất (PS, HP, kW) và số vòng quay.',
   },
   hero: {
-    title: 'Tra cứu Thông số Kỹ thuật Động cơ Thủy',
-    description: 'Tra cứu nhanh hãng sản xuất, mã hiệu động cơ, công suất và số vòng quay của các dòng máy thủy phổ biến (Weichai, Cummins, Caterpillar, Yanmar, Hanshin...) phục vụ tính toán hệ động lực.',
-  },
-  tool: {
-    navAriaLabel: 'Danh sách công cụ kỹ thuật',
-    links: [
-      { href: '/cong-cu/chuyen-doi-cong-suat/', label: 'Chuyển đổi công suất' },
-      { href: '/cong-cu/kiem-tra-duong-kinh-truc-chan-vit/', label: 'Kiểm tra đường kính trục chân vịt' },
-      { href: '/cong-cu/tra-cuu-dong-co/', label: 'Tra cứu thông số động cơ', current: true },
-    ],
+    title: 'Tra cứu thông số động cơ thủy',
   },
   lookup: {
     fields: [
-      { key: 'hang', label: 'Hãng sản xuất', placeholder: 'Vd: Weichai, Cummins' },
-      { key: 'hieu_may', label: 'Mã hiệu động cơ', placeholder: 'Vd: X6170ZC350-1' },
-      { key: 'ps', label: 'Công suất (PS, CV)', placeholder: 'Vd: 350' },
-      { key: 'hp', label: 'Công suất (HP)', placeholder: 'Vd: 345' },
-      { key: 'kw', label: 'Công suất (kW)', placeholder: 'Vd: 257' },
-      { key: 'rpm', label: 'Số vòng quay (RPM)', placeholder: 'Vd: 1000' },
+      { key: 'hang', label: 'Hãng sản xuất', placeholder: 'Ví dụ: Weichai, Cummins' },
+      { key: 'hieu_may', label: 'Mã hiệu động cơ', placeholder: 'Ví dụ: X6170ZC350-1' },
+      { key: 'ps', label: 'Công suất (PS, CV)', placeholder: 'Ví dụ: 350' },
+      { key: 'hp', label: 'Công suất (HP)', placeholder: 'Ví dụ: 345' },
+      { key: 'kw', label: 'Công suất (kW)', placeholder: 'Ví dụ: 257' },
+      { key: 'rpm', label: 'Số vòng quay (rpm)', placeholder: 'Ví dụ: 1000' },
     ],
-    headers: ['Hãng', 'Mã hiệu máy', 'Công suất (PS, CV)', 'Công suất (HP)', 'Công suất (kW)', 'Số vòng quay (RPM)'],
-    emptyMessage: 'Không tìm thấy dữ liệu động cơ phù hợp.',
+    headers: [
+      'Hãng',
+      'Mã hiệu máy',
+      'Công suất (PS, CV)',
+      'Công suất (HP)',
+      'Công suất (kW)',
+      'Số vòng quay (rpm)',
+    ],
+    emptyMessage: 'Không tìm thấy động cơ phù hợp.',
     resultCountLabel: 'kết quả phù hợp',
     paginationLabel: 'Điều hướng phân trang',
     prevLabel: 'Trang trước',
     nextLabel: 'Trang sau',
-    note: 'Thông số tra cứu dùng cho mục đích kiểm tra sơ bộ. Thiết kế chi tiết buồng máy và bệ máy cần đối chiếu catalogue kỹ thuật chính thức từ nhà sản xuất.',
+    sortLabel: 'Sắp xếp theo cột',
+    note: [
+      'Thông tin được tham khảo từ nhiều nguồn và được đóng góp từ cộng đồng mở, nên người dùng cần đối sánh lại trước khi sử dụng. Trường hợp cần bổ sung hoặc cập nhật thông tin máy, quý vị vui lòng gửi tài liệu liên quan đến chúng tôi.',
+      'Trân trọng cảm ơn các đóng góp của cộng đồng nhằm phát triển kho tư liệu mở về động cơ thủy một cách có trách nhiệm và chính xác, phục vụ công tác chuyên môn.',
+    ],
   },
 };

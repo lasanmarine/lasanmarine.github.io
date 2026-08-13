@@ -7,7 +7,7 @@ interface Props {
   content: {
     links: string[][];
     toolsLabel: string;
-    toolsMenu: string[][];
+    toolsMenu: { label: string; href: string; description: string; icon: string }[];
     contactLabel: string;
     languages: string[][];
   };
@@ -31,19 +31,24 @@ const currentLanguageLabel =
     </button>
     <nav id="site-nav" class="nav" aria-label="Main navigation">
       {content.links.map(([label, path]) => <a href={`${base}${path}`}>{label}</a>)}
-      {
-        base !== '/en' && (
-          <div class="nav-tools">
-            <a href={`${base}/cong-cu/chuyen-doi-cong-suat/`}>{content.toolsLabel}</a>
-            <div class="nav-tools__menu">
-              {content.toolsMenu.map(([label, path]) => (
-                <a href={`${base}${path}`}>{label}</a>
-              ))}
-            </div>
-          </div>
-        )
-      }
-      <a href={`${base}/lien-he/`}>{content.contactLabel}</a>
+      <div class="nav-tools">
+        <a href={`${base}/cong-cu/chuyen-doi-cong-suat/`}>{content.toolsLabel}</a>
+        <div class="nav-tools__menu">
+          {
+            content.toolsMenu.map((tool) => (
+              <a class="tool-card" href={`${base}${tool.href}`}>
+                <span class="tool-card__top">
+                  <Icon name={tool.icon} size={34} class="tool-card__icon" />
+                  <Icon name="arrow-up-right" size={18} class="tool-card__arrow" />
+                </span>
+                <strong>{tool.label}</strong>
+                <span class="tool-card__text">{tool.description}</span>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+      <a class="nav-contact" href={`${base}/lien-he/`}>{content.contactLabel}</a>
       <div class="nav-language">
         <button class="nav-language__toggle" type="button" aria-expanded="false">
           {currentLanguageLabel}

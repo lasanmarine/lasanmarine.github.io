@@ -70,11 +70,14 @@
   .nav-tools__menu {
     position: absolute;
     top: calc(100% + 18px);
-    left: -20px;
-    width: 290px;
+    right: -20px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 720px;
     padding: 10px;
     border: 1px solid rgba(11, 28, 75, 0.14);
     background: #fff;
+    box-shadow: 0 8px 24px rgba(7, 18, 51, 0.1);
     opacity: 0;
     visibility: hidden;
     transform: translateY(6px);
@@ -96,19 +99,84 @@
     visibility: visible;
     transform: translateY(0);
   }
-  .nav-tools__menu a {
+  // The three cards sit side by side; inside each one the content runs down:
+  // icon and corner arrow on the top row, then the name, then the description.
+  .tool-card {
     display: block;
-    padding: 12px 10px;
+    padding: 16px 16px 18px;
     color: #0b1c4b;
-    line-height: 1.45;
     text-decoration: none;
+    transition: background-color 160ms ease;
   }
-  .nav-tools__menu a:hover {
+  .tool-card:hover {
     background: #f4f6f9;
+  }
+  .tool-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+  .tool-card__icon {
+    color: #0a72c8;
+  }
+  .tool-card__arrow {
+    color: rgba(11, 28, 75, 0.35);
+    transition:
+      transform 200ms ease,
+      color 200ms ease;
+  }
+  // The arrow lifts towards the corner it points at.
+  .tool-card:hover .tool-card__arrow {
+    transform: translate(3px, -3px);
+    color: #0a72c8;
+  }
+  .tool-card strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  .tool-card__text {
+    display: block;
+    color: rgba(29, 31, 32, 0.62);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  // Contact is the header's one action, so it reads as a button rather than as
+  // another item in the list of destinations.
+  //
+  // Written as `.nav > a.nav-contact` because the plain `.nav > a` rule above
+  // is more specific than a lone class and would otherwise repaint the label
+  // navy on the marine fill.
+  .nav > a.nav-contact {
+    padding: 10px 20px;
+    border: 1px solid #0a72c8;
+    background: #0a72c8;
+    color: #fff;
+    font-weight: 600;
+    transition:
+      background-color 180ms ease,
+      border-color 180ms ease;
+  }
+  .nav > a.nav-contact:hover {
+    border-color: #095ea6;
+    background: #095ea6;
+  }
+  // The sliding underline belongs to the plain links, not to the button.
+  .nav > a.nav-contact::after {
+    display: none;
   }
 
   .nav-language {
     position: relative;
+  }
+  // The contact button and the language switcher are one cluster at the end of
+  // the bar, so they sit closer than the nav's 30px rhythm allows.
+  .nav-contact + .nav-language {
+    margin-left: -16px;
   }
   .nav-language__toggle {
     display: flex;
@@ -200,6 +268,10 @@
     .nav {
       gap: 18px;
     }
+    // The base gap is already tighter here, so the pull-in shrinks with it.
+    .nav-contact + .nav-language {
+      margin-left: -8px;
+    }
     .nav-language__toggle {
       padding: 8px 11px;
     }
@@ -262,6 +334,12 @@
       padding: 14px 4px;
       border-bottom: 1px solid rgba(11, 28, 75, 0.1);
     }
+    .nav > a.nav-contact {
+      margin-top: 14px;
+      padding: 14px 20px;
+      border-bottom: 1px solid #0a72c8;
+      text-align: center;
+    }
     .nav-tools {
       border-bottom: 1px solid rgba(11, 28, 75, 0.1);
     }
@@ -270,26 +348,47 @@
       padding: 14px 4px;
       font-weight: 600;
     }
+    // In the drawer the popover flattens back into a plain list: no card, no
+    // shadow, and no descriptions competing with the links around it.
     .nav-tools__menu {
       position: static;
+      display: block;
       width: auto;
       padding: 0 0 10px 14px;
       border: 0;
+      box-shadow: none;
       opacity: 1;
       visibility: visible;
       transform: none;
       font-size: 1rem;
     }
+    .tool-card__text {
+      display: none;
+    }
     .nav-tools__menu::before {
       display: none;
     }
-    .nav-tools__menu a {
+    .tool-card {
+      display: block;
       padding: 10px 4px;
+    }
+    .tool-card:hover {
+      background: none;
+    }
+    .tool-card__top {
+      display: none;
+    }
+    .tool-card strong {
+      margin-bottom: 3px;
+      font-weight: 400;
       color: rgba(11, 28, 75, 0.72);
     }
     .nav-language {
       // The preceding nav link already draws the divider above this group.
       padding-top: 10px;
+    }
+    .nav-contact + .nav-language {
+      margin-left: 0;
     }
     .nav-language__toggle {
       display: none;

@@ -1,0 +1,27 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ToolLayout from '@/blocks/ToolLayout.astro';
+import EngineLookup from '@/blocks/EngineLookup.astro';
+import '@/styles/tools.scss';
+import { traCuuDongCo as content } from '@/data/en/tra-cuu-dong-co.js';
+import engines from '@/data/vi/dong-co.json';
+---
+
+<BaseLayout title={content.meta.title} description={content.meta.description} lang="en">
+  <main>
+    <ToolLayout navTitle={content.hero.title}>
+      <EngineLookup
+        fields={content.lookup.fields}
+        headers={content.lookup.headers}
+        sortLabel={content.lookup.sortLabel}
+        emptyMessage={content.lookup.emptyMessage}
+        resultCountLabel={content.lookup.resultCountLabel}
+        paginationLabel={content.lookup.paginationLabel}
+        prevLabel={content.lookup.prevLabel}
+        nextLabel={content.lookup.nextLabel}
+        note={content.lookup.note}
+        rows={engines}
+      />
+    </ToolLayout>
+  </main>
+</BaseLayout>

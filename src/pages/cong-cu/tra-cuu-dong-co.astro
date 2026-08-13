@@ -9,15 +9,11 @@ import engines from '@/data/vi/dong-co.json';
 
 <BaseLayout title={content.meta.title} description={content.meta.description}>
   <main>
-    <ToolLayout
-      navTitle={content.hero.title}
-      navIntro={content.hero.description}
-      navAriaLabel={content.tool.navAriaLabel}
-      links={content.tool.links}
-    >
+    <ToolLayout navTitle={content.hero.title}>
       <EngineLookup
         fields={content.lookup.fields}
         headers={content.lookup.headers}
+        sortLabel={content.lookup.sortLabel}
         emptyMessage={content.lookup.emptyMessage}
         resultCountLabel={content.lookup.resultCountLabel}
         paginationLabel={content.lookup.paginationLabel}

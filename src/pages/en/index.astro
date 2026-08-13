@@ -1,8 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import ButtonLink from '@/components/ButtonLink.astro';
-import Icon from '@/components/Icon.astro';
-import ServiceShowcase from '@/blocks/ServiceShowcase.astro';
+import CardSlider from '@/blocks/CardSlider.astro';
 import ProcessSteps from '@/blocks/ProcessSteps.astro';
 import ProjectGrid from '@/blocks/ProjectGrid.astro';
 import CallToAction from '@/blocks/CallToAction.astro';
@@ -10,9 +9,33 @@ import '@/styles/components/HomePage.scss';
 import { home } from '@/data/en/home.js';
 import { getSiteData } from '@/data/site.js';
 
+// Eager glob so each entry is real ImageMetadata at build time, which is what
+// lets Astro emit the resized variants. import.meta.glob needs a literal path,
+// so the `@/` alias cannot be used here.
+const imageModules = import.meta.glob<{ default: ImageMetadata }>('/src/images/*.webp', {
+  eager: true,
+});
+// Sorted numerically: a plain sort would put ser10 between ser1 and ser2.
+const serviceImages = Object.keys(imageModules)
+  .filter((path) => /\/ser\d+\.webp$/.test(path))
+  .sort((a, b) => Number(a.match(/ser(\d+)/)![1]) - Number(b.match(/ser(\d+)/)![1]))
+  .map((path) => imageModules[path].default);
+
 const base = '/en';
 const { services, steps, projects } = getSiteData('en');
-const backgrounds = Array.from({ length: 10 }, (_, i) => `/ser${i + 1}.webp`);
+const categoryItems = home.categories.items.map((category) => ({
+  ...category,
+  image: imageModules[`/src/images/${category.image}`].default,
+  href: `${base}/dich-vu/`,
+}));
+
+// The photographs pair with the service order.
+const serviceItems = services.map((service, index) => ({
+  title: service.name,
+  text: service.description,
+  image: serviceImages[index % serviceImages.length],
+  href: `${base}/dich-vu/thiet-ke-tau-moi/`,
+}));
 ---
 
 <BaseLayout title={home.meta.title} description={home.meta.description} lang="en">
@@ -20,10 +43,12 @@ const backgrounds = Array.from({ length: 10 }, (_, i) => `/ser${i + 1}.webp`);
     <link rel="preload" href="/hero.webp" as="image" fetchpriority="high" />
   </Fragment>
   <main>
-    <section class="technical-grid hero">
+    <section class="hero">
       <div class="container py-24">
         <h1 data-aos="fade-up">{home.hero.title}</h1>
-        <p class="hero__description" data-aos="fade-up" data-aos-delay="120">{home.hero.description}</p>
+        <p class="hero__description" data-aos="fade-up" data-aos-delay="120">
+          {home.hero.description}
+        </p>
         <div class="flex flex-wrap gap-3.5" data-aos="fade-up" data-aos-delay="240">
           <ButtonLink href={home.hero.ctaPrimary.href}>{home.hero.ctaPrimary.label}</ButtonLink>
           <ButtonLink href={home.hero.ctaSecondary.href} outline>
@@ -33,96 +58,70 @@ const backgrounds = Array.from({ length: 10 }, (_, i) => `/ser${i + 1}.webp`);
       </div>
     </section>
     <section class="section">
-      <div class="container grid grid-cols-[400px_1fr] gap-20 max-[800px]:grid-cols-1 max-[800px]:gap-6">
-        <h2 class="section-title" data-aos="fade-right">{home.about.title}</h2>
+      <div
+        class="container grid grid-cols-[400px_1fr] gap-20 max-[800px]:grid-cols-1 max-[800px]:gap-6"
+      >
+        <h2 class="section-title section-title--marked" data-aos="fade-right">
+          {home.about.title}
+        </h2>
         <div class="prose" data-aos="fade-up" data-aos-delay="120">
           <p class="lead">{home.about.lead}</p>
           <p>{home.about.body}</p>
+          <ButtonLink href={`${base}/gioi-thieu/`} ghost class="mt-4">
+            {home.about.ctaLabel}
+          </ButtonLink>
         </div>
       </div>
     </section>
-    <section class="vehicle-categories" data-vehicle-categories>
-      <div class="vehicle-categories__sticky">
-        <div class="vehicle-categories__background" aria-hidden="true">
-          {
-            home.categories.items.map((category, index) => (
-              <div
-                class:list={{ active: index === 0 }}
-                data-category-background={index}
-                style={`background-image: linear-gradient(90deg, rgba(7, 18, 51, 0.88), rgba(7, 18, 51, 0.52)), url('${category.image}')`}
-              />
-            ))
-          }
-        </div>
-        <div class="container vehicle-categories__content">
-          <div class="vehicle-categories__heading" data-aos="fade-up">
-            <h2 class="section-title">{home.categories.title}</h2>
-            {home.categories.intro && <p class="lead intro max-w-[720px] mt-3">{home.categories.intro}</p>}
-          </div>
-          <div class="categories-viewport">
-            <div class="categories" data-category-track>
-              {
-                home.categories.items.map((category, index) => (
-                  <a
-                    href="/en/dich-vu/"
-                    class:list={{ active: index === 0 }}
-                    data-category-card={index}
-                  >
-                    <div>
-                      <h3>{category.title}</h3>
-                      <p>{category.text}</p>
-                    </div>
-                    <span>
-                      <em>{home.categories.cardCta}</em>
-                      <Icon name="arrow" size={32} />
-                    </span>
-                  </a>
-                ))
-              }
-            </div>
-          </div>
-          <div class="categories-progress" aria-hidden="true"><i data-category-progress></i></div>
-        </div>
-      </div>
-    </section>
-    <section class="section w-full! bg-navy py-0!">
-      <div class="container w-full! max-w-none! mx-0!">
-        <ServiceShowcase
-          base={base}
-          sectionTitle={home.services.sectionTitle}
-          detailsLabel={home.services.detailsLabel}
-          services={services}
-          backgrounds={backgrounds}
-        />
-      </div>
-    </section>
-    <section class="section technical-grid text-white scroll-mt-21">
+    <CardSlider
+      title={home.categories.title}
+      intro={home.categories.intro}
+      items={categoryItems}
+      ctaLabel={home.categories.cardCta}
+      navLabel={home.categories.navLabel}
+      prevLabel={home.categories.prevLabel}
+      nextLabel={home.categories.nextLabel}
+    />
+    <CardSlider
+      variant="compact"
+      title={home.services.sectionTitle}
+      items={serviceItems}
+      ctaLabel={home.services.detailsLabel}
+      navLabel={home.services.navLabel}
+      prevLabel={home.services.prevLabel}
+      nextLabel={home.services.nextLabel}
+    />
+    <section class="section band-navy text-white scroll-mt-21">
       <div class="container">
         <h2 class="text-[40px] mb-15" data-aos="fade-up">{home.process.title}</h2>
         <ProcessSteps steps={steps} dark />
       </div>
     </section>
-    <section class="section">
+    <section class="section section--divided">
       <div class="container">
-        <div class="mb-12 flex items-end justify-between gap-[30px] max-[800px]:flex-col max-[800px]:items-start">
-          <h2 class="section-title" data-aos="fade-right">{home.projects.title}</h2>
+        <div
+          class="mb-12 flex items-end justify-between gap-[30px] max-[800px]:flex-col max-[800px]:items-start"
+        >
+          <h2 class="section-title section-title--marked" data-aos="fade-right">
+            {home.projects.title}
+          </h2>
           <div data-aos="fade-left" data-aos-delay="100">
-            <ButtonLink href="/en/du-an/">{home.projects.cta}</ButtonLink>
+            <ButtonLink href="/en/du-an/" ghost>{home.projects.cta}</ButtonLink>
           </div>
         </div>
-        <ProjectGrid base={base} projects={projects} imageLabel={home.projects.imageLabel} limit={3} />
+        <ProjectGrid
+          base={base}
+          projects={projects}
+          imageLabel={home.projects.imageLabel}
+          limit={3}
+        />
       </div>
     </section>
-    <CallToAction
-      title={home.cta.title}
-      text={home.cta.text}
-      href="/en/lien-he/"
-      label={home.customerMessage.ctaLabel}
-    />
+    <CallToAction title={home.cta.title} text={home.cta.text} href="/en/lien-he/" />
   </main>
 </BaseLayout>
 
 <script>
-  import { initVehicleCategories } from '@/scripts/vehicle-categories';
-  initVehicleCategories();
+  import { initCardSliders } from '@/scripts/card-slider';
+  initCardSliders();
 </script>

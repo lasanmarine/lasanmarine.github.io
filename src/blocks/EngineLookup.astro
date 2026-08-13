@@ -17,18 +17,20 @@ interface EngineRow {
 interface Props {
   fields: FilterField[];
   headers: string[];
+  sortLabel: string;
   emptyMessage: string;
   resultCountLabel: string;
   paginationLabel: string;
   prevLabel: string;
   nextLabel: string;
-  note: string;
+  note: string[];
   rows: EngineRow[];
 }
 
 const {
   fields,
   headers,
+  sortLabel,
   emptyMessage,
   resultCountLabel,
   paginationLabel,
@@ -45,6 +47,7 @@ const {
   data-engine-lookup
   data-rows={JSON.stringify(rows)}
   data-headers={JSON.stringify(headers)}
+  data-sort-label={sortLabel}
 >
   <div class="lookup-controls">
     {
@@ -57,13 +60,33 @@ const {
     }
   </div>
 
-  <p class="lookup-count" data-count data-suffix={resultCountLabel} aria-live="polite"></p>
+  <div class="lookup-meta">
+    <p class="lookup-count" data-count data-suffix={resultCountLabel} aria-live="polite"></p>
+    <label class="lookup-sort">
+      {sortLabel}
+      <select data-sort-select>
+        {headers.map((header, index) => <option value={index}>{header}</option>)}
+      </select>
+      <button type="button" data-sort-direction aria-label={sortLabel}>
+        <span class="sort-arrow" aria-hidden="true"></span>
+      </button>
+    </label>
+  </div>
 
   <div class="lookup-table-wrap">
     <table class="result-table">
       <thead>
         <tr>
-          {headers.map((h) => <th>{h}</th>)}
+          {
+            headers.map((header, index) => (
+              <th aria-sort="none" data-sort-index={index}>
+                <button type="button" title={`${sortLabel}: ${header}`}>
+                  {header}
+                  <span class="sort-arrow" aria-hidden="true" />
+                </button>
+              </th>
+            ))
+          }
         </tr>
       </thead>
       <tbody data-body></tbody>
@@ -77,7 +100,7 @@ const {
     <button type="button" class="lookup-page-btn" data-next aria-label={nextLabel}>›</button>
   </nav>
 
-  <p class="tool-note">{note}</p>
+  {note.map((paragraph) => <p class="tool-note">{paragraph}</p>)}
 </div>
 
 <script>

@@ -1,20 +1,21 @@
 export const dichVu = {
   meta: {
-    title: 'Dịch vụ Kỹ thuật Tàu thủy | Lasan Marine',
-    description: 'Trọn gói dịch vụ thiết kế đóng mới, hoán cải vỏ/máy, tính toán ổn định và hồ sơ Đăng kiểm VR.',
+    title: 'Dịch vụ kỹ thuật tàu thủy | Lasan Marine',
+    description:
+      'Thiết kế đóng mới, hoán cải vỏ và máy, tính toán ổn định và lập hồ sơ trình thẩm định Cục Đăng kiểm Việt Nam (VR).',
   },
   hero: {
-    title: 'Dịch vụ Thiết kế & Tư vấn Kỹ thuật Tàu thủy',
+    title: 'Dịch vụ thiết kế và tư vấn kỹ thuật tàu thủy',
     description:
-      'Trọn gói giải pháp từ ý tưởng ban đầu, tối ưu thủy động lực học, tính toán kết cấu đến hồ sơ duyệt Đăng kiểm VR.',
+      'Từ ý tưởng ban đầu, tối ưu thủy động lực học và tính toán kết cấu đến bộ hồ sơ trình thẩm định đăng kiểm.',
   },
   services: {
     detailsLabel: 'Xem chi tiết giải pháp',
   },
   process: {
-    title: 'Quy trình Triển khai Kỹ thuật',
+    title: 'Quy trình triển khai',
   },
   cta: {
-    title: 'Nhận tư vấn kỹ thuật & báo giá trong 24 giờ',
+    title: 'Nhận tư vấn kỹ thuật và báo giá trong 24 giờ',
   },
 };

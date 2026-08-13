@@ -1,28 +1,37 @@
-// Inter, variable 100–900 with optical sizing (roman + italic).
-@font-face {
-  font-family: 'Inter Local';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: optional;
-  src: url('/fonts/Inter-Variable.woff2') format('woff2-variations');
-}
-
-@font-face {
-  font-family: 'Inter Local';
-  font-style: italic;
-  font-weight: 100 900;
-  font-display: optional;
-  src: url('/fonts/Inter-Italic-Variable.woff2') format('woff2-variations');
+// IBM Plex Sans, variable weight 100–700, self-hosted and split into three
+// subsets. Vietnamese pages pull the latin and vietnamese files only; the
+// unicode-range on each face keeps the browser from fetching the rest.
+@each $subset,
+  $range
+    in (
+      'latin':
+        'U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD',
+      'latin-ext':
+        'U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF',
+      'vietnamese':
+        'U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB'
+    )
+{
+  @each $style in ('normal', 'italic') {
+    @font-face {
+      font-family: 'Plex Local';
+      font-style: #{$style};
+      font-weight: 100 700;
+      font-display: optional;
+      src: url('/fonts/ibm-plex-sans-#{$subset}-wght-#{$style}.woff2') format('woff2-variations');
+      unicode-range: #{$range};
+    }
+  }
 }
 
 $navy: #0b1c4b;
 $blue: #0a72c8;
 $pale: #f4f6f9;
+$navy-deep: #071233;
 $ink: #1d1f20;
 
 :root {
-  font-family: 'Inter Local', system-ui, sans-serif;
-  font-optical-sizing: auto;
+  font-family: 'Plex Local', system-ui, sans-serif;
   color: $ink;
   background: white;
   text-rendering: optimizeLegibility;
@@ -52,6 +61,16 @@ h4,
 p {
   margin-top: 0;
 }
+// Headings run light, following the hero. The scale is graded by size: the
+// larger a heading is, the thinner it can go before the light cut stops
+// reading as deliberate. Small headings keep more weight so the Vietnamese
+// diacritics do not thin out into the background.
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 300;
+}
 button,
 input,
 select,
@@ -69,27 +88,60 @@ textarea {
 .section {
   padding-block: 100px;
 }
-.section--pale {
-  background: $pale;
-  border-block: 1px solid rgba($navy, 0.1);
+// The page runs on a single background colour end to end. Sections separate
+// themselves with a hairline rule, not with a second fill.
+.section--divided {
+  border-top: 1px solid rgba($navy, 0.12);
 }
-.technical-grid {
-  background-color: $navy;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-  background-size: 80px 80px;
+// The one dark surface on the site. Every inverted block uses this class, so
+// the hero, the calls to action, the process bands and the stats strip all
+// share the same field of colour.
+//
+// Three background layers, painted front to back:
+//   1. a faint diagonal sweep, as if the surface were catching light,
+//   2. a marine glow anchored to the upper right,
+//   3. the navy field itself, running lighter at the top left.
+//
+// They are layers of one `background` rather than pseudo-elements, so the
+// class can be dropped on any element without disturbing its contents or
+// needing a stacking context of its own.
+.band-navy {
+  color: white;
+  background:
+    linear-gradient(104deg, transparent 32%, rgba(255, 255, 255, 0.05) 52%, transparent 68%),
+    radial-gradient(115% 130% at 88% 6%, rgba($blue, 0.45) 0%, transparent 58%),
+    linear-gradient(158deg, #0b2358 0%, $navy-deep 52%, #050d26 100%);
 }
 .page-title {
   font-size: clamp(2.75rem, 5vw, 4.125rem);
+  font-weight: 200;
   line-height: 1.05;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.03em;
 }
 .section-title {
   color: $navy;
   font-size: clamp(2rem, 3.5vw, 2.875rem);
+  font-weight: 250;
   line-height: 1.1;
   letter-spacing: -0.025em;
+}
+// Opt-in rule above a section title. Used on some sections, not all, so the
+// page has a beat instead of an unbroken run of identical headings.
+.section-title--marked::before {
+  content: '';
+  display: block;
+  width: 44px;
+  height: 2px;
+  margin-bottom: 22px;
+  background: $blue;
+}
+// A heading and the line under it read as one unit, and the gap between them
+// sets the rhythm of every block. It is deliberately wide: the headings are
+// light-weight, so they need air around them to hold their own.
+.page-title + p,
+.section-title + p,
+.section-title + .lead {
+  margin-top: 32px;
 }
 .lead {
   font-size: 1.25rem;
@@ -124,6 +176,17 @@ textarea {
 .button--outline:hover {
   border-color: white;
   background: rgba(255, 255, 255, 0.12);
+}
+// Outline variant for light backgrounds, so a page with several calls to
+// action is not a column of identical solid blue blocks.
+.button--ghost {
+  border-color: rgba($navy, 0.3);
+  background: transparent;
+  color: $navy;
+}
+.button--ghost:hover {
+  border-color: $navy;
+  background: rgba($navy, 0.06);
 }
 .button svg {
   transition: transform 0.2s;
@@ -160,9 +223,32 @@ textarea {
   transform: none;
 }
 
+// Image placeholder: an outline and a centred caption, on the page colour.
 .blueprint {
   position: relative;
   border: 1px solid rgba($navy, 0.18);
+}
+.blueprint__label {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 12px;
+  justify-items: center;
+  padding: 16px;
+  color: rgba($navy, 0.55);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.blueprint__label::before {
+  content: '';
+  width: 26px;
+  height: 26px;
+  background:
+    linear-gradient(rgba($navy, 0.3), rgba($navy, 0.3)) center / 1px 100% no-repeat,
+    linear-gradient(rgba($navy, 0.3), rgba($navy, 0.3)) center / 100% 1px no-repeat;
 }
 .blueprint .corner {
   position: absolute;

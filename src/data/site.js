@@ -2,82 +2,91 @@ export const services = [
   {
     name: 'Thiết kế tàu mới',
     description:
-      'Phát triển phương án tàu từ bài toán khai thác đến trọn bộ hồ sơ kỹ thuật thi công & thẩm định Đăng kiểm (VR).',
+      'Phát triển phương án tàu từ bài toán khai thác đến bộ hồ sơ kỹ thuật thi công và thẩm định đăng kiểm.',
     longDescription:
-      'Tư vấn toàn diện từ bài toán kinh tế - kỹ thuật: Tính chọn kích thước chính (L, B, D, d), thiết kế tuyến hình thân tàu giảm sức cản, bố trí chung tối ưu công năng, tính toán kết cấu theo Quy phạm VR, thiết kế hệ động lực - chân vịt và lập hồ sơ tính toán thủy tĩnh & thông báo ổn định.',
+      'Tư vấn từ bài toán kinh tế – kỹ thuật: chọn kích thước chính (L, B, D, d), thiết kế tuyến hình giảm sức cản, bố trí chung theo công năng, tính toán kết cấu theo quy phạm VR, thiết kế hệ động lực và chân vịt, lập hồ sơ thủy tĩnh cùng thông báo ổn định.',
     icon: 'ship',
   },
   {
     name: 'Chuyển hoán vỏ',
-    description: 'Tính toán cải tạo kết cấu, kéo dài thân tàu (Jumboization) hoặc tăng tải trọng chở hàng.',
+    description:
+      'Tính toán cải tạo kết cấu, kéo dài thân tàu (jumboization) hoặc tăng tải trọng chở hàng.',
     longDescription:
-      'Khảo sát đo đạc hiện trạng, tính toán sức bền dầm dọc thân tàu và biến dạng kết cấu khi điều chỉnh kích thước hoặc thay đổi công năng. Lập hồ sơ chuyển hoán trình Cục Đăng kiểm thẩm định.',
+      'Khảo sát hiện trạng, tính sức bền dầm dọc thân tàu và biến dạng kết cấu khi thay đổi kích thước hoặc công năng, sau đó lập hồ sơ chuyển hoán trình Cục Đăng kiểm Việt Nam thẩm định.',
     icon: 'ship',
   },
   {
     name: 'Chuyển hoán máy',
-    description: 'Tính toán chọn máy chính mới, phối hợp tỷ số truyền hộp số và tối ưu đường kính trục - chân vịt.',
+    description:
+      'Chọn máy chính mới, phối hợp tỷ số truyền hộp số và tính lại đường kính trục cùng chân vịt.',
     longDescription:
-      'Đánh giá sức bền bệ máy, tính toán dao động xoắn hệ trục, phối hợp đặc tính công suất động cơ với đường cong sức cản tàu. Thiết kế lại hệ động lực đảm bảo tàu đạt tốc độ khai thác và tiết kiệm dầu.',
+      'Đánh giá sức bền bệ máy, tính dao động xoắn hệ trục và phối hợp đặc tính công suất động cơ với đường cong sức cản của tàu, từ đó thiết kế lại hệ động lực để tàu đạt tốc độ khai thác với mức tiêu hao nhiên liệu hợp lý.',
     icon: 'cog',
   },
   {
     name: 'Chuyển hoán nghề tàu cá',
-    description: 'Tải lại trọng tâm tàu, điều chỉnh bố trí boong, bố trí thiết bị nghề cá và tính lại thông báo ổn định.',
+    description:
+      'Xác định lại trọng tâm tàu, điều chỉnh bố trí boong và thiết bị nghề, tính lại thông báo ổn định.',
     longDescription:
-      'Tái cấu trúc bố trí chung boong thao tác, kiểm tra sức bền bệ tời/hệ thống cẩu kéo, lập lại các trạng thái tải trọng khai thác thực tế và tính toán lại thông báo ổn định theo Tiêu chuẩn Đăng kiểm tàu cá.',
+      'Tái cấu trúc bố trí boong thao tác, kiểm tra sức bền bệ tời và hệ thống cẩu kéo, lập lại các trạng thái tải trọng khai thác thực tế và tính lại thông báo ổn định theo tiêu chuẩn đăng kiểm tàu cá.',
     icon: 'ship',
   },
   {
     name: 'Chuyển vùng hoạt động',
-    description: 'Đánh giá tính năng, bổ sung trang thiết bị và lập hồ sơ mở rộng vùng hoạt động (VR-SI lên VR-SB, Biển khơi).',
+    description:
+      'Đánh giá tính năng, bổ sung trang thiết bị và lập hồ sơ mở rộng vùng hoạt động, từ VR-SI lên VR-SB hoặc biển khơi.',
     longDescription:
-      'Tính toán lại mạn khô tối thiểu, độ bền mạn/boong, trang thiết bị cứu sinh, cứu hỏa và tầm hoạt động. Lập hồ sơ kỹ thuật phục vụ thẩm định chuyển vùng hoạt động an toàn theo quy định VR.',
+      'Tính lại mạn khô tối thiểu, độ bền mạn và boong, rà soát trang thiết bị cứu sinh, cứu hỏa cùng tầm hoạt động, sau đó lập hồ sơ kỹ thuật phục vụ thẩm định chuyển vùng theo quy định của đăng kiểm.',
     icon: 'file',
   },
   {
     name: 'Hồ sơ kỹ thuật phân cấp',
-    description: 'Lập trọn bộ bản vẽ kỹ thuật, thuyết minh tính toán phục vụ thẩm định, phân cấp và cấp giấy chứng nhận VR.',
+    description:
+      'Lập bản vẽ kỹ thuật và thuyết minh tính toán phục vụ thẩm định, phân cấp và cấp giấy chứng nhận.',
     longDescription:
-      'Số hóa và lập trọn bộ hồ sơ kỹ thuật bao gồm: Thuyết minh kỹ thuật, Bản vẽ bố trí chung, Tuyến hình, Kết cấu thân tàu, Hệ thống máy - điện - ống, Hồ sơ thủy tĩnh và Thông báo ổn định trình duyệt VR.',
+      'Số hóa và lập bộ hồ sơ kỹ thuật gồm thuyết minh, bản vẽ bố trí chung, tuyến hình, kết cấu thân tàu, hệ thống máy – điện – ống, hồ sơ thủy tĩnh và thông báo ổn định để trình duyệt.',
     icon: 'file',
   },
   {
-    name: 'Thiết kế sửa đổi & Thi công',
-    description: 'Cập nhật bản vẽ thi công (Shop drawings/Nesting CNC), xử lý phát sinh thực tế tại nhà máy đóng tàu.',
+    name: 'Thiết kế sửa đổi và thi công',
+    description:
+      'Cập nhật bản vẽ thi công (shop drawing, nesting CNC) và xử lý phát sinh tại nhà máy đóng tàu.',
     longDescription:
-      'Hỗ trợ kỹ thuật trực tiếp tại xưởng/triền đà, điều chỉnh hồ sơ thiết kế phù hợp thực tế công nghệ đóng tàu của nhà máy mà vẫn đảm bảo 100% tuân thủ bản vẽ đã thẩm định.',
+      'Hỗ trợ kỹ thuật trực tiếp tại xưởng và triền đà, điều chỉnh hồ sơ thiết kế cho phù hợp với công nghệ đóng tàu của nhà máy mà vẫn tuân thủ bản vẽ đã được thẩm định.',
     icon: 'file',
   },
   {
     name: 'Hoán cải công năng phương tiện',
-    description: 'Tái thiết kế phương tiện thủy thành tàu du lịch, nhà hàng nổi, tàu công vụ hoặc tàu chuyên dùng.',
+    description:
+      'Thiết kế lại phương tiện thủy thành tàu du lịch, nhà hàng nổi, tàu công vụ hoặc tàu chuyên dùng.',
     longDescription:
-      'Xây dựng phương án hoán cải toàn diện về kiến trúc thượng tầng, bố trí không gian hành khách, kiểm tra lại sức bền cục bộ và tính toán lại ổn định chống chìm / ổn định thế năng.',
+      'Xây dựng phương án hoán cải kiến trúc thượng tầng và không gian hành khách, kiểm tra lại sức bền cục bộ, tính lại ổn định nguyên vẹn và ổn định tai nạn.',
     icon: 'cog',
   },
   {
-    name: 'Nâng cấp & Thay thế hệ động lực',
-    description: 'Lập phương án thay thế động cơ diesel thủy, nâng cấp hệ thống phụ trợ buồng máy và đường ống tàu.',
+    name: 'Nâng cấp và thay thế hệ động lực',
+    description:
+      'Lập phương án thay động cơ diesel thủy, nâng cấp hệ thống phụ trợ buồng máy và đường ống.',
     longDescription:
-      'Lập bản vẽ bố trí buồng máy mới, thiết kế hệ thống làm mát, thông gió, khí xả, nhiên liệu, kiểm tra tính tương thích của hộp số và chân vịt với công suất máy mới.',
+      'Lập bản vẽ bố trí buồng máy mới, thiết kế hệ thống làm mát, thông gió, khí xả và nhiên liệu, đồng thời kiểm tra tính tương thích của hộp số và chân vịt với công suất máy mới.',
     icon: 'cog',
   },
   {
     name: 'Lập thông báo ổn định',
-    description: 'Tính toán thủy tĩnh, lập đồ thị ổn định mạn đứng, ổn định thế năng và hồ sơ ổn định ngập nước theo quy phạm.',
+    description:
+      'Tính toán thủy tĩnh, dựng đồ thị ổn định tĩnh và động, lập hồ sơ ổn định tai nạn theo quy phạm.',
     longDescription:
-      'Ứng dụng phần mềm chuyên dụng (Maxsurf/NAPA) mô hình hóa chính xác thân tàu, tính toán ổn định cho 100% trạng thái khai thác (không tải, đầy tải, tiêu thụ 50%, rời bến, cập bến) đáp ứng đầy đủ tiêu chí VR & IMO.',
+      'Dùng phần mềm chuyên dụng như Maxsurf hoặc NAPA để mô hình hóa thân tàu và tính ổn định cho các trạng thái khai thác gồm không tải, đầy tải, tiêu thụ 50% dự trữ, rời bến và cập bến, theo tiêu chí của VR và IMO.',
     icon: 'file',
   },
 ];
 export const steps = [
-  'Tiếp nhận bài toán khai thác & Khảo sát phương tiện.',
-  'Phân tích Thủy động lực học & Đề xuất Thông số chính.',
-  'Triển khai Thiết kế Tuyến hình, Bố trí chung & Kết cấu.',
-  'Tính toán Thủy tĩnh, Ổn định & Sức bền theo Quy phạm.',
-  'Nộp Hồ sơ & Trực tiếp Bảo vệ trước Cục Đăng kiểm (VR).',
-  'Bàn giao Hồ sơ Kỹ thuật & Hỗ trợ Giám sát Thi công.',
+  'Tiếp nhận bài toán khai thác và khảo sát phương tiện.',
+  'Phân tích thủy động lực học và đề xuất thông số chính.',
+  'Thiết kế tuyến hình, bố trí chung và kết cấu.',
+  'Tính toán thủy tĩnh, ổn định và sức bền theo quy phạm.',
+  'Nộp và bảo vệ hồ sơ trước Cục Đăng kiểm Việt Nam.',
+  'Bàn giao hồ sơ kỹ thuật và hỗ trợ giám sát thi công.',
 ];
 export const projects = [
   {

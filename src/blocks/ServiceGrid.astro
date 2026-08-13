@@ -26,7 +26,10 @@ const { base, services, detailsLabel, compact = false } = Astro.props as Props;
         data-aos="fade-up"
         data-aos-delay={(index % (compact ? 5 : 3)) * 80}
         class:list={[
-          'group grid min-h-[320px] grid-rows-[auto_auto_1fr_auto] gap-5 text-navy no-underline transition-colors duration-200 hover:bg-pale max-[560px]:min-h-0',
+          // The marine rule wiping across the top edge gives the hover a
+          // direction, so a wall of identical bordered boxes gains some life.
+          'group relative grid min-h-[320px] grid-rows-[auto_auto_1fr_auto] gap-5 text-navy no-underline transition-colors duration-200 hover:bg-pale max-[560px]:min-h-0',
+          'before:absolute before:inset-x-0 before:top-0 before:h-0.5 before:origin-left before:scale-x-0 before:bg-marine before:transition-transform before:duration-300 hover:before:scale-x-100',
           compact
             ? 'min-h-[220px] border-r border-b border-navy/14 px-6 py-7'
             : 'border border-navy/14 px-9 py-10 max-[560px]:px-[26px] max-[560px]:pt-[30px] max-[560px]:pb-8',

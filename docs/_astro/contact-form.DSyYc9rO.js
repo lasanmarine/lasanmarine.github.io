@@ -1,1 +1,0 @@
-function o(t=document){const e=t.querySelector("#contact-form");e?.addEventListener("submit",r=>{r.preventDefault(),e.querySelector(".fields")?.setAttribute("hidden",""),e.querySelector(".success")?.removeAttribute("hidden")})}export{o as i};

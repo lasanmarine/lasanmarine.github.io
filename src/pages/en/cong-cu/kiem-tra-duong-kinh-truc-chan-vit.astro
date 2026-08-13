@@ -8,29 +8,22 @@ import { kiemTraDuongKinhTrucChanVit as content } from '@/data/en/kiem-tra-duong
 
 <BaseLayout title={content.meta.title} description={content.meta.description} lang="en">
   <main>
-    <ToolLayout
-      navTitle={content.hero.title}
-      navIntro={content.hero.description}
-      navAriaLabel={content.tool.navAriaLabel}
-      links={content.tool.links}
-    >
+    <ToolLayout navTitle={content.hero.title}>
       <ShaftDiameterCalculator
         powerLabel={content.calculator.powerLabel}
         unitLabel={content.calculator.unitLabel}
-        unitPlaceholder={content.calculator.unitPlaceholder}
         units={content.calculator.units}
         rpmLabel={content.calculator.rpmLabel}
         ratioLabel={content.calculator.ratioLabel}
         ratioPlaceholder={content.calculator.ratioPlaceholder}
         materialLabel={content.calculator.materialLabel}
-        materialPlaceholder={content.calculator.materialPlaceholder}
         materials={content.calculator.materials}
         submitLabel={content.calculator.submitLabel}
         resetLabel={content.calculator.resetLabel}
-        resultsTitle={content.calculator.resultsTitle}
         resultHeaders={content.calculator.resultHeaders}
         resultRows={content.calculator.resultRows}
         note={content.calculator.note}
+        formula={content.calculator.formula}
       />
     </ToolLayout>
   </main>
