@@ -1,4 +1,8 @@
+# START YOAST BLOCK
+# ---------------------------
 User-agent: *
-Allow: /
+Disallow:
 
-Sitemap: https://lasanmarine.com/sitemap-index.xml
+Sitemap: https://lasanmarine.com/sitemap_index.xml
+# ---------------------------
+# END YOAST BLOCK

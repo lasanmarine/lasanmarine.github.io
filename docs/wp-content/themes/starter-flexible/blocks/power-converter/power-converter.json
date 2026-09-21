@@ -1,0 +1,8 @@
+{
+  "key": "group_power_converter",
+  "title": "Power Converter",
+  "fields": [
+    { "key": "field_pc_custom_class", "label": "Custom Class", "name": "custom_class", "type": "text", "required": 0 }
+  ],
+  "location": [[{ "param": "block", "operator": "==", "value": "acf/power-converter" }]]
+}

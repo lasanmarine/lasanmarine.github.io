@@ -1,0 +1,43 @@
+{
+    "key": "group_project_showcase",
+    "title": "Dự án tiêu biểu",
+    "fields": [
+        {
+            "key": "field_ps_label",
+            "label": "Nhãn block",
+            "name": "label",
+            "type": "text",
+            "default_value": "DỰ ÁN TIÊU BIỂU"
+        },
+        {
+            "key": "field_ps_projects",
+            "label": "Chọn dự án",
+            "name": "projects",
+            "type": "relationship",
+            "instructions": "Tích chọn dự án từ post type Dự án. Ảnh, tên và thông số lấy thẳng từ hồ sơ dự án, không phải nhập lại. Để trống thì tự lấy các dự án mới nhất.",
+            "post_type": ["project"],
+            "filters": ["search", "taxonomy"],
+            "taxonomy": [],
+            "return_format": "id",
+            "min": 0,
+            "max": 12,
+            "elements": ["featured_image"]
+        },
+        {
+            "key": "field_ps_limit",
+            "label": "Số dự án khi để trống",
+            "name": "limit",
+            "type": "number",
+            "default_value": 5,
+            "min": 1,
+            "max": 12
+        },
+        {
+            "key": "field_ps_custom_class",
+            "label": "Custom Class",
+            "name": "custom_class",
+            "type": "text"
+        }
+    ],
+    "location": [[{ "param": "block", "operator": "==", "value": "acf/project-showcase" }]]
+}

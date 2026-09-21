@@ -1,0 +1,8 @@
+{
+  "key": "group_engine_lookup",
+  "title": "Engine Lookup",
+  "fields": [
+    { "key": "field_el_custom_class", "label": "Custom Class", "name": "custom_class", "type": "text", "required": 0 }
+  ],
+  "location": [[{ "param": "block", "operator": "==", "value": "acf/engine-lookup" }]]
+}
