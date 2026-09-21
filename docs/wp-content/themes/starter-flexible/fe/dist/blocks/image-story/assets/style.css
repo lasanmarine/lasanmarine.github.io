@@ -1,0 +1,1 @@
+.is__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:clamp(20px,2.6vw,40px)}.is__item{width:100%;display:block;margin:0}.is__caption{--tw-text-opacity: 1;color:rgb(123 135 148 / var(--tw-text-opacity, 1));display:block;margin-top:10px;font-size:12.5px;letter-spacing:.12em}.is__note{margin-top:0}

@@ -1,0 +1,1 @@
+.sl{display:grid;align-items:flex-start;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:clamp(28px,4vw,72px)}.sl__intro{position:sticky;top:140px}.sl__note{--tw-text-opacity: 1;color:rgb(83 97 115 / var(--tw-text-opacity, 1));margin-top:16px;max-width:26em;font-size:14.5px;line-height:1.75}@media (max-width: 760px){.sl__intro{position:static}}
