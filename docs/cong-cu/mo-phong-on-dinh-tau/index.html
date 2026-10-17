@@ -121,13 +121,27 @@
       .seo h2 { font-size: 19px; margin: 28px 0 8px; color: #06122D; }
       .seo a { color: #0A72C8; }
       .seo__loading { margin-top: 32px; color: #5b6b80; }
+      /* loading splash over everything until the app is ready (src/splash.js fades it out) */
+      #splash { position: fixed; inset: 0; z-index: 1000; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; background: #fff; transition: opacity .4s ease, visibility .4s; }
+      #splash.splash--out { opacity: 0; visibility: hidden; pointer-events: none; }
+      .splash__logo { width: min(300px, 64vw); height: auto; animation: splash-in .5s ease both; }
+      .splash__bar { position: relative; width: min(140px, 36vw); height: 3px; border-radius: 3px; overflow: hidden; background: #e6ecf2; }
+      .splash__bar::after { content: ""; position: absolute; inset: 0; width: 40%; border-radius: inherit; background: #0A72C8; animation: splash-bar 1.1s ease-in-out infinite; }
+      @keyframes splash-in { from { opacity: 0; transform: translateY(6px); } }
+      @keyframes splash-bar { from { transform: translateX(-100%); } to { transform: translateX(250%); } }
+      @media (prefers-reduced-motion: reduce) { .splash__logo, .splash__bar::after { animation: none; } }
       @media (prefers-color-scheme: dark) {
         body { background: #1a1b1e; }
         .seo, .seo h1, .seo h2 { color: #e6ebf2; }
         .seo a { color: #5fb0f0; }
+        /* dark page (Mantine's dark body): the navy logo turns light */
+        #splash { background: #242424; }
+        .splash__logo { filter: brightness(0) invert(.92); }
+        .splash__bar { background: #3b3b3b; }
+        .splash__bar::after { background: #5fb0f0; }
       }
     </style>
-    <script type="module" crossorigin src="/cong-cu/mo-phong-on-dinh-tau/assets/index-B9W5nxS6.js"></script>
+    <script type="module" crossorigin src="/cong-cu/mo-phong-on-dinh-tau/assets/index-mLX_15-p.js"></script>
     <link rel="stylesheet" crossorigin href="/cong-cu/mo-phong-on-dinh-tau/assets/index-C6Za91og.css">
   </head>
   <body>
@@ -160,6 +174,10 @@
         <noscript><p><strong>Công cụ cần bật JavaScript để chạy.</strong></p></noscript>
         <p class="seo__loading" aria-live="polite">Đang tải công cụ mô phỏng…</p>
       </main>
+    </div>
+    <div id="splash" role="status" aria-label="Đang tải công cụ mô phỏng…">
+      <img class="splash__logo" src="/cong-cu/mo-phong-on-dinh-tau/assets/logo-BY5rt1EK.png" alt="Lasan Marine" width="2932" height="415" fetchpriority="high" />
+      <div class="splash__bar"></div>
     </div>
   </body>
 </html>
