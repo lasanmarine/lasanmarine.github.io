@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://lasanmarine.com/</loc>
-		<lastmod>2026-10-07T04:17:54+00:00</lastmod>
+		<lastmod>2026-11-07T16:39:27+00:00</lastmod>
 	</url>
 	<url>
 		<loc>https://lasanmarine.com/cong-cu/chuyen-doi-cong-suat/</loc>
@@ -17,92 +17,180 @@
 		<lastmod>2026-09-07T08:58:00+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://lasanmarine.com/tin-tuc/</loc>
-		<lastmod>2026-09-07T09:13:19+00:00</lastmod>
-	</url>
-	<url>
-		<loc>https://lasanmarine.com/lien-he/</loc>
-		<lastmod>2026-09-07T09:16:37+00:00</lastmod>
-	</url>
-	<url>
 		<loc>https://lasanmarine.com/cong-cu/nhiem-vu-thu/</loc>
 		<lastmod>2026-09-08T01:08:14+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://lasanmarine.com/en/insights/</loc>
-		<lastmod>2026-10-06T04:00:05+00:00</lastmod>
-	</url>
-	<url>
-		<loc>https://lasanmarine.com/en/contact/</loc>
-		<lastmod>2026-10-06T04:02:02+00:00</lastmod>
-	</url>
-	<url>
 		<loc>https://lasanmarine.com/cong-cu/</loc>
-		<lastmod>2026-10-17T00:00:00+00:00</lastmod>
+		<lastmod>2026-11-07T07:50:32+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://lasanmarine.com/nang-luc/</loc>
-		<lastmod>2026-10-07T03:44:43+00:00</lastmod>
+		<loc>https://lasanmarine.com/en/capabilities/ship-design/steel-fishing-vessel-design/</loc>
+		<lastmod>2026-11-07T08:44:22+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://lasanmarine.com/gioi-thieu/</loc>
-		<lastmod>2026-10-07T03:44:43+00:00</lastmod>
+		<loc>https://lasanmarine.com/en/capabilities/ship-design/frp-composite-boat-design/</loc>
+		<lastmod>2026-11-07T08:44:23+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://lasanmarine.com/nang-luc/thiet-ke-tau/</loc>
-		<lastmod>2026-10-07T03:44:44+00:00</lastmod>
+		<loc>https://lasanmarine.com/en/capabilities/ship-design/fishing-vessel-conversion/</loc>
+		<lastmod>2026-11-07T08:44:24+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://lasanmarine.com/en/about/</loc>
-		<lastmod>2026-10-07T03:44:45+00:00</lastmod>
+		<loc>https://lasanmarine.com/en/capabilities/ship-design/passenger-boat-design/</loc>
+		<lastmod>2026-11-07T08:44:25+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://lasanmarine.com/en/capabilities/</loc>
-		<lastmod>2026-10-07T03:44:45+00:00</lastmod>
+		<loc>https://lasanmarine.com/en/capabilities/approval-documents/</loc>
+		<lastmod>2026-11-07T08:44:26+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://lasanmarine.com/en/capabilities/ship-design/</loc>
-		<lastmod>2026-10-07T03:44:46+00:00</lastmod>
+		<loc>https://lasanmarine.com/en/projects/</loc>
+		<lastmod>2026-11-07T08:49:05+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://lasanmarine.com/nang-luc/marine-rd/cong-trinh/</loc>
-		<lastmod>2026-10-07T04:02:27+00:00</lastmod>
+		<loc>https://lasanmarine.com/en/tools/power-converter/</loc>
+		<lastmod>2026-11-07T08:49:06+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://lasanmarine.com/en/capabilities/research-development/</loc>
-		<lastmod>2026-10-07T04:02:27+00:00</lastmod>
+		<loc>https://lasanmarine.com/en/tools/propeller-shaft-diameter/</loc>
+		<lastmod>2026-11-07T08:49:06+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://lasanmarine.com/nang-luc/marine-rd/</loc>
-		<lastmod>2026-10-07T04:02:27+00:00</lastmod>
+		<loc>https://lasanmarine.com/en/tools/engine-lookup/</loc>
+		<lastmod>2026-11-07T08:49:06+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://lasanmarine.com/en/capabilities/research-development/publications/</loc>
-		<lastmod>2026-10-07T04:02:28+00:00</lastmod>
+		<loc>https://lasanmarine.com/en/design-brief/</loc>
+		<lastmod>2026-11-07T08:49:07+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://lasanmarine.com/en/capabilities/software/</loc>
-		<lastmod>2026-10-07T04:17:53+00:00</lastmod>
-	</url>
-	<url>
-		<loc>https://lasanmarine.com/nang-luc/dich-vu-cntt/</loc>
-		<lastmod>2026-10-07T04:17:53+00:00</lastmod>
+		<loc>https://lasanmarine.com/en/tools/</loc>
+		<lastmod>2026-11-07T08:49:08+00:00</lastmod>
 	</url>
 	<url>
 		<loc>https://lasanmarine.com/en/home/</loc>
-		<lastmod>2026-10-07T04:17:55+00:00</lastmod>
+		<lastmod>2026-11-07T09:00:04+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/nang-luc/ho-so-dang-kiem/</loc>
+		<lastmod>2026-11-07T16:39:21+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/nang-luc/thiet-ke-tau/tau-khach-cano/</loc>
+		<lastmod>2026-11-07T16:39:22+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/nang-luc/thiet-ke-tau/hoan-cai-chuyen-nghe/</loc>
+		<lastmod>2026-11-07T16:39:22+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/nang-luc/thiet-ke-tau/tau-composite/</loc>
+		<lastmod>2026-11-07T16:39:23+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/nang-luc/thiet-ke-tau/tau-ca-vo-thep/</loc>
+		<lastmod>2026-11-07T16:39:23+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/nang-luc/marine-rd/cong-trinh/</loc>
+		<lastmod>2026-11-07T16:39:24+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/gioi-thieu/</loc>
+		<lastmod>2026-11-07T16:39:25+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/nang-luc/</loc>
+		<lastmod>2026-11-07T16:39:25+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/nang-luc/dich-vu-cntt/</loc>
+		<lastmod>2026-11-07T16:39:26+00:00</lastmod>
 	</url>
 	<url>
 		<loc>https://lasanmarine.com/du-an/</loc>
-		<lastmod>2026-10-07T04:20:50+00:00</lastmod>
+		<lastmod>2026-11-07T16:39:26+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/nang-luc/marine-rd/</loc>
+		<lastmod>2026-11-07T16:39:27+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/nang-luc/thiet-ke-tau/</loc>
+		<lastmod>2026-11-07T16:39:28+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/lien-he/</loc>
+		<lastmod>2026-11-07T16:39:28+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/tin-tuc/</loc>
+		<lastmod>2026-11-07T16:48:13+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/cong-cu/mo-phong-on-dinh-tau/gioi-thieu/</loc>
+		<lastmod>2026-11-07T17:55:42+00:00</lastmod>
 	</url>
 	<url>
 		<loc>https://lasanmarine.com/cong-cu/mo-phong-on-dinh-tau/</loc>
-		<lastmod>2026-10-17T00:00:00+00:00</lastmod>
+		<lastmod>2026-11-07T17:55:42+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/cong-cu/suc-can-cong-suat/gioi-thieu/</loc>
+		<lastmod>2026-11-07T17:55:43+00:00</lastmod>
 	</url>
 	<url>
 		<loc>https://lasanmarine.com/cong-cu/suc-can-cong-suat/</loc>
-		<lastmod>2026-10-17T00:00:00+00:00</lastmod>
+		<lastmod>2026-11-07T17:55:43+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/en/capabilities/research-development/publications/</loc>
+		<lastmod>2026-11-07T18:42:28+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/en/about/</loc>
+		<lastmod>2026-11-07T18:42:29+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/en/capabilities/</loc>
+		<lastmod>2026-11-07T18:42:30+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/en/capabilities/ship-design/</loc>
+		<lastmod>2026-11-07T18:42:30+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/en/capabilities/research-development/</loc>
+		<lastmod>2026-11-07T18:42:31+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/en/capabilities/software/</loc>
+		<lastmod>2026-11-07T18:42:32+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/en/contact/</loc>
+		<lastmod>2026-11-07T18:42:32+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/en/tools/ship-stability-simulator/about/</loc>
+		<lastmod>2026-11-07T18:42:33+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/en/insights/</loc>
+		<lastmod>2026-11-07T18:42:33+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/en/tools/resistance-power-simulator/about/</loc>
+		<lastmod>2026-11-07T18:42:34+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/en/tools/resistance-power-simulator/</loc>
+		<lastmod>2026-11-07T18:42:49+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://lasanmarine.com/en/tools/ship-stability-simulator/</loc>
+		<lastmod>2026-11-07T18:42:49+00:00</lastmod>
 	</url>
 </urlset>
 <!-- XML Sitemap generated by Yoast SEO -->
